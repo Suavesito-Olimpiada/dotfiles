@@ -1,0 +1,1 @@
+QEMU_AUDIO_DRV=alsa qemu-system-x86_64 -m 1024 -accel kvm -vga std -daemonize -soundhw ac97 /home/jose/VM/qemu/WXP_disk.qcow2

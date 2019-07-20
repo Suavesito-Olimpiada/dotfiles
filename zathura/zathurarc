@@ -1,0 +1,19 @@
+# zathurarc
+
+set adjust-open best-fit
+
+set show-recent 5
+
+set page-padding 10
+set scroll-wrap true
+
+set incremental-search true
+set window-title-home-tilde true
+
+# set recolor-reverse-video false
+# set recolor 
+
+set default-fg "#EEEEEE"
+set default-bg "#111111"
+
+map ZZ quit

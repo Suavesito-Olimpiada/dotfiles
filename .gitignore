@@ -1,0 +1,19 @@
+# Adding ignore list for vim no-desirable files/directories
+vim/backup/
+vim/undo/*
+vim/swap/*
+vim/.netrwhist
+
+# Cache things
+scripts/clipboard
+scripts/hdmi.st
+ranger/history
+ranger/tagged
+ranger/bookmarks
+
+# Wallpapers
+imgs/wallpaper/*
+
+# No secrets in my git
+zsh/secrets.zsh
+hub

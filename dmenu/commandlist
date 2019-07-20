@@ -1,0 +1,94 @@
+#   internet
+st -e nmtui                                                                                     # INTERNET CONNECTION
+st -e httping -Y -K google.com                                                                  # HTTPING INTERNET PROVE
+st -e speedometer -r wlp2s0 -t wlp2s0                                                           # SPEEDOMETER INTERNET CHECK
+st -e speedometer -r enp1s0 -t enp1s0                                                           # SPEEDOMETER ETHERNET CHECK
+qbittorrent                                                                                     # QBITTORRENT TORRENTS DOWNLOAD
+st -e rtorrent                                                                                  # RTORRENT TORRENT DOWNLOAD
+firefox                                                                                         # FIREFOX NAVIGATOR
+chromium                                                                                        # CHROMIUM NAVIGATOR
+tabbed -c -r 3 torsocks /home/jose/Apps/gitBuild/nofork/surf/surf -e - "https://duckduckgo.com" # SURF BROWSER
+tabbed -c -r 2 /home/jose/Apps/gitBuild/nofork/surf/surf -e -                                   # SURF BROWSER
+ring.cx                                                                                         # RING CALL
+utox                                                                                            # UTOX MESSAGE APP
+skypeforlinux                                                                                   # SKYPE FOR LINUX
+bluejean                                                                                        # BLUEJEAN FOR LINUX
+
+#   office
+st -e vim                                                                                       # VIM
+libreoffice --writer                                                                            # LIBREOFFICE WRITER
+libreoffice --calc                                                                              # LIBREOFFICE CALC
+libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
+libreoffice --draw                                                                              # LIBREOFFICE DRAW
+tabbed -c zathura -e                                                                            # ZATHURA TABBED
+/home/jose/Apps/precompile/atom-1.37.0-amd64/atom                                               # TEXT EDITOR
+/home/jose/.config/scripts/atom.sh
+
+#   math
+/home/jose/.config/scripts/calculadora_genius.sh                                                # GENIUS CALCULATOR
+/home/jose/.config/scripts/calculadora_R                                                        # R CALCULATOR
+st -e genius --maxdigits=0 --precision=2048 --fullexp                                           # CALCULATOR TERMINAL
+st -e sage                                                                                      # SAGE MATH PACK
+st -e gnuplot                                                                                   # GNUPLOT PLOT TOOL
+DMENU=1 .config/scripts/jupyter_toggle.sh
+
+#   games
+doomrl                                                                                          # DOOM GAME
+st -e doomrl -console                                                                           # DOOM GAME CONSOLE
+cd /home/jose/Apps/precompile/LaserTank && ./ltanks64                                           # LTANKS GAME
+steam                                                                                           # STEAM ENGINE
+cgoban3                                                                                         # GO KGS
+dwarffortress                                                                                   # DWARFFORTRESS
+
+#   media
+gimp                                                                                            # GIMP
+inkscape                                                                                        # INKSCAPE
+st -c Music -e ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf                                     # NCMPC
+/home/jose/Apps/gitBuild/forked/st/st -c Music -e ncmpcpp                                       # NCMPCPP
+vlc                                                                                             # VLC VIDEO - MUSIC
+spotify                                                                                         # SPOTIFY
+cheese                                                                                          # WEBCAM
+popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
+darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
+shotcut-bin                                                                                     # VIDEO EDITOR
+scide                                                                                           # SUPERCOLLIDER EDITOR
+st -e sclang                                                                                    # SUPERCOLLIDER SERVER
+pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
+st -c Youtube -e youtube-viewer
+pinta                                                                                           # DRAWING PROGRAM
+krita
+blender
+pitivi
+kdenlive
+
+#   programming
+tabbed -c -r 2 st -w - -e python3                                                                                   # PYTHON 3 PROGRAMMING
+tabbed -c -r 2 st -w - -e bpython                                                                                   # PYTHON 3 PROGRAMMING
+tabbed -c -r 2 st -w - -e julia                                                                                     # JULIA INTERPRETER
+tabbed -c -r 2 st -w - -e root                                                                                      # ROOT CERN INTERPRETER
+tabbed -c -r 2 st -w - -e R                                                                                         # R
+
+#   system
+st -e vim /home/jose/.config/herbstluftwm/autostart                                             # AUTOSTART HERBSTLUFT
+st -e alsamixer                                                                                 # ALSAMIXER SOUND
+st -e htop                                                                                      # HTOP PROCESS
+st -e sudo htop                                                                                 # SUDO HTOP PROCESS
+st -e vim /home/jose/.config/dmenu/commandlist                                                  # VIM COMMANDLIST EDIT
+#herbstclient quit                                                                              # HERBSTLUFT QUIT
+xkill                                                                                           # XKILL
+/home/jose/Apps/gitBuild/forked/st/st -e ranger                                                   # RANGER FILE NAVIGATOR
+VirtualBox                                                                                      # VIRTUALBOX
+/home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
+remmina                                                                                         # CONTROL REMOTE DESKTOP
+pamac-manager
+gksu gufw                                                                                       # FIREWALL CONFIG APP
+gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
+gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
+/home/jose/.config/scripts/alarm.sh
+
+# QEMU and VM
+/home/jose/.config/dmenu/qemu                                                                   # QEMU VM
+
+# pack managers
+/home/jose/.config/dmenu/flatpak                                                                # PROGRAMS INSTALLED WITH FLATPAK
+/home/jose/.config/dmenu/snap                                                                   # PROGRAMS INSTALLED WITH SNAP

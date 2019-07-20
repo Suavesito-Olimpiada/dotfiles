@@ -1,0 +1,149 @@
+#
+#  _________  _   _      _    _ _
+# |__  / ___|| | | |    / \  | (_) __ _ ___  ___  ___
+#   / /\___ \| |_| |   / _ \ | | |/ _` / __|/ _ \/ __|
+#  / /_ ___) |  _  |  / ___ \| | | (_| \__ \  __/\__ \
+# /____|____/|_| |_| /_/   \_\_|_|\__,_|___/\___||___/
+#
+# Here are my aliases for the runtime
+
+# SYSTEM ALIASES
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias l='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -CF'
+alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -alhF'
+alias la='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -A'
+
+alias grep='grep --color=tty -d skip'
+alias locate='locate -r'
+alias wget='wget -c --read-timeout=20'
+
+alias cp='cp -i'
+alias mv='mv -i'
+
+#alias cat='bat' # This is batman
+#alias cat='lolcat' # This is lol
+
+alias info='info --vi-keys'
+
+alias :q=exit
+alias :Q=exit
+
+
+# X SYSTEM SECTION
+alias hw='startx /bin/herbstluftwm --locked'
+
+
+# UPDATE SECTION
+#
+# This are some short ways to update all
+# the things that I have that can be updated
+# tha «pacmanup» is just for arch-like 
+# GNU/Linux distributions.
+
+alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U"
+alias pip2up="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip2 install -U"
+
+alias gemup="gem update"
+# alias stackup="stack update && stack upgrade"
+alias Rup="sudo R -e 'old.packages (repos = \"https://cran.itam.mx\"); update.packages (ask = FALSE, repos = \"https://cran.itam.mx\")'"
+alias juliaup="julia -e 'import Pkg; Pkg.update(); Pkg.build()'"
+alias npmup="sudo npm i -g npm"
+
+alias flatup="sudo flatpak update"
+alias snapup="sudo snap refresh"
+
+alias pacmanup="yaourt -Syyuua && sudo mandb && sudo pkgfile --update"
+alias pacmanclean='sudo pacman -Rns $(pacman -Qtdq)'
+
+
+# MOUNTING SECTION
+#
+# This are very specific and probably will change
+# with the time.
+
+alias mountWindows='sudo mount /dev/sda9 /home/jose/Microsoft/'
+alias umntWindows='sudo umount /home/jose/Microsoft/'
+
+
+# SPECIAL APPS SECTION
+#
+# Some spetial functions that I aliased for my own
+# purpose.
+
+function less_highlight_f()
+{
+    if [ $@ = "" ]
+    then
+        less
+    else
+        if [ ${1: -4} = ".pdf" ]
+        then
+            pdftotext $@ - | less
+        else
+            echo $@
+            echo
+            ~/.config/less-highlight/less-highlight.sh $@ | less -R
+        fi
+    fi
+}
+alias lessc=less_highlight_f
+
+function volume_control ()
+{
+    SOUND=`pactl list sinks | grep "Monitor Source" | sed 's/\([^a-zA-Z]Monitor Source: \)\(.*\)\(.monitor\)/\2/'`
+    pactl set-sink-volume $SOUND $@
+}
+alias volume=volume_control
+
+function _man() # Give colors to man
+{
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+}
+alias man=_man
+
+function _ssh_tmux ()
+{
+    SESSION=''
+    ARGS=''
+    while [[ $# -gt 0 ]]
+    do
+        if [[ $1 !=  '--session' ]]
+        then
+            ARGS="$ARGS $1"
+        else
+            SESSION=$2
+            shift
+        fi
+        shift
+    done
+    /usr/bin/ssh -t ${=ARGS} "tmux -2 attach-session -t ssh_tmux$SESSION || tmux -2 new-session -s ssh_tmux$SESSION";
+}
+alias sst=_ssh_tmux
+
+
+# UTILITY SECTION
+#
+# Here I have some things that make the life
+# easier in some ways. This are not systems,
+# neither system needed things to do, or
+# aliased functions, just aliases that are useful.
+
+alias lg="lazygit" # Lazygit git utility
+alias git="hub" # Use hub intead of git
+alias neofetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
+alias screenfetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
+
+# tmux specifics
+
+alias tmux="tmux -2 -u"
+alias tnew="tmux new-session -s"
+alias tlss="tmux list-sessions"
+alias tatt="tmux attach-session -t"
+alias trld="tmux source-file ~/.tmux.conf"

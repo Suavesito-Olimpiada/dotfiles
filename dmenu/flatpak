@@ -1,0 +1,2 @@
+#!/bin/bash
+APP=$(cat ~/.config/dmenu/flatlist | dmenu -h 15 -i -l 8) && flatpak run $APP &> /dev/null &!

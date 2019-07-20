@@ -1,0 +1,21 @@
+[user]
+	email = jose.zubieta@cimat.mx
+	name = José Joaquín Zubieta Rico
+	mail = jose.zubieta@cimat.mx
+[color]
+	ui = auto
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[github]
+    user = Suavesito-Olimpiada
+[init]
+	templatedir = ~/.git_template
+[alias]
+	ctags = !.git/hooks/ctags
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

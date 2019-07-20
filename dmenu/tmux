@@ -1,0 +1,6 @@
+#!/bin/bash
+SESSION=$(tmux list-sessions | sed -rn 's/([^:]+).*/\1/p' | dmenu -h 15 -i -l 8)
+if [[ ! -z $SESSION ]]
+then
+    st -e tmux -2 attach-session -t $SESSION
+fi

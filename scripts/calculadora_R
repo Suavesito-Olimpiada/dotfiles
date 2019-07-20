@@ -1,0 +1,8 @@
+#!/bin/bash
+Operacion=`echo|dmenu -p Calcular: `
+Resultado=`Rscript -e "$Operacion"`
+Resultado=${Resultado#*] }
+Accion=`printf "$Resultado \nCopiar" |dmenu -i -l 2`
+if [ "$Accion" == "Copiar" ]; then
+    echo -n "$Resultado" | xsel -b
+fi

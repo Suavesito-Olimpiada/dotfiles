@@ -1,0 +1,808 @@
+jose@1.0.0 /home/jose
+└─┬ UNMET DEPENDENCY npm@6.9.0
+  ├── UNMET DEPENDENCY abbrev@1.1.1
+  ├── UNMET DEPENDENCY ansicolors@0.3.2
+  ├── UNMET DEPENDENCY ansistyles@0.1.3
+  ├── UNMET DEPENDENCY aproba@2.0.0
+  ├── UNMET DEPENDENCY archy@1.0.0
+  ├─┬ UNMET DEPENDENCY bin-links@1.1.2
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY cmd-shim@2.0.2
+  │ ├── UNMET DEPENDENCY gentle-fs@2.0.1
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ └── UNMET DEPENDENCY write-file-atomic@2.4.2
+  ├── UNMET DEPENDENCY bluebird@3.5.3
+  ├── UNMET DEPENDENCY byte-size@5.0.1
+  ├─┬ UNMET DEPENDENCY cacache@11.3.2
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY chownr@1.1.1
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY glob@7.1.3
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├─┬ UNMET DEPENDENCY lru-cache@5.1.1
+  │ │ └── UNMET DEPENDENCY yallist@3.0.3
+  │ ├── UNMET DEPENDENCY mississippi@3.0.0
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY move-concurrently@1.0.1
+  │ ├── UNMET DEPENDENCY promise-inflight@1.0.1
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ ├── UNMET DEPENDENCY ssri@6.0.1
+  │ ├─┬ UNMET DEPENDENCY unique-filename@1.1.1
+  │ │ └── UNMET DEPENDENCY unique-slug@2.0.0
+  │ └── UNMET DEPENDENCY y18n@4.0.0
+  ├── UNMET DEPENDENCY call-limit@1.1.0
+  ├── UNMET DEPENDENCY chownr@1.1.1
+  ├── UNMET DEPENDENCY ci-info@2.0.0
+  ├─┬ UNMET DEPENDENCY cli-columns@3.1.2
+  │ ├─┬ UNMET DEPENDENCY string-width@2.1.1
+  │ │ ├── UNMET DEPENDENCY is-fullwidth-code-point@2.0.0
+  │ │ └─┬ UNMET DEPENDENCY strip-ansi@4.0.0
+  │ │   └── UNMET DEPENDENCY ansi-regex@3.0.0
+  │ └─┬ UNMET DEPENDENCY strip-ansi@3.0.1
+  │   └── UNMET DEPENDENCY ansi-regex@2.1.1
+  ├─┬ UNMET DEPENDENCY cli-table3@0.5.1
+  │ ├── UNMET OPTIONAL DEPENDENCY colors@1.3.3
+  │ ├── UNMET DEPENDENCY object-assign@4.1.1
+  │ └── UNMET DEPENDENCY string-width@2.1.1
+  ├─┬ UNMET DEPENDENCY cmd-shim@2.0.2
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ └── UNMET DEPENDENCY mkdirp@0.5.1
+  ├─┬ UNMET DEPENDENCY columnify@1.5.4
+  │ ├── UNMET DEPENDENCY strip-ansi@3.0.1
+  │ └─┬ UNMET DEPENDENCY wcwidth@1.0.1
+  │   └─┬ UNMET DEPENDENCY defaults@1.0.3
+  │     └── UNMET DEPENDENCY clone@1.0.4
+  ├─┬ UNMET DEPENDENCY config-chain@1.1.12
+  │ ├── UNMET DEPENDENCY ini@1.3.5
+  │ └── UNMET DEPENDENCY proto-list@1.2.4
+  ├── UNMET DEPENDENCY debuglog@1.0.1
+  ├── UNMET DEPENDENCY detect-indent@5.0.0
+  ├── UNMET DEPENDENCY detect-newline@2.1.0
+  ├─┬ UNMET DEPENDENCY dezalgo@1.0.3
+  │ ├── UNMET DEPENDENCY asap@2.0.6
+  │ └── UNMET DEPENDENCY wrappy@1.0.2
+  ├── UNMET DEPENDENCY editor@1.0.0
+  ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  ├── UNMET DEPENDENCY find-npm-prefix@1.0.2
+  ├─┬ UNMET DEPENDENCY fs-vacuum@1.2.10
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY path-is-inside@1.0.2
+  │ └── UNMET DEPENDENCY rimraf@2.6.3
+  ├─┬ UNMET DEPENDENCY fs-write-stream-atomic@1.0.10
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY iferr@0.1.5
+  │ ├── UNMET DEPENDENCY imurmurhash@0.1.4
+  │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  ├─┬ UNMET DEPENDENCY gentle-fs@2.0.1
+  │ ├── UNMET DEPENDENCY aproba@1.2.0
+  │ ├── UNMET DEPENDENCY fs-vacuum@1.2.10
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY iferr@0.1.5
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY path-is-inside@1.0.2
+  │ ├── UNMET DEPENDENCY read-cmd-shim@1.0.1
+  │ └── UNMET DEPENDENCY slide@1.1.6
+  ├─┬ UNMET DEPENDENCY glob@7.1.3
+  │ ├── UNMET DEPENDENCY fs.realpath@1.0.0
+  │ ├── UNMET DEPENDENCY inflight@1.0.6
+  │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ ├─┬ UNMET DEPENDENCY minimatch@3.0.4
+  │ │ └─┬ UNMET DEPENDENCY brace-expansion@1.1.11
+  │ │   ├── UNMET DEPENDENCY balanced-match@1.0.0
+  │ │   └── UNMET DEPENDENCY concat-map@0.0.1
+  │ ├── UNMET DEPENDENCY once@1.4.0
+  │ └── UNMET DEPENDENCY path-is-absolute@1.0.1
+  ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  ├── UNMET DEPENDENCY has-unicode@2.0.1
+  ├── UNMET DEPENDENCY hosted-git-info@2.7.1
+  ├── UNMET DEPENDENCY iferr@1.0.2
+  ├── UNMET DEPENDENCY imurmurhash@0.1.4
+  ├─┬ UNMET DEPENDENCY inflight@1.0.6
+  │ ├── UNMET DEPENDENCY once@1.4.0
+  │ └── UNMET DEPENDENCY wrappy@1.0.2
+  ├── UNMET DEPENDENCY inherits@2.0.3
+  ├── UNMET DEPENDENCY ini@1.3.5
+  ├─┬ UNMET DEPENDENCY init-package-json@1.10.3
+  │ ├── UNMET DEPENDENCY glob@7.1.3
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├─┬ UNMET DEPENDENCY promzard@0.3.0
+  │ │ └── UNMET DEPENDENCY read@1.0.7
+  │ ├── UNMET DEPENDENCY read@1.0.7
+  │ ├── UNMET DEPENDENCY read-package-json@2.0.13
+  │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ ├── UNMET DEPENDENCY validate-npm-package-license@3.0.4
+  │ └── UNMET DEPENDENCY validate-npm-package-name@3.0.0
+  ├─┬ UNMET DEPENDENCY is-cidr@3.0.0
+  │ └─┬ UNMET DEPENDENCY cidr-regex@2.0.10
+  │   └── UNMET DEPENDENCY ip-regex@2.1.0
+  ├── UNMET DEPENDENCY json-parse-better-errors@1.0.2
+  ├─┬ UNMET DEPENDENCY JSONStream@1.3.5
+  │ ├── UNMET DEPENDENCY jsonparse@1.3.1
+  │ └── UNMET DEPENDENCY through@2.3.8
+  ├── UNMET DEPENDENCY lazy-property@1.0.0
+  ├─┬ UNMET DEPENDENCY libcipm@3.0.3
+  │ ├── UNMET DEPENDENCY bin-links@1.1.2
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY find-npm-prefix@1.0.2
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY ini@1.3.5
+  │ ├── UNMET DEPENDENCY lock-verify@2.1.0
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY npm-lifecycle@2.1.0
+  │ ├── UNMET DEPENDENCY npm-logical-tree@1.2.1
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├── UNMET DEPENDENCY pacote@9.5.0
+  │ ├── UNMET DEPENDENCY read-package-json@2.0.13
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ └── UNMET DEPENDENCY worker-farm@1.6.0
+  ├─┬ UNMET DEPENDENCY libnpm@2.0.1
+  │ ├── UNMET DEPENDENCY bin-links@1.1.2
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY find-npm-prefix@1.0.2
+  │ ├── UNMET DEPENDENCY libnpmaccess@3.0.1
+  │ ├─┬ UNMET DEPENDENCY libnpmconfig@1.2.1
+  │ │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ │ ├─┬ UNMET DEPENDENCY find-up@3.0.0
+  │ │ │ └─┬ UNMET DEPENDENCY locate-path@3.0.0
+  │ │ │   ├─┬ UNMET DEPENDENCY p-locate@3.0.0
+  │ │ │   │ └─┬ UNMET DEPENDENCY p-limit@2.1.0
+  │ │ │   │   └── UNMET DEPENDENCY p-try@2.0.0
+  │ │ │   └── UNMET DEPENDENCY path-exists@3.0.0
+  │ │ └── UNMET DEPENDENCY ini@1.3.5
+  │ ├── UNMET DEPENDENCY libnpmhook@5.0.2
+  │ ├── UNMET DEPENDENCY libnpmorg@1.0.0
+  │ ├─┬ UNMET DEPENDENCY libnpmpublish@1.1.1
+  │ │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ │ ├── UNMET DEPENDENCY lodash.clonedeep@4.5.0
+  │ │ ├── UNMET DEPENDENCY normalize-package-data@2.5.0
+  │ │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ │ ├── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  │ │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ │ └── UNMET DEPENDENCY ssri@6.0.1
+  │ ├── UNMET DEPENDENCY libnpmsearch@2.0.0
+  │ ├── UNMET DEPENDENCY libnpmteam@1.0.1
+  │ ├── UNMET DEPENDENCY lock-verify@2.1.0
+  │ ├── UNMET DEPENDENCY npm-lifecycle@2.1.0
+  │ ├── UNMET DEPENDENCY npm-logical-tree@1.2.1
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├── UNMET DEPENDENCY npm-profile@4.0.1
+  │ ├── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  │ ├── UNMET DEPENDENCY npmlog@4.1.2
+  │ ├── UNMET DEPENDENCY pacote@9.5.0
+  │ ├── UNMET DEPENDENCY read-package-json@2.0.13
+  │ └── UNMET DEPENDENCY stringify-package@1.0.0
+  ├─┬ UNMET DEPENDENCY libnpmaccess@3.0.1
+  │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ ├─┬ UNMET DEPENDENCY get-stream@4.1.0
+  │ │ └── UNMET DEPENDENCY pump@3.0.0
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY libnpmhook@5.0.2
+  │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY libnpmorg@1.0.0
+  │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY libnpmsearch@2.0.0
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY libnpmteam@1.0.1
+  │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY libnpx@10.2.0
+  │ ├── UNMET DEPENDENCY dotenv@5.0.1
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ ├── UNMET DEPENDENCY update-notifier@2.5.0
+  │ ├── UNMET DEPENDENCY which@1.3.1
+  │ ├── UNMET DEPENDENCY y18n@4.0.0
+  │ └─┬ UNMET DEPENDENCY yargs@11.0.0
+  │   ├─┬ UNMET DEPENDENCY cliui@4.1.0
+  │   │ ├── UNMET DEPENDENCY string-width@2.1.1
+  │   │ ├─┬ UNMET DEPENDENCY strip-ansi@4.0.0
+  │   │ │ └── UNMET DEPENDENCY ansi-regex@3.0.0
+  │   │ └─┬ UNMET DEPENDENCY wrap-ansi@2.1.0
+  │   │   ├─┬ UNMET DEPENDENCY string-width@1.0.2
+  │   │   │ ├── UNMET DEPENDENCY code-point-at@1.1.0
+  │   │   │ ├── UNMET DEPENDENCY is-fullwidth-code-point@1.0.0
+  │   │   │ └── UNMET DEPENDENCY strip-ansi@3.0.1
+  │   │   └── UNMET DEPENDENCY strip-ansi@3.0.1
+  │   ├── UNMET DEPENDENCY decamelize@1.2.0
+  │   ├─┬ UNMET DEPENDENCY find-up@2.1.0
+  │   │ └─┬ UNMET DEPENDENCY locate-path@2.0.0
+  │   │   ├─┬ UNMET DEPENDENCY p-locate@2.0.0
+  │   │   │ └─┬ UNMET DEPENDENCY p-limit@1.2.0
+  │   │   │   └── UNMET DEPENDENCY p-try@1.0.0
+  │   │   └── UNMET DEPENDENCY path-exists@3.0.0
+  │   ├── UNMET DEPENDENCY get-caller-file@1.0.2
+  │   ├─┬ UNMET DEPENDENCY os-locale@2.1.0
+  │   │ ├─┬ UNMET DEPENDENCY execa@0.7.0
+  │   │ │ ├─┬ UNMET DEPENDENCY cross-spawn@5.1.0
+  │   │ │ │ ├── UNMET DEPENDENCY lru-cache@4.1.5
+  │   │ │ │ ├─┬ UNMET DEPENDENCY shebang-command@1.2.0
+  │   │ │ │ │ └── UNMET DEPENDENCY shebang-regex@1.0.0
+  │   │ │ │ └── UNMET DEPENDENCY which@1.3.1
+  │   │ │ ├── UNMET DEPENDENCY get-stream@3.0.0
+  │   │ │ ├── UNMET DEPENDENCY is-stream@1.1.0
+  │   │ │ ├─┬ UNMET DEPENDENCY npm-run-path@2.0.2
+  │   │ │ │ └── UNMET DEPENDENCY path-key@2.0.1
+  │   │ │ ├── UNMET DEPENDENCY p-finally@1.0.0
+  │   │ │ ├── UNMET DEPENDENCY signal-exit@3.0.2
+  │   │ │ └── UNMET DEPENDENCY strip-eof@1.0.0
+  │   │ ├─┬ UNMET DEPENDENCY lcid@1.0.0
+  │   │ │ └── UNMET DEPENDENCY invert-kv@1.0.0
+  │   │ └─┬ UNMET DEPENDENCY mem@1.1.0
+  │   │   └── UNMET DEPENDENCY mimic-fn@1.2.0
+  │   ├── UNMET DEPENDENCY require-directory@2.1.1
+  │   ├── UNMET DEPENDENCY require-main-filename@1.0.1
+  │   ├── UNMET DEPENDENCY set-blocking@2.0.0
+  │   ├── UNMET DEPENDENCY string-width@2.1.1
+  │   ├── UNMET DEPENDENCY which-module@2.0.0
+  │   ├── UNMET DEPENDENCY y18n@3.2.1
+  │   └─┬ UNMET DEPENDENCY yargs-parser@9.0.2
+  │     └── UNMET DEPENDENCY camelcase@4.1.0
+  ├─┬ UNMET DEPENDENCY lock-verify@2.1.0
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ └── UNMET DEPENDENCY semver@5.6.0
+  ├─┬ UNMET DEPENDENCY lockfile@1.0.4
+  │ └── UNMET DEPENDENCY signal-exit@3.0.2
+  ├── UNMET DEPENDENCY lodash._baseindexof@3.1.0
+  ├─┬ UNMET DEPENDENCY lodash._baseuniq@4.6.0
+  │ ├── UNMET DEPENDENCY lodash._createset@4.0.3
+  │ └── UNMET DEPENDENCY lodash._root@3.0.1
+  ├── UNMET DEPENDENCY lodash._bindcallback@3.0.1
+  ├── UNMET DEPENDENCY lodash._cacheindexof@3.0.2
+  ├─┬ UNMET DEPENDENCY lodash._createcache@3.1.2
+  │ └── UNMET DEPENDENCY lodash._getnative@3.9.1
+  ├── UNMET DEPENDENCY lodash._getnative@3.9.1
+  ├── UNMET DEPENDENCY lodash.clonedeep@4.5.0
+  ├── UNMET DEPENDENCY lodash.restparam@3.6.1
+  ├── UNMET DEPENDENCY lodash.union@4.6.0
+  ├── UNMET DEPENDENCY lodash.uniq@4.5.0
+  ├── UNMET DEPENDENCY lodash.without@4.4.0
+  ├─┬ UNMET DEPENDENCY lru-cache@4.1.5
+  │ ├── UNMET DEPENDENCY pseudomap@1.0.2
+  │ └── UNMET DEPENDENCY yallist@2.1.2
+  ├── UNMET DEPENDENCY meant@1.0.1
+  ├─┬ UNMET DEPENDENCY mississippi@3.0.0
+  │ ├─┬ UNMET DEPENDENCY concat-stream@1.6.2
+  │ │ ├── UNMET DEPENDENCY buffer-from@1.0.0
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ ├─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │ │ ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ │ ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │ │ ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │ │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ │ ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │ │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ │ └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ │ └── UNMET DEPENDENCY typedarray@0.0.6
+  │ ├─┬ UNMET DEPENDENCY duplexify@3.6.0
+  │ │ ├── UNMET DEPENDENCY end-of-stream@1.4.1
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ ├─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │ │ ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ │ ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │ │ ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │ │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ │ ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │ │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ │ └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ │ └── UNMET DEPENDENCY stream-shift@1.0.0
+  │ ├─┬ UNMET DEPENDENCY end-of-stream@1.4.1
+  │ │ └── UNMET DEPENDENCY once@1.4.0
+  │ ├─┬ UNMET DEPENDENCY flush-write-stream@1.0.3
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ ├─┬ UNMET DEPENDENCY from2@2.3.0
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ ├─┬ UNMET DEPENDENCY parallel-transform@1.1.0
+  │ │ ├── UNMET DEPENDENCY cyclist@0.2.2
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ ├─┬ UNMET DEPENDENCY pump@3.0.0
+  │ │ ├── UNMET DEPENDENCY end-of-stream@1.4.1
+  │ │ └── UNMET DEPENDENCY once@1.4.0
+  │ ├─┬ UNMET DEPENDENCY pumpify@1.5.1
+  │ │ ├── UNMET DEPENDENCY duplexify@3.6.0
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ └─┬ UNMET DEPENDENCY pump@2.0.1
+  │ │   ├── UNMET DEPENDENCY end-of-stream@1.4.1
+  │ │   └── UNMET DEPENDENCY once@1.4.0
+  │ ├─┬ UNMET DEPENDENCY stream-each@1.2.2
+  │ │ ├── UNMET DEPENDENCY end-of-stream@1.4.1
+  │ │ └── UNMET DEPENDENCY stream-shift@1.0.0
+  │ └─┬ UNMET DEPENDENCY through2@2.0.3
+  │   ├─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │   │ ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │   │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │   │ ├── UNMET DEPENDENCY isarray@1.0.0
+  │   │ ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │   │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   │ ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │   │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   │ └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │   └── UNMET DEPENDENCY xtend@4.0.1
+  ├─┬ UNMET DEPENDENCY mkdirp@0.5.1
+  │ └── UNMET DEPENDENCY minimist@0.0.8
+  ├─┬ UNMET DEPENDENCY move-concurrently@1.0.1
+  │ ├── UNMET DEPENDENCY aproba@1.2.0
+  │ ├─┬ UNMET DEPENDENCY copy-concurrently@1.0.5
+  │ │ ├── UNMET DEPENDENCY aproba@1.2.0
+  │ │ ├── UNMET DEPENDENCY fs-write-stream-atomic@1.0.10
+  │ │ ├── UNMET DEPENDENCY iferr@0.1.5
+  │ │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ │ └── UNMET DEPENDENCY run-queue@1.0.3
+  │ ├── UNMET DEPENDENCY fs-write-stream-atomic@1.0.10
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ └─┬ UNMET DEPENDENCY run-queue@1.0.3
+  │   └── UNMET DEPENDENCY aproba@1.2.0
+  ├─┬ UNMET DEPENDENCY node-gyp@3.8.0
+  │ ├─┬ UNMET DEPENDENCY fstream@1.0.11
+  │ │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ │ └── UNMET DEPENDENCY rimraf@2.6.3
+  │ ├── UNMET DEPENDENCY glob@7.1.3
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├─┬ UNMET DEPENDENCY nopt@3.0.6
+  │ │ └── UNMET DEPENDENCY abbrev@1.1.1
+  │ ├── UNMET DEPENDENCY npmlog@4.1.2
+  │ ├── UNMET DEPENDENCY osenv@0.1.5
+  │ ├── UNMET DEPENDENCY request@2.88.0
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ ├── UNMET DEPENDENCY semver@5.3.0
+  │ ├─┬ UNMET DEPENDENCY tar@2.2.1
+  │ │ ├─┬ UNMET DEPENDENCY block-stream@0.0.9
+  │ │ │ └── UNMET DEPENDENCY inherits@2.0.3
+  │ │ ├── UNMET DEPENDENCY fstream@1.0.11
+  │ │ └── UNMET DEPENDENCY inherits@2.0.3
+  │ └── UNMET DEPENDENCY which@1.3.1
+  ├─┬ UNMET DEPENDENCY nopt@4.0.1
+  │ ├── UNMET DEPENDENCY abbrev@1.1.1
+  │ └── UNMET DEPENDENCY osenv@0.1.5
+  ├─┬ UNMET DEPENDENCY normalize-package-data@2.5.0
+  │ ├── UNMET DEPENDENCY hosted-git-info@2.7.1
+  │ ├─┬ UNMET DEPENDENCY resolve@1.10.0
+  │ │ └── UNMET DEPENDENCY path-parse@1.0.6
+  │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ └── UNMET DEPENDENCY validate-npm-package-license@3.0.4
+  ├─┬ UNMET DEPENDENCY npm-audit-report@1.3.2
+  │ ├── UNMET DEPENDENCY cli-table3@0.5.1
+  │ └── UNMET DEPENDENCY console-control-strings@1.1.0
+  ├── UNMET DEPENDENCY npm-cache-filename@1.0.2
+  ├─┬ UNMET DEPENDENCY npm-install-checks@3.0.0
+  │ └── UNMET DEPENDENCY semver@5.6.0
+  ├─┬ UNMET DEPENDENCY npm-lifecycle@2.1.0
+  │ ├── UNMET DEPENDENCY byline@5.0.0
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY node-gyp@3.8.0
+  │ ├── UNMET DEPENDENCY resolve-from@4.0.0
+  │ ├── UNMET DEPENDENCY slide@1.1.6
+  │ ├── UNMET DEPENDENCY uid-number@0.0.6
+  │ ├── UNMET DEPENDENCY umask@1.1.0
+  │ └── UNMET DEPENDENCY which@1.3.1
+  ├─┬ UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├── UNMET DEPENDENCY hosted-git-info@2.7.1
+  │ ├── UNMET DEPENDENCY osenv@0.1.5
+  │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ └── UNMET DEPENDENCY validate-npm-package-name@3.0.0
+  ├─┬ UNMET DEPENDENCY npm-packlist@1.4.1
+  │ ├─┬ UNMET DEPENDENCY ignore-walk@3.0.1
+  │ │ └── UNMET DEPENDENCY minimatch@3.0.4
+  │ └── UNMET DEPENDENCY npm-bundled@1.0.6
+  ├─┬ UNMET DEPENDENCY npm-pick-manifest@2.2.3
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ └── UNMET DEPENDENCY semver@5.6.0
+  ├─┬ UNMET DEPENDENCY npm-profile@4.0.1
+  │ ├── UNMET DEPENDENCY aproba@2.0.0
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ └── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  ├─┬ UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY JSONStream@1.3.5
+  │ ├── UNMET DEPENDENCY lru-cache@4.1.5
+  │ ├─┬ UNMET DEPENDENCY make-fetch-happen@4.0.1
+  │ │ ├─┬ UNMET DEPENDENCY agentkeepalive@3.4.1
+  │ │ │ └─┬ UNMET DEPENDENCY humanize-ms@1.2.1
+  │ │ │   └── UNMET DEPENDENCY ms@2.1.1
+  │ │ ├── UNMET DEPENDENCY cacache@11.3.2
+  │ │ ├── UNMET DEPENDENCY http-cache-semantics@3.8.1
+  │ │ ├─┬ UNMET DEPENDENCY http-proxy-agent@2.1.0
+  │ │ │ ├─┬ UNMET DEPENDENCY agent-base@4.2.1
+  │ │ │ │ └─┬ UNMET DEPENDENCY es6-promisify@5.0.0
+  │ │ │ │   └── UNMET DEPENDENCY es6-promise@4.2.6
+  │ │ │ └─┬ UNMET DEPENDENCY debug@3.1.0
+  │ │ │   └── UNMET DEPENDENCY ms@2.0.0
+  │ │ ├─┬ UNMET DEPENDENCY https-proxy-agent@2.2.1
+  │ │ │ ├── UNMET DEPENDENCY agent-base@4.2.1
+  │ │ │ └── UNMET DEPENDENCY debug@3.1.0
+  │ │ ├── UNMET DEPENDENCY lru-cache@4.1.5
+  │ │ ├── UNMET DEPENDENCY mississippi@3.0.0
+  │ │ ├─┬ UNMET DEPENDENCY node-fetch-npm@2.0.2
+  │ │ │ ├─┬ UNMET DEPENDENCY encoding@0.1.12
+  │ │ │ │ └─┬ UNMET DEPENDENCY iconv-lite@0.4.23
+  │ │ │ │   └── UNMET DEPENDENCY safer-buffer@2.1.2
+  │ │ │ ├── UNMET DEPENDENCY json-parse-better-errors@1.0.2
+  │ │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ ├── UNMET DEPENDENCY promise-retry@1.1.1
+  │ │ ├─┬ UNMET DEPENDENCY socks-proxy-agent@4.0.1
+  │ │ │ ├── UNMET DEPENDENCY agent-base@4.2.1
+  │ │ │ └─┬ UNMET DEPENDENCY socks@2.2.0
+  │ │ │   ├── UNMET DEPENDENCY ip@1.1.5
+  │ │ │   └── UNMET DEPENDENCY smart-buffer@4.0.1
+  │ │ └── UNMET DEPENDENCY ssri@6.0.1
+  │ └── UNMET DEPENDENCY npm-package-arg@6.1.0
+  ├── UNMET DEPENDENCY npm-user-validate@1.0.0
+  ├─┬ UNMET DEPENDENCY npmlog@4.1.2
+  │ ├─┬ UNMET DEPENDENCY are-we-there-yet@1.1.4
+  │ │ ├── UNMET DEPENDENCY delegates@1.0.0
+  │ │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │ │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │ │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │ │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │ ├── UNMET DEPENDENCY console-control-strings@1.1.0
+  │ ├─┬ UNMET DEPENDENCY gauge@2.7.4
+  │ │ ├── UNMET DEPENDENCY aproba@1.2.0
+  │ │ ├── UNMET DEPENDENCY console-control-strings@1.1.0
+  │ │ ├── UNMET DEPENDENCY has-unicode@2.0.1
+  │ │ ├── UNMET DEPENDENCY object-assign@4.1.1
+  │ │ ├── UNMET DEPENDENCY signal-exit@3.0.2
+  │ │ ├─┬ UNMET DEPENDENCY string-width@1.0.2
+  │ │ │ ├── UNMET DEPENDENCY code-point-at@1.1.0
+  │ │ │ ├─┬ UNMET DEPENDENCY is-fullwidth-code-point@1.0.0
+  │ │ │ │ └── UNMET DEPENDENCY number-is-nan@1.0.1
+  │ │ │ └── UNMET DEPENDENCY strip-ansi@3.0.1
+  │ │ ├── UNMET DEPENDENCY strip-ansi@3.0.1
+  │ │ └─┬ UNMET DEPENDENCY wide-align@1.1.2
+  │ │   └─┬ UNMET DEPENDENCY string-width@1.0.2
+  │ │     ├── UNMET DEPENDENCY code-point-at@1.1.0
+  │ │     ├── UNMET DEPENDENCY is-fullwidth-code-point@1.0.0
+  │ │     └── UNMET DEPENDENCY strip-ansi@3.0.1
+  │ └── UNMET DEPENDENCY set-blocking@2.0.0
+  ├─┬ UNMET DEPENDENCY once@1.4.0
+  │ └── UNMET DEPENDENCY wrappy@1.0.2
+  ├── UNMET DEPENDENCY opener@1.5.1
+  ├─┬ UNMET DEPENDENCY osenv@0.1.5
+  │ ├── UNMET DEPENDENCY os-homedir@1.0.2
+  │ └── UNMET DEPENDENCY os-tmpdir@1.0.2
+  ├─┬ UNMET DEPENDENCY pacote@9.5.0
+  │ ├── UNMET DEPENDENCY bluebird@3.5.3
+  │ ├── UNMET DEPENDENCY cacache@11.3.2
+  │ ├── UNMET DEPENDENCY figgy-pudding@3.5.1
+  │ ├── UNMET DEPENDENCY get-stream@4.1.0
+  │ ├── UNMET DEPENDENCY glob@7.1.3
+  │ ├─┬ UNMET DEPENDENCY lru-cache@5.1.1
+  │ │ └── UNMET DEPENDENCY yallist@3.0.3
+  │ ├── UNMET DEPENDENCY make-fetch-happen@4.0.1
+  │ ├── UNMET DEPENDENCY minimatch@3.0.4
+  │ ├─┬ UNMET DEPENDENCY minipass@2.3.5
+  │ │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ └── UNMET DEPENDENCY yallist@3.0.3
+  │ ├── UNMET DEPENDENCY mississippi@3.0.0
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY normalize-package-data@2.5.0
+  │ ├── UNMET DEPENDENCY npm-package-arg@6.1.0
+  │ ├── UNMET DEPENDENCY npm-packlist@1.4.1
+  │ ├── UNMET DEPENDENCY npm-pick-manifest@2.2.3
+  │ ├── UNMET DEPENDENCY npm-registry-fetch@3.9.0
+  │ ├── UNMET DEPENDENCY osenv@0.1.5
+  │ ├── UNMET DEPENDENCY promise-inflight@1.0.1
+  │ ├─┬ UNMET DEPENDENCY promise-retry@1.1.1
+  │ │ ├── UNMET DEPENDENCY err-code@1.1.2
+  │ │ └── UNMET DEPENDENCY retry@0.10.1
+  │ ├─┬ UNMET DEPENDENCY protoduck@5.0.1
+  │ │ └── UNMET DEPENDENCY genfun@5.0.0
+  │ ├── UNMET DEPENDENCY rimraf@2.6.3
+  │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ ├── UNMET DEPENDENCY ssri@6.0.1
+  │ ├── UNMET DEPENDENCY tar@4.4.8
+  │ ├── UNMET DEPENDENCY unique-filename@1.1.1
+  │ └── UNMET DEPENDENCY which@1.3.1
+  ├── UNMET DEPENDENCY path-is-inside@1.0.2
+  ├── UNMET DEPENDENCY promise-inflight@1.0.1
+  ├── UNMET DEPENDENCY qrcode-terminal@0.12.0
+  ├─┬ UNMET DEPENDENCY query-string@6.2.0
+  │ ├── UNMET DEPENDENCY decode-uri-component@0.2.0
+  │ └── UNMET DEPENDENCY strict-uri-encode@2.0.0
+  ├── UNMET DEPENDENCY qw@1.0.1
+  ├─┬ UNMET DEPENDENCY read@1.0.7
+  │ └── UNMET DEPENDENCY mute-stream@0.0.7
+  ├─┬ UNMET DEPENDENCY read-cmd-shim@1.0.1
+  │ └── UNMET DEPENDENCY graceful-fs@4.1.15
+  ├─┬ UNMET DEPENDENCY read-installed@4.0.3
+  │ ├── UNMET DEPENDENCY debuglog@1.0.1
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY read-package-json@2.0.13
+  │ ├── UNMET DEPENDENCY readdir-scoped-modules@1.0.2
+  │ ├── UNMET DEPENDENCY semver@5.6.0
+  │ ├── UNMET DEPENDENCY slide@1.1.6
+  │ └── UNMET DEPENDENCY util-extend@1.0.3
+  ├─┬ UNMET DEPENDENCY read-package-json@2.0.13
+  │ ├── UNMET DEPENDENCY glob@7.1.3
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ ├── UNMET DEPENDENCY json-parse-better-errors@1.0.2
+  │ ├── UNMET DEPENDENCY normalize-package-data@2.5.0
+  │ └── UNMET DEPENDENCY slash@1.0.0
+  ├─┬ UNMET DEPENDENCY read-package-tree@5.2.2
+  │ ├── UNMET DEPENDENCY debuglog@1.0.1
+  │ ├── UNMET DEPENDENCY dezalgo@1.0.3
+  │ ├── UNMET DEPENDENCY once@1.4.0
+  │ ├── UNMET DEPENDENCY read-package-json@2.0.13
+  │ └── UNMET DEPENDENCY readdir-scoped-modules@1.0.2
+  ├─┬ UNMET DEPENDENCY readable-stream@3.1.1
+  │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ ├─┬ UNMET DEPENDENCY string_decoder@1.2.0
+  │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ └── UNMET DEPENDENCY util-deprecate@1.0.2
+  ├─┬ UNMET DEPENDENCY readdir-scoped-modules@1.0.2
+  │ ├── UNMET DEPENDENCY debuglog@1.0.1
+  │ ├── UNMET DEPENDENCY dezalgo@1.0.3
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ └── UNMET DEPENDENCY once@1.4.0
+  ├─┬ UNMET DEPENDENCY request@2.88.0
+  │ ├── UNMET DEPENDENCY aws-sign2@0.7.0
+  │ ├── UNMET DEPENDENCY aws4@1.8.0
+  │ ├── UNMET DEPENDENCY caseless@0.12.0
+  │ ├─┬ UNMET DEPENDENCY combined-stream@1.0.6
+  │ │ └── UNMET DEPENDENCY delayed-stream@1.0.0
+  │ ├── UNMET DEPENDENCY extend@3.0.2
+  │ ├── UNMET DEPENDENCY forever-agent@0.6.1
+  │ ├─┬ UNMET DEPENDENCY form-data@2.3.2
+  │ │ ├── UNMET DEPENDENCY asynckit@0.4.0
+  │ │ ├── UNMET DEPENDENCY combined-stream@1.0.6
+  │ │ └── UNMET DEPENDENCY mime-types@2.1.19
+  │ ├─┬ UNMET DEPENDENCY har-validator@5.1.0
+  │ │ ├─┬ UNMET DEPENDENCY ajv@5.5.2
+  │ │ │ ├── UNMET DEPENDENCY co@4.6.0
+  │ │ │ ├── UNMET DEPENDENCY fast-deep-equal@1.1.0
+  │ │ │ ├── UNMET DEPENDENCY fast-json-stable-stringify@2.0.0
+  │ │ │ └── UNMET DEPENDENCY json-schema-traverse@0.3.1
+  │ │ └── UNMET DEPENDENCY har-schema@2.0.0
+  │ ├─┬ UNMET DEPENDENCY http-signature@1.2.0
+  │ │ ├── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │ ├─┬ UNMET DEPENDENCY jsprim@1.4.1
+  │ │ │ ├── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │ │ ├── UNMET DEPENDENCY extsprintf@1.3.0
+  │ │ │ ├── UNMET DEPENDENCY json-schema@0.2.3
+  │ │ │ └─┬ UNMET DEPENDENCY verror@1.10.0
+  │ │ │   ├── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │ │   └── UNMET DEPENDENCY extsprintf@1.3.0
+  │ │ └─┬ UNMET DEPENDENCY sshpk@1.14.2
+  │ │   ├─┬ UNMET DEPENDENCY asn1@0.2.4
+  │ │   │ └── UNMET DEPENDENCY safer-buffer@2.1.2
+  │ │   ├── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │   ├─┬ UNMET OPTIONAL DEPENDENCY bcrypt-pbkdf@1.0.2
+  │ │   │ └── UNMET OPTIONAL DEPENDENCY tweetnacl@0.14.5
+  │ │   ├─┬ UNMET DEPENDENCY dashdash@1.14.1
+  │ │   │ └── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │   ├─┬ UNMET OPTIONAL DEPENDENCY ecc-jsbn@0.1.2
+  │ │   │ ├── UNMET OPTIONAL DEPENDENCY jsbn@0.1.1
+  │ │   │ └── UNMET DEPENDENCY safer-buffer@2.1.2
+  │ │   ├─┬ UNMET DEPENDENCY getpass@0.1.7
+  │ │   │ └── UNMET DEPENDENCY assert-plus@1.0.0
+  │ │   ├── UNMET OPTIONAL DEPENDENCY jsbn@0.1.1
+  │ │   ├── UNMET DEPENDENCY safer-buffer@2.1.2
+  │ │   └── UNMET OPTIONAL DEPENDENCY tweetnacl@0.14.5
+  │ ├── UNMET DEPENDENCY is-typedarray@1.0.0
+  │ ├── UNMET DEPENDENCY isstream@0.1.2
+  │ ├── UNMET DEPENDENCY json-stringify-safe@5.0.1
+  │ ├─┬ UNMET DEPENDENCY mime-types@2.1.19
+  │ │ └── UNMET DEPENDENCY mime-db@1.35.0
+  │ ├── UNMET DEPENDENCY oauth-sign@0.9.0
+  │ ├── UNMET DEPENDENCY performance-now@2.1.0
+  │ ├── UNMET DEPENDENCY qs@6.5.2
+  │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ ├─┬ UNMET DEPENDENCY tough-cookie@2.4.3
+  │ │ ├── UNMET DEPENDENCY psl@1.1.29
+  │ │ └── UNMET DEPENDENCY punycode@1.4.1
+  │ ├─┬ UNMET DEPENDENCY tunnel-agent@0.6.0
+  │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ └── UNMET DEPENDENCY uuid@3.3.2
+  ├── UNMET DEPENDENCY retry@0.12.0
+  ├─┬ UNMET DEPENDENCY rimraf@2.6.3
+  │ └── UNMET DEPENDENCY glob@7.1.3
+  ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  ├── UNMET DEPENDENCY semver@5.6.0
+  ├─┬ UNMET DEPENDENCY sha@2.0.1
+  │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ └─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │   ├── UNMET DEPENDENCY isarray@1.0.0
+  │   ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   └── UNMET DEPENDENCY util-deprecate@1.0.2
+  ├── UNMET DEPENDENCY slide@1.1.6
+  ├── UNMET DEPENDENCY sorted-object@2.0.1
+  ├─┬ UNMET DEPENDENCY sorted-union-stream@2.1.3
+  │ ├─┬ UNMET DEPENDENCY from2@1.3.0
+  │ │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │ └─┬ UNMET DEPENDENCY readable-stream@1.1.14
+  │ │   ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │ │   ├── UNMET DEPENDENCY inherits@2.0.3
+  │ │   ├── UNMET DEPENDENCY isarray@0.0.1
+  │ │   └── UNMET DEPENDENCY string_decoder@0.10.31
+  │ └─┬ UNMET DEPENDENCY stream-iterate@1.2.0
+  │   ├─┬ UNMET DEPENDENCY readable-stream@2.3.6
+  │   │ ├── UNMET DEPENDENCY core-util-is@1.0.2
+  │   │ ├── UNMET DEPENDENCY inherits@2.0.3
+  │   │ ├── UNMET DEPENDENCY isarray@1.0.0
+  │   │ ├── UNMET DEPENDENCY process-nextick-args@2.0.0
+  │   │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   │ ├─┬ UNMET DEPENDENCY string_decoder@1.1.1
+  │   │ │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │   │ └── UNMET DEPENDENCY util-deprecate@1.0.2
+  │   └── UNMET DEPENDENCY stream-shift@1.0.0
+  ├─┬ UNMET DEPENDENCY ssri@6.0.1
+  │ └── UNMET DEPENDENCY figgy-pudding@3.5.1
+  ├── UNMET DEPENDENCY stringify-package@1.0.0
+  ├─┬ UNMET DEPENDENCY tar@4.4.8
+  │ ├── UNMET DEPENDENCY chownr@1.1.1
+  │ ├─┬ UNMET DEPENDENCY fs-minipass@1.2.5
+  │ │ └─┬ UNMET DEPENDENCY minipass@2.3.3
+  │ │   ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   └── UNMET DEPENDENCY yallist@3.0.2
+  │ ├─┬ UNMET DEPENDENCY minipass@2.3.5
+  │ │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │ └── UNMET DEPENDENCY yallist@3.0.3
+  │ ├─┬ UNMET DEPENDENCY minizlib@1.1.1
+  │ │ └── UNMET DEPENDENCY minipass@2.3.3
+  │ ├── UNMET DEPENDENCY mkdirp@0.5.1
+  │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ └── UNMET DEPENDENCY yallist@3.0.3
+  ├── UNMET DEPENDENCY text-table@0.2.0
+  ├── UNMET DEPENDENCY tiny-relative-date@1.3.0
+  ├── UNMET DEPENDENCY uid-number@0.0.6
+  ├── UNMET DEPENDENCY umask@1.1.0
+  ├─┬ UNMET DEPENDENCY unique-filename@1.1.1
+  │ └─┬ UNMET DEPENDENCY unique-slug@2.0.0
+  │   └── UNMET DEPENDENCY imurmurhash@0.1.4
+  ├── UNMET DEPENDENCY unpipe@1.0.0
+  ├─┬ UNMET DEPENDENCY update-notifier@2.5.0
+  │ ├─┬ UNMET DEPENDENCY boxen@1.3.0
+  │ │ ├─┬ UNMET DEPENDENCY ansi-align@2.0.0
+  │ │ │ └── UNMET DEPENDENCY string-width@2.1.1
+  │ │ ├── UNMET DEPENDENCY camelcase@4.1.0
+  │ │ ├── UNMET DEPENDENCY chalk@2.4.1
+  │ │ ├── UNMET DEPENDENCY cli-boxes@1.0.0
+  │ │ ├── UNMET DEPENDENCY string-width@2.1.1
+  │ │ ├─┬ UNMET DEPENDENCY term-size@1.2.0
+  │ │ │ └── UNMET DEPENDENCY execa@0.7.0
+  │ │ └─┬ UNMET DEPENDENCY widest-line@2.0.0
+  │ │   └── UNMET DEPENDENCY string-width@2.1.1
+  │ ├─┬ UNMET DEPENDENCY chalk@2.4.1
+  │ │ ├─┬ UNMET DEPENDENCY ansi-styles@3.2.1
+  │ │ │ └─┬ UNMET DEPENDENCY color-convert@1.9.1
+  │ │ │   └── UNMET DEPENDENCY color-name@1.1.3
+  │ │ ├── UNMET DEPENDENCY escape-string-regexp@1.0.5
+  │ │ └─┬ UNMET DEPENDENCY supports-color@5.4.0
+  │ │   └── UNMET DEPENDENCY has-flag@3.0.0
+  │ ├─┬ UNMET DEPENDENCY configstore@3.1.2
+  │ │ ├─┬ UNMET DEPENDENCY dot-prop@4.2.0
+  │ │ │ └── UNMET DEPENDENCY is-obj@1.0.1
+  │ │ ├── UNMET DEPENDENCY graceful-fs@4.1.15
+  │ │ ├─┬ UNMET DEPENDENCY make-dir@1.3.0
+  │ │ │ └── UNMET DEPENDENCY pify@3.0.0
+  │ │ ├─┬ UNMET DEPENDENCY unique-string@1.0.0
+  │ │ │ └── UNMET DEPENDENCY crypto-random-string@1.0.0
+  │ │ ├── UNMET DEPENDENCY write-file-atomic@2.4.2
+  │ │ └── UNMET DEPENDENCY xdg-basedir@3.0.0
+  │ ├── UNMET DEPENDENCY import-lazy@2.1.0
+  │ ├─┬ UNMET DEPENDENCY is-ci@1.1.0
+  │ │ └── UNMET DEPENDENCY ci-info@1.6.0
+  │ ├─┬ UNMET DEPENDENCY is-installed-globally@0.1.0
+  │ │ ├─┬ UNMET DEPENDENCY global-dirs@0.1.1
+  │ │ │ └── UNMET DEPENDENCY ini@1.3.5
+  │ │ └─┬ UNMET DEPENDENCY is-path-inside@1.0.1
+  │ │   └── UNMET DEPENDENCY path-is-inside@1.0.2
+  │ ├── UNMET DEPENDENCY is-npm@1.0.0
+  │ ├─┬ UNMET DEPENDENCY latest-version@3.1.0
+  │ │ └─┬ UNMET DEPENDENCY package-json@4.0.1
+  │ │   ├─┬ UNMET DEPENDENCY got@6.7.1
+  │ │   │ ├─┬ UNMET DEPENDENCY create-error-class@3.0.2
+  │ │   │ │ └── UNMET DEPENDENCY capture-stack-trace@1.0.0
+  │ │   │ ├── UNMET DEPENDENCY duplexer3@0.1.4
+  │ │   │ ├── UNMET DEPENDENCY get-stream@3.0.0
+  │ │   │ ├── UNMET DEPENDENCY is-redirect@1.0.0
+  │ │   │ ├── UNMET DEPENDENCY is-retry-allowed@1.1.0
+  │ │   │ ├── UNMET DEPENDENCY is-stream@1.1.0
+  │ │   │ ├── UNMET DEPENDENCY lowercase-keys@1.0.1
+  │ │   │ ├── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   │ ├── UNMET DEPENDENCY timed-out@4.0.1
+  │ │   │ ├── UNMET DEPENDENCY unzip-response@2.0.1
+  │ │   │ └─┬ UNMET DEPENDENCY url-parse-lax@1.0.0
+  │ │   │   └── UNMET DEPENDENCY prepend-http@1.0.4
+  │ │   ├─┬ UNMET DEPENDENCY registry-auth-token@3.3.2
+  │ │   │ ├─┬ UNMET DEPENDENCY rc@1.2.7
+  │ │   │ │ ├── UNMET DEPENDENCY deep-extend@0.5.1
+  │ │   │ │ ├── UNMET DEPENDENCY ini@1.3.5
+  │ │   │ │ ├── UNMET DEPENDENCY minimist@1.2.0
+  │ │   │ │ └── UNMET DEPENDENCY strip-json-comments@2.0.1
+  │ │   │ └── UNMET DEPENDENCY safe-buffer@5.1.2
+  │ │   ├─┬ UNMET DEPENDENCY registry-url@3.1.0
+  │ │   │ └── UNMET DEPENDENCY rc@1.2.7
+  │ │   └── UNMET DEPENDENCY semver@5.6.0
+  │ ├─┬ UNMET DEPENDENCY semver-diff@2.1.0
+  │ │ └── UNMET DEPENDENCY semver@5.6.0
+  │ └── UNMET DEPENDENCY xdg-basedir@3.0.0
+  ├── UNMET DEPENDENCY uuid@3.3.2
+  ├─┬ UNMET DEPENDENCY validate-npm-package-license@3.0.4
+  │ ├─┬ UNMET DEPENDENCY spdx-correct@3.0.0
+  │ │ ├── UNMET DEPENDENCY spdx-expression-parse@3.0.0
+  │ │ └── UNMET DEPENDENCY spdx-license-ids@3.0.3
+  │ └─┬ UNMET DEPENDENCY spdx-expression-parse@3.0.0
+  │   ├── UNMET DEPENDENCY spdx-exceptions@2.1.0
+  │   └── UNMET DEPENDENCY spdx-license-ids@3.0.3
+  ├─┬ UNMET DEPENDENCY validate-npm-package-name@3.0.0
+  │ └── UNMET DEPENDENCY builtins@1.0.3
+  ├─┬ UNMET DEPENDENCY which@1.3.1
+  │ └── UNMET DEPENDENCY isexe@2.0.0
+  ├─┬ UNMET DEPENDENCY worker-farm@1.6.0
+  │ └─┬ UNMET DEPENDENCY errno@0.1.7
+  │   └── UNMET DEPENDENCY prr@1.0.1
+  └─┬ UNMET DEPENDENCY write-file-atomic@2.4.2
+    ├── UNMET DEPENDENCY graceful-fs@4.1.15
+    ├── UNMET DEPENDENCY imurmurhash@0.1.4
+    └── UNMET DEPENDENCY signal-exit@3.0.2
+

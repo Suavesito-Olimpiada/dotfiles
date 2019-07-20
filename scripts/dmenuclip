@@ -1,0 +1,7 @@
+#!/bin/bash
+COMANDO=`dmenu -p COPIAR: -i -l 11 -nb "white" -nf "black" -sb "black" -sf "white" < ~/.config/dmenu/clipboard`
+if [ "$COMANDO" == "limpiar" ]; then
+    echo "limpiar" > ~/.config/dmenu/clipboard
+else
+echo $COMANDO | xsel -b
+fi
