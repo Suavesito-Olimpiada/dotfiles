@@ -33,7 +33,7 @@ configobj==5.0.6
 cryptography==2.7
 curtsies==0.3.0
 cycler==0.10.0
-Cython==0.29.11
+Cython==0.29.12
 decorator==4.4.0
 defusedxml==0.6.0
 distlib==0.2.9
@@ -44,7 +44,7 @@ docutils==0.14
 entrypoints==0.3
 ewmh==0.1.6
 fastpbkdf2==0.2
-flake8==3.7.7
+flake8==3.7.8
 Flask==1.0.3
 future==0.17.1
 future-fstrings==1.1.0
@@ -65,7 +65,7 @@ idna==2.8
 imagesize==1.1.0
 importlib-metadata==0.18
 ipykernel==5.1.1
-ipython==7.5.0
+ipython==7.6.1
 ipython-genutils==0.1.0
 ipywidgets==7.4.2
 isc==2.0
@@ -79,7 +79,7 @@ jsonschema==3.0.1
 jupyter-client==5.2.4
 jupyter-console==6.0.0
 jupyter-core==4.5.0
-jupyterlab==1.0.1
+jupyterlab==1.0.2
 jupyterlab-server==1.0.0
 kaitaistruct==0.8
 Keras==2.2.4
@@ -118,7 +118,7 @@ pacman-mirrors==4.14.2
 pandas==0.24.2
 pandas-datareader==0.7.0
 pandocfilters==1.4.2
-parso==0.5.0
+parso==0.5.1
 passlib==1.7.1
 path-and-address==2.0.1
 pbr==5.1.3
@@ -126,7 +126,7 @@ pdftotext==2.1.1
 pep517==0.5.0
 pexpect==4.7.0
 pickleshare==0.7.5
-Pillow==6.0.0
+Pillow==6.1.0
 pluggy==0.12.0
 ply==3.11
 progress==1.5
@@ -154,10 +154,10 @@ pyOpenSSL==19.0.0
 pyparsing==2.4.0
 pyPEG2==2.15.2
 pyperclip==1.6.5
-PyQt5==5.12.3
-PyQt5-sip==4.19.17
-PyQtWebEngine==5.12.1
-pyrsistent==0.15.2
+PyQt5==5.13.0
+PyQt5-sip==4.19.18
+PyQtWebEngine==5.13.0
+pyrsistent==0.15.3
 PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
@@ -171,14 +171,14 @@ pytz==2019.1
 pyxdg==0.26
 pyxrootd==4.9.1
 PyYAML==5.1
-pyzmq==18.0.1
+pyzmq==18.0.2
 qutebrowser==1.6.3
 ranger-fm==1.9.2
 requests==2.22.0
 requests-oauthlib==1.2.0
 retrying==1.3.3
 rope==0.14.0
-ruamel.yaml==0.15.97
+ruamel.yaml==0.15.99
 scikit-learn==0.21.2
 scipy==1.3.0
 scrypt==0.8.7
@@ -186,7 +186,7 @@ Send2Trash==1.5.0
 service-identity==18.1.0
 setproctitle==1.1.10
 simplegeneric==0.8.1
-sip==4.19.17
+sip==4.19.18
 six==1.12.0
 sklearn==0.0
 snowballstemmer==1.2.1
@@ -218,7 +218,7 @@ tifffile==2019.2.10
 tldr==0.5
 tornado==5.1.1
 traitlets==4.3.2
-typed-ast==1.3.5
+typed-ast==1.4.0
 ufw==0.36
 urllib3==1.25.3
 urwid==2.0.1
@@ -226,9 +226,9 @@ wakatime==12.0.0
 wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.15.2
-widgetsnbextension==3.4.2
+widgetsnbextension==3.5.0
 wrapt==1.11.2
 wsproto==0.14.1
-yapf==0.27.0
+yapf==0.28.0
 youtube-dl==2019.7.2
-zipp==0.5.1
+zipp==0.5.2
