@@ -276,7 +276,6 @@ extra/libnet 1.1.6-3
 multilib/lib32-fribidi 1.0.5-1
 extra/webrtc-audio-processing 0.3.1-1
 extra/pulseaudio 12.2-2
-extra/pulseaudio-bluetooth 12.2-2
 extra/pulseaudio-equalizer 12.2-2
 extra/screen 4.6.2-1
 community/perl-json 2.97001-1
@@ -455,7 +454,6 @@ extra/libofa 0.9.3-8
 extra/wildmidi 0.4.3-1
 extra/libmpcdec 1:0.1+r475-2
 extra/gtkmm 1:2.24.5-3
-core/hdparm 9.58-1
 extra/hunspell-de 20161207-2
 community/i3lock 2.11.1-1 (i3)
 core/ipw2100-fw 1.3-9
@@ -579,10 +577,7 @@ core/ncurses 6.1-6
 core/readline 8.0.0-1
 core/gdbm 1.18.1-2
 extra/bc 1.07.1-3
-extra/bluez 5.50-6
 extra/bluez-libs 5.50-6
-community/bluez-tools 0.2.0-4
-extra/bluez-utils 5.50-6
 extra/jack 0.125.0-7
 core/gawk 4.2.1-2 (base base-devel)
 extra/xdg-dbus-proxy 0.1.1-1
@@ -997,7 +992,6 @@ community/blosc 1.16.3-1
 extra/boost-libs 1.69.0-2
 extra/boost 1.69.0-2
 community/bpython 0.18-1
-community/cmark-gfm 0.29.0.gfm.0-1
 extra/raptor 2.0.15-11
 community/flickcurl 1.26-7
 extra/jbig2dec 0.16-1
@@ -1133,7 +1127,6 @@ community/singular 4.1.2.p1-3
 core/wireless-regdb 2019.03.01-1
 community/libnih 1.0.3-3
 local/yaourt 1.9-1
-local/spotify-dl-git r15.1136e5e-1
 extra/opengl-man-pages 20180321-1
 extra/freeglut 3.0.0-2
 community/qt4 4.8.7-29.1
@@ -1144,7 +1137,6 @@ extra/v4l-utils 1.16.6-1
 core/libedit 20190324_3.1-1
 extra/llvm-libs 8.0.0-2
 extra/avahi 0.7+18+g1b5f401-2
-extra/bash-completion 2.9-1
 extra/clang 8.0.0-4
 community/runc 1.0.0rc8-1
 extra/ostree 2019.2-1
@@ -1220,21 +1212,8 @@ extra/gupnp 1.2.1-1
 extra/gupnp-igd 0.2.5+3+gedd78a6-2
 community/haskell-cmdargs 0.10.20-8
 community/haskell-bitarray 0.0.1.1-12
-community/haskell-cmark-gfm 0.2.0-2
 community/haskell-digest 0.0.1.2-14
-community/haskell-utility-ht 0.0.14-12
-community/haskell-gitrev 1.3.1-14
-community/haskell-hxt-charproperties 9.2.0.1-12
-community/haskell-hxt-regex-xmlschema 9.2.0.3-16
-community/haskell-hxt-unicode 9.0.2.4-12
-community/haskell-hxt 9.3.1.16-16
-community/haskell-lexer 1.0.2-6
 community/haskell-open-browser 0.2.1.0-14
-community/haskell-regex-pcre 0.94.4-14
-community/haskell-rfc5051 0.1.0.4-5
-community/haskell-sha 1.6.4.4-8
-community/haskell-xml 1.3.14-19
-community/haskell-text-icu 0.7.0.1-26
 community/hwinfo 21.60-2
 community/libx86emu 2.3-1
 community/python-pexpect 4.7.0-1
@@ -1264,7 +1243,6 @@ community/python2-werkzeug 0.15.2-1
 community/ranger 1.9.2.212.g5ae67755-1
 extra/socat 1.7.3.3-1
 extra/unrar 1:5.7.5-1
-extra/w3m 0.5.3.git20190105-1
 core/wpa_supplicant 2:2.8-1
 extra/eglexternalplatform 1.0+3+g7c8f8e2-1
 community/python-docutils 0.14-2
@@ -1306,7 +1284,6 @@ community/reaver 1.6.5-1
 community/otf-fira-code 1.206-1
 community/otf-fira-mono 2:3.206-3
 community/otf-fira-sans 1:4.301-1
-local/cxltx-styles 1.4.7-1
 extra/alsa-lib 1.1.9-1
 extra/alsa-plugins 1.1.9-2
 extra/alsa-utils 1.1.9-1
@@ -1319,7 +1296,6 @@ community/darktable 2:2.6.2-2
 extra/ethtool 1:5.1-1
 extra/gdb 8.3-1
 extra/gdb-common 8.3-1
-community/haskell-hsyaml 0.1.2.0-1
 multilib/lib32-polkit 0.116-1
 community/libgexiv2 0.12.0-2
 extra/portaudio 1:19.6.0-5
@@ -1341,7 +1317,6 @@ community/virtualbox 6.0.8-2
 community/virtualbox-guest-iso 6.0.8-1
 extra/vpnc 1:0.5.3.r460.r73-1
 community/zathura-pdf-mupdf 0.3.4-2
-extra/lynx 2.8.9-2
 core/linux-firmware 20190514.711d329-1.1 (base)
 community/neofetch 6.0.0-1
 community/ttf-font-icons 1.1-3
@@ -1402,9 +1377,6 @@ community/haskell-clock 0.8-1
 extra/glslang 7.11.3214-1
 extra/gnuplot 5.2.7-1
 extra/libdc1394 2.2.6-1
-community/haskell-data-accessor 0.2.3-1
-community/haskell-data-accessor-template 0.2.1.16-8
-community/haskell-data-accessor-transformers 0.2.1.7-15
 community/herbstluftwm 0.7.2-1
 community/highlight 3.52-1
 community/jsmol 14.29.46-1
@@ -1470,8 +1442,6 @@ community/scrot 0.9.1-1
 multilib/steam-manjaro 1.0.0.61-2
 extra/strace 5.1-1
 community/sysstat 12.1.5-1
-community/tlp 1.2.2-1.1
-community/tlp-rdw 1.2.2-1.1
 community/tor 0.4.0.5-1
 local/lib32-nss-mdns 0.14.1-1
 local/aurtab 1-2
@@ -1612,8 +1582,6 @@ community/gst-transcoder 1.16.0-1
 extra/gtk2-perl 1.24992-4
 extra/pango-perl 1.227-11
 extra/harfbuzz-icu 2.5.3-1
-community/haskell-hs-bibutils 6.7.0.0-5
-community/haskell-pretty-show 1.9.5-5
 community/haskell-unicode-transforms 0.3.6-1
 extra/intel-ucode 20190618-1
 extra/jre-openjdk 12.0.1.u12-1
@@ -1820,7 +1788,6 @@ extra/sdl2_image 2.0.5-1
 extra/vim-runtime 8.1.1635-1
 extra/vim 8.1.1635-1
 community/youtube-dl 2019.07.02-1
-local/skypeforlinux-stable-bin 8.49.0.49-1
 extra/libburn 1.5.0-1
 extra/libisofs 1.5.0-1
 extra/exo 0.12.6-1 (xfce4)
@@ -1858,8 +1825,6 @@ community/blender 17:2.80rc1-2
 community/cython 0.29.12-1
 community/cython2 0.29.12-1
 extra/dnsmasq 2.80-4
-community/dunst 1.4.1-2
-community/dunstify 1.4.1-2
 extra/enchant 2.2.4-1
 extra/feh 3.2-1
 core/nss 3.45-1
@@ -2004,11 +1969,8 @@ community/go 2:1.12.7-1
 extra/gst-plugins-bad 1.16.0-4
 extra/rtmpdump 1:2.4.r96.fa8646d-5
 extra/guile 2.2.6-1
-community/haskell-aeson-pretty 0.8.7-78
-community/haskell-base-unicode-symbols 0.2.4.2-1
 community/haskell-constraints 0.11-8
 community/haskell-cryptohash 0.11.9-104
-community/haskell-doctemplates 0.2.2.1-83
 community/haskell-either 5.0.1.1-12
 community/haskell-enclosed-exceptions 1.0.3-30
 community/haskell-extra 1.6.17-3
@@ -2021,37 +1983,25 @@ community/haskell-shelly 1.8.1-62
 community/haskell-system-fileio 0.3.16.4-21
 community/haskell-system-filepath 0.4.14-26
 community/haskell-hackage-security 0.5.3.0-53
-community/haskell-haddock-library 1.7.0-53
 community/haskell-infer-license 0.2.0-29
 community/haskell-text-metrics 0.3.0-31
 community/haskell-hpack 0.31.2-44
-community/haskell-hslua 1.0.3.1-9
 community/haskell-temporary 1.3-34
-community/haskell-hslua-module-system 0.2.1-3
-community/haskell-hslua-module-text 0.2.1-12
 community/haskell-hspec 2.7.1-8
 community/haskell-hspec-core 2.7.1-7
 community/haskell-hspec-discover 2.7.1-8
 community/haskell-hspec-smallcheck 0.5.2-50
-community/haskell-http 4000.3.14-8
 community/haskell-quickcheck-io 0.2.0-24
-community/haskell-ipynb 0.1-50
-community/haskell-juicypixels 3.3.3.1-2
 community/haskell-mustache 2.3.0-206
 community/haskell-optparse-simple 0.1.1.2-35
-community/haskell-pandoc-types 1.17.5.4-38
 community/haskell-path 0.6.1-107
 community/haskell-path-io 1.4.2-29
 community/haskell-project-template 0.2.0.1-151
 community/haskell-retry 0.8.0.1-11
-community/haskell-roman-numerals 0.5.1.5-19
-community/haskell-skylighting-core 0.8.1.1-2
-community/haskell-skylighting 0.8.1.1-2
 community/haskell-store 0.5.1.1-8
 community/haskell-th-lift-instances 0.1.11-44
 community/haskell-th-orphans 0.13.7-17
 community/haskell-th-utilities 0.2.3.0-7
-community/haskell-texmath 0.11.2.2-25
 community/haskell-zip-archive 0.4.1-10
 community/hub 2.12.2-1
 extra/poppler 0.78.0-1
@@ -2131,9 +2081,6 @@ extra/noto-fonts-extra 20190111-2
 community/npm 6.10.1-1
 community/opendht 1:1.9.5-2
 community/os-prober 1.77-1
-community/pandoc 2.7.3-10
-community/pandoc-citeproc 0.16.2-77
-community/pandoc-crossref 0.3.4.1-59
 community/pdfjs 2.2.228-1
 community/plasma-browser-integration-git 5.16.80.r807.ge429cdeb-1 (plasma-git)
 community/plasma-framework-git 5.61.0.r15199.g348c578bb-1 (kf5-git)
@@ -2181,5 +2128,63 @@ extra/xorg-xauth 1.1-1 (xorg-apps xorg)
 extra/xorg-xwininfo 1.1.5-1 (xorg-apps xorg)
 community/yapf 0.28.0-1
 community/yarn 1.17.3-1
-local/spotify-dev 1.1.10.546-1
 local/virtualbox-ext-oracle 6.0.10-1
+community/macchanger 1.7.0-4
+extra/w3m 0.5.3.git20190105-1
+community/cmark-gfm 0.29.0.gfm.0-1
+community/haskell-aeson-pretty 0.8.7-78
+community/haskell-cmark-gfm 0.2.0-2
+community/haskell-doctemplates 0.2.2.1-83
+community/haskell-haddock-library 1.7.0-53
+community/haskell-http 4000.3.14-8
+community/haskell-hxt 9.3.1.16-16
+community/haskell-hxt-charproperties 9.2.0.1-12
+community/haskell-hxt-regex-xmlschema 9.2.0.3-16
+community/haskell-hxt-unicode 9.0.2.4-12
+community/haskell-ipynb 0.1-50
+community/haskell-juicypixels 3.3.3.1-2
+community/haskell-lexer 1.0.2-6
+community/haskell-pretty-show 1.9.5-5
+community/haskell-regex-pcre 0.94.4-14
+community/haskell-sha 1.6.4.4-8
+community/haskell-hslua 1.0.3.1-9
+community/haskell-hslua-module-system 0.2.1-3
+community/haskell-hslua-module-text 0.2.1-12
+community/haskell-hsyaml 0.1.2.0-1
+community/haskell-pandoc-types 1.17.5.4-38
+community/haskell-skylighting 0.8.1.1-2
+community/haskell-skylighting-core 0.8.1.1-2
+community/haskell-xml 1.3.14-19
+community/haskell-hs-bibutils 6.7.0.0-5
+community/haskell-rfc5051 0.1.0.4-5
+community/haskell-texmath 0.11.2.2-25
+community/pandoc 2.7.3-10
+community/haskell-base-unicode-symbols 0.2.4.2-1
+community/haskell-data-accessor 0.2.3-1
+community/haskell-data-accessor-template 0.2.1.16-8
+community/haskell-data-accessor-transformers 0.2.1.7-15
+community/haskell-gitrev 1.3.1-14
+community/haskell-roman-numerals 0.5.1.5-19
+community/haskell-text-icu 0.7.0.1-26
+community/haskell-utility-ht 0.0.14-12
+community/pandoc-citeproc 0.16.2-77
+community/pandoc-crossref 0.3.4.1-59
+community/firejail 0.9.60-1
+community/python-soupsieve 1.9.2-1
+community/python-beautifulsoup4 4.7.1-1
+local/skypeforlinux-stable-bin 8.50.0.38-1
+extra/bluez 5.50-6
+extra/bluez-cups 5.50-6
+extra/bluez-plugins 5.50-6
+community/bluez-tools 0.2.0-4
+extra/bash-completion 2.9-1
+core/hdparm 9.58-1
+community/tlp 1.2.2-1.1
+community/tlp-rdw 1.2.2-1.1
+extra/pulseaudio-bluetooth 12.2-2
+extra/bluez-utils 5.50-6
+community/python-bluepy 1.3.0-1
+community/dunst 1.4.1-2
+community/dunstify 1.4.1-2
+community/notification-daemon 3.20.0-3
+community/blueman 2.1-1
