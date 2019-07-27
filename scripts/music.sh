@@ -3,12 +3,12 @@
 WORD='ReAlLy_LoNg_WoRd_ThAt_NoOnE_WiLl_NeVeR_EvEr_UsE_At_AnY_TiMe'
 
 MPV_STAT=$(pgrep mpv)
-SPO_STAT=$(pgrep spotify)
+MPR_STAT=$(playerctl -l)
 MPC_STAT=$(mpc |& grep paused | sed 's/\[\(paused\)\]\(.*\)/\1/')
 
 if [[ -z $MPV_STAT ]]
 then
-    if [[ -z $SPO_STAT ]] || [[ -z $MPC_STAT ]]
+    if [[ -z $MPR_STAT ]] || [[ -z $MPC_STAT ]]
     then
         case $@ in
             "next")
