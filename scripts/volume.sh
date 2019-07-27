@@ -1,4 +1,4 @@
 #!/bin/env sh
 
-SOUND=`pactl list sinks | grep "Monitor Source" | sed 's/\([^a-zA-Z]Monitor Source: \)\(.*\)\(.monitor\)/\2/' | sed -n '1p'`
+SOUND=`pactl list sinks short | grep "RUNNING" | sed -n '1p' | awk '{printf "%s", $2}'`
 pactl set-sink-volume $SOUND $@
