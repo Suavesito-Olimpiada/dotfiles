@@ -42,6 +42,7 @@ hc keybind $Mod-Shift-u spawn /home/jose/.config/scripts/ibrowser.sh
 hc keybind $Mod-e spawn /home/jose/.config/scripts/scratchy.py
 hc keybind $Mod-y spawn /home/jose/.config/scripts/music_mpc.sh
 hc keybind $Mod-g spawn /home/jose/.config/scripts/calculadora_genius.sh
+hc keybind $Mod-Mod1-j spawn tabbed -c -r 2 st -w - -e julia
 hc keybind $Mod-Mod1-h spawn xdotool mousemove 1920 0 # Hide mouse in corner
 
 # basic movement
