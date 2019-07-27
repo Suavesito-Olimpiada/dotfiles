@@ -21,14 +21,15 @@ while true; do
     vol=$(amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/')
     if [[ -z $(pgrep mpv) ]]
     then
-        if [[ -z $(pgrep spotify) ]]
+        if [[ -z $(playerctl -l) ]]
         then
-            msc=$(mpc current | sed -e 's:\(.*\)\(\.\(mp[34]\|aac\)\):\1:' -e 's_/_\\/_g' -e 's:&:\\&:g' | cut -c -40)
+            msc=$(mpc current | sed -e 's:\(.*\)\(\.\(mp[34]\|aac\)\):\1:' -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
+            # Use of colrm intead of cut -c because of 'https://unix.stackexchange.com/questions/163721/can-not-use-cut-c-characters-with-utf-8'
         else
-            msc=$(playerctl metadata --format '{{artist}} - {{title}}' | sed -e 's_/_\\/_g' -e 's:&:\\&:g' | cut -c -40)
+            msc=$(playerctl metadata --format '{{artist}} - {{title}}' | sed -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
         fi
     else
-        msc=$(xwininfo -id $(xdotool search --pid $(pgrep mpv) |& sed -n "s/\([0-9]\)/\1/p") | sed -n -e "2p" | sed -e "s/\(^[a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\(.*$\)/\5/" -e 's:"::g' -e 's_/_\\/_g' -e 's:&:\\&:g' | cut -c -40)
+        msc=$(xwininfo -id $(xdotool search --pid $(pgrep mpv) |& sed -n "s/\([0-9]\)/\1/p") | sed -n -e "2p" | sed -e "s/\(^[a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\(.*$\)/\5/" -e 's:"::g' -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
     fi
 
     if (( $vol < 100 )); then if (( $vol < 10 )); then vol="  $vol"; else vol=" $vol"; fi ; fi
