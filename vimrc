@@ -228,7 +228,9 @@ map <C-H> <C-W>h
 " If you suffer of terminal block you can type ctrl-q
 map <C-S> <C-W>=
 
-" 
+" Buffer jumps in normal mode
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bp :bp<CR>
 
 " spell
 nnoremap <silent> <Leader>es :set spell spelllang=es<CR>
@@ -377,6 +379,7 @@ let g:markdown_syntax_conceal = 1
 
 " Vim-markdown (pandoc)
 let g:vim_markdown_math = 1
+let g:pandoc#command#custom_open = 'zathura'
 
 " Gzip
 let loaded_gzip=1
@@ -481,8 +484,8 @@ let g:slime_target = "vimterminal"
 
 " Vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'home'
-let g:rooter_targets = '*.cpp,*.c,*.jl,*.py,Makefile,/'
-let g:rooter_patterns = ['README.md']
+let g:rooter_targets = '/,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
+let g:rooter_patterns = ['README.md', 'Readme.md', '.git', '.git/']
 
 " Goyo vim
 let g:goyo_width=120
