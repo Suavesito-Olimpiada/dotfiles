@@ -38,3 +38,4 @@
 - shell:
     #  - [git submodule update --init --recursive --remote, Installing submodules]
   - [git submodule foreach git pull, Installing submodules]
+  - [mkdir -p ~/.vim/swap ~/.vim/backup, Creating vim backup and swap directories]
