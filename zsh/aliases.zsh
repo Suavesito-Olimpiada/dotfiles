@@ -25,6 +25,9 @@ alias mv='mv -i'
 
 alias info='info --vi-keys'
 
+alias dropcatch='echo 3 | sudo tee /proc/sys/vm/drop_caches'
+alias swapswap='sudo swapoff -a && sudo swapon -a'
+
 alias :q=exit
 alias :Q=exit
 
