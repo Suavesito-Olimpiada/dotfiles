@@ -16,7 +16,6 @@ extra/rsync 3.1.3-1
 core/nilfs-utils 2.2.7-1
 extra/libvorbis 1.3.6-1
 extra/hicolor-icon-theme 0.17-1
-extra/lcms2 2.9-1
 extra/libass 0.14.0-1
 extra/libavc1394 0.5.4-3
 extra/libsoxr 0.1.3-1
@@ -108,7 +107,6 @@ local/bdf-bitocra 1.2-10
 core/libusb 1.0.22-1
 extra/neon 0.30.2-3
 extra/imlib2 1.5.1-1
-extra/mpg123 1.25.10-1
 community/twolame 0.3.13-8
 extra/gnome-video-effects 0.4.3+13+g6867955-1 (gnome)
 extra/htop 2.2.0-2
@@ -167,7 +165,6 @@ extra/xorg-smproxy 1.0.6-2 (xorg-apps xorg)
 extra/xorg-xcmsdb 1.0.5-2 (xorg-apps xorg)
 extra/xorg-xdpyinfo 1.3.2-2 (xorg-apps xorg)
 extra/xorg-xgamma 1.0.6-2 (xorg-apps xorg)
-extra/xorg-xinput 1.6.2-2 (xorg-apps xorg)
 extra/xorg-xkbevd 1.1.4-2 (xorg-apps xorg)
 extra/xorg-xkbutils 1.0.4-3 (xorg-apps xorg)
 extra/libiec61883 1.2.0-5
@@ -324,7 +321,6 @@ extra/fontconfig 2:2.13.1+12+g5f5ec56-1
 extra/libthai 0.1.28-1
 extra/json-glib 1.4.4-1
 extra/libepoxy 1.5.3-1
-extra/libyaml 0.2.1-1
 core/automake 1.16.1-1 (base-devel)
 core/gpm 1.20.7.r27.g1fd1941-1
 core/ding-libs 0.6.1-2
@@ -407,14 +403,11 @@ community/hping 3.0.0-4
 extra/libnetfilter_queue 1.0.3-1
 extra/libplist 2.0.0+11+gec9ba8b-2
 extra/polkit-qt5 0.112.0+git20180107-2
-extra/phonon-qt5-gstreamer 4.9.0-5
 community/ring-kde 3.0.0-2
 community/gimp-help-es 2.8.2-6
 core/which 2.21-3 (base base-devel)
 core/mhwd-db 0.6.3-6 (base)
 core/bridge-utils 1.6-3
-community/libtorrent 0.13.7-1
-community/rtorrent 0.9.7-2
 extra/aalib 1.4rc5-13
 extra/libtiff 4.0.10-1
 extra/libxrender 0.9.10-2
@@ -455,7 +448,6 @@ extra/wildmidi 0.4.3-1
 extra/libmpcdec 1:0.1+r475-2
 extra/gtkmm 1:2.24.5-3
 extra/hunspell-de 20161207-2
-community/i3lock 2.11.1-1 (i3)
 core/ipw2100-fw 1.3-9
 core/ipw2200-fw 3.1-7
 multilib/lib32-zlib 1.2.11-2
@@ -487,7 +479,6 @@ extra/libmikmod 3.3.11.1-2
 multilib/lib32-libudev0-shim 1-4
 multilib/lib32-libvpx1.3 1.3.0-2
 community/libudev0-shim 1-3
-multilib/lib32-sdl2_image 2.0.4-1
 extra/sdl_image 1.2.12-5
 multilib/lib32-sdl_mixer 1.2.12-3
 multilib/lib32-smpeg 0.4.5-3
@@ -500,7 +491,6 @@ community/ntl 11.3.2-1
 extra/libimobiledevice 1.2.0+87+g92c5462-1
 extra/liblangtag 0.6.2-2
 community/libnatpmp 20150609-2
-extra/spirv-tools 2018.5-1 (vulkan-devel)
 extra/lpsolve 5.5.2.5-3
 extra/libspectre 0.2.8-2
 community/libvpx1.3 1.3.0-2
@@ -543,10 +533,8 @@ extra/soundtouch 2.1.2-1
 community/jansson 2.12-1
 multilib/lib32-lm_sensors 3.5.0-2
 extra/graphite 1:1.3.13-1
-extra/lmdb 0.9.23-1
 extra/gcab 1.2-1
 core/grep 3.3-1 (base base-devel)
-extra/shaderc 2018.0-3
 core/logrotate 3.15.0-1 (base)
 extra/ecl 16.1.3-3
 extra/mtools 4.0.23-1
@@ -557,7 +545,6 @@ community/girara 0.3.2-1
 core/gzip 1.10-1 (base base-devel)
 extra/mono-addins 1.3.3-2
 community/pinta 1.6-4
-community/lxc 1:3.1.0-1
 extra/libutempter 1.1.6-3
 extra/libxslt 1.1.33-1
 extra/fuse2 2.9.9-1
@@ -566,7 +553,6 @@ extra/hunspell-es_mx 1:2.4-1
 extra/libwpd 0.10.3-1
 extra/libetonyek 0.1.9-1
 extra/libwpg 0.3.3-1
-extra/phonon-qt5 4.10.2-1
 community/opusfile 0.11-1
 extra/smartmontools 7.0-1
 extra/suitesparse 5.4.0-1
@@ -608,11 +594,9 @@ community/ptex 2.3.0-1
 core/ca-certificates 20181109-1
 core/flex 2.6.4-2 (base-devel)
 community/libpgm 5.2.122-3
-community/fortune-mod 2.6.2-1
 community/godep 2:80-2
 extra/libunwind 1.3.1-1
 multilib/lib32-libldap 2.4.47-1
-extra/libtorrent-rasterbar 1:1.1.12-1
 extra/libvncserver 0.9.12-1
 local/python-tifffile 2019.2.10-1
 core/libsasl 2.1.27-1
@@ -621,7 +605,6 @@ extra/shared-mime-info 1.12-1
 core/kmod 26-2
 core/pambase 20190105.1-1
 extra/cairo 1.16.0-2
-extra/x265 3.0-1
 extra/clutter-gst 3.0.27-1
 core/crda 4.14-2
 core/iw 5.0.1-1
@@ -649,7 +632,6 @@ core/run-parts 4.8.6.1-1
 extra/sdl2_mixer 2.0.4-3
 extra/sdl2_ttf 2.0.15-1
 extra/sdl_mixer 1.2.12-7
-extra/spice 0.14.0-3
 community/supercollider 3.10.2-1 (pro-audio)
 extra/taglib 1.11.1-3
 community/vamp-plugin-sdk 2.8.0-1 (pro-audio)
@@ -748,7 +730,6 @@ community/python-passlib 1.7.1-2
 extra/python-pep517 0.5.0-1
 extra/python-pyopenssl 19.0.0-1
 community/python-pyperclip 1.7.0-1
-community/python-pytoml 0.1.20-1
 extra/python-retrying 1.3.3-4
 community/python-scrypt 0.8.7-1
 extra/python-service-identity 18.1.0-1
@@ -792,7 +773,6 @@ community/python2-pyhamcrest 1.9.0-3
 community/python2-webencodings 0.5.1-2
 extra/python2-zope-interface 4.6.0-1
 extra/python2-incremental 17.5.0-2
-community/python2-jupyter_client 5.2.4-1
 community/python2-lockfile 0.12.2-4
 community/python2-subprocess32 3.5.3-1
 community/python2-mpmath 1.1.0-1
@@ -801,7 +781,6 @@ extra/python2-pyasn1 0.4.5-1
 extra/python2-pyopenssl 19.0.0-1
 extra/python2-notify 0.1.1-14
 extra/python2-pep517 0.5.0-1
-community/python2-pytoml 0.1.20-1
 extra/python2-retrying 1.3.3-4
 community/python2-rpy2 2.8.6-2
 community/python2-snowballstemmer 1.2.1-3
@@ -815,13 +794,10 @@ community/jupyter 4.1.0-7
 community/jupyter-nbformat 4.4.0-2
 community/jupyter_console 6.0.0-1
 community/python-entrypoints 0.3-1
-community/python-ipywidgets 7.4.2-1
-community/python-jupyter_client 5.2.4-1
 community/python-pandocfilters 1.4.2-2
 community/python-send2trash 1.5.0-2
 community/python-terminado 0.8.1-2
 community/python-testpath 0.4.2-1
-community/python2-ipywidgets 7.4.2-1
 community/aarch64-linux-gnu-binutils 2.32-1
 core/cryptsetup 2.1.0-1.1 (base)
 core/libelf 0.176-1
@@ -836,7 +812,6 @@ core/tar 1.32-1 (base)
 extra/appstream-glib 0.7.15-1
 extra/libxkbcommon-x11 0.8.4-1
 extra/libvdpau 1.2-1
-extra/libvpx 1.8.0-1
 community/eclib 20190226-2
 extra/graphene 1.8.6-1
 community/python-jedi 0.13.3-1
@@ -852,7 +827,6 @@ multilib/lib32-sdl2_ttf 2.0.15-1
 extra/libatomic_ops 7.6.10-1
 extra/libcerf 1.13-1
 extra/libdvdread 6.0.1-1
-extra/libheif 1.4.0-1
 community/libnfs 4.0.0-3
 core/mkinitcpio-busybox 1.30.1-1
 core/man-db 2.8.5-2 (base)
@@ -891,7 +865,6 @@ community/python2-cysignals 1.10.2-1
 community/remmina 1:1.3.4-1
 community/terminus-font 4.47-2
 extra/upower 0.99.10-1
-extra/xf86-video-intel 1:2.99.917+863+g6afed33b-1 (xorg-drivers)
 community/python-mpmath 1.1.0-1
 extra/gperftools 2.7-1
 community/ceph-libs 13.2.1-3
@@ -962,15 +935,12 @@ extra/x264 2:157.r72db4377-1
 extra/libglvnd 1.1.1-1
 extra/libibus 1.5.20-2
 community/cabextract 1.9.1-1
-extra/compiler-rt 8.0.0-1
 community/compton 6.2-2
 extra/python-prometheus_client 0.6.0-1
 multilib/lib32-libssh2 1.8.2-1
-multilib/lib32-llvm-libs 8.0.0-1
 multilib/lib32-libcups 2.2.11-1
 multilib/lib32-libglvnd 1.1.1-1
 extra/openmpi 4.0.1-1
-core/pkgconf 1.6.1-1 (base-devel)
 community/python-ldap3 2.6-1
 community/python2-matplotlib 2.2.4-2
 extra/python2-virtualenv 16.1.0-1
@@ -986,7 +956,6 @@ extra/at-spi2-core 2.32.1-1
 extra/libxml2 2.9.9-2
 extra/libcroco 0.6.13-1
 extra/pixman 0.38.4-1
-extra/giflib 5.1.9-3
 extra/openjpeg2 2.3.1-1
 community/blosc 1.16.3-1
 extra/boost-libs 1.69.0-2
@@ -1047,8 +1016,6 @@ core/openssh 8.0p1-1
 core/hwids 20190316-1
 extra/opus 1.3.1-1
 core/icu 64.2-1
-core/zstd 1.4.0-1
-extra/ffmpeg 1:4.1.3-1
 extra/libcups 2.2.11-2
 extra/dconf 0.32.0-3
 extra/pango 1:1.43.0-2
@@ -1072,13 +1039,11 @@ community/glfw-x11 3.3-2
 core/groff 1.22.4-1 (base-devel)
 core/gssproxy 0.8.2-1
 extra/gst-libav 1.16.0-1
-extra/gvfs 1.40.1-2 (gnome)
 core/libaio 0.3.112-1
 extra/libcdio 2.1.0-1
 extra/libcdio-paranoia 10.2+2.0.0-2
 core/mdadm 4.1-1 (base)
 community/hostapd 2.8-1
-community/jupyter-notebook 5.7.8-1
 extra/python-defusedxml 0.6.0-1
 multilib/lib32-cracklib 2.9.7-1
 multilib/lib32-icu 64.2-1
@@ -1088,7 +1053,6 @@ multilib/lib32-libxau 1.0.9-1
 multilib/lib32-libxcomposite 0.4.5-1
 multilib/lib32-libxcursor 1.2.0-1
 multilib/lib32-libxdmcp 1.1.3-1
-multilib/lib32-sqlite 3.28.0-1
 multilib/lib32-libxdamage 1.1.5-1
 multilib/lib32-libxext 1.3.4-1
 multilib/lib32-libxft 2.3.3-1
@@ -1104,7 +1068,6 @@ extra/libwmf 0.2.12-1
 extra/libxcomp 3.5.99.20-2
 community/log4cplus 2.0.4-1
 extra/mono 5.20.1.19-1
-community/mpv 1:0.29.1-6
 extra/networkmanager 1.18.0-1 (gnome)
 extra/nx-headers 3.5.99.20-2
 extra/nx-x11 3.5.99.20-2
@@ -1135,9 +1098,7 @@ core/bashrc-manjaro 5.0.007-1 (base)
 core/pcre2 10.33-1
 extra/v4l-utils 1.16.6-1
 core/libedit 20190324_3.1-1
-extra/llvm-libs 8.0.0-2
 extra/avahi 0.7+18+g1b5f401-2
-extra/clang 8.0.0-4
 community/runc 1.0.0rc8-1
 extra/ostree 2019.2-1
 extra/gd 2.2.5-2
@@ -1254,8 +1215,6 @@ community/python-sphinxcontrib-devhelp 1.0.1-1
 community/python-sphinxcontrib-jsmath 1.0.1-1
 community/python-sphinxcontrib-qthelp 1.0.2-1
 community/python-sphinxcontrib-serializinghtml 1.1.3-1
-extra/lld 8.0.0-1
-extra/llvm 8.0.0-2
 extra/python2-opengl 3.1.0-4
 local/ddcutil 0.9.5-1
 local/clightd-git r241.33d0ac4-1
@@ -1272,7 +1231,6 @@ community/xxhash 0.7.0-1
 community/dwarffortress 0.44.12-1
 extra/enca 1.19-2
 extra/libdvdcss 1.4.2-1
-extra/openmp 8.0.0-1
 extra/gsound 1.0.2-4
 extra/gst-python 1.16.0-1
 community/pitivi 0.999-2
@@ -1281,7 +1239,6 @@ extra/libsidplay 1.36.59-9
 extra/gstreamer-vaapi 1.16.0-1
 community/pixiewps 1.4.2-1
 community/reaver 1.6.5-1
-community/otf-fira-code 1.206-1
 community/otf-fira-mono 2:3.206-3
 community/otf-fira-sans 1:4.301-1
 extra/alsa-lib 1.1.9-1
@@ -1312,12 +1269,8 @@ extra/python2-requests 2.22.0-1
 extra/qpdf 8.4.2-1
 community/tmux 2.9_a-2
 community/uncrustify 0.69.0-1
-community/virtualbox-host-dkms 6.0.8-2
-community/virtualbox 6.0.8-2
-community/virtualbox-guest-iso 6.0.8-1
 extra/vpnc 1:0.5.3.r460.r73-1
 community/zathura-pdf-mupdf 0.3.4-2
-core/linux-firmware 20190514.711d329-1.1 (base)
 community/neofetch 6.0.0-1
 community/ttf-font-icons 1.1-3
 extra/docbook-xml 4.5-8
@@ -1338,14 +1291,12 @@ core/manjaro-keyring 20190608-1
 community/aarch64-linux-gnu-glibc 2.29-1
 community/aarch64-linux-gnu-gcc 9.1.0-1
 extra/egl-wayland 1.1.3-1
-core/e2fsprogs 1.45.2-1 (base)
 core/openssl 1.1.1.c-1
 extra/xkeyboard-config 2.27-1
 core/device-mapper 2.02.185-1 (base)
 core/libidn2 2.2.0-1
 core/libseccomp 2.4.1-2
 core/p11-kit 0.23.16.1-1
-core/gnupg 2.2.16-1
 community/alembic 1.7.11-1
 extra/double-conversion 3.1.5-1
 extra/librsvg 2:2.44.14+1+g17bb3cd6-1
@@ -1354,7 +1305,6 @@ extra/glib-networking 2.60.3-1
 extra/libsoup 2.66.2+4+g716acf96-1
 extra/libbluray 1.1.2-1
 extra/speexdsp 1.2.0-1
-extra/cmake 3.14.5-1
 extra/ctags 1:r20190522+g3fdf28bc-1
 extra/libraqm 0.7.0-1
 extra/liblouis 3.10.0-1
@@ -1374,7 +1324,6 @@ community/haskell-crypto-api 0.13.3-17
 community/haskell-skein 1.0.9.4-30
 community/haskell-contravariant 1.5.2-1
 community/haskell-clock 0.8-1
-extra/glslang 7.11.3214-1
 extra/gnuplot 5.2.7-1
 extra/libdc1394 2.2.6-1
 community/herbstluftwm 0.7.2-1
@@ -1387,15 +1336,11 @@ core/thin-provisioning-tools 0.8.5-2
 extra/quazip 0.8.1-1
 multilib/lib32-alsa-lib 1.1.9-1
 multilib/lib32-alsa-plugins 1.1.9-1
-multilib/lib32-e2fsprogs 1.45.2-1
 multilib/lib32-libidn2 2.2.0-1
 multilib/lib32-libpsl 0.21.0-1
 multilib/lib32-openssl 1:1.1.1.c-1
-multilib/lib32-curl 7.65.1-1
 multilib/lib32-p11-kit 0.23.16.1-1
-multilib/lib32-libcurl-compat 7.65.1-1
 multilib/lib32-lz4 1.9.1-1
-community/libcurl-compat 7.65.1-1
 core/openssl-1.0 1.0.2.s-1
 multilib/lib32-openssl-1.0 1.0.2.s-1
 multilib/lib32-zstd 1.4.0-1
@@ -1423,7 +1368,6 @@ extra/python-pylint 2.3.1-1
 community/python-scipy 1.3.0-1
 extra/python-urllib3 1.25.3-1
 community/python-wsproto 0.14.1-1
-community/python-yaml 5.1-1
 community/python2-babel 2.7.0-1
 community/python2-cheroot 6.5.5-1
 community/python2-mock 3.0.5-1
@@ -1435,12 +1379,10 @@ community/python2-pygments 2.4.2-1
 community/python2-scipy 1.2.1-2
 extra/python2-twisted 19.2.1-1
 extra/python2-urllib3 1.25.3-1
-community/python2-yaml 5.1-1
 community/qbittorrent 4.1.6-1
 community/symmetrica 2.0-7
 community/scrot 0.9.1-1
 multilib/steam-manjaro 1.0.0.61-2
-extra/strace 5.1-1
 community/sysstat 12.1.5-1
 community/tor 0.4.0.5-1
 local/lib32-nss-mdns 0.14.1-1
@@ -1473,7 +1415,6 @@ community/ruby-rdoc 6.1.1-3
 community/fzf 0.18.0-1
 community/wpa_tui 0.3-1
 community/libfakekey 0.3-1
-extra/qca 2.2.1-1
 community/kdeconnect 1.3.4-1
 extra/gtk-doc 1.30+1+g44c5972-2
 extra/libgee 0.20.1-2
@@ -1527,7 +1468,6 @@ core/libnftnl 1.1.3-1
 core/libpsl 0.21.0-1
 core/perl 5.30.0-3 (base)
 core/util-linux 2.34-3 (base base-devel)
-core/curl 7.65.1-3
 core/gpgme 1.13.1-1
 core/libarchive 3.4.0-2
 extra/harfbuzz 2.5.3-1
@@ -1540,16 +1480,12 @@ extra/libproxy 0.4.15-10
 extra/libxt 1.2.0-1
 extra/babl 0.1.66-1
 community/bettercap 2.24.1-1
-extra/bind-tools 9.14.3-1
 core/binutils 2.32-2 (base-devel)
 community/brial 1.2.5-2
-core/btrfs-progs 5.1.1-1
 extra/bubblewrap 0.3.3-2.1
 extra/cairo-perl 1.106-8
-core/libtool 2.4.6+42+gb88cebd5-4 (base-devel)
 extra/pipewire 0.2.6+1+g37613b67-1
 extra/xorg-fonts-encodings 1.0.5-1 (xorg-fonts xorg)
-extra/chromium 75.0.3770.100-1
 extra/colord-gtk 0.2.0-1
 community/containerd 1.2.7-1
 core/dhcpcd 7.2.2-1 (base)
@@ -1563,7 +1499,6 @@ community/freerdp 1:2.0.0_rc4-6
 community/gap 4.10.2-1
 community/gap-doc 4.10.2-1
 core/gcc 9.1.0-2 (base-devel)
-core/gcc-fortran 9.1.0-2
 extra/gegl 0.4.16-1
 extra/gimp 2.10.12-1
 community/haskell-async 2.2.2-1
@@ -1605,7 +1540,6 @@ community/krunner-git 5.60.0.r364.ga07027c-1 (kf5-git)
 multilib/lib32-dbus 1.12.16-1
 multilib/lib32-expat 2.2.7-1
 core/lib32-gcc-libs 9.1.0-2 (multilib-devel)
-multilib/lib32-systemd 242.32-1
 multilib/lib32-libx11 1.6.8-1
 multilib/lib32-giflib 5.2.1-1
 multilib/lib32-harfbuzz 2.5.3-1
@@ -1680,11 +1614,8 @@ extra/python2-lxml 4.3.4-1
 community/python2-psutil 5.6.3-1
 community/python2-pysocks 1.7.0-1
 community/python2-soupsieve 1.9.2-1
-community/qutebrowser 1.6.3-1
 extra/unixodbc 2.3.7-2
-community/root 6.18.00-1
 community/rubberband 1.8.2-2
-extra/rust-docs 1:1.35.0-1
 community/sagemath-doc 8.8-1
 multilib/smlnj 110.90-1
 community/spice-gtk 0.37-1
@@ -1697,12 +1628,9 @@ extra/texlive-pictures 2019.50872-1 (texlive-most)
 extra/texlive-science 2019.50760-1 (texlive-most)
 community/tldr 0.5-1
 community/toxcore 1:0.2.10-1
-extra/vala 0.44.5-1
-extra/vulkan-icd-loader 1.1.112-1
 community/wine-mono 4.9.0-1
 community/winetricks 20190615-1
 extra/xorg-sessreg 1.1.2-1 (xorg-apps xorg)
-community/xrootd 4.9.1-2
 community/zathura 0.4.3-2
 extra/apparmor 2.13.3-4
 community/squashfs-tools 4.3-8
@@ -1726,9 +1654,7 @@ extra/libssh 0.9.0-1
 extra/libva 2.5.0-1
 community/opensubdiv 3.4.0-1
 extra/cups-filters 1.25.1-1
-extra/imagemagick 7.0.8.53-1
 core/dnssec-anchors 20190629-1
-community/docker 1:18.09.7-1
 community/faudio 19.07-1
 extra/gtk-update-icon-cache 1:3.24.10-1
 extra/gtk3 1:3.24.10-1
@@ -1750,7 +1676,6 @@ core/lib32-glibc 2.29-3.1
 multilib/lib32-krb5 1.17-1
 multilib/lib32-libdrm 2.4.99-1
 multilib/lib32-libxt 1.2.0-1
-extra/libmagick6 6.9.10.53-1
 extra/libmm-glib 1.10.4-1
 extra/libraw 0.19.3-1
 extra/libuv 1.30.1-1
@@ -1764,7 +1689,6 @@ community/python-jsonrpc-server 0.2.0-1
 community/python-matplotlib 3.1.1-1
 extra/python2-mako 1.0.13-1
 community/python2-networkx 2.2-2
-community/python2-pbr 5.4.0-1
 community/python2-sphinxcontrib-websupport 1.1.2-1
 extra/qt5-declarative 5.13.0-1 (qt qt5)
 extra/qt5-graphicaleffects 5.13.0-1 (qt qt5)
@@ -1775,7 +1699,6 @@ extra/qt5-quickcontrols2 5.13.0-1 (qt qt5)
 extra/qt5-script 5.13.0-1 (qt qt5)
 extra/qt5-speech 5.13.0-1 (qt qt5)
 extra/qt5-svg 5.13.0-1 (qt qt5)
-extra/qt5-tools 5.13.0-1 (qt qt5)
 extra/qt5-webchannel 5.13.0-1 (qt qt5)
 extra/re2 20190701-1
 extra/qt5-websockets 5.13.0-1 (qt qt5)
@@ -1800,20 +1723,15 @@ community/edbrowse 3.7.4-2
 extra/tidy 5.7.16-1
 core/ed 1.15-1
 core/vi 1:070224-3 (base)
-core/bzip2 1.0.8-1.1 (base)
 core/iana-etc 20190702-1
-extra/libpciaccess 0.15-1
 core/nettle 3.5.1-1
 core/sqlite 3.29.0-1
-core/systemd-libs 242.32-3.1
 extra/xorg-server-common 1.20.5-2 (xorg)
 extra/xorg-setxkbmap 1.3.2-1 (xorg-apps xorg)
 core/glib2 2.60.5-1
-core/systemd 242.32-3.1 (base-devel)
 extra/xorg-server 1.20.5-2 (xorg)
 core/ca-certificates-mozilla 3.45-1
 core/gnutls 3.6.8-3
-extra/mesa 19.1.2-1
 community/attica-git 5.61.0.r704.g8480c4d-1 (kf5-git)
 extra/intel-tbb 2019.8-1
 extra/libice 1.0.10-1
@@ -1825,187 +1743,22 @@ community/blender 17:2.80rc1-2
 community/cython 0.29.12-1
 community/cython2 0.29.12-1
 extra/dnsmasq 2.80-4
-extra/enchant 2.2.4-1
-extra/feh 3.2-1
 core/nss 3.45-1
 extra/noto-fonts 20190111-2
 extra/gnu-free-fonts 20120503-6
 extra/iso-codes 4.3-1
 extra/js60 60.8.0-1
-extra/firefox 68.0.1-1
 community/flake8 1:3.7.8-1
 extra/flashplugin 32.0.0.223-1
 extra/flatpak 1.4.2-1
-community/haskell-attoparsec 0.13.2.2-56
-community/haskell-aeson 1.4.4.0-3
-community/haskell-base-orphans 0.8.1-15
-community/haskell-base64-bytestring 1.0.0.2-12
 community/haskell-basement 0.0.11-1
-community/haskell-conduit 1.3.1.1-23
-community/haskell-conduit-extra 1.3.2-6
-community/haskell-dlist 0.8.0.6-8
-community/haskell-exceptions 0.10.2-8
-community/haskell-mono-traversable 1.0.11.0-25
-community/haskell-network 2.8.0.0-16
-community/haskell-resourcet 1.2.2-24
-community/haskell-split 0.2.3.3-17
-community/haskell-streaming-commons 0.2.1.1-4
-community/haskell-time-compat 1.9.2.2-7
-community/haskell-typed-process 0.2.6.0-1
-community/haskell-unordered-containers 0.2.10.0-12
-community/haskell-vector 0.12.0.3-10
-community/haskell-vector-algorithms 0.8.0.1-22
-community/haskell-asn1-encoding 0.9.5-96
-community/haskell-asn1-parse 0.9.4-107
-community/haskell-asn1-types 0.3.3-4
-community/haskell-blaze-markup 0.8.2.2-23
-community/haskell-connection 0.3.0-12
-community/haskell-cryptonite 0.26-8
-community/haskell-data-default 0.7.1.1-28
-community/haskell-data-default-instances-dlist 0.0.1-41
-community/haskell-hourglass 0.2.12-25
-community/haskell-http-client 0.6.4-16
-community/haskell-http-client-tls 0.3.5.3-127
-community/haskell-http-conduit 2.3.7.1-39
-community/haskell-http-types 0.12.3-19
-community/haskell-lifted-base 0.2.3.12-43
-community/haskell-memory 0.14.18-27
-community/haskell-monad-control 1.0.2.3-43
-community/haskell-pem 0.2.4-53
-community/haskell-socks 0.6.0-9
-community/haskell-tls 1.4.1-77
-community/haskell-transformers-base 0.4.5.2-41
-community/haskell-x509 1.7.5-25
-community/haskell-x509-store 1.6.7-24
-community/haskell-x509-system 1.6.6-92
-community/haskell-x509-validation 1.6.11-24
-community/haskell-adjunctions 4.4-88
-community/haskell-ansi-terminal 0.9.1-3
-community/haskell-aws 0.21.1-68
-community/haskell-bifunctors 5.5.4-12
-community/haskell-blaze-html 0.9.1.1-29
-community/haskell-cipher-aes 0.2.11-93
-community/haskell-clientsession 0.9.1.2-109
-community/haskell-colour 2.3.5-7
-community/haskell-comonad 5.0.5-12
-community/haskell-concurrent-output 1.10.10-3
-community/haskell-cprng-aes 0.6.1-99
-community/haskell-crypto-cipher-types 0.0.9-93
-community/haskell-crypto-random 0.0.9-100
-community/haskell-distributive 0.6-31
-community/haskell-free 5.1.1-14
-community/haskell-invariant 0.5.3-14
-community/haskell-kan-extensions 5.2-58
-community/haskell-profunctors 5.4-10
-community/haskell-securemem 0.1.10-55
-community/haskell-semigroupoids 5.3.2-24
-community/haskell-xml-conduit 1.8.0.1-67
-community/haskell-aeson-compat 0.3.9-45
-community/haskell-ansi-wl-pprint 0.6.9-3
-community/haskell-attoparsec-iso8601 1.0.1.0-30
-community/haskell-auto-update 0.1.6-1
-community/haskell-dav 1.3.3-77
-community/haskell-dbus 1.2.7-19
-community/haskell-fast-logger 2.4.16-6
-community/haskell-fdo-notify 0.3.1-179
-community/haskell-feed 1.1.0.0-13
-community/haskell-hslogger 1.3.0.0-7
-community/haskell-http-api-data 0.4.1-6
-community/haskell-lens 4.17.1-15
 community/haskell-microlens 0.4.11.2-1
 community/haskell-microlens-th 0.4.3.2-1
-community/haskell-monad-logger 0.3.30-66
-community/haskell-network-multicast 0.2.0-63
-community/haskell-optparse-applicative 0.14.3.0-18
-community/haskell-persistent 2.9.2-38
-community/haskell-persistent-sqlite 2.9.3-40
-community/haskell-persistent-template 2.6.0-55
-community/haskell-resource-pool 0.2.3.2-73
-community/haskell-shakespeare 2.0.20-36
-community/haskell-splitmix 0.0.2-13
-community/haskell-unix-time 0.4.7-3
-community/haskell-xml-hamlet 0.5.0-135
-community/haskell-bsb-http-chunked 0.0.0.4-36
-community/haskell-fingertree 0.1.4.2-12
-community/haskell-http-date 0.0.8-33
-community/haskell-http2 1.6.5-20
-community/haskell-iproute 1.7.7-19
-community/haskell-libyaml 0.1.1.0-27
-community/haskell-network-byte-order 0.1.1.0-3
-community/haskell-psqueues 0.2.7.2-2
-community/haskell-quickcheck 2.13.1-6
-community/haskell-reducers 3.12.3-51
-community/haskell-rio 0.1.10.0-1
-community/haskell-sandi 0.5-30
-community/haskell-simple-sendfile 0.2.28-39
-community/haskell-tagsoup 0.14.8-7
-community/haskell-tasty 1.2.3-1
-community/haskell-tasty-hunit 0.10.0.1-46
-community/haskell-tasty-quickcheck 0.10.1-8
-community/haskell-tasty-rerun 1.1.14-21
-community/haskell-tls-session-manager 0.0.1.0-8
-community/haskell-unliftio 0.2.12-1
-community/haskell-vault 0.3.1.2-20
-community/haskell-wai 3.2.2.1-3
-community/haskell-wai-extra 3.0.27-1
-community/haskell-wai-logger 2.3.5-11
-community/haskell-warp 3.2.27-37
-community/haskell-warp-tls 3.2.7-2
-community/haskell-yaml 0.11.1.0-3
-community/git-annex 7.20190615-23
-community/haskell-cryptonite-conduit 0.2.2-180
-community/haskell-css-text 0.1.3.0-54
-community/haskell-email-validate 2.3.2.11-16
-community/haskell-hjsmin 0.2.0.2-53
-community/haskell-wai-app-static 3.1.6.3-72
-community/haskell-xss-sanitize 0.3.6-33
-community/haskell-yesod 1.6.0-303
-community/haskell-yesod-core 1.6.14-57
-community/haskell-yesod-form 1.6.5-20
-community/haskell-yesod-persistent 1.6.0.2-56
-community/haskell-yesod-static 1.6.0.1-155
 core/glib2-docs 2.60.5-1
 community/go 2:1.12.7-1
 extra/gst-plugins-bad 1.16.0-4
 extra/rtmpdump 1:2.4.r96.fa8646d-5
 extra/guile 2.2.6-1
-community/haskell-constraints 0.11-8
-community/haskell-cryptohash 0.11.9-104
-community/haskell-either 5.0.1.1-12
-community/haskell-enclosed-exceptions 1.0.3-30
-community/haskell-extra 1.6.17-3
-community/haskell-fsnotify 0.3.0.1-52
-community/haskell-generic-deriving 1.12.4-11
-community/haskell-githash 0.1.3.1-66
-community/haskell-glob 0.10.0-15
-community/haskell-lifted-async 0.10.0.4-16
-community/haskell-shelly 1.8.1-62
-community/haskell-system-fileio 0.3.16.4-21
-community/haskell-system-filepath 0.4.14-26
-community/haskell-hackage-security 0.5.3.0-53
-community/haskell-infer-license 0.2.0-29
-community/haskell-text-metrics 0.3.0-31
-community/haskell-hpack 0.31.2-44
-community/haskell-temporary 1.3-34
-community/haskell-hspec 2.7.1-8
-community/haskell-hspec-core 2.7.1-7
-community/haskell-hspec-discover 2.7.1-8
-community/haskell-hspec-smallcheck 0.5.2-50
-community/haskell-quickcheck-io 0.2.0-24
-community/haskell-mustache 2.3.0-206
-community/haskell-optparse-simple 0.1.1.2-35
-community/haskell-path 0.6.1-107
-community/haskell-path-io 1.4.2-29
-community/haskell-project-template 0.2.0.1-151
-community/haskell-retry 0.8.0.1-11
-community/haskell-store 0.5.1.1-8
-community/haskell-th-lift-instances 0.1.11-44
-community/haskell-th-orphans 0.13.7-17
-community/haskell-th-utilities 0.2.3.0-7
-community/haskell-zip-archive 0.4.1-10
-community/hub 2.12.2-1
-extra/poppler 0.78.0-1
-extra/poppler-glib 0.78.0-1
 extra/inkscape 0.92.4-6
 core/iproute2 5.2.0-1 (base)
 community/ipython 7.6.1-1
@@ -2016,7 +1769,6 @@ community/python-pyzmq 18.0.2-1
 community/jupyterlab 1.0.2-1
 community/kcoreaddons-git 5.61.0.r837.g18b54cd-1 (kf5-git)
 community/kconfig-git 5.61.0.r575.g4e9a1d0-1 (kf5-git)
-community/kwindowsystem-git 5.61.0.r433.g2737ca9-1 (kf5-git)
 community/kactivities-git 5.61.0.r1238.g894d9ec0-1 (kf5-git)
 community/karchive-git 5.61.0.r366.gd2d60b8-1 (kf5-git)
 community/kauth-git 5.61.0.r306.g6210515-1 (kf5-git)
@@ -2025,57 +1777,34 @@ community/kdbusaddons-git 5.61.0.r267.g0dfe911-1 (kf5-git)
 community/kglobalaccel-git 5.61.0.r309.g5aa0ed5-1 (kf5-git)
 community/kcodecs-git 5.61.0.r262.gf0b3923-1 (kf5-git)
 community/kcompletion-git 5.61.0.r301.g50f116b-1 (kf5-git)
-community/kconfigwidgets-git 5.61.0.r378.g82c4a45-1 (kf5-git)
-community/kguiaddons-git 5.61.0.r237.gaef39ba-1 (kf5-git)
 community/ki18n-git 5.61.0.r335.gdff6630-1 (kf5-git)
 community/kiconthemes-git 5.61.0.r366.g59a49e1-1 (kf5-git)
-community/kitemviews-git 5.61.0.r224.gb66c829-1 (kf5-git)
-community/kservice-git 5.61.0.r654.gca2f09c-1 (kf5-git)
 community/ktextwidgets-git 5.61.0.r261.gede761e-1 (kf5-git)
-community/kwidgetsaddons-git 5.61.0.r555.gc69eda5-1 (kf5-git)
 community/sonnet-git 5.61.0.r473.g895edc0-1 (kf5-git)
-community/kbookmarks-git 5.61.0.r267.g9d95ba8-1 (kf5-git)
 community/kjobwidgets-git 5.61.0.r253.g813d57a-1 (kf5-git)
-community/knotifications-git 5.61.0.r435.g82207f9-1 (kf5-git)
-community/kwallet-git 5.61.0.r901.g2972d39-1 (kf5-git)
-community/kxmlgui-git 5.61.0.r511.gcca6f92-1 (kf5-git)
 community/solid-git 5.61.0.r490.g5e194c4-1 (kf5-git)
 extra/kcmutils 5.60.0-1 (kf5)
-community/kdeclarative-git 5.61.0.r676.g1f9fef4-1 (kf5-git)
-community/kio-git 5.61.0.r3470.g928352ea-1 (kf5-git)
-community/kirigami2-git 5.61.0.r1856.g90294e61-1 (kf5-git)
 extra/kitemmodels 5.60.0-1 (kf5)
 extra/knotifyconfig 5.60.0-1 (kf5)
-community/kpackage-git 5.61.0.r522.gc74ec36-1 (kf5-git)
 extra/krita 4.2.3-1
 extra/ldb 1:1.5.5-1
-multilib/lib32-bzip2 1.0.8-1
 multilib/lib32-glib2 2.60.5-1
 multilib/lib32-gnutls 3.6.8-2
-multilib/lib32-libcurl-gnutls 7.65.1-2
-multilib/lib32-libpciaccess 0.15-1
 multilib/lib32-librtmp0 2.4-3
 multilib/lib32-libwebp 1.0.3-1
 multilib/lib32-nettle 3.5.1-1
-community/libcurl-gnutls 7.65.1-2
-multilib/lib32-mesa 19.1.2-1
-multilib/lib32-mesa-vdpau 19.1.2-1
 multilib/lib32-nss 3.45-1
-multilib/lib32-vulkan-intel 19.1.2-1
-multilib/lib32-vulkan-radeon 19.1.2-1
 community/libev 4.27-1
 community/libgiac 1.5.0.63-1
 extra/libreoffice-fresh 6.2.5-1
 community/librtmp0 2.4-4
 extra/libsynctex 2019.51075-2
 extra/libteam 1.29-1
-extra/libva-mesa-driver 19.1.2-1
 extra/libwbclient 4.10.6-1
 extra/libzip 1.5.2-2
 community/lxcfs 3.0.4-1
 extra/wget 1.20.3-2
 extra/mercurial 5.0.2-1
-extra/mesa-vdpau 19.1.2-1
 community/node-gyp 5.0.2-1
 extra/noto-fonts-extra 20190111-2
 community/npm 6.10.1-1
@@ -2083,17 +1812,14 @@ community/opendht 1:1.9.5-2
 community/os-prober 1.77-1
 community/pdfjs 2.2.228-1
 community/plasma-browser-integration-git 5.16.80.r807.ge429cdeb-1 (plasma-git)
-community/plasma-framework-git 5.61.0.r15199.g348c578bb-1 (kf5-git)
 extra/threadweaver 5.60.0-1 (kf5)
 extra/pyqt5-common 5.13.0-1
-extra/qt5-webengine 5.13.0-2 (qt qt5)
 extra/pyqtwebengine-common 5.13.0-1
 community/pythia8 8.2.43-1
 community/python-pillow 6.1.0-1
 extra/python-sip-pyqt5 4.19.18-1
 extra/python-pyqt5 5.13.0-1
 extra/python-pyqtwebengine 5.13.0-1
-community/python-ruamel-yaml 0.15.99-1
 extra/python-sip 4.19.18-1
 community/python-typed-ast 1.4.0-1
 community/python-zipp 0.5.2-1
@@ -2108,15 +1834,11 @@ extra/qemu-arch-extra 4.0.0-3
 extra/smbclient 4.10.6-1
 extra/samba 4.10.6-1
 extra/snapd 2.40-1
-community/stack 1.9.3.1-84
 extra/syntax-highlighting 5.60.0-1 (kf5)
-core/systemd-sysvcompat 242.32-3.1 (base)
 extra/texlive-bin 2019.51075-2
 extra/tk 8.6.9.1-2
 community/ttf-ubuntu-font-family 0.83-5
 community/vagrant 2.2.5-1
-extra/vulkan-intel 19.1.2-1
-extra/vulkan-radeon 19.1.2-1
 multilib/wine 4.12.1-1
 extra/xorg-server-devel 1.20.5-2 (xorg)
 extra/xorg-server-xdmx 1.20.5-2 (xorg)
@@ -2132,33 +1854,19 @@ local/virtualbox-ext-oracle 6.0.10-1
 community/macchanger 1.7.0-4
 extra/w3m 0.5.3.git20190105-1
 community/cmark-gfm 0.29.0.gfm.0-1
-community/haskell-aeson-pretty 0.8.7-78
 community/haskell-cmark-gfm 0.2.0-2
-community/haskell-doctemplates 0.2.2.1-83
-community/haskell-haddock-library 1.7.0-53
-community/haskell-http 4000.3.14-8
 community/haskell-hxt 9.3.1.16-16
 community/haskell-hxt-charproperties 9.2.0.1-12
 community/haskell-hxt-regex-xmlschema 9.2.0.3-16
 community/haskell-hxt-unicode 9.0.2.4-12
-community/haskell-ipynb 0.1-50
-community/haskell-juicypixels 3.3.3.1-2
 community/haskell-lexer 1.0.2-6
 community/haskell-pretty-show 1.9.5-5
 community/haskell-regex-pcre 0.94.4-14
 community/haskell-sha 1.6.4.4-8
-community/haskell-hslua 1.0.3.1-9
-community/haskell-hslua-module-system 0.2.1-3
-community/haskell-hslua-module-text 0.2.1-12
 community/haskell-hsyaml 0.1.2.0-1
-community/haskell-pandoc-types 1.17.5.4-38
-community/haskell-skylighting 0.8.1.1-2
-community/haskell-skylighting-core 0.8.1.1-2
 community/haskell-xml 1.3.14-19
 community/haskell-hs-bibutils 6.7.0.0-5
 community/haskell-rfc5051 0.1.0.4-5
-community/haskell-texmath 0.11.2.2-25
-community/pandoc 2.7.3-10
 community/haskell-base-unicode-symbols 0.2.4.2-1
 community/haskell-data-accessor 0.2.3-1
 community/haskell-data-accessor-template 0.2.1.16-8
@@ -2167,8 +1875,6 @@ community/haskell-gitrev 1.3.1-14
 community/haskell-roman-numerals 0.5.1.5-19
 community/haskell-text-icu 0.7.0.1-26
 community/haskell-utility-ht 0.0.14-12
-community/pandoc-citeproc 0.16.2-77
-community/pandoc-crossref 0.3.4.1-59
 community/firejail 0.9.60-1
 community/python-soupsieve 1.9.2-1
 community/python-beautifulsoup4 4.7.1-1
@@ -2187,3 +1893,297 @@ community/python-bluepy 1.3.0-1
 community/dunst 1.4.1-2
 community/dunstify 1.4.1-2
 community/notification-daemon 3.20.0-3
+extra/bind-tools 9.14.4-1
+core/bzip2 1.0.8-2 (base)
+core/e2fsprogs 1.45.3-1 (base)
+extra/lmdb 0.9.24-1
+core/zstd 1.4.1-1
+core/btrfs-progs 5.2-1
+core/systemd-libs 242.84-1
+core/systemd 242.84-1 (base-devel)
+extra/libvpx 1.8.1-1
+extra/giflib 5.2.1-1
+extra/libpciaccess 0.16-1
+extra/x265 3.1.1-1
+extra/llvm-libs 8.0.1-1
+core/curl 7.65.3-1
+core/gnupg 2.2.17-2
+extra/mesa 19.1.3-1
+extra/lcms2 2.9-2
+extra/ffmpeg 1:4.1.4-1
+core/libtool 2.4.6+42+gb88cebd5-5 (base-devel)
+extra/chromium 75.0.3770.142-1
+extra/compiler-rt 8.0.1-1
+extra/clang 8.0.1-1
+extra/cmake 3.15.0-1
+community/docker 1:18.09.8-1
+extra/enchant 2.2.5-1
+extra/feh 3.2.1-1
+extra/firefox 68.0.1-2
+community/fortune-mod 2.10.0-1
+community/haskell-attoparsec 0.13.2.2-57
+community/haskell-base-orphans 0.8.1-16
+community/haskell-dlist 0.8.0.6-9
+community/haskell-time-compat 1.9.2.2-8
+community/haskell-unordered-containers 0.2.10.0-14
+community/haskell-vector 0.12.0.3-11
+community/haskell-aeson 1.4.4.0-5
+community/haskell-base64-bytestring 1.0.0.2-13
+community/haskell-exceptions 0.10.2-9
+community/haskell-mono-traversable 1.0.11.0-27
+community/haskell-resourcet 1.2.2-25
+community/haskell-split 0.2.3.3-18
+community/haskell-vector-algorithms 0.8.0.1-23
+community/haskell-asn1-encoding 0.9.5-97
+community/haskell-asn1-parse 0.9.4-108
+community/haskell-asn1-types 0.3.3-5
+community/haskell-conduit 1.3.1.1-25
+community/haskell-conduit-extra 1.3.2-8
+community/haskell-cryptonite 0.26-9
+community/haskell-data-default 0.7.1.1-29
+community/haskell-data-default-instances-dlist 0.0.1-42
+community/haskell-hourglass 0.2.12-26
+community/haskell-http-client 0.6.4-18
+community/haskell-http-types 0.12.3-21
+community/haskell-memory 0.14.18-28
+community/haskell-network 2.8.0.0-17
+community/haskell-pem 0.2.4-54
+community/haskell-socks 0.6.0-10
+community/haskell-streaming-commons 0.2.1.1-5
+community/haskell-typed-process 0.2.6.0-2
+community/haskell-x509 1.7.5-26
+community/haskell-x509-store 1.6.7-25
+community/haskell-x509-validation 1.6.11-25
+community/haskell-ansi-terminal 0.9.1-5
+community/haskell-aws 0.21.1-71
+community/haskell-blaze-html 0.9.1.1-30
+community/haskell-blaze-markup 0.8.2.2-24
+community/haskell-cipher-aes 0.2.11-94
+community/haskell-clientsession 0.9.1.2-110
+community/haskell-colour 2.3.5-9
+community/haskell-comonad 5.0.5-13
+community/haskell-concurrent-output 1.10.10-4
+community/haskell-connection 0.3.0-13
+community/haskell-cprng-aes 0.6.1-100
+community/haskell-crypto-cipher-types 0.0.9-94
+community/haskell-crypto-random 0.0.9-101
+community/haskell-distributive 0.6-32
+community/haskell-http-client-tls 0.3.5.3-129
+community/haskell-http-conduit 2.3.7.1-42
+community/haskell-lifted-base 0.2.3.12-44
+community/haskell-monad-control 1.0.2.3-44
+community/haskell-securemem 0.1.10-56
+community/haskell-tls 1.4.1-78
+community/haskell-transformers-base 0.4.5.2-42
+community/haskell-x509-system 1.6.6-93
+community/haskell-xml-conduit 1.8.0.1-69
+community/haskell-adjunctions 4.4-90
+community/haskell-ansi-wl-pprint 0.6.9-5
+community/haskell-bifunctors 5.5.4-13
+community/haskell-dav 1.3.3-79
+community/haskell-free 5.1.1-16
+community/haskell-invariant 0.5.3-16
+community/haskell-kan-extensions 5.2-60
+community/haskell-lens 4.17.1-17
+community/haskell-optparse-applicative 0.14.3.0-19
+community/haskell-profunctors 5.4-11
+community/haskell-semigroupoids 5.3.2-26
+community/haskell-shakespeare 2.0.20-38
+community/haskell-xml-hamlet 0.5.0-137
+community/haskell-aeson-compat 0.3.9-47
+community/haskell-attoparsec-iso8601 1.0.1.0-31
+community/haskell-auto-update 0.1.6-2
+community/haskell-dbus 1.2.7-21
+community/haskell-fast-logger 2.4.16-7
+community/haskell-fdo-notify 0.3.1-181
+community/haskell-feed 1.1.0.0-15
+community/haskell-hslogger 1.3.0.0-8
+community/haskell-http-api-data 0.4.1-8
+community/haskell-monad-logger 0.3.30-68
+community/haskell-network-multicast 0.2.0-64
+community/haskell-persistent 2.9.2-40
+community/haskell-persistent-sqlite 2.9.3-42
+community/haskell-persistent-template 2.6.0-57
+community/haskell-quickcheck 2.13.2-1
+community/haskell-resource-pool 0.2.3.2-74
+community/haskell-sandi 0.5-32
+community/haskell-splitmix 0.0.2-14
+community/haskell-tagsoup 0.14.8-8
+community/haskell-unix-time 0.4.7-4
+community/haskell-bsb-http-chunked 0.0.0.4-37
+community/haskell-fingertree 0.1.4.2-13
+community/haskell-http-date 0.0.8-34
+community/haskell-http2 1.6.5-22
+community/haskell-iproute 1.7.7-20
+community/haskell-libyaml 0.1.1.0-29
+community/haskell-network-byte-order 0.1.1.0-4
+community/haskell-psqueues 0.2.7.2-3
+community/haskell-reducers 3.12.3-53
+community/haskell-simple-sendfile 0.2.28-41
+community/haskell-tasty 1.2.3-2
+community/haskell-tasty-hunit 0.10.0.1-47
+community/haskell-tasty-quickcheck 0.10.1-9
+community/haskell-tasty-rerun 1.1.14-23
+community/haskell-tls-session-manager 0.0.1.0-9
+community/haskell-vault 0.3.1.3-1
+community/haskell-wai 3.2.2.1-6
+community/haskell-wai-extra 3.0.27-4
+community/haskell-wai-logger 2.3.5-14
+community/haskell-warp 3.2.27-40
+community/haskell-warp-tls 3.2.7-5
+extra/libyaml 0.2.2-1
+community/haskell-cryptonite-conduit 0.2.2-182
+community/haskell-css-text 0.1.3.0-55
+community/haskell-email-validate 2.3.2.11-17
+community/haskell-hjsmin 0.2.0.2-54
+community/haskell-rio 0.1.11.0-3
+community/haskell-unliftio 0.2.12-2
+community/haskell-wai-app-static 3.1.6.3-75
+community/haskell-xss-sanitize 0.3.6-34
+community/haskell-yaml 0.11.1.0-5
+community/haskell-yesod 1.6.0-308
+community/haskell-yesod-core 1.6.14-61
+community/haskell-yesod-form 1.6.6-2
+community/haskell-yesod-persistent 1.6.0.2-60
+community/haskell-yesod-static 1.6.0.1-160
+community/git-annex 7.20190708-5
+extra/glslang 7.11.3214-2
+extra/gvfs 1.40.2-1 (gnome)
+community/haskell-aeson-pretty 0.8.7-80
+extra/spirv-tools 2019.3-2 (vulkan-devel)
+community/haskell-constraints 0.11-9
+community/haskell-cryptohash 0.11.9-105
+community/haskell-doctemplates 0.2.2.1-85
+community/haskell-either 5.0.1.1-14
+community/haskell-enclosed-exceptions 1.0.3-31
+community/haskell-extra 1.6.17-4
+community/haskell-fsnotify 0.3.0.1-53
+community/haskell-generic-deriving 1.12.4-12
+community/haskell-githash 0.1.3.1-68
+community/haskell-glob 0.10.0-16
+community/haskell-lifted-async 0.10.0.4-17
+community/haskell-shelly 1.8.1-63
+community/haskell-system-fileio 0.3.16.4-22
+community/haskell-system-filepath 0.4.14-27
+community/haskell-hackage-security 0.5.3.0-54
+community/haskell-haddock-library 1.7.0-55
+community/haskell-hpack 0.31.2-46
+community/haskell-hslua 1.0.3.1-11
+community/haskell-infer-license 0.2.0-30
+community/haskell-text-metrics 0.3.0-32
+community/haskell-hslua-module-system 0.2.1-5
+community/haskell-hslua-module-text 0.2.1-14
+community/haskell-hspec-core 2.7.1-8
+community/haskell-quickcheck-io 0.2.0-25
+community/haskell-temporary 1.3-35
+community/haskell-hspec 2.7.1-9
+community/haskell-hspec-discover 2.7.1-9
+community/haskell-hspec-smallcheck 0.5.2-51
+community/haskell-http 4000.3.14-11
+community/haskell-ipynb 0.1-52
+community/haskell-juicypixels 3.3.3.1-3
+community/haskell-mustache 2.3.0-208
+community/haskell-optparse-simple 0.1.1.2-37
+community/haskell-pandoc-types 1.17.5.4-40
+community/haskell-path 0.6.1-109
+community/haskell-path-io 1.4.2-31
+community/haskell-project-template 0.2.0.1-153
+community/haskell-retry 0.8.0.1-12
+community/haskell-skylighting 0.8.2-3
+community/haskell-skylighting-core 0.8.2-3
+community/haskell-store 0.5.1.2-1
+community/haskell-th-lift-instances 0.1.11-45
+community/haskell-th-orphans 0.13.7-18
+community/haskell-th-utilities 0.2.3.0-8
+community/haskell-texmath 0.11.2.2-27
+community/haskell-zip-archive 0.4.1-11
+community/hub 2.12.3-1
+community/i3lock 2.12-1 (i3)
+extra/imagemagick 7.0.8.56-1
+community/python-ipywidgets 7.5.0-1
+community/python-jupyter_client 5.3.1-1
+community/jupyter-notebook 6.0.0-1
+community/kconfigwidgets-git 5.61.0.r379.g434fba9-1 (kf5-git)
+community/kguiaddons-git 5.61.0.r238.g9937e6b-1 (kf5-git)
+community/kservice-git 5.61.0.r656.gb04b8e3-1 (kf5-git)
+community/kwidgetsaddons-git 5.61.0.r558.g6531924-1 (kf5-git)
+community/kwindowsystem-git 5.61.0.r434.g3c5f3f8-1 (kf5-git)
+community/kbookmarks-git 5.61.0.r269.gf3068ff-1 (kf5-git)
+community/kitemviews-git 5.61.0.r225.gba738a8-1 (kf5-git)
+community/knotifications-git 5.61.0.r436.gbe46618-1 (kf5-git)
+community/kwallet-git 5.61.0.r904.gff6b077-1 (kf5-git)
+community/kxmlgui-git 5.61.0.r513.gd4af86d-1 (kf5-git)
+community/kdeclarative-git 5.61.0.r677.g811e78e-1 (kf5-git)
+community/kio-git 5.61.0.r3475.g0cc93676-1 (kf5-git)
+community/kirigami2-git 5.61.0.r1864.gd2d04fdb-1 (kf5-git)
+community/kpackage-git 5.61.0.r525.gaa310c6-1 (kf5-git)
+multilib/lib32-bzip2 1.0.8-2
+multilib/lib32-curl 7.65.3-1
+multilib/lib32-e2fsprogs 1.45.3-1
+multilib/lib32-libcurl-compat 7.65.3-1
+multilib/lib32-libcurl-gnutls 7.65.3-1
+multilib/lib32-libpciaccess 0.16-1
+multilib/lib32-systemd 242.84-1
+community/libcurl-compat 7.65.3-1
+community/libcurl-gnutls 7.65.3-1
+multilib/lib32-llvm-libs 8.0.1-1
+multilib/lib32-mesa 19.1.3-1
+multilib/lib32-mesa-vdpau 19.1.3-1
+multilib/lib32-sdl2_image 2.0.5-1
+multilib/lib32-sqlite 3.29.0-1
+multilib/lib32-vulkan-intel 19.1.3-1
+multilib/lib32-vulkan-radeon 19.1.3-1
+extra/libheif 1.4.0-3
+extra/libmagick6 6.9.10.56-1
+community/libtorrent 0.13.8-1
+extra/libtorrent-rasterbar 1:1.1.13-1
+extra/libva-mesa-driver 19.1.3-1
+core/linux-firmware 20190726.dff98c6-1 (base)
+extra/lld 8.0.1-1
+extra/llvm 8.0.1-1
+community/lxc 1:3.1.0-2
+extra/mesa-vdpau 19.1.3-1
+extra/mpg123 1.25.11-1
+extra/shaderc 2019.0-1
+extra/vulkan-icd-loader 1.1.115-1
+community/mpv 1:0.29.1-7
+extra/openmp 8.0.1-1
+community/otf-fira-code 1.207-1
+community/pandoc 2.7.3-14
+community/pandoc-citeproc 0.16.2-81
+community/pandoc-crossref 0.3.4.1-63
+extra/phonon-qt5 4.10.3-1
+extra/phonon-qt5-gstreamer 4.9.1-1
+core/pkgconf 1.6.3-1 (base-devel)
+community/plasma-framework-git 5.61.0.r15205.gf04584d42-1 (kf5-git)
+extra/poppler 0.79.0-1
+extra/poppler-glib 0.79.0-1
+community/python-pytoml 0.1.21-1
+community/python-ruamel-yaml 0.15.100-1
+community/python-yaml 5.1.1-1
+community/python2-ipywidgets 7.5.0-1
+community/python2-jupyter_client 5.3.1-1
+community/python2-pbr 5.4.1-1
+community/python2-pytoml 0.1.21-1
+community/python2-yaml 5.1.1-1
+extra/qca 2.2.1-2
+extra/qt5-tools 5.13.0-2 (qt qt5)
+extra/qt5-webengine 5.13.0-3 (qt qt5)
+community/qutebrowser 1.7.0-1
+community/root 6.18.00-2
+community/rtorrent 0.9.8-1
+extra/rust-docs 1:1.36.0-1
+extra/spice 0.14.2-1
+community/stack 1.9.3.1-89
+extra/strace 5.2-1
+core/systemd-sysvcompat 242.84-1 (base)
+extra/vala 0.44.6-1
+community/virtualbox-host-dkms 6.0.10-1
+community/virtualbox 6.0.10-1
+community/virtualbox-guest-iso 6.0.10-1
+extra/vulkan-intel 19.1.3-1
+extra/vulkan-radeon 19.1.3-1
+extra/xf86-video-intel 1:2.99.917+865+g60022507-1 (xorg-drivers)
+extra/xorg-xinput 1.6.3-1 (xorg-apps xorg)
+community/xrootd 4.10.0-1
+core/gcc-fortran 9.1.0-2
