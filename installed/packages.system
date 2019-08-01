@@ -403,7 +403,6 @@ community/hping 3.0.0-4
 extra/libnetfilter_queue 1.0.3-1
 extra/libplist 2.0.0+11+gec9ba8b-2
 extra/polkit-qt5 0.112.0+git20180107-2
-community/ring-kde 3.0.0-2
 community/gimp-help-es 2.8.2-6
 core/which 2.21-3 (base base-devel)
 core/mhwd-db 0.6.3-6 (base)
@@ -484,7 +483,6 @@ multilib/lib32-sdl_mixer 1.2.12-3
 multilib/lib32-smpeg 0.4.5-3
 extra/smpeg 0.4.5-4
 community/libappindicator-gtk2 12.10.0-13
-community/libfilteraudio 0.0.1-4
 community/libgcrypt15 1.5.6-2
 extra/libusbmuxd 1.0.10+29+g9db5747-1
 community/ntl 11.3.2-1
@@ -841,7 +839,6 @@ extra/python2-markupsafe 1.1.1-1
 community/python2-progress 1.5-1
 extra/rtkit 0.12-1
 extra/srt 1.3.2-1
-community/utox 0.17.0-3
 extra/xorg-xinit 1.4.1-1
 extra/xorg-xprop 1.2.4-1 (xorg-apps xorg)
 community/acpid 2.0.31-1
@@ -1627,7 +1624,6 @@ extra/texlive-langextra 2019.50911-1 (texlive-lang)
 extra/texlive-pictures 2019.50872-1 (texlive-most)
 extra/texlive-science 2019.50760-1 (texlive-most)
 community/tldr 0.5-1
-community/toxcore 1:0.2.10-1
 community/wine-mono 4.9.0-1
 community/winetricks 20190615-1
 extra/xorg-sessreg 1.1.2-1 (xorg-apps xorg)
@@ -2187,3 +2183,8 @@ extra/xf86-video-intel 1:2.99.917+865+g60022507-1 (xorg-drivers)
 extra/xorg-xinput 1.6.3-1 (xorg-apps xorg)
 community/xrootd 4.10.0-1
 core/gcc-fortran 9.1.0-2
+extra/check 0.12.0-1
+community/fractal 4.0.0-2
+extra/gtksourceview3 3.24.11-1
+community/libhandy 0.0.10-1
+community/ring-kde 3.0.0-2
