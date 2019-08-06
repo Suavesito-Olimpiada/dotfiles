@@ -6,10 +6,6 @@
 # Julia definition
 --langdef=julia
 --langmap=julia:.jl
---regex-julia=/^[ \t]*(@with_kw[ \t]+)?(abstract type|primitive type|struct|mutable struct|typealias)[ \t]+([^ \t({[]+).*$/\3/t,type/
---regex-julia=/^[ \t]*(macro)[ \t]+([^ \t({[]+).*$/\2/m,macro/
---regex-julia=/^[ \t]*(@inline[ \t]+|@noinline[ \t]+)?(function)[ \t]+([^ \t({[]+)[^(]*\([ \t]*([^ \t;,=)({]+).*$/\3 (\4, …)/f,function/
---regex-julia=/^[ \t]*(@inline[ \t]+|@noinline[ \t]+)?(function)[ \t]+([^ \t({[]+)[^(]*(\([ \t]*\).*|\([ \t]*)$/\3/f,function/
---regex-julia=/^[ \t]*(@inline[ \t]+|@noinline[ \t]+)?(([^@#$ \t({[]+)|\(([^@#$ \t({[]+)\)|\((\$)\))[ \t]*(\{.*\})?[ \t]*\([ \t]*\)[ \t]*=([^=].*$|$)/\3\4\5/f,function/
---regex-julia=/^[ \t]*(@inline[ \t]+|@noinline[ \t]+)?(([^@#$ \t({[]+)|\(([^@#$ \t({[]+)\)|\((\$)\))[ \t]*(\{.*\})?[ \t]*\([ \t]*([^ \t;,=)({]+).*\)[ \t]*=([^=].*$|$)/\3\4\5 (\7, …)/f,function/
---regex-julia=/^(const)[ \t]+([^ \t({[]+).*[ ]*=.*$/\2/c,const/
+--regex-julia=/^[ \t]*(([^ \t.({[]+\.)*@[^ \t({[]+[ \t]+)*(function|macro|abstract type|primitive type|struct|mutable struct|module)[ \t]+([^ \t({[]+).*$/\4/f,function/
+--regex-julia=/^[ \t]*(([^ \t.({[]+\.)*@[^ \t({[]+[ \t]+)*(([^@#$ \t({[]+)|\(([^@#$ \t({[]+)\))[ \t]*[ \t]*\([^#]*\)([ \t]+where[ \t]+\{.*\})?[ \t]*=([^=].*)?$/\4\5/f,function/
+--regex-julia=/^(([^ \t.({[]+\.)*@[^ \t({[]+[ \t]+)*(const[ \t]+)?(([^ \t.({[]+\.)*@[^ \t({[]+[ \t]+)*([^@#$ \t({[]+)[ \t]*=([^=].*)?$/\6/v,variable/
