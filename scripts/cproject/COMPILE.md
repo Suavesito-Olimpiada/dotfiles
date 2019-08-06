@@ -2,12 +2,12 @@
 
 #### **Compile**
 
-To be able to compile in linux you need to get into **src** directory in your terminal.
-There you compile with 
+To be able to compile in GNU/Linux you need to get into **src** directory in your terminal.
+There you compile with
 
 > make
 
-it will create the *program* executable file.
+it will create the *program* executable file inside the **build** directory.
 
 #### **Compile and run**
 

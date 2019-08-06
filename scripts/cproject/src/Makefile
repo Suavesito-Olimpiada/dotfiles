@@ -9,7 +9,7 @@ BDIR=../build
 
 LIBS=-lm
 
-_DEPS = 
+_DEPS =
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _OBJ = main.o
