@@ -347,6 +347,9 @@ command! -nargs=1 Figlet :r !figlet <q-args>
 " Yank to system clipboard with OSC52
 command! Osc52CopyYank call Osc52Yank()
 
+" Add license
+command! License call InsertLicense('licenseFile')
+
 
 "}}}
 "  ____  _             _
@@ -516,6 +519,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " CSV.vim
 :let g:csv_delim=','
 let g:csv_strict_columns = 1
+
+" Licenses vim
+let g:licenses_copyright_holders_name = 'Zubieta Rico, José Joaquín <jose.zubieta@cimat.mx>'
+let g:licenses_authors_name = 'Zubieta Rico, José Joaquín <jose.zubieta@cimat.mx>'
+let g:licenses_default_commands = ['gpl', 'mit']
 
 
 "}}}
