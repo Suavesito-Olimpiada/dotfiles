@@ -202,3 +202,7 @@
 	path = vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
 	branch = master
+[submodule "vim/bundle/vim-licenses"]
+	path = vim/bundle/vim-licenses
+	url = https://github.com/antoyo/vim-licenses
+	branch = master

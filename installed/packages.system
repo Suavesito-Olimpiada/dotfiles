@@ -345,7 +345,6 @@ extra/wxgtk2 3.0.4-2
 local/python-keras 2.2.4-1
 local/python2-keras 2.2.4-1
 local/shotcut-bin 181008-1
-extra/gsl 2.5-1
 extra/cblas 3.8.0-2
 community/fig2dev 3.2.7-1
 extra/libsm 1.2.3-1
@@ -2200,3 +2199,4 @@ extra/gtk3 1:3.24.10-1
 community/libappindicator-gtk3 12.10.0-13
 local/thermald 1.9-2
 community/watchexec 1.10.2-1
+extra/gsl 2.5-1
