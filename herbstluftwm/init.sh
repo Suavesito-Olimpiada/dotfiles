@@ -4,7 +4,9 @@ xautolock -time 5 -locker '/home/jose/.config/script/lock_screen 1' -corners 0-+
 autocutsel -fork &!
 autocutsel -selection PRIMARY -fork &! #Makes cut and paste behave as expected
 mpd &> /dev/null &!
-dunst -config /home/jose/.config/dunst/dunstrc &!
+# dunst -config /home/jose/.config/dunst/dunstrc &!
+/usr/lib/notify-osd/notify-osd &!
+blueman-applet &!
 compton --config /home/jose/.config/compton/compton.conf &!
 /home/jose/Apps/precompile/lifecalendar/lifecalendar.py -c /home/jose/Apps/precompile/lifecalendar/examples/default.cfg -o "/home/jose/Apps/precompile/lifecalendar/BgLifetime.png"
 feh --bg-fill --no-fehbg /home/jose/Apps/precompile/lifecalendar/BgLifetime.png
