@@ -13,7 +13,11 @@ export MANPAGER="less -R"
 export VISUAL="/bin/vim"
 export EDITOR="/bin/vim"
 
-export WAKATIME_HOME="/home/jose/.config/wakatime"
+# Auto-Notify threshold for zsh-auto-notify
+AUTO_NOTIFY_THRESHOLD=30
+AUTO_NOTIFY_TITLE="Hey! %command has just finished"
+AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
+AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt")
 
 #export LC_ALL="es_MX.UTF-8"
 

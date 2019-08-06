@@ -28,6 +28,8 @@ zplug "bcho/Watson.zsh"
 
 zplug "ryutok/rust-zsh-completions"
 
+zplug "MichaelAquilina/zsh-auto-notify"
+
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 if ! zplug check --verbose; then
