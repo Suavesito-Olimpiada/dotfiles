@@ -95,7 +95,7 @@ LibAppArmor==2.13.3
 lit==0.8.1.dev0
 lockfile==0.12.2
 louis==3.10.0
-lxml==4.3.4
+lxml==4.4.0
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==3.1.1

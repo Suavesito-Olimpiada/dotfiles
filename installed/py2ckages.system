@@ -91,8 +91,8 @@ kiwisolver==1.1.0
 lockfile==0.12.2
 logutils==0.3.5
 louis==3.10.0
-lxml==4.3.4
-Mako==1.0.13
+lxml==4.4.0
+Mako==1.0.14
 Markdown==3.0.1
 MarkupSafe==1.1.1
 matplotlib==2.2.4
