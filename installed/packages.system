@@ -1591,7 +1591,6 @@ community/languagetool 4.6-1
 local/julia-bin 1.1.1-1
 community/nerd-fonts-terminus 2.0.0-2
 community/ttf-nerd-fonts-symbols 2.0.0-4
-local/bluejeans 1.37.22-1
 local/nerd-fonts-hack 2.0.0-1
 local/nerd-fonts-inconsolata 2.0.0-1 (nerd-fonts)
 extra/noto-fonts-cjk 20190409-1
@@ -2200,3 +2199,8 @@ community/libappindicator-gtk3 12.10.0-13
 local/thermald 1.9-2
 community/watchexec 1.10.2-1
 extra/gsl 2.5-1
+core/pth 2.0.7-6
+extra/xine-lib 1.2.9-9
+community/openscenegraph34 3.4.1-1
+local/bluejeans 1.37.22-1
+local/flightgear 2018.3.2-2
