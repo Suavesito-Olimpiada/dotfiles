@@ -206,3 +206,7 @@
 	path = vim/bundle/vim-licenses
 	url = https://github.com/antoyo/vim-licenses
 	branch = master
+[submodule "vim/bundle/vim-pandoc-after"]
+	path = vim/bundle/vim-pandoc-after
+	url = https://github.com/vim-pandoc/vim-pandoc-after
+	branch = master

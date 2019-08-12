@@ -1254,7 +1254,6 @@ extra/cowsay 3.04-1
 community/espeak 1:1.48.04-2
 local/python-pyttsx3 2.7-1
 extra/xorg-xkill 1.0.5-1 (xorg-apps xorg)
-local/python-pynvim 0.3.2-1
 core/pacman 5.1.3-1 (base base-devel)
 core/wireless_tools 30.pre9-2
 community/aircrack-ng 1.5.2-1
@@ -2205,3 +2204,8 @@ community/openscenegraph34 3.4.1-1
 local/bluejeans 1.37.22-1
 local/flightgear 2018.3.2-2
 extra/refind-efi 0.11.3-1
+community/haskell-tasty-smallcheck 0.8.1-43
+local/haskell-tasty-hspec 1.1.5.1-1
+local/pandoc-pyplot 2.1.5.1-1
+local/python-pynvim 0.3.2-2
+local/python2-pynvim 0.3.2-2

@@ -139,6 +139,7 @@ pycparser==2.19
 Pygments==2.4.2
 PyGObject==3.32.2
 PyHamcrest==1.9.0
+pynvim==0.3.2
 PyOpenGL==3.1.0
 pyOpenSSL==19.0.0
 pyparsing==2.4.0
