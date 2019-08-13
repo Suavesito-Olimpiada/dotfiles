@@ -153,7 +153,6 @@ community/pari-seadata-small 20090618-2
 community/rubiks 20070912-3
 extra/zip 3.0-8
 community/tcc 0.9.27-3
-extra/xorg-docs 1.7.1-2 (xorg)
 extra/xorg-font-util 1.3.1-2 (xorg-fonts xorg)
 extra/xorg-font-utils 7.6-5
 extra/xorg-fonts-alias 1.0.3-2
@@ -612,7 +611,6 @@ multilib/lib32-libogg 1.3.3-3
 multilib/lib32-sdl_image 1.2.12-6
 multilib/lib32-sdl_ttf 2.0.11-5
 extra/libfbclient 3.0.4.33054-1
-core/libpipeline 1.5.1-1
 extra/libtommath 1.1.0-1
 community/mitmproxy 4.0.4-3
 extra/networkmanager-openvpn 1.8.10-1
@@ -817,7 +815,6 @@ extra/libcerf 1.13-1
 extra/libdvdread 6.0.1-1
 community/libnfs 4.0.0-3
 core/mkinitcpio-busybox 1.30.1-1
-core/man-db 2.8.5-2 (base)
 core/manjaro-release 18.0.4-1
 core/mhwd-nvidia-390xx 390.116-1
 community/phodav 2.3-1
@@ -849,7 +846,6 @@ extra/libva-vdpau-driver 0.7.4-4
 extra/python-protobuf 3.7.0-1
 community/python2-cysignals 1.10.2-1
 community/remmina 1:1.3.4-1
-community/terminus-font 4.47-2
 extra/upower 0.99.10-1
 community/python-mpmath 1.1.0-1
 extra/gperftools 2.7-1
@@ -1617,7 +1613,6 @@ community/libjamiclient 20190603-1 (jami)
 extra/qt5-base 5.13.0-7.1 (qt qt5)
 community/jami-gnome 20190603-1 (jami)
 extra/webkit2gtk 2.24.3-1
-community/kakoune 2019.07.01-1
 extra/leveldb 1.22-1
 multilib/lib32-faudio 19.07-1
 multilib/lib32-freetype2 2.10.1-1
@@ -2148,7 +2143,6 @@ extra/qt5-imageformats 5.13.0-2 (qt qt5)
 community/telegram-desktop 1.7.14-3
 extra/libcanberra-pulse 0.30+2+gc0620e4-2
 extra/gtkmm3 3.24.1-1
-extra/pavucontrol 1:4.0-1
 community/blueman 2.1-1
 extra/libwnck3 3.32.0-2
 extra/libxres 1.2.0-1
@@ -2162,7 +2156,6 @@ core/gnutls 3.6.9-1
 extra/pango 1:1.44.1-1
 extra/sdl2 2.0.10-1
 extra/wayland-protocols 1.18-1
-extra/chromium 76.0.3809.87-0
 extra/cmake 3.15.1-1
 extra/libxfce4ui 4.13.7-1
 extra/libxfce4util 4.13.5-1
@@ -2209,3 +2202,27 @@ local/haskell-tasty-hspec 1.1.5.1-1
 local/pandoc-pyplot 2.1.5.1-1
 local/python-pynvim 0.3.2-2
 local/python2-pynvim 0.3.2-2
+community/terminus-font 4.47-2
+extra/libkeybinder3 0.3.2-2
+extra/python2-dbus 1.2.8-2
+community/terminator 1.91-6
+community/st-manjaro 1:0.8.2.r12.gf1546cf-2
+core/libpipeline 1.5.1-1
+core/man-db 2.8.5-2 (base)
+extra/xorg-docs 1.7.1-2 (xorg)
+extra/pavucontrol 1:4.0-1
+extra/clazy 1.5-2
+extra/qbs 1.13.1-1
+extra/qtcreator 4.9.2-3
+community/aria2 1.34.0-3
+community/pm2ml 2017.12-3
+community/powerpill 2018.11-2
+extra/pyalpm 0.8.5-2
+community/python3-memoizedb 2017.3.30-3
+community/python3-xcgf 2017.3-3
+community/python3-xcpf 2019-1.1
+community/lostfiles 4.03-1
+extra/qt5-doc 5.13.0-1 (qt qt5)
+extra/qt5-examples 5.13.0-1 (qt qt5)
+local/vrms-arch 0.1.0.r25.g802c767-1
+extra/chromium 76.0.3809.100-0
