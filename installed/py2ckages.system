@@ -43,7 +43,7 @@ docutils==0.14
 entrypoints==0.3
 enum34==1.1.6
 file-magic==0.4.0
-Flask==1.0.3
+Flask==1.1.1
 Flask-AutoIndex==0.6.4
 Flask-Babel==0.12.2
 Flask-OldSessions==0.10
@@ -91,7 +91,7 @@ kiwisolver==1.1.0
 lockfile==0.12.2
 logutils==0.3.5
 louis==3.10.0
-lxml==4.4.0
+lxml==4.4.1
 Mako==1.0.14
 Markdown==3.0.1
 MarkupSafe==1.1.1
@@ -108,12 +108,12 @@ ndg-httpsclient==0.5.1
 networkx==2.2
 notebook==5.7.5
 numpy==1.16.4
-packaging==19.0
+packaging==19.1
 pandocfilters==1.4.2
 parso==0.5.1
 pathlib==1.0.1
 pathlib2==2.3.3
-pbr==5.4.1
+pbr==5.4.2
 pecan==1.3.3
 pep517==0.5.0
 pexpect==4.7.0
@@ -133,7 +133,7 @@ prompt-toolkit1==1.0.15
 protobuf==3.6.1
 psutil==5.6.3
 ptyprocess==0.6.0
-pyasn1==0.4.5
+pyasn1==0.4.6
 pycairo==1.18.1
 pycparser==2.19
 Pygments==2.4.2
@@ -142,7 +142,7 @@ PyHamcrest==1.9.0
 pynvim==0.3.2
 PyOpenGL==3.1.0
 pyOpenSSL==19.0.0
-pyparsing==2.4.0
+pyparsing==2.4.2
 PyQt5==5.13.0
 PyQt5-sip==4.19.18
 pyrsistent==0.14.11
@@ -151,7 +151,7 @@ python-dateutil==2.8.0
 python-libtorrent==1.1.13
 python-openid==2.2.5
 pytoml==0.1.21
-pytz==2019.1
+pytz==2019.2
 PyYAML==5.1.1
 pyzmq==18.0.2
 rados==2.0.0
