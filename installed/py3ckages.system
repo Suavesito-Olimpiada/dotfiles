@@ -149,6 +149,7 @@ pycparser==2.19
 pydocstyle==4.0.0
 pyflakes==2.1.1
 pyftpdlib==1.5.5
+pygame==1.9.6
 Pygments==2.4.2
 PyGObject==3.32.2
 Pykka==2.0.0
@@ -164,6 +165,7 @@ PyQt5==5.13.0
 PyQt5-sip==4.19.18
 PyQtWebEngine==5.13.0
 pyrsistent==0.15.4
+PySide2==5.13.0
 PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
@@ -192,6 +194,7 @@ scrypt==0.8.7
 Send2Trash==1.5.0
 service-identity==18.1.0
 setproctitle==1.1.10
+shiboken2==5.13.0
 simplegeneric==0.8.1
 sip==4.19.18
 six==1.12.0

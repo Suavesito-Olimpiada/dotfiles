@@ -1488,7 +1488,6 @@ community/tldr 0.5-1
 community/winetricks 20190615-1
 extra/xorg-sessreg 1.1.2-1 (xorg-apps xorg)
 community/zathura 0.4.3-2
-extra/apparmor 2.13.3-4
 community/squashfs-tools 4.3-8
 community/languagetool 4.6-1
 local/julia-bin 1.1.1-1
@@ -1613,8 +1612,6 @@ community/opendht 1:1.9.5-2
 community/os-prober 1.77-1
 community/pdfjs 2.2.228-1
 extra/threadweaver 5.60.0-1 (kf5)
-extra/pyqt5-common 5.13.0-1
-extra/pyqtwebengine-common 5.13.0-1
 community/pythia8 8.2.43-1
 community/python-pillow 6.1.0-1
 extra/python-sip-pyqt5 4.19.18-1
@@ -2250,3 +2247,17 @@ community/cabal-install 2.4.0.0-122
 community/haskell-cabal-doctest 1.0.6-8
 community/haskell-resolv 0.1.1.1-36
 extra/firefox 68.0.1-2
+extra/http-parser 2.9.2-1
+community/electron 6.0.1-1
+extra/apparmor 2.13.3-4
+extra/pyqt5-common 5.13.0-1
+extra/pyqtwebengine-common 5.13.0-1
+extra/apr 1.7.0-1
+extra/apr-util 1.6.1-5
+community/libutf8proc 2.4.0-1
+extra/serf 1.3.9-3
+extra/subversion 1.12.2-1
+local/liblinear 2.30-1
+local/python-liblinear 2.30-1
+local/python2-liblinear 2.30-1
+local/ccv 0.7.r2076-1
