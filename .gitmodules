@@ -50,10 +50,6 @@
 	path = vim/bundle/julia-vim
 	url = git://github.com/JuliaEditorSupport/julia-vim.git
 	branch = master
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-	branch = master
 [submodule "vim/bundle/nvim-yarp"]
 	path = vim/bundle/nvim-yarp
 	url = git://github.com/roxma/nvim-yarp.git
@@ -77,10 +73,6 @@
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
 	url = git://github.com/vim-airline/vim-airline-themes.git
-	branch = master
-[submodule "vim/bundle/vim-clang-format"]
-	path = vim/bundle/vim-clang-format
-	url = git://github.com/rhysd/vim-clang-format.git
 	branch = master
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
@@ -174,10 +166,6 @@
 	path = vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
 	branch = master
-[submodule "vim/bundle/nerdtree-git-plugin"]
-	path = vim/bundle/nerdtree-git-plugin
-	url = git://github.com/Xuyuanp/nerdtree-git-plugin.git
-	branch = master
 [submodule "vim/bundle/vim-nerdtree-syntax-highlight"]
 	path = vim/bundle/vim-nerdtree-syntax-highlight
 	url = git://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
@@ -213,4 +201,16 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
+	branch = master
+[submodule "vim/bundle/vim-clang-format"]
+	path = vim/bundle/vim-clang-format
+	url = git://github.com/rhysd/vim-clang-format.git
+	branch = master
+[submodule "vim/bundle/nerdtree-git-plugin"]
+	path = vim/bundle/nerdtree-git-plugin
+	url = git://github.com/Xuyuanp/nerdtree-git-plugin.git
+	branch = master
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
 	branch = master
