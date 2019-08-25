@@ -214,3 +214,7 @@
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
 	branch = master
+[submodule "vim/bundle/vim-sneak"]
+	path = vim/bundle/vim-sneak
+	url = https://github.com/justinmk/vim-sneak
+	branch = master

@@ -772,7 +772,6 @@ extra/libxkbcommon-x11 0.8.4-1
 extra/libvdpau 1.2-1
 community/eclib 20190226-2
 extra/graphene 1.8.6-1
-community/python-jedi 0.13.3-1
 extra/python-markupsafe 1.1.1-1
 multilib/lib32-gdk-pixbuf2 2.38.1-1
 multilib/lib32-libelf 0.176-1
@@ -1448,7 +1447,6 @@ community/python-astor 0.8-1
 community/python-bcrypt 3.1.7-1
 extra/python-cryptography 2.7-1
 extra/python-gobject 3.32.2-1
-extra/python-isort 4.3.20-1
 community/python-keras-applications 1.0.8-1
 community/python-keras-preprocessing 1.1.0-1
 community/python-pluggy 0.12.0-1
@@ -1578,7 +1576,6 @@ extra/flatpak 1.4.2-1
 community/haskell-basement 0.0.11-1
 community/haskell-microlens 0.4.11.2-1
 community/haskell-microlens-th 0.4.3.2-1
-community/go 2:1.12.7-1
 extra/gst-plugins-bad 1.16.0-4
 extra/rtmpdump 1:2.4.r96.fa8646d-5
 extra/guile 2.2.6-1
@@ -1811,7 +1808,6 @@ local/python2-pynvim 0.3.2-2
 extra/libkeybinder3 0.3.2-2
 extra/python2-dbus 1.2.8-2
 community/terminator 1.91-6
-community/st-manjaro 1:0.8.2.r12.gf1546cf-2
 core/libpipeline 1.5.1-1
 extra/xorg-docs 1.7.1-2 (xorg)
 extra/pavucontrol 1:4.0-1
@@ -2137,7 +2133,6 @@ community/python-arrow 0.14.4-1
 community/python-flask 1.1.1-1
 community/python-h2 3.1.1-1
 community/python-jsonschema 3.0.2-1
-community/python-language-server 0.28.1-1
 community/python-pandas-datareader 0.7.4-1
 extra/python-prometheus_client 0.7.1-1
 extra/python-pyasn1 0.4.6-1
@@ -2261,3 +2256,19 @@ local/rr 5.2.0-4
 local/skypeforlinux-stable-bin 8.51.0.86-2
 local/julia-bin 1.2.0-1
 local/pandoc-pyplot 2.1.5.1-1
+community/python-language-server 0.28.1-1
+community/python-jedi 0.13.3-1
+community/autopep8 1:1.4.4-1
+extra/python-isort 4.3.20-1
+community/mypy 0.720-1
+community/python-mypy_extensions 0.4.1-1
+community/python-psutil 5.6.3-1
+community/python-black 19.3b0-1
+community/python-toml 0.10.0-1
+community/acorn 1:6.2.1-1
+community/bash-language-server 1.5.6-1
+community/go 2:1.12.7-1
+community/st-manjaro 1:0.8.2.r12.gf1546cf-2
+community/pmenu 0.3.2-1
+community/python-kitchen 1.2.6-1
+community/rtv 1.27.0-1
