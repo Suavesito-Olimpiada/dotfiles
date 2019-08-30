@@ -1,5 +1,6 @@
 absl-py==0.7.1
 alabaster==0.7.12
+altgraph==0.16.1
 anytree==2.6.0
 apparmor==2.13.3
 appdirs==1.4.3
@@ -13,7 +14,6 @@ autograd==1.2
 autopep8==1.4.4
 Babel==2.7.0
 backcall==0.1.0
-backports.csv==1.0.7
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 black==19.3b0
@@ -30,10 +30,8 @@ caffeine-ng==3.4.2
 certifi==2019.3.9
 cffi==1.12.3
 chardet==3.0.4
-cli-helpers==1.2.0
 Click==7.0
 colorama==0.4.1
-configobj==5.0.6
 cryptography==2.7
 curtsies==0.3.0
 cycler==0.10.0
@@ -45,9 +43,11 @@ distro==1.4.0
 django-extensions==2.1.6
 docopt==0.6.2
 docutils==0.14
+dot2tex==2.11.3
 entrypoints==0.3
 ewmh==0.1.6
 fastpbkdf2==0.2
+fbs==0.8.3
 flake8==3.7.8
 Flask==1.1.1
 future==0.17.1
@@ -68,6 +68,7 @@ hyperframe==5.2.0
 idna==2.8
 imagesize==1.1.0
 importlib-metadata==0.19
+include-server==3.3.2
 ipykernel==5.1.1
 ipython==7.6.1
 ipython-genutils==0.1.0
@@ -110,7 +111,6 @@ mock==2.0.0
 Mopidy==2.1.0
 mpmath==1.1.0
 msgpack==0.6.1
-mycli==1.19.0
 mypy==0.720
 mypy-extensions==0.4.1
 nbconvert==5.5.0.dev0
@@ -158,12 +158,12 @@ pyftpdlib==1.5.5
 pygame==1.9.6
 Pygments==2.4.2
 PyGObject==3.32.2
+PyInstaller==3.5
 Pykka==2.0.0
 pylint==2.3.1
 pyls-black==0.4.4
 pyls-isort==0.1.1
 pyls-mypy==0.1.6
-PyMySQL==0.9.3
 pynvim==0.3.2
 PyOpenGL==3.1.0
 pyOpenSSL==19.0.0
@@ -221,10 +221,8 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.2
 sphinxcontrib-serializinghtml==1.1.3
 SQLAlchemy==1.3.6
-sqlparse==0.2.4
 sympy==1.4
-tabulate==0.8.3
-td-watson==1.7.0
+td-watson==1.8.0
 team==1.0
 tensorboard==1.14.0
 tensorflow==1.14.0
@@ -233,7 +231,6 @@ tensorflow-serving-api==1.14.0rc0
 tensorflow-serving-api-gpu==1.14.0rc0
 termcolor==1.1.0
 terminado==0.8.1
-terminaltables==3.1.0
 testpath==0.4.2
 tifffile==2019.2.10
 tldr==0.5
@@ -254,6 +251,7 @@ wrapt==1.11.2
 wsproto==0.14.1
 XCGF==2017.3.10.23.45.54
 XCPF==2019.1.23.9.30.27
+XlsxWriter==1.1.8
 yapf==0.28.0
 youtube-dl==2019.8.2
 zipp==0.5.2
