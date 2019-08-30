@@ -2276,3 +2276,9 @@ community/libc++ 8.0.0-1
 community/ccache 3.7.2-1
 community/distcc 3.3.2-1
 extra/lzop 1.04-2
+extra/libdvbpsi 1:1.3.2-1
+extra/libebml 1.3.9-1
+extra/aribb24 1.0.3-2
+extra/libmatroska 1.5.2-1
+extra/libtar 1.2.20-4
+extra/vlc 3.0.8-0
