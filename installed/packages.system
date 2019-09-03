@@ -2179,7 +2179,6 @@ extra/libnet 1.1.6-3
 community/cabal-install 2.4.0.0-122
 community/haskell-cabal-doctest 1.0.6-8
 community/haskell-resolv 0.1.1.1-36
-extra/firefox 68.0.1-2
 extra/http-parser 2.9.2-1
 community/electron 6.0.1-1
 extra/apparmor 2.13.3-4
@@ -2291,3 +2290,4 @@ community/suil 0.10.4-1
 community/aubio 0.4.9-3 (pro-audio)
 community/ardour 5.12-11 (pro-audio)
 local/bear 2.4.2-1
+extra/firefox 69.0-0
