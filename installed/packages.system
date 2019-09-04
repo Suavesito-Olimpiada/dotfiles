@@ -1374,7 +1374,6 @@ extra/perl-mailtools 2.21-2
 extra/perl-timedate 2.30-6
 extra/glib-perl 1.329-2
 extra/gobject-introspection-runtime 1.60.2-1
-extra/graphviz 2.40.1-17
 community/gst-editing-services 1.16.0-1
 community/gst-transcoder 1.16.0-1
 extra/gtk2-perl 1.24992-4
@@ -2291,3 +2290,5 @@ community/aubio 0.4.9-3 (pro-audio)
 community/ardour 5.12-11 (pro-audio)
 local/bear 2.4.2-1
 extra/firefox 69.0-0
+extra/graphviz 2.40.1-17
+extra/xorg-fonts-misc 1.0.3-6
