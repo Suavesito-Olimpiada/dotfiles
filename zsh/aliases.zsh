@@ -50,7 +50,7 @@ alias gemup="gem update"
 # alias stackup="stack update && stack upgrade"
 alias Rup="sudo R -e 'old.packages (repos = \"https://cran.itam.mx\"); update.packages (ask = FALSE, repos = \"https://cran.itam.mx\")'"
 alias juliaup="julia -e 'import Pkg; Pkg.update(); Pkg.build()'"
-alias npmup="sudo npm i -g npm"
+alias npmup="npm i -g npm"
 
 alias flatup="sudo flatpak update"
 alias snapup="sudo snap refresh"
