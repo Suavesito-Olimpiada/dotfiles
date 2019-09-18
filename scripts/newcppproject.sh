@@ -36,14 +36,14 @@ fi
 
 if [[ -n "$2" ]]
 then
-    PROJECT_NAME="$2"
+    PROJECT_NAME="$(echo $2)" # To allow echo to subtitute unicode codes.
 else
     PROJECT_NAME="Project Name"
 fi
 
 if [[ -n "$3" ]]
 then
-    PROJECT_DESC="$3"
+    PROJECT_DESC="$(echo $3)"
 else
     PROJECT_DESC="Description of the project."
 fi
@@ -52,12 +52,12 @@ cp -r ~/.config/scripts/cppproject/* ./
 
 DATE=$(date "+%m-%d-%Y")
 
-sed -i "2,2s/00-00-0000/$DATE/" README.md
-sed -i "17,17s/00-00-0000/$DATE/" README.md
+sed -i "3,3s/00-00-0000/$DATE/" README.md
+sed -i "18,19s/00-00-0000/$DATE/" README.md
 sed -i "3,3s/00-00-0000/$DATE/" src/main.cpp
 
 sed -i "1,1s%NAME%$PROJECT_NAME%" README.md
-sed -i "5,5s%Description of the project\.%$PROJECT_DESC%" README.md
+sed -i "6,6s%Description of the project\.%$PROJECT_DESC%" README.md
 
 sed -i "1,1s%NAME%$PROJECT_NAME%" src/main.cpp
 sed -i "5,5s%Description of the project\.%$PROJECT_DESC%" src/main.cpp

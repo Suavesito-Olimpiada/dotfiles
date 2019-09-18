@@ -1,44 +1,54 @@
-IDIR =../include
-CXX=g++
-CXXFLAGS=-I$(IDIR) -g -Wall -std=c++17
+CXX             = g++
+CXXFLAGS        = -I$(INCDIR) -I$(LINDIR) -g -Wall -Werror -Wextra -pedantic -std=c++2a \
+                  -fconcepts
+# _-fconcepts_ is for the C++ Starndard Technical
+# Specification of concepts in C++17 (or later),
+# enabling it in gcc compiler.
 
-ODIR=../build/obj
-LDIR=../lib
-TDIR=../test
-BDIR=../build
+LIBFLAGS        = -lm -pthread
+# For math and thread libraries
 
-LIBS=-lm
+BLDDIR          = ../build
+OBJDIR          = ../build/obj
+INCDIR          = ../include
+LIBDIR          = ../lib
+LINDIR          = ../lib/include
+TSTDIR          = ../test
 
-_DEPS = 
-DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+_LIBINCLUDES    = argh.h
+LIBINCLUDES     = $(patsubst %,$(INCDIR)/%,$(_INCLUDES))
 
-_OBJ = main.o
-OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+_INCLUDES       =
+INCLUDES        = $(patsubst %,$(INCDIR)/%,$(_INCLUDES))
 
-BIN = program
+_OBJECTS        = main.o
+OBJECTS         = $(patsubst %,$(OBJDIR)/%,$(_OBJECTS))
 
-$(ODIR)/%.o: %.cpp $(DEPS)
-	$(CXX) -c -o $@ $< $(CXXFLAGS)
+TARGET          = program
 
-$(BIN): $(OBJ)
-	$(CXX) -o $(BDIR)/$@ $^ $(CXXFLAGS) $(LIBS)
+$(OBJDIR)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
+	$(CXX) -c -o $@ $< $(CXXFLAGS) $(LIBFLAGS)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGS) $(LIBFLAGS)
 
 .PHONY: clean
 
 clean:
-	rm -f $(BDIR)/$(ODIR)/*.o *~ core $(INCDIR)/*~ $(BDIR)/$(BIN)
+	rm -f $(BLDDIR)/$(OBJDIR)/*.o $(BLDDIR)/$(TARGET)
 
 .PHONY: run
 
-run: ./$(BIN)
-	$(BDIR)/$(BIN) ${ARGS}
+run: ./$(TARGET)
+	$(BLDDIR)/$(TARGET) ${ARGS}
 
 .PHONY: debug
 
-debug: ./$(BIN)
-	gdb --args $(BDIR)/$(BIN) ${ARGS}
+debug: ./$(TARGET)
+	gdb --args $(BLDDIR)/$(TARGET) ${ARGS}
 
 .PHONY: test
 
-test: ./$(BIN)
-	sh $(TDIR)/test.sh &>> $(TDIR)/program.log
+test: ./$(TARGET)
+	sh $(TSTDIR)/test.sh &>> $(TSTDIR)/program.log
+
