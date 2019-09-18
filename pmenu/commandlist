@@ -1,0 +1,22 @@
+nmtui                                                                                           # INTERNET CONNECTION
+httping -Y -K google.com                                                                        # HTTPING INTERNET PROVE
+speedometer -r wlp2s0 -t wlp2s0                                                                 # SPEEDOMETER INTERNET CHECK
+speedometer -r enp1s0 -t enp1s0                                                                 # SPEEDOMETER ETHERNET CHECK
+rtorrent                                                                                        # RTORRENT TORRENT DOWNLOAD
+vim                                                                                             # VIM
+genius --maxdigits=0 --precision=2048 --fullexp                                                 # CALCULATOR TERMINAL
+sage                                                                                            # SAGE MATH PACK
+gnuplot                                                                                         # GNUPLOT PLOT TOOL
+doomrl -console                                                                                 # DOOM GAME CONSOLE
+sclang                                                                                          # SUPERCOLLIDER SERVER
+vim /home/jose/.config/herbstluftwm/autostart                                                   # AUTOSTART HERBSTLUFT
+alsamixer                                                                                       # ALSAMIXER SOUND
+htop                                                                                            # HTOP PROCESS
+sudo htop                                                                                       # SUDO HTOP PROCESS
+vim /home/jose/.config/dmenu/commandlist                                                        # VIM COMMANDLIST EDIT
+vim /home/jose/.config/pmenu/commandlist                                                        # VIM COMMANDLIST EDIT
+ranger                                                                                          # RANGER FILE NAVIGATOR
+calcurse                                                                                        # CALCURSE
+vrms -g                                                                                         # VIRTUAL RICHARD M STALLMAN
+watson                                                                                          # KEEP TRACKING OF TIME
+scalpel                                                                                         # FIND DELETED FILES
