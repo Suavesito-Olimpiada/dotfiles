@@ -27,6 +27,7 @@ libreoffice --draw                                                              
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
 /home/jose/Apps/precompile/atom-1.37.0-amd64/atom                                               # TEXT EDITOR
 /home/jose/.config/scripts/atom.sh
+scribus                                                                                         # SCRIBUS
 
 #   math
 /home/jose/.config/scripts/calculadora_genius.sh                                                # GENIUS CALCULATOR
@@ -49,8 +50,6 @@ gimp                                                                            
 inkscape                                                                                        # INKSCAPE
 st -c Music -e ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf                                     # NCMPC
 /home/jose/Apps/gitBuild/forked/st/st -c Music -e ncmpcpp                                       # NCMPCPP
-vlc                                                                                             # VLC VIDEO - MUSIC
-spotify                                                                                         # SPOTIFY
 cheese                                                                                          # WEBCAM
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
 darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
@@ -60,10 +59,12 @@ st -e sclang                                                                    
 pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
 st -c Youtube -e youtube-viewer
 pinta                                                                                           # DRAWING PROGRAM
-krita
-blender
-pitivi
-kdenlive
+krita                                                                                           # DRAWING PROGRAM
+blender                                                                                         # 3D RENDERING EDITOR
+pitivi                                                                                          # VIDEO EDITING PROGRAM
+kdenlive                                                                                        # VIDEO EDITING PROGRAM
+ardour5                                                                                         # AUDIO EDITING PROGRAM
+musikwave                                                                                       # MUSIC P2P APP
 
 #   programming
 tabbed -c -r 2 st -w - -e python3                                                               # PYTHON 3 PROGRAMMING
@@ -71,6 +72,8 @@ tabbed -c -r 2 st -w - -e bpython                                               
 tabbed -c -r 2 st -w - -e julia                                                                 # JULIA INTERPRETER
 tabbed -c -r 2 st -w - -e root                                                                  # ROOT CERN INTERPRETER
 tabbed -c -r 2 st -w - -e R                                                                     # R INTERPRETER
+qtcreator                                                                                       # QTCREATOR
+glade                                                                                           # GTK GLADE APP CREATOR
 
 #   system
 st -e vim /home/jose/.config/herbstluftwm/autostart                                             # AUTOSTART HERBSTLUFT
@@ -84,12 +87,13 @@ xkill                                                                           
 VirtualBox                                                                                      # VIRTUALBOX
 /home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
 remmina                                                                                         # CONTROL REMOTE DESKTOP
-pamac-manager
 gksu gufw                                                                                       # FIREWALL CONFIG APP
 gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
 /home/jose/.config/scripts/alarm.sh
 blueman-manager                                                                                 # BLUETOOTH MANAGER
+pavucontrol                                                                                     # PAVUCONTROL
+st -e calcurse                                                                                  # CALCURSE
 
 # QEMU and VM
 /home/jose/.config/dmenu/qemu                                                                   # QEMU VM
