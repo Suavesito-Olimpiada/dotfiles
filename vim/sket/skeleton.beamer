@@ -1,0 +1,37 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+%_____________________  _____     _____  ____________________  
+%\______   \_   _____/ /  _  \   /     \ \_   _____\______   \ 
+% |    |  _/|    __)_ /  /_\  \ /  \ /  \ |    __)_ |       _/ 
+% |    |   \|        /    |    /    Y    \|        \|    |   \ 
+% |______  /_______  \____|__  \____|__  /_______  /|____|_  / 
+%        \/        \/        \/        \/        \/        \/  
+                                                              
+\usetheme{Madrid}
+\defbeamertemplate*{footline}{shadow theme}
+{%
+    \leavevmode%
+    \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+        \usebeamerfont{author in head/foot}\insertframenumber\,/\,\inserttotalframenumber\hfill\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+        \usebeamerfont{title in head/foot}\insertshorttitle%
+    \end{beamercolorbox}}%
+    \vskip0pt%
+}
+
+\title{}
+\author{José Joaquín Zubieta Rico}
+\date{}
+
+\begin{document}
+    \begin{frame}
+    \maketitle
+    \end{frame}
+
+\end{document}
