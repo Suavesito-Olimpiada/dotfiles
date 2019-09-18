@@ -39,7 +39,7 @@ syntax on
 filetype plugin indent on
 
 " This first because every leader action
-" is remmaped to the key the the leader is
+" is remmaped to the key that the leader is
 " configured with at THAT moment.
 let mapleader=" "
 
@@ -72,6 +72,8 @@ set smartindent
 set omnifunc=syntaxcomplete#Complete
 set complete+=kspel,i,d
 set completefunc=syntaxcomplete#Complete
+set thesaurus="thesaurus/thesaurus_en.txt"
+
 
 set history=10000
 set wildmenu
@@ -96,11 +98,16 @@ set autowriteall
 set lazyredraw
 set ttyfast
 
+" set timeout
+set ttimeout
+" set timeoutlen=150
+set ttimeoutlen=-1
+
 set cursorline
 set cursorcolumn
 set number
 set relativenumber
-set textwidth=80
+" set textwidth=80
 
 set foldmethod=indent
 set nofoldenable
@@ -253,9 +260,12 @@ nnoremap <silent> <Leader>gl :Goyo<CR>
 nnoremap <silent> <Leader>md :MundoToggle<CR>
 
 " LanguageClient-neovim keybinds
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <Leader>rn :call LanguageClient_textDocument_rename()<CR>
+augroup LCT
+    autocmd!
+    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> <Leader>rn :call LanguageClient_textDocument_rename()<CR>
+augroup END
 
 " toggle tagbar
 nnoremap <silent> <Leader>tb :TagbarToggle<CR>
@@ -270,6 +280,16 @@ nnoremap <silent> <Leader>ges :GrammarousCheck --lang=es<CR>
 
 " Grammarous operator map (gr)
 map gr <Plug>(operator-grammarous)
+
+" Leader load skeletons
+nmap <silent> <Leader>tex :0read ~/.vim/sket/skeleton.tex
+nmap <silent> <Leader>bea :0read ~/.vim/sket/skeleton.beamer
+
+" Vim sneak f,t,F,T
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 
 "}}}
@@ -316,6 +336,9 @@ autocmd FileType markdown inoremap <silent> <Bar> <Bar><Esc>:call <SID>align()<C
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+" NERDTree
+noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
+
 " Use of osc52 to pass the yanked text
 " to the CLIPBOARD X selection
 augroup YANK
@@ -329,6 +352,12 @@ aug CSV_Editing
         au BufRead,BufWritePost *.csv :%ArrangeColumn
         au BufWritePre *.csv :%UnArrangeColumn
 aug end
+
+" Load skeletons automatically
+" autocmd BufNewFile *.h      0read ~/.vim/sket/skeleton.h
+" autocmd BufNewFile *.c      0read ~/.vim/sket/skeleton.c
+" autocmd BufNewFile *.cpp    0read ~/.vim/sket/skeleton.cpp
+" autocmd BufNewFile *.md     0read ~/.vim/sket/skeleton.md
 
 
 "}}}
@@ -349,6 +378,9 @@ command! Osc52CopyYank call Osc52Yank()
 
 " Add license
 command! License call InsertLicense('licenseFile')
+
+" Pandoc ALL
+command! -nargs=1 PandocAll :Pandoc <args> --filter ~/.pandoc/dot2tex-filter.py --filter pandoc-crossref --filter pandoc-pyplot --filter filter_pandoc_run_py
 
 
 "}}}
@@ -379,10 +411,12 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=zsh', 'julia']
 let g:markdown_minlines = 100 " As tpope/vim-markdown recoments
 let g:markdown_syntax_conceal = 1
 
-
-" Vim-markdown (pandoc)
+" Vim-pandoc
 let g:vim_markdown_math = 1
 let g:pandoc#command#custom_open = 'zathura'
+
+" Vim-pandoc-after (pandoc)
+let g:pandoc#after#modules#enabled = ["ultisnips"]
 
 " Gzip
 let loaded_gzip=1
@@ -405,10 +439,7 @@ let g:mundo_right = 1
 " julia-vim
 let g:latex_to_unicode_auto = 1
 let g:default_julia_version = "1.1.0"
-let g:latex_to_unicode_suggestions = 1
-
-" CSV.vim
-let g:csv_highlight_column = 'y'
+" let g:latex_to_unicode_suggestions = 1
 
 " LanguageClient-neovim
 let g:LanguageClient_autoStart = 1
@@ -430,12 +461,12 @@ let g:LanguageClient_serverCommands = {
 \   'c': ['clangd'],
 \   'cpp': ['clangd'],
 \   'latex': ['texlab'],
+\   'bash': ['bash-language-server'],
 \   }
 
 set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
 
 " NERDTree
-noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden=0
 let g:NERDTreeIndicatorMapCustom = {
 \   "Modified"  : "✹",
@@ -450,7 +481,7 @@ let g:NERDTreeIndicatorMapCustom = {
 \   "Unknown"   : "?"
 \   }
 
-" NerdTree
+" NerdTree syntax highlight
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -487,7 +518,7 @@ let g:slime_target = "vimterminal"
 
 " Vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'home'
-let g:rooter_targets = '/,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
+let g:rooter_targets = '/,*.h,/*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
 let g:rooter_patterns = ['README.md', 'Readme.md', '.git', '.git/']
 
 " Goyo vim
@@ -511,19 +542,38 @@ let g:grammarous#default_comments_only_filetypes = {
 let g:grammarous#languagetool_cmd = 'languagetool'
 let g:grammarous#show_first_error = 1
 
-" Utilsnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" Vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=0
 
 " CSV.vim
+let g:csv_highlight_column = 'y'
 :let g:csv_delim=','
 let g:csv_strict_columns = 1
 
 " Licenses vim
-let g:licenses_copyright_holders_name = 'Zubieta Rico, José Joaquín <jose.zubieta@cimat.mx>'
-let g:licenses_authors_name = 'Zubieta Rico, José Joaquín <jose.zubieta@cimat.mx>'
-let g:licenses_default_commands = ['gpl', 'mit']
+let g:licenses_copyright_holders_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
+let g:licenses_authors_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
+let g:licenses_default_commands = ['gpl', 'mit', 'gplv2', 'bsd2', 'bsd3', 'lgpl']
+
+" UtilSnips vim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=["/home/jose/.vim/snips"]
+let g:UltiSnipsSnippetDir=["/home/jose/.vim/snips"]
+
+" Vim clang format
+let g:clang_format#code_style = "google"
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Stroustrup"}
+
+" Vim sneak
+let g:sneak#label = 1
 
 
 "}}}
