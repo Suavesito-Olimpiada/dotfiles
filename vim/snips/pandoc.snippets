@@ -1,0 +1,117 @@
+extends markdown
+extends pandoc
+
+snippet meta "Pandoc standard metadata" b
+---
+title:
+ -  ${1:title}
+subtitle: |
+ |  ${2:subject}
+ |  ${3:subject sub}
+author:
+ -  José Joaquín Zubieta Rico
+institute:
+ -  $^1$Universidad de Guanajuato
+logo:
+ -  img/escudo.jpg
+theme:
+ -  metropolis
+date:
+ -  \today
+output:
+ -  ${4:`!echo %:t`}
+abstract:
+ -  ${5:abstract}
+---
+$0
+endsnippet
+
+snippet metatiks "Pandoc metadata for include header." b
+header-includes: |
+    \usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usepackage{float}
+    \floatplacement{figure}{H}
+endsnippet
+
+snippet todo "TODO Pandoc"
+ - [] `echo $USER` ${1:Description} `!v strftime("%c")`
+endsnippet
+
+snippet cal "Caligraphy latex math."
+\mathcal{${1:C}}
+endsnippet
+
+snippet bb "Nice latex math."
+\mathbb{${1:R}}
+endsnippet
+
+snippet bf "Bold latex."
+\mathbf{${1:I}}
+endsnippet
+
+snippet frac "Fraction for latex"
+\frac{${1:1}}{${2:2}}$0
+endsnippet
+
+snippet sum "Sum for latex"
+\sum_{${1:i=0}}^{${2:N}}{${3:x}}
+endsnippet
+
+snippet begend "Begin-End block latex"
+\begin{${1:aligned}}
+    $2
+\end{$1}
+endsnippet
+
+snippet cmmt "Comment."
+
+[//]: # ($1)
+
+endsnippet
+
+snippet codei "Code block inline."
+\`${1:x**2}\`
+endsnippet
+
+snippet codeir "Code block inline."
+\`${1:x**2}\`.{run}
+endsnippet
+
+snippet begendi "Begin-End block latex inlined"
+\begin{${1:aligned}}$2\end{$1}
+endsnippet
+
+snippet codeb "Code block."
+\`\`\`{${1:.julia}}
+$0
+\`\`\`
+endsnippet
+
+snippet codebplt "Code block for pandoc-pyplot." b
+\`\`\`{.pyplot dpi=300 caption="${1:Image description.}" links=false}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x):
+    ${2:return x**2}
+$0
+x = np.arange(-5, 5, 0.1)
+y = f(x)
+
+plt.figure()
+plt.plot(x,y)
+\`\`\`
+endsnippet
+
+snippet codebdot "Code block for dot images."
+\`\`\`{.dot caption="${1:Dot image.}" scale=1.0}
+digraph ${2:graph} {
+    rankdir=TD
+    A [texlbl="\alpha"]
+    B [texlbl="\beta"]
+
+    A -> B
+}
+\`\`\`
+endsnippet
