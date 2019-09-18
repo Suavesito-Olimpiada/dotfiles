@@ -17,7 +17,19 @@ export EDITOR="/bin/vim"
 AUTO_NOTIFY_THRESHOLD=30
 AUTO_NOTIFY_TITLE="Hey! %command has just finished"
 AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
-AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt")
+AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt" "julia" "bpython" "R" "julia-1.3" "sst")
+
+# Tiny-care-terminal configurations
+export TTC_BOTS='tinycarebot,salfcare_bot,magicrealismbot'
+export TTC_SAY_BOX='panda'
+export TTC_REPOS='/home/jose/Documentos/Work/Ambotics/Kinesica/Kinesica'
+export TTC_WEATHER='Guanajuato, Guanajuato'
+export TTC_CELCIUS=true
+export TTC_APIKEYS=false
+export TTC_UPDATE_INTERVAL=15
+export TTC_TERMINAL_TITLE=true
+export TTC_POMODORO=25
+export TTC_BREAK=5
 
 #export LC_ALL="es_MX.UTF-8"
 
