@@ -37,13 +37,14 @@ hc keybind $Mod-z spawn tabbed -c zathura -e
 hc keybind $Mod-Control-q spawn xkill
 hc keybind $Mod-Shift-p spawn /home/jose/.config/scripts/hdmi.sh
 hc keybind $Mod-Shift-a spawn /home/jose/.config/scripts/audio.sh
-hc keybind $Mod-Shift-s spawn /home/jose/.config/scripts/lock_screen.sh
+hc keybind $Mod-Shift-s spawn /home/jose/.config/scripts/lock_screen.sh 1
 hc keybind $Mod-Shift-u spawn /home/jose/.config/scripts/ibrowser.sh
 hc keybind $Mod-e spawn /home/jose/.config/scripts/scratchy.py
 hc keybind $Mod-y spawn /home/jose/.config/scripts/music_mpc.sh
 hc keybind $Mod-g spawn /home/jose/.config/scripts/calculadora_genius.sh
 hc keybind $Mod-Mod1-j spawn tabbed -c -r 2 st -w - -e julia
-hc keybind $Mod-Mod1-h spawn xdotool mousemove 1920 0 # Hide mouse in corner
+hc keybind $Mod-Mod1-h spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
+hc keybind $Mod-Mod1-Shift-h spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
 
 # basic movement
 # focusing clients
@@ -112,9 +113,9 @@ hc keybind $Mod-p pseudotile toggle
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
 hc keybind $Mod-space                                                           \
-    or , and . compare tags.focus.curframe_wcount = 2                   \
-    . cycle_layout +1 vertical horizontal max vertical grid    \
-    , cycle_layout +1
+            or , and . compare tags.focus.curframe_wcount = 2                   \
+                     . cycle_layout +1 vertical horizontal max vertical grid    \
+               , cycle_layout +1
 
 # mouse
 hc mouseunbind --all
@@ -148,7 +149,7 @@ hc keybind XF86AudioPrev            spawn $music prev
 hc keybind XF86AudioPlay            spawn $music toggle
 
 # Print Screen
-hc keybind Print					spawn scrot '%Y-%m-%d-%T_$wx$h.png' -q 100 -z -e 'mv $f ~/Imágenes/Screenshots/'
+hc keybind Print                    spawn scrot '%Y-%m-%d-%T_$wx$h.png' -q 100 -z -e 'mv $f ~/Imágenes/Screenshots/'
 
 # theme
 hc attr theme.tiling.reset 1
@@ -199,10 +200,10 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
+hc set tree_style '╾│ ├└╼─┐'
+
 # unlock, just to be sure
 hc unlock
-
-herbstclient set tree_style '╾│ ├└╼─┐'
 
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
