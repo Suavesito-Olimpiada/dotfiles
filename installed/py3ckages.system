@@ -26,7 +26,7 @@ brotlipy==0.7.0
 btrfsutil==1.1.1
 CacheControl==0.12.5
 caffeine-ng==3.4.2
-certifi==2019.3.9
+certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
 Click==7.0
@@ -131,9 +131,11 @@ path-and-address==2.0.1
 pbr==5.1.3
 pdftotext==2.1.1
 pep517==0.6.0
+pew==1.2.0
 pexpect==4.7.0
 pickleshare==0.7.5
 Pillow==6.1.0
+pipenv==2018.11.15.dev0
 pluggy==0.12.0
 ply==3.11
 pm2ml==2017.12.31.5.7.19
@@ -234,6 +236,8 @@ typing-extensions==3.7.4
 ufw==0.36
 urllib3==1.25.3
 urwid==2.0.1
+virtualenv==16.1.0
+virtualenv-clone==0.5.3
 vrms-arch==1.0
 wcwidth==0.1.7
 webencodings==0.5.1
