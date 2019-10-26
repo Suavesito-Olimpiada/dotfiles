@@ -51,7 +51,7 @@ if maparg('<Leader>l', 'n') ==# '' " Use <C-L> to clear the highlighting of :set
     nnoremap <silent> <Leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
-set tags=./tags
+set tags=./.git/tags;
 set path+=**,include
 
 set confirm
@@ -153,6 +153,7 @@ function! s:goyo_leave()
   Limelight!
   set cursorcolumn
   set cursorline
+  AirlineRefresh
 endfunction
 
 " Tabular automatic mode
@@ -347,11 +348,11 @@ augroup YANK
 augroup END
 
 " Organizing CSV files columns
-aug CSV_Editing
-        au!
-        au BufRead,BufWritePost *.csv :%ArrangeColumn
-        au BufWritePre *.csv :%UnArrangeColumn
-aug end
+" aug CSV_Editing
+"         au!
+"         au BufRead,BufWritePost *.csv :%ArrangeColumn
+"         au BufWritePre *.csv :%UnArrangeColumn
+" aug end
 
 " Load skeletons automatically
 " autocmd BufNewFile *.h      0read ~/.vim/sket/skeleton.h
@@ -414,6 +415,10 @@ let g:markdown_syntax_conceal = 1
 " Vim-pandoc
 let g:vim_markdown_math = 1
 let g:pandoc#command#custom_open = 'zathura'
+
+" Vim-pandoc-syntax
+let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby",
+\   "julia", "bash=zsh", "python", "pyplot=python" ]
 
 " Vim-pandoc-after (pandoc)
 let g:pandoc#after#modules#enabled = ["ultisnips"]
@@ -486,7 +491,7 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeLimitedSyntax = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['jl', 'h', 'diff']
+let g:NERDTreeSyntaxEnabledExtensions = ['jl', 'h', 'diff', 'c', 'cpp']
 
 " Vim-devicons
 let g:webicons_enable = 1
@@ -518,7 +523,7 @@ let g:slime_target = "vimterminal"
 
 " Vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'home'
-let g:rooter_targets = '/,*.h,/*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
+let g:rooter_targets = '/,*.h,*hpp,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
 let g:rooter_patterns = ['README.md', 'Readme.md', '.git', '.git/']
 
 " Goyo vim
@@ -547,7 +552,7 @@ let g:multi_cursor_use_default_mapping=0
 
 " CSV.vim
 let g:csv_highlight_column = 'y'
-:let g:csv_delim=','
+let g:csv_delim=','
 let g:csv_strict_columns = 1
 
 " Licenses vim
