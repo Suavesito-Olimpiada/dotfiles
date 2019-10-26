@@ -21,8 +21,8 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
-hc keybind $Mod-Return spawn st
-hc keybind $Mod-Shift-Return spawn st -e tmux
+hc keybind $Mod-Return spawn termite
+hc keybind $Mod-Shift-Return spawn termite -e tmux
 hc keybind $Mod-m spawn ~/.config/scripts/man_pages.sh
 hc keybind $Mod-Shift-m spawn ~/.config/scripts/manv_pages.sh
 hc keybind $Mod-n spawn ~/.config/scripts/less_output.sh
@@ -32,7 +32,7 @@ hc keybind $Mod-Shift-b spawn feh --randomize --bg-fill --no-fehbg ~/.wallpaper/
 hc keybind $Mod-Control-r spawn mpc random
 hc keybind $Mod-w spawn /home/jose/.config/scripts/wifi_check.sh
 hc keybind $Mod-b spawn /home/jose/.config/scripts/bluetooth_check.sh
-hc keybind $Mod-Shift-t spawn /home/jose/Apps/gitBuild/forked/st/st -e ranger
+hc keybind $Mod-Shift-t spawn termite -e ranger
 hc keybind $Mod-z spawn tabbed -c zathura -e
 hc keybind $Mod-Control-q spawn xkill
 hc keybind $Mod-Shift-p spawn /home/jose/.config/scripts/hdmi.sh
@@ -42,7 +42,7 @@ hc keybind $Mod-Shift-u spawn /home/jose/.config/scripts/ibrowser.sh
 hc keybind $Mod-e spawn /home/jose/.config/scripts/scratchy.py
 hc keybind $Mod-y spawn /home/jose/.config/scripts/music_mpc.sh
 hc keybind $Mod-g spawn /home/jose/.config/scripts/calculadora_genius.sh
-hc keybind $Mod-Mod1-j spawn tabbed -c -r 2 st -w - -e julia
+hc keybind $Mod-Mod1-j spawn termite -e julia
 hc keybind $Mod-Mod1-h spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
 hc keybind $Mod-Mod1-Shift-h spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
 

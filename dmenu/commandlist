@@ -1,89 +1,91 @@
-#   internet
-st -e nmtui                                                                                     # INTERNET CONNECTION
-st -e httping -Y -K google.com                                                                  # HTTPING INTERNET PROVE
-st -e speedometer -r wlp2s0 -t wlp2s0                                                           # SPEEDOMETER INTERNET CHECK
-st -e speedometer -r enp1s0 -t enp1s0                                                           # SPEEDOMETER ETHERNET CHECK
+# internet
+termite -e nmtui                                                                                # INTERNET CONNECTION
+termite -e "httping -Y -K google.com"                                                           # HTTPING INTERNET PROVE
+termite -e "speedometer -r wlp2s0 -t wlp2s0"                                                    # SPEEDOMETER INTERNET CHECK
+termite -e "speedometer -r enp1s0 -t enp1s0"                                                    # SPEEDOMETER ETHERNET CHECK
 qbittorrent                                                                                     # QBITTORRENT TORRENTS DOWNLOAD
-st -e rtorrent                                                                                  # RTORRENT TORRENT DOWNLOAD
+termite -e rtorrent                                                                             # RTORRENT TORRENT DOWNLOAD
 firefox                                                                                         # FIREFOX NAVIGATOR
 chromium                                                                                        # CHROMIUM NAVIGATOR
 tabbed -c -r 3 torsocks /home/jose/Apps/gitBuild/nofork/surf/surf -e - "https://duckduckgo.com" # SURF BROWSER
 tabbed -c -r 2 /home/jose/Apps/gitBuild/nofork/surf/surf -e -                                   # SURF BROWSER
 
-#   communications
+# communications
 telegram-desktop                                                                                # TELEGRAM APP
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
 utox                                                                                            # UTOX MESSAGE APP
 skypeforlinux                                                                                   # SKYPE FOR LINUX
-bluejean                                                                                        # BLUEJEAN FOR LINUX
+cozy-desktop                                                                                    # COZY FOR LINUX
+/home/jose/Apps/nativefierBuild/whats-app-linux-x64/whats-app                                   # NATIVEFIER WHATSAPP
 
-#   office
-st -e vim                                                                                       # VIM
+# office
+termite -e vim                                                                                  # VIM
 libreoffice --writer                                                                            # LIBREOFFICE WRITER
 libreoffice --calc                                                                              # LIBREOFFICE CALC
 libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
-/home/jose/Apps/precompile/atom-1.37.0-amd64/atom                                               # TEXT EDITOR
-/home/jose/.config/scripts/atom.sh
+atom                                                                                            # TEXT EDITOR
 scribus                                                                                         # SCRIBUS
 
-#   math
+# math
 /home/jose/.config/scripts/calculadora_genius.sh                                                # GENIUS CALCULATOR
 /home/jose/.config/scripts/calculadora_R                                                        # R CALCULATOR
-st -e genius --maxdigits=0 --precision=2048 --fullexp                                           # CALCULATOR TERMINAL
-st -e sage                                                                                      # SAGE MATH PACK
-st -e gnuplot                                                                                   # GNUPLOT PLOT TOOL
+termite -e "genius --maxdigits=0 --precision=2048 --fullexp"                                    # CALCULATOR TERMINAL
+termite -e sage                                                                                 # SAGE MATH PACK
+termite -e gnuplot                                                                              # GNUPLOT PLOT TOOL
 DMENU=1 .config/scripts/jupyter_toggle.sh
 
-#   games
+# games
 doomrl                                                                                          # DOOM GAME
-st -e doomrl -console                                                                           # DOOM GAME CONSOLE
+termite -e "doomrl -console"                                                                    # DOOM GAME CONSOLE
 cd /home/jose/Apps/precompile/LaserTank && ./ltanks64                                           # LTANKS GAME
 steam                                                                                           # STEAM ENGINE
 cgoban3                                                                                         # GO KGS
 dwarffortress                                                                                   # DWARFFORTRESS
 
-#   media
+# media
 gimp                                                                                            # GIMP
 inkscape                                                                                        # INKSCAPE
-st -c Music -e ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf                                     # NCMPC
-/home/jose/Apps/gitBuild/forked/st/st -c Music -e ncmpcpp                                       # NCMPCPP
+termite --title Music -e "ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf"                         # NCMPC
+termite --title Music -e ncmpcpp                                                                # NCMPCPP
 cheese                                                                                          # WEBCAM
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
 darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
 shotcut-bin                                                                                     # VIDEO EDITOR
 scide                                                                                           # SUPERCOLLIDER EDITOR
-st -e sclang                                                                                    # SUPERCOLLIDER SERVER
+termite -e sclang                                                                               # SUPERCOLLIDER SERVER
 pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
-st -c Youtube -e youtube-viewer
+termite --title Youtube -e youtube-viewer
 pinta                                                                                           # DRAWING PROGRAM
 krita                                                                                           # DRAWING PROGRAM
 blender                                                                                         # 3D RENDERING EDITOR
 pitivi                                                                                          # VIDEO EDITING PROGRAM
+flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
 kdenlive                                                                                        # VIDEO EDITING PROGRAM
 ardour5                                                                                         # AUDIO EDITING PROGRAM
 musikwave                                                                                       # MUSIC P2P APP
+vlc                                                                                             # VIDEOLAN
 
-#   programming
-tabbed -c -r 2 st -w - -e python3                                                               # PYTHON 3 PROGRAMMING
-tabbed -c -r 2 st -w - -e bpython                                                               # PYTHON 3 PROGRAMMING
-tabbed -c -r 2 st -w - -e julia                                                                 # JULIA INTERPRETER
-tabbed -c -r 2 st -w - -e root                                                                  # ROOT CERN INTERPRETER
-tabbed -c -r 2 st -w - -e R                                                                     # R INTERPRETER
+# programming
+termite -e python3                                                                              # PYTHON 3 PROGRAMMING
+termite -e bpython                                                                              # PYTHON 3 PROGRAMMING
+termite -e julia                                                                                # JULIA INTERPRETER
+termite -e root                                                                                 # ROOT CERN INTERPRETER
+termite -e R                                                                                    # R INTERPRETER
 qtcreator                                                                                       # QTCREATOR
 glade                                                                                           # GTK GLADE APP CREATOR
 
-#   system
-st -e vim /home/jose/.config/herbstluftwm/autostart                                             # AUTOSTART HERBSTLUFT
-st -e alsamixer                                                                                 # ALSAMIXER SOUND
-st -e htop                                                                                      # HTOP PROCESS
-st -e sudo htop                                                                                 # SUDO HTOP PROCESS
-st -e vim /home/jose/.config/dmenu/commandlist                                                  # VIM COMMANDLIST EDIT
-#herbstclient quit                                                                              # HERBSTLUFT QUIT
+# system
+termite -e "vim /home/jose/.config/herbstluftwm/autostart"                                      # AUTOSTART HERBSTLUFT
+termite -e alsamixer                                                                            # ALSAMIXER SOUND
+termite -e htop                                                                                 # HTOP PROCESS
+termite -e "sudo htot"                                                                          # SUDO HTOP PROCESS
+termite -e "vim /home/jose/.config/dmenu/commandlist"                                           # VIM COMMANDLIST EDIT
+# herbstclient quit                                                                             # HERBSTLUFT QUIT
 xkill                                                                                           # XKILL
-/home/jose/Apps/gitBuild/forked/st/st -e ranger                                                   # RANGER FILE NAVIGATOR
+termite -e ranger                                                                               # RANGER FILE NAVIGATOR
 VirtualBox                                                                                      # VIRTUALBOX
 /home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
 remmina                                                                                         # CONTROL REMOTE DESKTOP
@@ -93,10 +95,11 @@ gksu sysprof                                                                    
 /home/jose/.config/scripts/alarm.sh
 blueman-manager                                                                                 # BLUETOOTH MANAGER
 pavucontrol                                                                                     # PAVUCONTROL
-st -e calcurse                                                                                  # CALCURSE
+termite -e calcurse                                                                             # CALCURSE
 
 # QEMU and VM
 /home/jose/.config/dmenu/qemu                                                                   # QEMU VM
+qtemu                                                                                           # QEMU GRAPHICAL INTERFACE
 
 # pack managers
 /home/jose/.config/dmenu/flatpak                                                                # PROGRAMS INSTALLED WITH FLATPAK
