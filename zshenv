@@ -13,6 +13,12 @@ export MANPAGER="less -R"
 export VISUAL="/bin/vim"
 export EDITOR="/bin/vim"
 
+# As I use termite for some things, to be able to use it with ssh
+# I need to change the term enviroment variable.
+if [[ $TERM == xterm-termite ]]; then
+    export TERM="xterm-256color"
+fi
+
 # Auto-Notify threshold for zsh-auto-notify
 AUTO_NOTIFY_THRESHOLD=30
 AUTO_NOTIFY_TITLE="Hey! %command has just finished"
@@ -36,9 +42,14 @@ export TTC_BREAK=5
 # Keys that the people shouldn't have (except for me)
 source /home/jose/.zsh/secrets.zsh
 
-export ZPLUG_HOME=/home/jose/.zsh/plugin/zplug
+# For downgrade package [ALA Manjaro](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
+export DOWNGRADE_FROM_ALA="1"
 
-export JULIA_NUM_THREADS=4
+# Julia threads to nproc
+export JULIA_NUM_THREADS=$(nproc)
+
+# Path and home variables
+export ZPLUG_HOME=/home/jose/.zsh/plugin/zplug
 
 export LOC_APPS=$HOME/Apps
 export PATH="$LOC_APPS/bin:$PATH"
