@@ -1,4 +1,4 @@
-command! Compile !st -e /home/jose/.vim/script/tex-compile.sh "%:p:h" "%:p:r" "%:p" &
+command! Compile !termite -e "/home/jose/.vim/script/tex-compile.sh \"%:p:h\" \"%:p:r\" \"%:p\"" &
 set spell spl=es
 set updatetime=1500
 autocmd CursorHold,CursorHoldI * silent! w
