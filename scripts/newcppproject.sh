@@ -50,6 +50,12 @@ fi
 
 cp -r ~/.config/scripts/cppproject/* ./
 
+mkdir -p "include"
+mkdir -p "test/in"
+mkdir -p "test/out"
+mkdir -p "build/obj"
+mkdir -p "build/objdbg"
+
 DATE=$(date "+%m-%d-%Y")
 
 sed -i "3,3s/00-00-0000/$DATE/" README.md
