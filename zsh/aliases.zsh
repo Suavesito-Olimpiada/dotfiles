@@ -23,6 +23,8 @@ alias mv='mv -i'
 #alias cat='bat' # This is batman
 #alias cat='lolcat' # This is lol
 
+alias yay='yay --cleanmenu --noredownload --editor=vim --color always'
+
 alias info='info --vi-keys'
 
 alias dropcatch='echo 3 | sudo tee /proc/sys/vm/drop_caches'
@@ -55,8 +57,9 @@ alias npmup="npm i -g npm"
 alias flatup="sudo flatpak update"
 alias snapup="sudo snap refresh"
 
-alias pacmanup="yaourt -Syyuua && sudo mandb && sudo pkgfile --update"
+alias pacmanup="yay -Syyuu && sudo mandb && sudo pkgfile --update"
 alias pacmanclean='sudo pacman -Rns $(pacman -Qtdq)'
+alias paccacheclean='sudo paccache -rvk3'
 
 
 # MOUNTING SECTION
@@ -75,11 +78,11 @@ alias umntWindows='sudo umount /home/jose/Microsoft/'
 
 function less_highlight_f()
 {
-    if [ $@ = "" ]
+    if [[ $@ = "" ]]
     then
         less
     else
-        if [ ${1: -4} = ".pdf" ]
+        if [[ ${1: -4} = ".pdf" ]]
         then
             pdftotext $@ - | less
         else
