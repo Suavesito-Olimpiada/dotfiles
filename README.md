@@ -7,7 +7,7 @@
 Dotfiles administrated with dotbot. After installing, do:
 
 ```lang=bash
-git clone https://github.com/Suavesito-Olimpiada/dotfiles ~.dotfiles
+git clone https://github.com/Suavesito-Olimpiada/dotfiles ~/.dotfiles
 cd .dotfiles
 ./install
 ```
