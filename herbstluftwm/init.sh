@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 xset 120 5
+xset r rate 300 25
 xss-lock -l -- '/home/jose/.config/script/lock_screen' &!
 autocutsel -fork &!
 autocutsel -selection PRIMARY -fork &! #Makes cut and paste behave as expected
