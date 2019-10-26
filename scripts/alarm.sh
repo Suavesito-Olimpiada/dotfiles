@@ -36,4 +36,4 @@ esac
 
 notify-send -u critical "$MSG"
 
-ffplay -loglevel -8 -t 5 -loop 2 -nodisp -autoexit "/media/data/Música/Kungs vs Cookin on 3 Burners - This Girl.mp3"
+ffplay -loglevel -8 -t 5 -loop 3 -nodisp -autoexit "/media/data/Música/Kungs vs Cookin on 3 Burners - This Girl.mp3"
