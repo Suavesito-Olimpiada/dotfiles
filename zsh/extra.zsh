@@ -7,7 +7,7 @@
 #
 #
 # This are some extra lines that I DON'T want them to be
-# in my zshrc, so i create this file and call it from
+# in my zshrc, so I create this file and call it from
 # zshrc. Cheers!!!
 
 
@@ -65,5 +65,15 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # Configurations for all the packages installed
 # and loaded before.
 
-# A nive reminder that I'm not free. :'c
+# For termite to be able to use ctrl-shift-t to open a new terminal in
+# the same directory I need to set 'manually' the working directory.
+
+# I need to use xterm-256color, because I change the TERM env for termite
+# to be able to use correctly ssh.
+if [[ $TERM == xterm-256color ]]; then
+    . /etc/profile.d/vte.sh
+    __vte_osc7
+fi
+
+# A nice reminder that I'm not free. :'c
 echo $(vrms -g |& head -2 | tail -1 | sed 's/N\(.*\): \([0-9]*\)/You have \2 n\1 in your system./')
