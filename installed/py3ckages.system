@@ -56,6 +56,7 @@ future==0.17.1
 future-fstrings==1.1.0
 gast==0.3.2
 gmpy2==2.1.0b1
+graphviz==0.13
 greenlet==0.4.15
 grip==4.5.2
 grpcio==1.24.2
@@ -117,6 +118,7 @@ mypy==0.730
 mypy-extensions==0.4.1
 nbconvert==5.6.0
 nbformat==4.4.0
+networkx==2.3
 notebook==6.0.1
 npyscreen==4.10.5
 numexpr==2.7.0
@@ -124,7 +126,7 @@ numpy==1.17.2
 oauthlib==3.1.0
 opendht==1.10.1
 packaging==19.2
-pacman-mirrors==4.14.2
+pacman-mirrors==4.15
 pandas==0.25.1
 pandas-datareader==0.8.1
 pandocfilters==1.4.2
@@ -162,6 +164,7 @@ pyftpdlib==1.5.5
 pygame==1.9.6
 Pygments==2.4.2
 PyGObject==3.34.0
+pygraphviz==1.5
 PyInstaller==3.5
 Pykka==2.0.0
 pylint==2.3.1
