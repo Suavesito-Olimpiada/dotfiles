@@ -10,6 +10,8 @@
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
     ~/.zsh: zsh
+    ~/.p10k.zsh:
+        path: zsh/p10k.zsh
     ~/.zplug: zplug
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
