@@ -9,7 +9,7 @@ fi
 
 if [[ -n "$1" ]]
 then
-    pandoc  -t "$TYPE"                            \
+    pandoc  -t "$TYPE"                           \
             --filter ~/.pandoc/dot2tex-filter.py \
             --filter pandoc-crossref             \
             --filter pandoc-pyplot               \
