@@ -22,7 +22,6 @@ output:
  -  ${4:`!echo %:t`}
 abstract:
  -  ${5:abstract}
-header-includes: |
 ---
 $0
 endsnippet
@@ -116,8 +115,8 @@ snippet cdbdot "Code block for dot images."
 \`\`\`{.dot caption="${1:Dot image.}" scale=1.0}
 digraph ${2:graph} {
     rankdir=TD
-    A [texlbl="\alpha"]
-    B [texlbl="\beta"]
+    A [texlbl="$\alpha$"]
+    B [texlbl="$\beta$"]
 
     A -> B
 }
