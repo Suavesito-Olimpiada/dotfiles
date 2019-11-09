@@ -30,6 +30,8 @@ zplug "ryutok/rust-zsh-completions"
 
 zplug "MichaelAquilina/zsh-auto-notify"
 
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 if ! zplug check --verbose; then
@@ -54,6 +56,11 @@ zplug load
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Fuck nicesties
+eval $(thefuck --alias)
 
 
 #   ____ ___  _   _ _____ ___ ____
