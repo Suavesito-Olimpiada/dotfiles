@@ -13,14 +13,14 @@
 # I'll figured it out. :)
 #
 
-function zle-line-init zle-keymap-select # VI mode indicator in prompt
-{
-    RPS1="${${KEYMAP/vicmd/NORMAL}/(main|viins)/INSERT} %T"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
+# function zle-line-init zle-keymap-select # VI mode indicator in prompt
+# {
+#     RPS1="${${KEYMAP/vicmd/NORMAL}/(main|viins)/INSERT} %T"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
 
 # Bindkeys
 
