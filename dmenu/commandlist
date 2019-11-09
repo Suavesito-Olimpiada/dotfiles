@@ -53,7 +53,6 @@ termite --title Music -e ncmpcpp                                                
 cheese                                                                                          # WEBCAM
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
 darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
-shotcut-bin                                                                                     # VIDEO EDITOR
 scide                                                                                           # SUPERCOLLIDER EDITOR
 termite -e sclang                                                                               # SUPERCOLLIDER SERVER
 pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
@@ -66,7 +65,7 @@ flowblade                                                                       
 kdenlive                                                                                        # VIDEO EDITING PROGRAM
 ardour5                                                                                         # AUDIO EDITING PROGRAM
 musikwave                                                                                       # MUSIC P2P APP
-vlc                                                                                             # VIDEOLAN
+shotwell                                                                                        # IMAGE ORGANIZER
 
 # programming
 termite -e python3                                                                              # PYTHON 3 PROGRAMMING
@@ -76,12 +75,13 @@ termite -e root                                                                 
 termite -e R                                                                                    # R INTERPRETER
 qtcreator                                                                                       # QTCREATOR
 glade                                                                                           # GTK GLADE APP CREATOR
+lepton                                                                                          # GIST LIKE SNIPPETS APP
 
 # system
 termite -e "vim /home/jose/.config/herbstluftwm/autostart"                                      # AUTOSTART HERBSTLUFT
 termite -e alsamixer                                                                            # ALSAMIXER SOUND
 termite -e htop                                                                                 # HTOP PROCESS
-termite -e "sudo htot"                                                                          # SUDO HTOP PROCESS
+termite -e "sudo htop"                                                                          # SUDO HTOP PROCESS
 termite -e "vim /home/jose/.config/dmenu/commandlist"                                           # VIM COMMANDLIST EDIT
 # herbstclient quit                                                                             # HERBSTLUFT QUIT
 xkill                                                                                           # XKILL
@@ -96,6 +96,8 @@ gksu sysprof                                                                    
 blueman-manager                                                                                 # BLUETOOTH MANAGER
 pavucontrol                                                                                     # PAVUCONTROL
 termite -e calcurse                                                                             # CALCURSE
+hardinfo                                                                                        # HARD HARDWARE INFO
+filezilla                                                                                       # FTP FREE GUI
 
 # QEMU and VM
 /home/jose/.config/dmenu/qemu                                                                   # QEMU VM
