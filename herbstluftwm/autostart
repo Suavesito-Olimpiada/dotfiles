@@ -21,7 +21,7 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
-hc keybind $Mod-Return spawn termite
+hc keybind $Mod-Return spawn termite --title="termite"
 hc keybind $Mod-Shift-Return spawn termite -e tmux
 hc keybind $Mod-m spawn ~/.config/scripts/man_pages.sh
 hc keybind $Mod-Shift-m spawn ~/.config/scripts/manv_pages.sh
