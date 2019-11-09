@@ -34,6 +34,9 @@
     ~/.config/ranger: ranger
     ~/.config/scripts: scripts
     ~/.config/zathura: zathura
+    ~/.config/termite: termite
+    ~/.config/thefuck/settings.py:
+        path: thefuck/settings.py
     ~/.wallpaper: imgs/wallpaper
 
 - shell:
