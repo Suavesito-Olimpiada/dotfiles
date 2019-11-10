@@ -233,6 +233,7 @@ fcgi 2.4.2-1
 feh 3.2.1-1
 fflas-ffpack 2.4.3-2
 ffmpeg 1:4.2.1-3
+ffmpegthumbnailer 2.2.2-1
 fftw 3.3.8-1
 fig2dev 3.2.7-1
 figlet 2.2.5-3
@@ -287,6 +288,7 @@ gdbm 1.18.1-2
 gdk-pixbuf2 2.40.0-1
 gdome2 0.8.1-6
 gegl 0.4.16-3
+gendesk 1.0.4-1
 genius 1.0.24-2
 geoclue 2.5.5-2
 geocode-glib 3.26.1-1
@@ -819,6 +821,7 @@ kjobwidgets-git 5.64.0.r268.g6e96100-1
 klee-uclibc 1.2-1
 kmod 26-2
 knotifications-git 5.64.0.r471.g4875b7f-1
+komorebi 2.1-2
 kpackage-git 5.64.0.r542.gfce9bb3-1
 krb5 1.17-1
 krita 4.2.7.1-2
@@ -1258,6 +1261,7 @@ libwacom 1.1-1
 libwbclient 4.10.8-1
 libwebp 1.0.3-1
 libwmf 0.2.12-1
+libwnck 2.31.0-2
 libwnck3 3.32.0-2
 libwpd 0.10.3-1
 libwpe 1.4.0-1
@@ -2134,6 +2138,7 @@ tensorboard 2.0.0-1
 tensorflow-opt 2.0.0-2
 terasology 1:2.2.0alpha12-1
 terminus-font 4.48-1
+terminus-font-ttf 4.47.0-1
 termite 15-1
 termite-terminfo 15-1
 tevent 1:0.9.39-2

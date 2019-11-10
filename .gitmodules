@@ -46,17 +46,9 @@
 	path = vim/bundle/gruvbox
 	url = git://github.com/morhetz/gruvbox.git
 	branch = master
-[submodule "vim/bundle/julia-vim"]
-	path = vim/bundle/julia-vim
-	url = git://github.com/JuliaEditorSupport/julia-vim.git
-	branch = master
 [submodule "vim/bundle/nvim-yarp"]
 	path = vim/bundle/nvim-yarp
 	url = git://github.com/roxma/nvim-yarp.git
-	branch = master
-[submodule "vim/bundle/rust.vim"]
-	path = vim/bundle/rust.vim
-	url = git://github.com/rust-lang/rust.vim.git
 	branch = master
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
@@ -81,10 +73,6 @@
 [submodule "vim/bundle/vim-hug-neovim-rpc"]
 	path = vim/bundle/vim-hug-neovim-rpc
 	url = git://github.com/roxma/vim-hug-neovim-rpc.git
-	branch = master
-[submodule "vim/bundle/vim-multiple-cursors"]
-	path = vim/bundle/vim-multiple-cursors
-	url = git://github.com/terryma/vim-multiple-cursors.git
 	branch = master
 [submodule "vim/bundle/vim-mundo"]
 	path = vim/bundle/vim-mundo
@@ -174,10 +162,6 @@
 	path = vim/bundle/vim-devicons
 	url = git://github.com/ryanoasis/vim-devicons.git
 	branch = master
-[submodule "vim/bundle/csv.vim"]
-	path = vim/bundle/csv.vim
-	url = git://github.com/chrisbra/csv.vim.git
-	branch = master
 [submodule "vim/bundle/vim-grammarous"]
 	path = vim/bundle/vim-grammarous
 	url = git://github.com/rhysd/vim-grammarous.git
@@ -217,4 +201,8 @@
 [submodule "vim/bundle/vim-sneak"]
 	path = vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
+	branch = master
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = git://github.com/sheerun/vim-polyglot.git
 	branch = master
