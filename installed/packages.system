@@ -94,6 +94,8 @@ brial 1.2.5-4
 bridge-utils 1.6-3
 brotli 1.0.7-1
 brotli06 0.6.0-1
+browserpass 3.0.6-3
+browserpass-firefox 3.4.1-1
 btrfs-progs 5.3.1-1
 bubblewrap 0.3.3-3
 bzip2 1.0.8-2
@@ -258,6 +260,7 @@ fortune-mod 2.10.0-2
 fplll 5.2.1-1
 fractal 4.2.1-1
 freeglut 3.2.1-1
+freeimage 3.18.0-3
 freerdp 1:2.0.0_rc4-7
 freetype2 2.10.1-1
 frei0r-plugins 1.6.1-7
@@ -278,6 +281,8 @@ gcc 9.2.0-3
 gcc-ada 9.2.0-3
 gcc-fortran 9.2.0-3
 gcc-libs 9.2.0-3
+gcc6 6.5.0-3
+gcc6-libs 6.5.0-3
 gconf 3.2.6+11+g07808097-4
 gcr 3.34.0-1
 gd 2.2.5-2
@@ -768,6 +773,7 @@ jdk7-openjdk 7.u231_2.6.19-1
 jdk8-openjdk 8.u232-1
 jemalloc 1:5.2.1-1
 jfsutils 1.1.15-6
+joplin 1.0.170-2
 jre-openjdk 13.0.1.u9-1
 jre-openjdk-headless 13.0.1.u9-1
 jre10-openjdk 10.0.2.u13-2
@@ -791,6 +797,7 @@ jupyter-widgetsnbextension 1:3.5.0-1
 jupyter_console 6.0.0-1
 jupyterlab 1.2.0-1
 jupyterlab_server 1.0.6-1
+jxrlib 0.2.1-3
 kaccounts-integration 19.08.2-1
 kactivities-git 5.64.0.r1254.g6f6111dd-1
 karchive-git 5.64.0.r395.g863d399-1
@@ -807,6 +814,7 @@ kcrash-git 5.64.0.r270.g75abc57-1
 kdbusaddons-git 5.64.0.r282.g5fd1ab6-1
 kdeclarative-git 5.64.0.r717.gb2c1a64-1
 kdeconnect 1.3.5-3
+keepass 2.42.1-5
 keyutils 1.6.1-1
 kfilemetadata-git 5.64.0.r655.g8a3b8d8-1
 kglobalaccel-git 5.64.0.r329.gc276a74-1
@@ -1290,6 +1298,7 @@ libxinerama 1.1.4-1
 libxkbcommon 0.9.1-1
 libxkbcommon-x11 0.9.1-1
 libxkbfile 1.1.0-1
+libxml++2.6 2.40.1-3
 libxml2 2.9.9-3
 libxmu 1.1.3-1
 libxpm 3.5.12-2
@@ -1436,6 +1445,7 @@ nettle 3.5.1-1
 networkmanager 1.20.4-1
 networkmanager-openvpn 1.8.10-1
 networkmanager-vpnc 1.2.7dev+20+gdca3aea-1
+nextcloud-client 2.6.0-3
 nfs-utils 2.4.1-2
 nfsidmap 2.4.1-2
 nilfs-utils 2.2.8-1
@@ -1526,6 +1536,7 @@ pari 2.11.2-1
 pari-galdata 20080411-2
 pari-seadata-small 20090618-2
 parted 3.2-9.1
+pass 1.7.3-1
 patch 2.7.6-7
 pavucontrol 1:4.0-1
 pciutils 3.6.2-1
@@ -2016,6 +2027,7 @@ root 6.18.04-3
 rpcbind 1.2.5-2
 rr 5.2.0-4
 rsync 3.1.3-1
+rtaudio 5.1.0-1
 rtkit 0.12-1
 rtmpdump 1:2.4.r96.fa8646d-5
 rtorrent 0.9.8-1
@@ -2116,6 +2128,8 @@ supercollider 3.10.3-5
 swh-plugins 0.4.17-3
 symmetrica 2.0-7
 sympow 2.023.5-1
+synfig 1.2.2-1
+synfigstudio 1.2.2-1
 syntax-highlighting 5.63.0-1
 sysfsutils 2.1.0-10
 syslinux 6.04.pre2.r11.gbf6db5b4-1
@@ -2192,6 +2206,7 @@ unixodbc 2.3.7-2
 unrar 1:5.8.3-1
 unzip 6.0-13
 upower 0.99.11-1
+uriparser 0.9.3-1
 usbmuxd 1.1.0+48+g1cc8b34-3
 usbredir 0.8.0-1
 usbutils 012-1
@@ -2257,6 +2272,7 @@ xcb-util-keysyms 0.4.0-2
 xcb-util-renderutil 0.3.9-2
 xcb-util-wm 0.4.1-2
 xcb-util-xrm 1.3-1
+xclip 0.13-2
 xdg-dbus-proxy 0.1.2-1
 xdg-desktop-portal 1.5.2-1
 xdg-desktop-portal-gtk 1.5.0-1
