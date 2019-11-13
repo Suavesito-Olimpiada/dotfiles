@@ -206,3 +206,15 @@
 	path = vim/bundle/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot.git
 	branch = master
+[submodule "vim/bundle/vimtex"]
+	path = vim/bundle/vimtex
+	url = git://github.com/lervag/vimtex.git
+	branch = master
+[submodule "vim/bundle/vim-gutentags"]
+	path = vim/bundle/vim-gutentags
+	url = git://github.com/ludovicchabant/vim-gutentags.git
+	branch = master
+[submodule "vim/bundle/gutentags_plus"]
+	path = vim/bundle/gutentags_plus
+	url = git://github.com/skywind3000/gutentags_plus.git
+	branch = master

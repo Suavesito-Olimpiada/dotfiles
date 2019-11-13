@@ -1,14 +1,20 @@
-# internet
+# network analysis
 termite -e nmtui                                                                                # INTERNET CONNECTION
 termite -e "httping -Y -K google.com"                                                           # HTTPING INTERNET PROVE
 termite -e "speedometer -r wlp2s0 -t wlp2s0"                                                    # SPEEDOMETER INTERNET CHECK
 termite -e "speedometer -r enp1s0 -t enp1s0"                                                    # SPEEDOMETER ETHERNET CHECK
+termite -e nyx                                                                                  # SPEEDOMETER FOR TOR
+termite -e "tmux new-session 'speedometer -r wlp2s0 -c -t wlp2s0' \; split-window 'nyx'"        # JUST SET ALL SPEEDOMETERES
+gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
+
+# internet
 qbittorrent                                                                                     # QBITTORRENT TORRENTS DOWNLOAD
 termite -e rtorrent                                                                             # RTORRENT TORRENT DOWNLOAD
 firefox                                                                                         # FIREFOX NAVIGATOR
 chromium                                                                                        # CHROMIUM NAVIGATOR
 tabbed -c -r 3 torsocks /home/jose/Apps/gitBuild/nofork/surf/surf -e - "https://duckduckgo.com" # SURF BROWSER
 tabbed -c -r 2 /home/jose/Apps/gitBuild/nofork/surf/surf -e -                                   # SURF BROWSER
+nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
 
 # communications
 telegram-desktop                                                                                # TELEGRAM APP
@@ -45,24 +51,28 @@ steam                                                                           
 cgoban3                                                                                         # GO KGS
 dwarffortress                                                                                   # DWARFFORTRESS
 
-# media
-gimp                                                                                            # GIMP
-inkscape                                                                                        # INKSCAPE
+# media usages
 termite --title Music -e "ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf"                         # NCMPC
 termite --title Music -e ncmpcpp                                                                # NCMPCPP
-cheese                                                                                          # WEBCAM
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
-darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
-scide                                                                                           # SUPERCOLLIDER EDITOR
-termite -e sclang                                                                               # SUPERCOLLIDER SERVER
-pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
 termite --title Youtube -e youtube-viewer
-pinta                                                                                           # DRAWING PROGRAM
+cheese                                                                                          # WEBCAM
+
+# media editing
+gimp                                                                                            # GIMP
+inkscape                                                                                        # INKSCAPE
+darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
 krita                                                                                           # DRAWING PROGRAM
+# 3d creation/editing
 blender                                                                                         # 3D RENDERING EDITOR
+# video editing
 pitivi                                                                                          # VIDEO EDITING PROGRAM
 flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
 kdenlive                                                                                        # VIDEO EDITING PROGRAM
+synfigstudio                                                                                    # ANIMATE FIGURES...
+# audio
+scide                                                                                           # SUPERCOLLIDER EDITOR
+termite -e sclang                                                                               # SUPERCOLLIDER SERVER
 ardour5                                                                                         # AUDIO EDITING PROGRAM
 musikwave                                                                                       # MUSIC P2P APP
 shotwell                                                                                        # IMAGE ORGANIZER
@@ -85,21 +95,28 @@ termite -e "sudo htop"                                                          
 termite -e "vim /home/jose/.config/dmenu/commandlist"                                           # VIM COMMANDLIST EDIT
 # herbstclient quit                                                                             # HERBSTLUFT QUIT
 xkill                                                                                           # XKILL
-termite -e ranger                                                                               # RANGER FILE NAVIGATOR
-VirtualBox                                                                                      # VIRTUALBOX
-/home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
-remmina                                                                                         # CONTROL REMOTE DESKTOP
 gksu gufw                                                                                       # FIREWALL CONFIG APP
-gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
+hardinfo                                                                                        # HARD HARDWARE INFO
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
+
+# utilities
+/home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
 /home/jose/.config/scripts/alarm.sh
+termite -e ranger                                                                               # RANGER FILE NAVIGATOR
+komorebi                                                                                        # DYNAMIC WALLPAPERS
+komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
 blueman-manager                                                                                 # BLUETOOTH MANAGER
 pavucontrol                                                                                     # PAVUCONTROL
 termite -e calcurse                                                                             # CALCURSE
-hardinfo                                                                                        # HARD HARDWARE INFO
 filezilla                                                                                       # FTP FREE GUI
+joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
+pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
 
-# QEMU and VM
+# remote access
+remmina                                                                                         # CONTROL REMOTE DESKTOP
+
+# virtual machines
+VirtualBox                                                                                      # VIRTUALBOX
 /home/jose/.config/dmenu/qemu                                                                   # QEMU VM
 qtemu                                                                                           # QEMU GRAPHICAL INTERFACE
 
