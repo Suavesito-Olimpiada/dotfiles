@@ -15,7 +15,7 @@ class Text:
         self.win.set_position(1)
         self.win.connect("destroy", self.destroy)
 
-        font = Pango.FontDescription("Bitocra13")
+        font = Pango.FontDescription("Terminus (TTF)")
 
         self.txt = Gtk.TextView()
         self.txt.modify_font(font)
