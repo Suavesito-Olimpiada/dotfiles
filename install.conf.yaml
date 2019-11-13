@@ -15,6 +15,8 @@
     ~/.zplug: zplug
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
+    ~/.zprofile: zprofile
+    ~/.zlogout: zlogout
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.nanorc: nanorc
@@ -26,7 +28,6 @@
     ~/.ctags: ctags
     ~/.config/compton: compton
     ~/.config/dmenu: dmenu
-    ~/.config/pmenu: pmenu
     ~/.config/herbstluftwm: herbstluftwm
     ~/.config/dunst: dunst
     ~/.config/hub: hub
