@@ -59,6 +59,9 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# For [marker](https://github.com/pindexis/marker)
+[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
 # Fuck nicesties
 eval $(thefuck --alias)
 

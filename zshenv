@@ -10,6 +10,9 @@
 # Some nice things for zsh
 # DEFAULT_USER='jose'
 
+# Ignoring spaced commands... for tomb
+export HISTIGNORESPACE=1
+
 #export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
 export MANPAGER="less -R"
 
