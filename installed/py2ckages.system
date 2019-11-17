@@ -85,6 +85,7 @@ nbformat==4.4.0
 ndg-httpsclient==0.5.1
 networkx==2.2
 notebook==5.7.5
+notmuch==0.29.2
 numpy==1.16.4
 packaging==19.2
 pandocfilters==1.4.2
@@ -119,7 +120,6 @@ pyOpenSSL==19.0.0
 pyparsing==2.4.2
 PyQt5==5.13.1
 PyQt5-sip==4.19.19
-Pyrex==0.9.9
 pyrsistent==0.14.11
 PySocks==1.7.0
 python-dateutil==2.8.0
@@ -132,7 +132,6 @@ pyzmq==18.1.0
 requests==2.22.0
 retrying==1.3.3
 rpy2==2.8.6
-rtaudio==0.1
 sage==8.9
 sagenb==1.1.2
 scandir==1.10.0

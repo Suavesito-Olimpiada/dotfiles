@@ -120,6 +120,7 @@ nbconvert==5.6.0
 nbformat==4.4.0
 networkx==2.3
 notebook==6.0.1
+notmuch==0.29.2
 npyscreen==4.10.5
 numexpr==2.7.0
 numpy==1.17.3
@@ -245,6 +246,7 @@ traitlets==4.3.3
 typed-ast==1.4.0
 typing-extensions==3.7.4
 ufw==0.36
+upass==0.3.0
 urllib3==1.25.6
 urwid==2.0.1
 virtualenv==16.1.0
