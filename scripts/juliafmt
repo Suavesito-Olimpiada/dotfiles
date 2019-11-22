@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [[ -z "$1" ]]
+then
+    echo "Must be at least one filename to format"
+    exit 1
+fi
+
+julia -e "using JuliaFormatter; format_file(\"$1\")"
