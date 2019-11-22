@@ -64,5 +64,5 @@ export PATH="$GEM_PATH/bin:$PATH"
 export NODE_PATH=$HOME/Apps/pkg/nodejs
 export PATH="$NODE_PATH/bin:$PATH"
 
-export JAVA_HOME="/usr/lib/jvm/java-12-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-13-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
