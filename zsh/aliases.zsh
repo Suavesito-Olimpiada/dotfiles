@@ -20,6 +20,8 @@ alias wget='wget -c --read-timeout=20'
 alias cp='cp -i'
 alias mv='mv -i'
 
+alias rm='wipe -l2 -x2 -p1'
+
 #alias cat='bat' # This is batman
 #alias cat='lolcat' # This is lol
 
