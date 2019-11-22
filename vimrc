@@ -252,7 +252,7 @@ nnoremap <silent> <Leader>sm :smile<CR>
 
 " toggle between list and nolist
 nnoremap <silent> <F5> :set list!<CR>
-inoremap <silent> <F5> :set list!<CR>
+inoremap <silent> <F5> <Esc>:set list!<CR>a
 
 " toggle goyo + limeligh
 nnoremap <silent> <Leader>gl :Goyo<CR>
@@ -441,11 +441,6 @@ let g:deoplete#enable_at_startup = 1
 " mundo (gundo fork)
 let g:mundo_right = 1
 
-" julia-vim
-let g:latex_to_unicode_auto = 1
-let g:default_julia_version = "1.1.0"
-" let g:latex_to_unicode_suggestions = 1
-
 " LanguageClient-neovim
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
@@ -466,6 +461,7 @@ let g:LanguageClient_serverCommands = {
 \   'c': ['clangd'],
 \   'cpp': ['clangd'],
 \   'latex': ['texlab'],
+\   'tex': ['texlab'],
 \   'bash': ['bash-language-server'],
 \   }
 
@@ -524,7 +520,7 @@ let g:slime_target = "vimterminal"
 " Vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'home'
 let g:rooter_targets = '/,*.h,*hpp,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
-let g:rooter_patterns = ['README.md', 'Readme.md', '.git', '.git/']
+let g:rooter_patterns = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
 
 " Goyo vim
 let g:goyo_width=120
@@ -550,11 +546,6 @@ let g:grammarous#show_first_error = 1
 " Vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
 
-" CSV.vim
-let g:csv_highlight_column = 'y'
-let g:csv_delim=','
-let g:csv_strict_columns = 1
-
 " Licenses vim
 let g:licenses_copyright_holders_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
 let g:licenses_authors_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
@@ -579,6 +570,40 @@ let g:clang_format#style_options = {
 
 " Vim sneak
 let g:sneak#label = 1
+
+" Vim polyglot
+let g:polyglot_disabled = ['markdown', 'tex', 'latex']
+
+" CSV.vim (available thanks to polyglot)
+let g:csv_highlight_column = 'y'
+let g:csv_delim=','
+let g:csv_strict_columns = 1
+
+" julia-vim (available thanks to polyglot)
+let g:latex_to_unicode_auto = 1
+let g:default_julia_version = "1.1.0"
+highlight link juliaParDelim Delimiter
+highlight juliaComma guifg=Red ctermfg=Red
+" let g:latex_to_unicode_suggestions = 1
+
+" Vim cpp enhanced highlight (available thanks to polyglot)
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+" let g:cpp_experimental_template_highlight = 1
+
+" vimtex (disable polyglot LatexBox)
+"
+
+" Gutentags
+let g:gutentags_project_root = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
+
+" Gutentags + Gutentags_plus
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+let g:gutentags_plus_switch = 1
+let g:gutentags_define_advanced_commands = 1
 
 
 "}}}
