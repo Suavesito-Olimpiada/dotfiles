@@ -25,7 +25,7 @@ cvxopt==1.2.3
 cycler==0.10.0
 cypari2==2.1.1
 cysignals==1.10.2
-Cython==0.29.13
+Cython==0.29.14
 decorator==4.4.0
 defusedxml==0.5.0
 distlib==0.2.9
@@ -41,7 +41,7 @@ Flask-OpenID==1.2.5
 Flask-Silk==0.2
 fpylll==0.4.1.dev0
 functools32==3.2.3.post2
-future==0.18.1
+future==0.18.2
 futures==3.3.0
 gevent==1.4.0
 gmpy2==2.1.0b1
@@ -117,12 +117,12 @@ PyHamcrest==1.9.0
 pynvim==0.3.2
 PyOpenGL==3.1.0
 pyOpenSSL==19.0.0
-pyparsing==2.4.2
-PyQt5==5.13.1
+pyparsing==2.4.4
+PyQt5==5.13.2
 PyQt5-sip==4.19.19
 pyrsistent==0.14.11
 PySocks==1.7.0
-python-dateutil==2.8.0
+python-dateutil==2.8.1
 python-libtorrent==1.1.13
 python-openid==2.2.5
 pytoml==0.1.21
