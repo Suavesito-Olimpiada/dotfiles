@@ -218,3 +218,7 @@
 	path = vim/bundle/gutentags_plus
 	url = git://github.com/skywind3000/gutentags_plus.git
 	branch = master
+[submodule "repl"]
+	path = repl
+	url = git://github.com/defunkt/repl-completion.git
+	branch = master

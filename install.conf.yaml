@@ -17,6 +17,7 @@
     ~/.zshenv: zshenv
     ~/.zprofile: zprofile
     ~/.zlogout: zlogout
+    ~/.repl: repl
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.nanorc: nanorc

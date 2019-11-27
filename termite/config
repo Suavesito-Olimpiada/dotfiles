@@ -6,7 +6,7 @@ bold_is_bright = false
 clickable_url = true
 dynamic_title = true
 
-font = Hack Nerd Font Mono 12px
+font = Hack Nerd Font Mono 10px
 # font = Bitstream Vera Sans Mono 9
 # font = Envy Code R 10
 # font = hack 10
