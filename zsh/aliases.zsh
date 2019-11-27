@@ -62,6 +62,7 @@ alias snapup="sudo snap refresh"
 alias pacmanup="yay -Syyuu && sudo mandb && sudo pkgfile --update"
 alias pacmanclean='sudo pacman -Rns $(pacman -Qtdq)'
 alias paccacheclean='sudo paccache -rvk3'
+alias sysclean='pacmanclean && paccacheclean'
 
 
 # MOUNTING SECTION
