@@ -78,6 +78,8 @@ setopt interactivecomments # Comment interatively
 
 unsetopt LIST_AMBIGUOUS # List ambiguos commands
 
+unsetopt MULTIOS # Bechave as bash with pipes
+
 # Style
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Completion case-insensitive (all)
