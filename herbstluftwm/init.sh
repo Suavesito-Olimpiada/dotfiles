@@ -5,7 +5,7 @@ xset r rate 300 25
 xss-lock -l -- "/home/jose/.config/script/lock_screen" &!
 autocutsel -fork &!
 autocutsel -selection PRIMARY -fork &! #Makes cut and paste behave as expected
-mpd &> /dev/null &!
+mpd &> /dev/null && mpd-mpris &> /dev/null &!
 /usr/lib/kdeconnectd&!
 dunst -config "/home/jose/.config/dunst/dunstrc" &!
 # /usr/lib/notify-osd/notify-osd &!
