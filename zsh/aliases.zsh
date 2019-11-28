@@ -59,7 +59,7 @@ alias npmup="npm i -g npm"
 alias flatup="sudo flatpak update"
 alias snapup="sudo snap refresh"
 
-alias pacmanup="yay -Syyuu && sudo mandb && sudo pkgfile --update"
+alias pacmanup="yay -Syyuu; sudo mandb; sudo pkgfile --update"
 alias pacmanclean='sudo pacman -Rns $(pacman -Qtdq)'
 alias paccacheclean='sudo paccache -rvk3'
 alias sysclean='pacmanclean; paccacheclean'
