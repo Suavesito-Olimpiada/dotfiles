@@ -72,7 +72,6 @@ Keras-Preprocessing==1.0.9
 kiwisolver==1.1.0
 lockfile==0.12.2
 lxml==4.4.1
-Markdown==3.0.1
 MarkupSafe==1.1.1
 matplotlib==2.2.4
 mercurial==5.1.2
