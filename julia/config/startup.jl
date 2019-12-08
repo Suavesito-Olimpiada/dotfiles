@@ -10,13 +10,13 @@ atreplinit() do repl
     catch
     end
     try
-        @eval using Revise
-        @async Revise.wait_steal_repl_backend()
         @eval using OhMyREPL
         @eval using Traceur
         @eval using Rebugger
         @eval using ProgressMeter
         @eval using BenchmarkTools
+        @eval using Revise
+        @async Revise.wait_steal_repl_backend()
     catch
     end
 end
