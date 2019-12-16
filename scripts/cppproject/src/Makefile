@@ -2,6 +2,8 @@ CXX             = g++
 CXXFLAGS        = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra \
 				  -pedantic -std=c++17 -fsanitize=address \
 				  -fsanitize=undefined
+CXXFLAGSREL     = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra \
+				  -pedantic -std=c++17
 CXXFLAGSDBG     = -I$(INCDIR) -I$(LINDIR) -O0 -g3 -Wall -Werror -Wextra \
 				  -pedantic -std=c++17 -fsanitize=address \
 				  -fsanitize=undefined
@@ -11,6 +13,7 @@ LIBFLAGS        = -lm -pthread
 
 BLDDIR          = ../build
 OBJDIR          = ../build/obj
+OBJDIRREL       = ../build/objrel
 OBJDIRDBG       = ../build/objdbg
 INCDIR          = ../include
 LIBDIR          = ../lib
@@ -25,9 +28,11 @@ INCLUDES        = $(patsubst %,$(INCDIR)/%,$(_INCLUDES))
 
 _OBJECTS        = main.o
 OBJECTS         = $(patsubst %,$(OBJDIR)/%,$(_OBJECTS))
+OBJECTSREL      = $(patsubst %,$(OBJDIRREL)/%,$(_OBJECTS))
 OBJECTSDBG      = $(patsubst %,$(OBJDIRDBG)/%,$(_OBJECTS))
 
 TARGET          = program
+TARGETREL       = programrel
 TARGETDBG       = programdbg
 
 $(OBJDIR)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
@@ -35,6 +40,12 @@ $(OBJDIR)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 
 $(TARGET): $(OBJECTS)
 	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGS) $(LIBFLAGS)
+
+$(OBJDIRREL)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
+	$(CXX) -c -o $@ $< $(CXXFLAGSREL) $(LIBFLAGS)
+
+$(TARGETREL): $(OBJECTS)
+	$(CXX) -o $(BLDDIRREL)/$@ $^ $(CXXFLAGSREL) $(LIBFLAGS)
 
 $(OBJDIRDBG)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 	$(CXX) -c -o $@ $< $(CXXFLAGSDBG) $(LIBFLAGS)
@@ -66,6 +77,10 @@ run: ./$(TARGET)
 
 debug: ./$(TARGETDBG)
 	gdb --args $(BLDDIR)/$(TARGETDBG) ${ARGS}
+
+.PHONY: release
+
+release: ./$(TARGETREL)
 
 .PHONY: test
 

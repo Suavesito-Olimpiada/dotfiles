@@ -222,3 +222,7 @@
 	path = repl
 	url = git://github.com/defunkt/repl-completion.git
 	branch = master
+[submodule "vim/bundle/julia.vim"]
+	path = vim/bundle/julia.vim
+	url = git://github.com/AtsushiSakai/julia.vim.git
+	branch = master
