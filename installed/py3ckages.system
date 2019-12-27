@@ -43,6 +43,7 @@ dot2tex==2.11.3
 entrypoints==0.3
 ewmh==0.1.6
 fastpbkdf2==0.2
+filter-pandoc-run-py==0.6.2
 flake8==3.7.9
 Flask==1.1.1
 future==0.18.2
