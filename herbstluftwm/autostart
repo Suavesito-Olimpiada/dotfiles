@@ -30,8 +30,9 @@ hc keybind $Mod-d spawn /home/jose/.config/dmenu/dmenu
 hc keybind $Mod-t spawn /home/jose/.config/dmenu/tmux
 hc keybind $Mod-Shift-b spawn feh --randomize --bg-fill --no-fehbg ~/.wallpaper/
 hc keybind $Mod-Control-r spawn mpc random
-hc keybind $Mod-w spawn /home/jose/.config/scripts/wifi_check.sh
-hc keybind $Mod-b spawn /home/jose/.config/scripts/bluetooth_check.sh
+hc keybind $Mod-w spawn /home/jose/.config/scripts/work/work.sh
+hc keybind $Mod-Control-w spawn /home/jose/.config/scripts/wifi_check.sh
+hc keybind $Mod-Control-b spawn /home/jose/.config/scripts/bluetooth_check.sh
 hc keybind $Mod-Shift-t spawn termite -e ranger
 hc keybind $Mod-z spawn tabbed -c zathura -e
 hc keybind $Mod-Control-q spawn xkill
