@@ -26,6 +26,8 @@ zplug "hlissner/zsh-autopair", defer:2
 
 zplug "bcho/Watson.zsh"
 
+zplug "RobSis/zsh-completion-generator"; compinit
+
 zplug "ryutok/rust-zsh-completions"
 
 zplug "MichaelAquilina/zsh-auto-notify"
