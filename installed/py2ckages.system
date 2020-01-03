@@ -43,7 +43,7 @@ Flask-Babel==0.12.2
 Flask-OldSessions==0.10
 Flask-OpenID==1.2.5
 Flask-Silk==0.2
-fpylll==0.5.0.dev0
+fpylll==0.5.1.dev0
 funcsigs==1.0.2
 functools32==3.2.3.post2
 future==0.18.2
@@ -131,14 +131,14 @@ pynvim==0.4.0
 PyOpenGL==3.1.4
 pyOpenSSL==19.1.0
 pyparsing==2.4.6
-PyQt5==5.13.2
-PyQt5-sip==4.19.19
+PyQt5==5.14.0
+PyQt5-sip==4.19.20
 pyrsistent==0.15.6
 PySocks==1.7.1
 pytest==4.6.8
 pytest-runner==5.2
 python-dateutil==2.8.1
-python-libtorrent==1.1.13
+python-libtorrent==1.2.3
 python-openid==2.2.5
 pytoml==0.1.21
 pytz==2019.3
