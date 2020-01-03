@@ -24,6 +24,7 @@ utox                                                                            
 skypeforlinux                                                                                   # SKYPE FOR LINUX
 cozy-desktop                                                                                    # COZY FOR LINUX
 /home/jose/Apps/nativefierBuild/whats-app-linux-x64/whats-app                                   # NATIVEFIER WHATSAPP
+signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
 
 # office
 termite -e vim                                                                                  # VIM
@@ -105,8 +106,6 @@ gksu sysprof                                                                    
 termite -e ranger                                                                               # RANGER FILE NAVIGATOR
 komorebi                                                                                        # DYNAMIC WALLPAPERS
 komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
-blueman-manager                                                                                 # BLUETOOTH MANAGER
-pavucontrol                                                                                     # PAVUCONTROL
 termite -e calcurse                                                                             # CALCURSE
 filezilla                                                                                       # FTP FREE GUI
 joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
@@ -119,6 +118,7 @@ remmina                                                                         
 VirtualBox                                                                                      # VIRTUALBOX
 /home/jose/.config/dmenu/qemu                                                                   # QEMU VM
 qtemu                                                                                           # QEMU GRAPHICAL INTERFACE
+q4wine                                                                                          # WINE QT5 GUI
 
 # pack managers
 /home/jose/.config/dmenu/flatpak                                                                # PROGRAMS INSTALLED WITH FLATPAK
