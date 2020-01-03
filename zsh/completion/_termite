@@ -1,0 +1,23 @@
+#compdef termite
+
+# zsh completions for 'termite'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[mostrar opciones de ayuda]'
+  '--help-all[muestra todas las opciones de ayuda]'
+  '--help-gtk[mostrar opciones GTK+]'
+  {-v,--version}'[version info]'
+  {-e,--exec}'[command to execute]'
+  {-r,--role}'[the role to use]'
+  {-t,--title}'[window title]'
+  {-d,--directory}'[change to directory]'
+  '--hold[remain open after child process exits]'
+  {-c,--config}'[path of config file]'
+  {-i,--icon}'[icon]'
+  '--display[visor \[display\] X que usar]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

@@ -1,0 +1,19 @@
+#compdef playerctl
+
+# zsh completions for 'playerctl'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[show help options]'
+  {-p,--player}'[A comma separated list of names of players to control (default: the first available player)]'
+  {-a,--all-players}'[select all available players to be controlled]'
+  {-i,--ignore-player}'[A comma separated list of names of players to ignore.]'
+  {-f,--format}'[A format string for printing properties and metadata]'
+  {-F,--follow}'[block and append the query to output when it changes for the most recently updated player.]'
+  {-l,--list-all}'[list the names of running players that can be controlled]'
+  {-v,--version}'[print version information]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments
