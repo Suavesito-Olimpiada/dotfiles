@@ -16,7 +16,7 @@ font = Hack Nerd Font Mono 10px
 # fullscreen = true
 # icon_name = terminal
 mouse_autohide = false
-scroll_on_output = true
+scroll_on_output = false
 scroll_on_keystroke = false
 
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
