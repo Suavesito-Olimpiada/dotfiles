@@ -58,6 +58,9 @@ setopt COMPLETE_IN_WORD
 
 setopt histignorealldups # If a new command is a duplicate, remove the older one
 
+unalias run-help
+autoload run-help
+
 autoload -Uz compinit colors
 compinit -C
 colors
