@@ -25,6 +25,9 @@ if [[ $TERM == xterm-termite ]]; then
     export TERM="xterm-256color"
 fi
 
+# To use with [zsh-completion-generator](https://github.com/RobSis/zsh-completion-generator)
+GENCOMPL_FPATH=$HOME/.zsh/completion
+
 # Auto-Notify threshold for zsh-auto-notify
 AUTO_NOTIFY_THRESHOLD=30
 AUTO_NOTIFY_TITLE="Hey! %command has just finished"
@@ -34,7 +37,7 @@ AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt" "julia" "bpyth
 #export LC_ALL="es_MX.UTF-8"
 
 # Keys that the people shouldn't have (except for me)
-source /home/jose/.zsh/secrets.zsh
+source $HOME/.zsh/secrets.zsh
 
 # For downgrade package [ALA Manjaro](https://wiki.manjaro.org/index.php?title=Downgrading_packages)
 export DOWNGRADE_FROM_ALA="1"
@@ -43,13 +46,13 @@ export DOWNGRADE_FROM_ALA="1"
 export JULIA_NUM_THREADS=$(nproc)
 
 # Path and home variables
-export ZPLUG_HOME=/home/jose/.zsh/plugin/zplug
+export ZPLUG_HOME=$HOME/.zsh/plugin/zplug
 
 export LOC_APPS=$HOME/Apps
 export PATH="$LOC_APPS/bin:$PATH"
 
-export PATH="/home/jose/.local/bin:$PATH"
-export PATH="/home/jose/.config/scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/scripts:$PATH"
 
 export GOPATH=$HOME/Apps/pkg/go
 export PATH="$GOPATH:$GOPATH/bin:$PATH"
