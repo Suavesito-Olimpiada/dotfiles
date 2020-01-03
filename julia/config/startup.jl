@@ -7,6 +7,7 @@ atreplinit() do repl
         haskey(Pkg.installed(), "Rebugger") || @eval Pkg.add("Rebugger")
         haskey(Pkg.installed(), "ProgressMeter") || @eval Pkg.add("ProgressMeter")
         haskey(Pkg.installed(), "BenchmarkTools") || @eval Pkg.add("BenchmarkTools")
+        haskey(Pkg.installed(), "ProfileView") || @eval Pkg.add("ProfileView")
     catch
     end
     try
@@ -15,6 +16,7 @@ atreplinit() do repl
         @eval using Rebugger
         @eval using ProgressMeter
         @eval using BenchmarkTools
+        @eval using ProfileView
         @eval using Revise
         @async Revise.wait_steal_repl_backend()
     catch
