@@ -36,4 +36,10 @@ esac
 
 notify-send -u critical "$MSG"
 
+VOL=$(amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/')
+
+pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 100%
+
 ffplay -loglevel -8 -t 5 -loop 3 -nodisp -autoexit "/media/data/Música/Kungs vs Cookin on 3 Burners - This Girl.mp3"
+
+pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo $VOL%
