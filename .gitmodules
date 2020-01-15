@@ -226,3 +226,7 @@
 	path = vim/bundle/julia.vim
 	url = git://github.com/AtsushiSakai/julia.vim.git
 	branch = master
+[submodule "vim/bundle/info.vim"]
+	path = vim/bundle/info.vim
+	url = https://gitlab.com/HiPhish/info.vim
+	branch = master

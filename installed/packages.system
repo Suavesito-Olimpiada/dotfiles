@@ -130,6 +130,7 @@ cifs-utils 6.9-1
 clang 9.0.0-3
 clazy 1.6-1
 cliquer 1.21-3
+clisp 2.49.93-2
 clucene 2.3.3.4-10
 clutter 1.26.2-2
 clutter-gst 3.0.27-2
@@ -323,7 +324,7 @@ glib2-docs 2.62.4-1
 glibc 2.30-3
 glibmm 2.62.0-1
 glm 0.9.9.6-2
-global 6.6.3-1
+global 6.6.4-1
 glpk 4.65-2
 glslang 7.13.3496-2
 glu 9.0.1-1
@@ -777,6 +778,8 @@ jre-openjdk 13.0.1.u9-1
 jre-openjdk-headless 13.0.1.u9-1
 jre10-openjdk 10.0.2.u13-2
 jre10-openjdk-headless 10.0.2.u13-2
+jre11-openjdk 11.0.5.u10-1
+jre11-openjdk-headless 11.0.5.u10-1
 jre7-openjdk 7.u231_2.6.19-1
 jre7-openjdk-headless 7.u231_2.6.19-1
 jre8-openjdk 8.u232-1
@@ -1403,7 +1406,7 @@ mpfr 4.0.2-2
 mpg123 1.25.13-1
 mplayer 38139-3
 mpv 1:0.30.0-5
-mpv-mpris 0.2-1
+mpv-mpris 0.3-1
 msgpack-c 3.2.1-1
 msmtp 1.8.7-1
 mtdev 1.1.5-2
