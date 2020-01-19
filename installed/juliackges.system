@@ -1,3 +1,4 @@
+"Genie" => v"0.24.0"
 "Revise" => v"2.5.0"
 "Debugger" => v"0.6.2"
 "BenchmarkTools" => v"0.4.3"
