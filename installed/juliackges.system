@@ -2,6 +2,7 @@
 "Revise" => v"2.5.0"
 "Debugger" => v"0.6.2"
 "BenchmarkTools" => v"0.4.3"
+"LanguageServer" => v"1.0.0"
 "Rebugger" => v"0.3.2"
 "Traceur" => v"0.3.0"
 "OhMyREPL" => v"0.5.3"
