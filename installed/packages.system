@@ -21,6 +21,7 @@ alsa-topology-conf 1.2.1-1
 alsa-ucm-conf 1.2.1.2-1
 alsa-utils 1.2.1-1
 anbox-modules-dkms-git 1:r1126.0a49ae0-1
+android-sdk-build-tools r29.0.2-1
 android-tools 29.0.5-2
 aom 1.0.0.errata1-1
 apparmor 2.13.3-5
@@ -311,6 +312,7 @@ gimp-plugin-wavelet-denoise 0.3.1-5
 girara 0.3.3-1
 git 2.25.0-1
 git-annex 7.20191230-7
+git-lfs 2.9.2-1
 gitsh 0.14-1
 givaro 4.1.1-1
 gl2ps 1.4.0-1
