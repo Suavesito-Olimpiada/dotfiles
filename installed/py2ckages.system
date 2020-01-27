@@ -142,7 +142,7 @@ rpy2==2.8.6
 rsa==4.0
 sagenb==1.1.2
 scandir==1.10.0
-scipy==1.2.2
+scipy==1.2.3
 Send2Trash==1.5.0
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
@@ -165,12 +165,12 @@ traitlets==4.3.3
 trollius==2.1
 Twisted==19.10.0
 typing==3.7.4.1
-urllib3==1.25.7
+urllib3==1.25.8
 virtualenv==16.7.9
 wcwidth==0.1.8
 webencodings==0.5.1
 Werkzeug==0.16.0
 widgetsnbextension==3.5.1
 zenmap==7.80
-zipp==0.6.0
+zipp==1.0.0
 zope.interface==4.7.1
