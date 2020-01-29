@@ -11,6 +11,7 @@ acpi 1.7-2
 acpid 2.0.32-1
 adobe-source-code-pro-fonts 2.030ro+1.050it-5
 adwaita-icon-theme 3.34.3-1
+aerc 0.3.0-3
 aircrack-ng 1.5.2-1
 alembic 1.7.12-1
 alsa-firmware 1.2.1-2
@@ -23,6 +24,7 @@ alsa-utils 1.2.1-1
 anbox-modules-dkms-git 1:r1126.0a49ae0-1
 android-sdk-build-tools r29.0.2-1
 android-tools 29.0.5-2
+ant 1.10.7-1
 aom 1.0.0.errata1-1
 apparmor 2.13.3-5
 apparmor-profiles 2.13.3-5
@@ -170,6 +172,7 @@ curl 7.68.0-1
 cvs 1.11.23-12
 cython 0.29.14-4
 cython2 0.29.14-4
+dante 1.4.2-2
 darktable 2:3.0.0-1
 dav1d 0.5.2-1
 db 5.3.28-5
@@ -356,6 +359,7 @@ graphite 1:1.3.13-2
 graphviz 2.42.3-2
 grep 3.4-1
 groff 1.22.4-3
+groovy 2.5.8-1
 grub 2.04-10
 grub-theme-live-common 18.1-1
 grub-theme-live-manjaro 18.1-1
@@ -498,7 +502,6 @@ haskell-feed 1.2.0.1-25
 haskell-file-embed 0.0.11.1-1
 haskell-filelock 0.1.1.4-1
 haskell-filepath-bytestring 1.4.2.1.6-2
-haskell-fingertree 0.1.4.2-22
 haskell-free 5.1.3-8
 haskell-fsnotify 0.3.0.1-67
 haskell-generic-deriving 1.12.4-22
@@ -596,7 +599,6 @@ haskell-psqueues 0.2.7.2-13
 haskell-quickcheck 2.13.2-12
 haskell-quickcheck-io 0.2.0-35
 haskell-random 1.1-17
-haskell-reducers 3.12.3-71
 haskell-reflection 2.1.5-7
 haskell-regex-applicative 0.3.3.1-1
 haskell-regex-applicative-text 0.1.0.1-16
@@ -779,7 +781,7 @@ jdk7-openjdk 7.u231_2.6.19-1
 jdk8-openjdk 8.u232-1
 jemalloc 1:5.2.1-1
 jfsutils 1.1.15-7
-joplin 1.0.175-2
+joplin 1.0.179-1
 jq 1.6-2
 jre-openjdk 13.0.1.u9-1
 jre-openjdk-headless 13.0.1.u9-1
@@ -1044,8 +1046,8 @@ libbs2b 3.1.0-6
 libbsd 0.10.0-1
 libburn 1.5.2-1
 libbytesize 2.1-3
-libc++ 8.0.1-1.0
-libc++abi 8.0.1-1.0
+libc++ 9.0.1-1
+libc++abi 9.0.1-1
 libcaca 0.99.beta19-2
 libcacard 2.7.0-1
 libcanberra 0.30+2+gc0620e4-2
@@ -1114,6 +1116,7 @@ libgme 0.6.2-1
 libgomp-docs 7.1.0-1
 libgpg-error 1.36-3
 libgphoto2 2.5.23-1
+libgsf 1.14.46+3+g7f927f0-1
 libgssglue 0.4-4
 libgtop 2.40.0+2+g31db82ef-1
 libgudev 233-1
@@ -1158,7 +1161,6 @@ libmms 0.6.4-2
 libmng 2.0.3-2
 libmnl 1.0.4-3
 libmodplug 0.8.9.0-2
-libmp4v2 2.0.0-5
 libmpc 1.1.0-2
 libmpcdec 1:0.1+r475-2
 libmpdclient 2.17-1
@@ -1877,7 +1879,6 @@ python2-dateutil 2.8.1-2
 python2-decorator 4.4.1-1
 python2-distlib 0.3.0-1
 python2-distro 1.4.0-3
-python2-docutils 0.14-4
 python2-enum34 1.1.6-2
 python2-flask 1.1.1-3
 python2-flask-autoindex 0.6.4-2
@@ -1897,12 +1898,10 @@ python2-h5py 2.10.0-2
 python2-html5lib 1.0.1-7
 python2-hyperlink 19.0.0-3
 python2-idna 2.8-3
-python2-imagesize 1.2.0-1
 python2-importlib-metadata 1.4.0-1
 python2-incremental 17.5.0-4
 python2-ipaddress 1.0.23-1
 python2-ipykernel 4.10.0-1
-python2-ipywidgets 7.5.1-4
 python2-itsdangerous 1.1.0-3
 python2-jedi 0.15.1-2
 python2-jinja 2.10.3-3
@@ -1963,18 +1962,13 @@ python2-singledispatch 3.4.0.3-3
 python2-sip 4.19.19-3
 python2-sip-pyqt5 4.19.20-1
 python2-six 1.13.0-2
-python2-snowballstemmer 2.0.0-3
 python2-speaklater 1.3-6
-python2-sphinx 1.8.5-4
-python2-sphinx-alabaster-theme 0.7.12-3
-python2-sphinxcontrib-websupport 1.1.2-3
 python2-subprocess32 3.5.3-1
 python2-sympy 1.5-1
 python2-tornado 5.1.1-2
 python2-traitlets 4.3.3-3
 python2-trollius 2.1-3
 python2-twisted 19.10.0-1
-python2-typing 3.7.4.1-1
 python2-urllib3 1.25.8-1
 python2-virtualenv 16.1.0-3
 python2-wcwidth 0.1.8-1
@@ -2152,7 +2146,7 @@ supercollider 3.10.4-1
 swh-plugins 0.4.17-3
 symmetrica 3.0.1-1
 sympow 2.023.5-1
-synfig 1.2.2-1
+synfig 1.2.2-2
 synfigstudio 1.2.2-1
 syntax-highlighting 5.66.0-1
 sysfsutils 2.1.0-11
