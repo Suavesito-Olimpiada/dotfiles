@@ -36,7 +36,7 @@ hc keybind $Mod-Control-b spawn /home/jose/.config/scripts/bluetooth_check.sh
 hc keybind $Mod-Shift-t spawn termite -e ranger
 hc keybind $Mod-z spawn tabbed -c zathura -e
 hc keybind $Mod-Control-q spawn xkill
-hc keybind $Mod-Shift-p spawn /home/jose/.config/scripts/hdmi.sh
+hc keybind $Mod-Shift-p spawn /home/jose/.config/scripts/hdmi/hdmi.sh
 hc keybind $Mod-Shift-a spawn /home/jose/.config/scripts/audio.sh
 hc keybind $Mod-Shift-s spawn /home/jose/.config/scripts/lock_screen.sh 1
 hc keybind $Mod-Shift-u spawn /home/jose/.config/scripts/ibrowser.sh
