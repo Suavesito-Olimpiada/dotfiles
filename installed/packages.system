@@ -8,6 +8,7 @@ accounts-qml-module 0.7-2
 acl 2.2.53-2
 acorn 1:7.1.0-2
 acpi 1.7-2
+acpica 20200110-1
 acpid 2.0.32-1
 adobe-source-code-pro-fonts 2.030ro+1.050it-5
 adwaita-icon-theme 3.34.3-1
@@ -27,8 +28,6 @@ aom 1.0.0.errata1-1
 apparmor 2.13.3-5
 apparmor-profiles 2.13.3-5
 appstream-glib 0.7.16-2
-apr 1.7.0-2
-apr-util 1.6.1-6
 arb 2.17.0-1
 arch-wiki-man 1.3.0-1
 archlinux-keyring 20200108-1
@@ -75,6 +74,7 @@ bdf-bitocra 1.2-10
 bdf-unifont 12.1.03-1
 bear 2.4.3-1
 bettercap 2.26.1-1
+bin86 0.16.21-2
 bind-tools 9.14.10-1
 binutils 2.33.1-2
 bison 3.5-1
@@ -92,6 +92,7 @@ bpython 0.18-2
 breeze-icons 5.66.0-1
 brial 1.2.7-2
 bridge-utils 1.6-4
+brltty 6.0-8
 brotli 1.0.7-3
 brotli06 0.6.0-1
 browserpass 3.0.6-3
@@ -179,11 +180,13 @@ dbus-c++ 0.9.0-9
 dbus-glib 0.110-1
 dconf 0.34.0-1
 desktop-file-utils 0.24-1
+dev86 0.16.21-3
 device-mapper 2.02.186-5
 dhclient 4.4.2-1
 dhcpcd 8.1.5-1
 diffutils 3.7-3
 ding-libs 0.6.1-3
+discount 2.2.6-1
 distcc 3.3.3-4
 djvulibre 3.5.27-5
 dkms 2.8.1-1
@@ -201,7 +204,6 @@ downgrade 6.2.3-1
 duktape 2.5.0-1
 dunst 1.4.1-2
 dunstify 1.4.1-2
-dwarffortress 0.44.12-2
 dzen2 0.9.5.14.488ab66-1
 e2fsprogs 1.45.5-1
 easy-rsa 3.0.6-1
@@ -217,13 +219,13 @@ eglexternalplatform 1.1-1
 electron 7.1.10-1
 electron5 5.0.12-1
 elfutils 0.177-2
+emacs 26.3-1
 enca 1.19-3
 enchant 2.2.7-1
 entr 4.4-1
 espeak 1:1.48.04-2
 ethtool 1:5.4-1
 exiv2 0.27.2-1
-exo 0.12.11-1
 expac 10-1
 expat 2.2.9-3
 f2fs-tools 1.13.0-1
@@ -347,6 +349,7 @@ gnutls 3.6.11.1-1
 go 2:1.13.6-1
 gobject-introspection-runtime 1.62.0-3
 godep 2:80-3
+gparted 1.1.0-1
 gperftools 2.7-1
 gpgme 1.13.1-3
 gpm 1.20.7.r27.g1fd1941-2
@@ -840,7 +843,6 @@ kmod 26-3
 knewstuff 5.66.0-1
 knotifications-git 5.67.0.r499.ga2c88d2-1
 knotifyconfig 5.66.0-1
-komorebi 2.1-2
 kpackage-git 5.67.0.r560.g05ad769-1
 kpeople 5.66.0-1
 kpeoplevcard 0.1+r37.562e0b0-1
@@ -999,7 +1001,7 @@ lib32-nss-mdns 0.14.1-1
 lib32-openal 1.20.1-1
 lib32-openssl 1:1.1.1.d-1
 lib32-openssl-1.0 1.0.2.t-1
-lib32-p11-kit 0.23.19-2
+lib32-p11-kit 0.23.20-1
 lib32-pango 1:1.44.7-1
 lib32-pcre 8.43-1
 lib32-pixman 0.38.4-1
@@ -1044,7 +1046,6 @@ libbluray 1.1.2-1
 libbraiding 1.0-3
 libbs2b 3.1.0-6
 libbsd 0.10.0-1
-libburn 1.5.2-1
 libbytesize 2.1-3
 libc++ 9.0.1-1
 libc++abi 9.0.1-1
@@ -1118,7 +1119,6 @@ libgpg-error 1.36-3
 libgphoto2 2.5.23-1
 libgsf 1.14.46+3+g7f927f0-1
 libgssglue 0.4-4
-libgtop 2.40.0+2+g31db82ef-1
 libgudev 233-1
 libgusb 0.3.2-2
 libhandy 0.0.13-1
@@ -1136,7 +1136,7 @@ libimobiledevice 1.2.0+87+g92c5462-6
 libindicator-gtk2 12.10.1-8
 libindicator-gtk3 12.10.1-8
 libinput 1.15.0-1
-libisofs 1.5.2-1
+libiscsi 1.19.0-1
 libixion 0.14.1-5
 libjamiclient 20190813-1
 libjpeg-turbo 2.0.4-1
@@ -1193,6 +1193,7 @@ libofa 0.9.3-8
 libogg 1.3.4-1
 libomxil-bellagio 0.9.3-2
 liborcus 0.14.1-5
+libotf 0.9.16-1
 libpagemaker 0.0.4-2
 libpaper 1.1.24-11
 libpcap 1.9.1-2
@@ -1259,7 +1260,6 @@ libusb 1.0.23-2
 libusb-compat 0.1.5-2
 libusbmuxd 2.0.0-2
 libutempter 1.1.6-3
-libutf8proc 2.4.0-1
 libutil-linux 2.35-1
 libuv 1.34.2-1
 libva 2.6.1-1
@@ -1299,8 +1299,6 @@ libxdamage 1.1.5-2
 libxdg-basedir 1.2.0-4
 libxdmcp 1.1.3-2
 libxext 1.3.4-2
-libxfce4ui 4.14.1-2.1
-libxfce4util 4.14.0-1
 libxfixes 5.0.3-3
 libxfont2 2.0.4-2
 libxft 2.3.3-1
@@ -1367,6 +1365,8 @@ lxcfs 3.1.2-1
 lz4 1:1.9.2-2
 lzo 2.10-3
 lzop 1.04-2
+m17n-db 1.8.0-2
+m17n-lib 1.8.0-6
 m4 1.4.18-3
 m4ri 20200125-1
 m4rie 20200125-1
@@ -1416,6 +1416,7 @@ movit 1.6.3-1
 mpc 0.33-1
 mpd 0.21.19-1
 mpd-mpris 0.2.3-2
+mpdecimal 2.4.2-2
 mpfi 1.5.4-2
 mpfr 4.0.2-2
 mpg123 1.25.13-1
@@ -1485,6 +1486,8 @@ nxproxy 3.5.99.22-1
 nyx 2.1.0-2
 oath-toolkit 2.6.2-7
 ocaml 4.09.0-2
+ocaml-compiler-libs 4.09.0-2
+ocaml-findlib 1.8.1-4
 oniguruma 6.9.4-1
 openal 1.20.1-1
 openblas 0.3.7-1
@@ -1522,7 +1525,7 @@ otf-fantasque-sans-mono 1.8.0-1
 otf-fira-code 2-1
 otf-fira-mono 2:3.206-3
 otf-fira-sans 1:4.301-1
-p11-kit 0.23.19-2
+p11-kit 0.23.20-1
 p7zip 16.02-5
 pacman 5.2.1-4
 pacman-mirrors 4.16.2-3
@@ -2022,7 +2025,7 @@ quazip 0.8.1-2
 qwt 6.1.4-2
 qwtpolar 1.1.1-4
 r 3.6.2-1
-ranger 1.9.2-2
+ranger 1.9.3.4.gd8c363c9-1
 rankwidth 0.8-1
 rapidjson 1.1.0-4
 raptor 2.0.15-12
@@ -2090,7 +2093,6 @@ seabios 1.13.0-1
 sed 4.8-1
 semver 7.1.1-1
 serd 0.30.2-1
-serf 1.3.9-3
 shaderc 2019.0-4
 shadow 4.8-1
 shared-mime-info 1.15-2
@@ -2124,6 +2126,7 @@ speex 1.2.0-2
 speexdsp 1.2.0-1
 spice 0.14.2-1
 spice-gtk 0.37-1
+spice-protocol 0.14.0-1
 spirv-tools 2019.3-2
 sqlcipher 4.2.0-1
 sqlite 3.30.1-2
@@ -2137,7 +2140,6 @@ steam-native 1.0.0.61-2
 stk 4.6.1-2
 stow 2.3.1-2
 strace 5.4-1
-subversion 1.13.0-2
 sudo 1.8.30-1
 suil 0.10.6-2
 suitesparse 5.6.0-1
@@ -2307,8 +2309,6 @@ xf86-video-ati 1:19.1.0-1
 xf86-video-intel 1:2.99.917+899+gf66d3954-1
 xf86-video-nouveau 1.0.16-1
 xf86-video-vesa 2.4.0-2
-xfburn 0.6.1-1
-xfconf 4.14.1-1
 xfsprogs 5.4.0-1
 xftwidth-git r26.35ff963-1
 xine-lib 1.2.10-1
@@ -2338,6 +2338,7 @@ xorg-server-xwayland 1.20.7-1
 xorg-sessreg 1.1.2-1
 xorg-setxkbmap 1.3.2-1
 xorg-smproxy 1.0.6-2
+xorg-twm 1.0.10-1
 xorg-util-macros 1.19.2-1
 xorg-x11perf 1.6.1-1
 xorg-xauth 1.1-1

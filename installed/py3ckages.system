@@ -20,6 +20,7 @@ bluepy==1.3.0
 Bottleneck==1.3.1
 bpython==0.18
 brial==1.0.2
+Brlapi==0.7.0
 brotlipy==0.7.0
 btrfsutil==1.1.1
 CacheControl==0.12.6
@@ -182,7 +183,7 @@ PyYAML==5.3
 pyzmq==18.1.1
 QScintilla==2.11.4
 rados==2.0.0
-ranger-fm==1.9.2
+ranger-fm==1.9.3
 rbd==2.0.0
 regex==2020.1.8
 requests==2.22.0
