@@ -25,6 +25,7 @@ skypeforlinux                                                                   
 cozy-desktop                                                                                    # COZY FOR LINUX
 /home/jose/Apps/nativefierBuild/whats-app-linux-x64/whats-app                                   # NATIVEFIER WHATSAPP
 signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
+termite -e aerc                                                                                 # E-MAIL TERMINAL CLIENT
 
 # office
 termite -e vim                                                                                  # VIM
@@ -110,6 +111,7 @@ termite -e calcurse                                                             
 filezilla                                                                                       # FTP FREE GUI
 joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
 pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
+termite -e bluetoothctl                                                                         # INTERNET CONNECTION
 
 # remote access
 remmina                                                                                         # CONTROL REMOTE DESKTOP
