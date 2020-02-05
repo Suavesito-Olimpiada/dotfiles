@@ -88,6 +88,7 @@ bluez-tools 0.2.0-4
 bluez-utils 5.52-2
 boost 1.71.0-4
 boost-libs 1.71.0-4
+borg 1.1.10-3
 bpython 0.18-2
 breeze-icons 5.66.0-1
 brial 1.2.7-2
@@ -1622,7 +1623,6 @@ poppler-glib 0.84.0-1
 poppler-qt5 0.84.0-1
 popt 1.16-12
 portaudio 1:19.6.0-6
-postgresql 12.1-2
 postgresql-libs 12.1-2
 potato 6-1
 potrace 1.16-1
