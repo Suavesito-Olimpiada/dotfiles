@@ -116,7 +116,6 @@ cantarell-fonts 1:0.201-1
 capnproto 0.7.0-3
 cblas 3.9.0-2
 ccache 3.7.7-1
-ccls 0.20190823.5-2
 ccrypt 1.11-1
 ccv 0.7.r2076-1
 cddlib 1:0.94j-1
@@ -1449,6 +1448,7 @@ nerd-fonts-hack 2.0.0-1
 nerd-fonts-noto-sans-mono 2.0.0-1
 nerd-fonts-terminus 2.0.0-2
 net-tools 1.60.20181103git-2
+netbeans 11.2-2
 netcdf 4.7.3-1
 netpbm 10.73.30-1
 nettle 3.5.1-2
@@ -1504,6 +1504,7 @@ openfx-gmic 2.3.15_rc.10-1
 opengl-man-pages 20190725-1
 openimagedenoise 1.1.0-1
 openimageio 2.0.13-1
+openjdk-doc 13.0.2.u8-1
 openjpeg 1.5.2-2
 openjpeg2 2.3.1-1
 openmp 9.0.1-1
@@ -2028,7 +2029,6 @@ qwtpolar 1.1.1-4
 r 3.6.2-1
 ranger 1.9.3.4.gd8c363c9-1
 rankwidth 0.8-1
-rapidjson 1.1.0-4
 raptor 2.0.15-12
 rasqal 1:0.9.33-2
 re2 20200101-1
