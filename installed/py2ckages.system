@@ -26,7 +26,7 @@ cvxopt==1.2.3
 cycler==0.10.0
 cypari2==2.1.0
 cysignals==1.10.0
-Cython==0.29.14
+Cython==0.29.15
 decorator==4.4.1
 defusedxml==0.6.0
 distlib==0.3.0
@@ -58,11 +58,11 @@ importlib-metadata==1.4.0
 incremental==17.5.0
 ipaddress==1.0.23
 ipykernel==4.10.0
-ipython==5.8.0
+ipython==5.9.0
 ipython-genutils==0.1.0
 itsdangerous==1.1.0
 jedi==0.15.2
-Jinja2==2.10.3
+Jinja2==2.11.1
 jsonschema==3.2.0
 jupyter-client==5.3.4
 jupyter-core==4.6.1
@@ -75,6 +75,7 @@ lxml==4.4.2
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==2.2.4
+mercurial==5.2.2
 mistune==0.8.4
 more-itertools==5.0.0
 mpmath==1.1.0
@@ -90,11 +91,11 @@ oauthlib==3.1.0
 ordered-set==3.1.1
 packaging==20.0
 pandocfilters==1.4.2
-parso==0.5.2
+parso==0.6.1
 pathlib==1.0.1
 pathlib2==2.3.5
 pep517==0.6.0
-pexpect==4.7.0
+pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==6.2.1
 Pillow-PIL==0.1.dev0
@@ -121,7 +122,7 @@ PyOpenGL==3.1.5
 pyOpenSSL==19.1.0
 pyparsing==2.4.6
 PyQt5==5.14.1
-PyQt5-sip==4.19.20
+PyQt5-sip==4.19.21
 pyrsistent==0.15.6
 PySocks==1.7.1
 pytest==4.6.8

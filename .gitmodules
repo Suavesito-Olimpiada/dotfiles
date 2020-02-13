@@ -242,3 +242,7 @@
 	path = vim/bundle/vim-textobj-between
 	url = https://github.com/thinca/vim-textobj-between
 	branch = master
+[submodule "vim/bundle/scvim"]
+	path = vim/bundle/scvim
+	url = git://github.com/supercollider/scvim.git
+	branch = master
