@@ -23,7 +23,6 @@ ring                                                                            
 utox                                                                                            # UTOX MESSAGE APP
 skypeforlinux                                                                                   # SKYPE FOR LINUX
 cozy-desktop                                                                                    # COZY FOR LINUX
-/home/jose/Apps/nativefierBuild/whats-app-linux-x64/whats-app                                   # NATIVEFIER WHATSAPP
 signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
 termite -e aerc                                                                                 # E-MAIL TERMINAL CLIENT
 
@@ -34,7 +33,6 @@ libreoffice --calc                                                              
 libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
-atom                                                                                            # TEXT EDITOR
 scribus                                                                                         # SCRIBUS
 
 # math
@@ -88,6 +86,7 @@ termite -e R                                                                    
 qtcreator                                                                                       # QTCREATOR
 glade                                                                                           # GTK GLADE APP CREATOR
 lepton                                                                                          # GIST LIKE SNIPPETS APP
+netbeans
 
 # system
 termite -e "vim /home/jose/.config/herbstluftwm/autostart"                                      # AUTOSTART HERBSTLUFT

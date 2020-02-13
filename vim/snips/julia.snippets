@@ -1,0 +1,43 @@
+extends julia
+
+snippet fun
+	function ${1}( ${2} )
+		${3:#body}
+	end
+endsnippet
+
+snippet if
+	if ${1:condition}
+		${2:do something}
+	end
+endsnippet
+
+snippet ifel
+	if ${1:condition}
+		${2:do something}
+	else
+		${3:do something else}
+	end
+endsnippet
+
+snippet elif
+	if ${1:condition}
+		${2:do something}
+	elseif ${3: other condition}
+		${4: do something}
+	else
+		${5:do something else}
+	end
+endsnippet
+
+snippet for
+	for ${1:i} in 1:${2:x}
+		${3:do something}
+	end
+endsnippet
+
+snippet wh
+	while ${1:condition}
+		${2:do something}
+	end
+endsnippet

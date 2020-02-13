@@ -1,0 +1,60 @@
+pass
+├── Cellphone
+│   ├── Signal
+│   │   ├── 1.gpg
+│   │   ├── 2.gpg
+│   │   ├── 3.gpg
+│   │   ├── 4.gpg
+│   │   ├── 5.gpg
+│   │   ├── 6.gpg
+│   │   └── pin.gpg
+│   └── WhatsApp
+│       └── pin.gpg
+├── Development
+│   ├── freelancer.com
+│   │   └── jose.zubieta@cimat.mx.gpg
+│   └── github.com
+│       └── jose.zubieta@cimat.mx.gpg
+├── Games
+│   └── steam.com.gpg
+├── Gov
+│   ├── conacyt.gov.mx.confirm.gpg
+│   └── conacyt.gov.mx.gpg
+├── GPG
+│   ├── that.gpg
+│   └── this.gpg
+├── Learning
+│   ├── edx.org
+│   │   └── jjjzubiet@hotmail.com.gpg
+│   └── qiskit.org
+│       └── jose.zubieta@cimat.mx.gpg
+├── Local
+│   ├── jaro.gpg
+│   ├── joplin.gpg
+│   └── tox.gpg
+└── Mail
+    ├── gmail.com
+    │   ├── jjjzubiet@gmail.com.gpg
+    │   └── jose.zubieta@cimat.mx.gpg
+    ├── outlook.live.com
+    │   └── jjjzubiet@hotmail.com.gpg
+    └── protonmail.com
+        ├── secure10.gpg
+        ├── secure11.gpg
+        ├── secure12.gpg
+        ├── secure13.gpg
+        ├── secure14.gpg
+        ├── secure15.gpg
+        ├── secure16.gpg
+        ├── secure1.gpg
+        ├── secure2.gpg
+        ├── secure3.gpg
+        ├── secure4.gpg
+        ├── secure5.gpg
+        ├── secure6.gpg
+        ├── secure7.gpg
+        ├── secure8.gpg
+        ├── secure9.gpg
+        └── suavesito@protonmail.com.gpg
+
+17 directories, 40 files

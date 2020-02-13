@@ -256,8 +256,8 @@ nnoremap <silent> <Leader>st :vsplit<CR>:terminal ++curwin ++close<CR>
 nnoremap <silent> <Leader>sm :smile<CR>
 
 " toggle between list and nolist
-nnoremap <silent> <F5> :set list!<CR>
-inoremap <silent> <F5> <Esc>:set list!<CR>a
+" nnoremap <silent> <F5> :set list!<CR>
+" inoremap <silent> <F5> <Esc>:set list!<CR>a
 
 " toggle goyo + limeligh
 nnoremap <silent> <Leader>gl :Goyo<CR>
@@ -268,9 +268,10 @@ nnoremap <silent> <Leader>md :MundoToggle<CR>
 " LanguageClient-neovim keybinds
 augroup LCT
     autocmd!
-    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-    autocmd FileType julia,rust,python,c,cpp,latex  noremap <silent> <Leader>rn :call LanguageClient_textDocument_rename()<CR>
+    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> <Leader>rn :call LanguageClient_textDocument_rename()<CR>
 augroup END
 
 " toggle tagbar
@@ -296,6 +297,10 @@ map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
+
+" bufferhint.vim
+nnoremap - :call bufferhint#Popup()<CR>
+nnoremap \ :call bufferhint#LoadPrevious()<CR>
 
 
 "}}}
@@ -330,7 +335,7 @@ autocmd FileType c,cpp,cs,java      setlocal commentstring=//\ %s
 autocmd FileType git,gitcommit      setlocal foldmethod=syntax foldlevel=1
 
 " COlorcolumn just for coding documents
-autocmd FileType c,cpp,python,julia,vim,sh  call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType c,cpp,python,julia,vim,sh,java  call matchadd('ColorColumn', '\%81v', 100)
 
 " Keep the position of the open files
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -364,6 +369,9 @@ augroup END
 " autocmd BufNewFile *.c      0read ~/.vim/sket/skeleton.c
 " autocmd BufNewFile *.cpp    0read ~/.vim/sket/skeleton.cpp
 " autocmd BufNewFile *.md     0read ~/.vim/sket/skeleton.md
+
+au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
+au Filetype supercollider packadd scvim
 
 
 "}}}
@@ -441,7 +449,12 @@ let airline#extensions#c_like_langs = ['arduino', 'c', 'cpp', 'cuda', 'go', 'jav
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-" call deoplete#custom#option('smart_case', v:true)
+call deoplete#custom#option({
+\   'smart_case': v:true,
+\   })
+call deoplete#custom#source('LanguageClient',
+\   'min_pattern_length',
+\   2)
 
 " mundo (gundo fork)
 let g:mundo_right = 1
@@ -467,7 +480,8 @@ let g:LanguageClient_serverCommands = {
 \   'cpp': ['clangd'],
 \   'latex': ['texlab'],
 \   'tex': ['texlab'],
-\   'bash': ['bash-language-server'],
+\   'bash': ['bash-language-server', 'start'],
+\   'java': ['/home/jose/.config/scripts/jdtls', '-data', getcwd()],
 \   }
 
 set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
@@ -523,8 +537,10 @@ autocmd FileType julia let b:dispatch = 'julia %'
 let g:slime_target = "vimterminal"
 
 " Vim-rooter
-let g:rooter_change_directory_for_non_project_files = 'home'
-let g:rooter_targets = '/,*.h,*hpp,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 0
+let g:rooter_resolve_links = 1
+let g:rooter_targets = '/,*.h,*.hpp,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
 let g:rooter_patterns = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
 
 " Goyo vim
@@ -610,6 +626,16 @@ let g:gutentags_modules = ['ctags', 'gtags_cscope']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_plus_switch = 1
 let g:gutentags_define_advanced_commands = 1
+
+" Info.vim
+let g:infoprg = '/usr/bin/info'
+
+" bufferhint.vim
+let g:bufferhint_MaxWidth = 40
+let g:bufferhint_PageStep = 10
+
+" vim-niceblock
+let g:niceblock_no_default_key_mappings = 0
 
 
 "}}}

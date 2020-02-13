@@ -18,10 +18,8 @@ theme:
  -  metropolis
 date:
  -  \today
-output:
- -  ${4:`!echo %:t`}
 abstract:
- -  ${5:abstract}
+ -  ${4:abstract}
 ---
 $0
 endsnippet
@@ -35,34 +33,44 @@ header-includes: |
     \floatplacement{figure}{H}
 endsnippet
 
-snippet td "TODO Pandoc"
+snippet todo "TODO Pandoc"
  - [] `echo $USER` ${1:Description} `!v strftime("%c")`
 endsnippet
 
-snippet cal "Caligraphy latex math."
-\mathcal{${1:C}}
+snippet mtcl "Caligraphy latex math."
+\mathcal{ ${1:C} }
 endsnippet
 
-snippet bb "Nice latex math."
-\mathbb{${1:R}}
+snippet mtbb "Nice latex math."
+\mathbb{ ${1:R} }
 endsnippet
 
-snippet bf "Bold latex."
-\mathbf{${1:I}}
+snippet mtbf "Bold latex."
+\mathbf{ ${1:I} }
 endsnippet
 
-snippet fr "Fraction for latex"
-\frac{${1:1}}{${2:2}}$0
+snippet mtfr "Fraction for latex"
+\frac{ ${1:1} }{ ${2:2} }$0
 endsnippet
 
-snippet sm "Sum for latex"
-\sum_{${1:i=0}}^{${2:N}}{${3:x}}
+snippet mts "Sum for latex"
+\sum_{ ${1:i=0} }^{ ${2:N} }{ ${3:x} }
 endsnippet
 
-snippet bgeb "Begin-End block latex"
+snippet mtbgeb "Begin-End block latex math"
 \begin{${1:aligned}}
     $2
 \end{$1}
+endsnippet
+
+snippet mtrli "Right-Left math block inlined"
+\left${1:(} $0 \right${2:)}
+endsnippet
+
+snippet mtrl "Right-Left math block"
+\left${1:(}
+    $0
+\right${2:)}
 endsnippet
 
 snippet cmmt "Comment."
@@ -85,7 +93,7 @@ snippet cdir "Code block inline."
 \`${1:x**2}\`.{run}
 endsnippet
 
-snippet bgei "Begin-End block latex inlined"
+snippet mtbgei "Begin-End block latex inlined"
 \begin{${1:aligned}}$2\end{$1}
 endsnippet
 
