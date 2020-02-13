@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 #
 #  _________  _   _   ____   ____
 # |__  / ___|| | | | |  _ \ / ___|
@@ -107,7 +100,18 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # All the non-standard configuration is called here.
-source /home/jose/.zsh/extra.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+if [[ -n $DISPLAY ]]
+then
+    source "$HOME/.zsh/p10k/p10k-instant-prompt-jose.zsh"
+else
+    source "$HOME/.zsh/p10k/p10k-instant-prompt-jose-nodisplay.zsh"
+fi
+
+source /home/jose/.zsh/extra.zsh

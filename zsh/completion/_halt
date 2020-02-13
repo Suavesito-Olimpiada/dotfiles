@@ -1,0 +1,19 @@
+#compdef halt
+
+# zsh completions for 'halt'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '--help[show this help]'
+  '--halt[halt the machine]'
+  {-p,--poweroff}'[switch off the machine]'
+  '--reboot[reboot the machine]'
+  {-f,--force}'[force immediate halt/power-off/reboot]'
+  {-w,--wtmp-only}'[t halt/power-off/reboot, just write wtmp record]'
+  {-d,--no-wtmp}'[dont write wtmp record]'
+  '--no-wall[dont send wall message before halt/power-off/reboot]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

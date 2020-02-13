@@ -22,19 +22,22 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug "hlissner/zsh-autopair", defer:2
-
-zplug "bcho/Watson.zsh"
-
-zplug "RobSis/zsh-completion-generator"; compinit
-
-zplug "ryutok/rust-zsh-completions"
-
-zplug "MichaelAquilina/zsh-auto-notify"
-
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+if [[ -n $DISPLAY ]]
+then
+    zplug "hlissner/zsh-autopair", defer:2
+
+    zplug "bcho/Watson.zsh"
+
+    zplug "RobSis/zsh-completion-generator"; compinit
+
+    zplug "ryutok/rust-zsh-completions"
+
+    zplug "MichaelAquilina/zsh-auto-notify"
+
+    zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+fi
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -57,9 +60,6 @@ zplug load
 # simplier to get run externally.
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # For [marker](https://github.com/pindexis/marker)
 [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
@@ -85,6 +85,14 @@ eval $(thefuck --alias)
 if [[ $TERM == xterm-256color ]]; then
     . /etc/profile.d/vte.sh
     __vte_osc7
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+if [[ -n $DISPLAY ]]
+then
+    source "$HOME/.zsh/p10k/p10k.zsh"
+else
+    source "$HOME/.zsh/p10k/p10k-nodisplay.zsh"
 fi
 
 # A nice reminder that I'm not free. :'c
