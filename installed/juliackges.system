@@ -1,5 +1,5 @@
-"Genie" => v"0.25.6"
 "Revise" => v"2.5.0"
+"GTK3_jll" => v"3.24.11+1"
 "Debugger" => v"0.6.4"
 "BenchmarkTools" => v"0.4.3"
 "StaticLint" => v"1.0.2"
@@ -11,5 +11,5 @@
 "IJulia" => v"1.21.1"
 "Cthulhu" => v"0.1.1"
 "ProgressMeter" => v"1.2.0"
-"ProfileView" => v"0.6.2"
 "SymbolServer" => v"1.0.1"
+"Gtk" => v"1.1.3"
