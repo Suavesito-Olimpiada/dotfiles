@@ -245,12 +245,12 @@ file 5.38-3
 filesystem 2019.10-4
 filezilla 3.46.3-1
 findutils 4.7.0-2
-firefox 72.0.2-1
+firefox 73.0-0.1
 firejail 0.9.62-1
 flac 1.3.3-1
 flake8 1:3.7.9-1
 flashplugin 32.0.0.314-1
-flatpak 1.6.1-1
+flatpak 1.6.2-0.1
 flex 2.6.4-3
 flickcurl 1.26-8
 flint 2.5.2-29
@@ -954,8 +954,8 @@ lib32-libxxf86vm 1.1.4-2
 lib32-llvm-libs 9.0.1-1
 lib32-lm_sensors 3.6.0-1
 lib32-lz4 1.9.2-1
-lib32-mesa 19.3.3-1
-lib32-mesa-vdpau 19.3.3-1
+lib32-mesa 19.3.4-0.2
+lib32-mesa-vdpau 19.3.4-0.2
 lib32-mpg123 1.25.13-1
 lib32-ncurses 6.1-4
 lib32-nettle 3.5.1-1
@@ -983,8 +983,8 @@ lib32-sqlite 3.31.1-1
 lib32-systemd 242.153-2
 lib32-tdb 1.3.18-1
 lib32-util-linux 2.35.1-1
-lib32-vulkan-intel 19.3.3-1
-lib32-vulkan-radeon 19.3.3-1
+lib32-vulkan-intel 19.3.4-0.2
+lib32-vulkan-radeon 19.3.4-0.2
 lib32-wayland 1.17.0-1
 lib32-xz 5.2.4-1
 lib32-zlib 1.2.11-2
@@ -1227,7 +1227,7 @@ libutempter 1.1.6-3
 libutil-linux 2.35.1-1
 libuv 1.34.2-1
 libva 2.6.1-1
-libva-mesa-driver 19.3.3-1
+libva-mesa-driver 19.3.4-0.2
 libva-vdpau-driver 0.7.4-4
 libva1 1.8.3-2
 libvdpau 1.3-1
@@ -1341,7 +1341,7 @@ man-db 2.9.0-1
 man-pages 5.04-2
 manjaro-firmware 20160419-1
 manjaro-keyring 20190608-1
-manjaro-release 18.1.5-1
+manjaro-release 19.0.0-1
 manjaro-system 20191210-4
 mariadb-libs 10.4.12-1
 mathjax2 2.7.7-1
@@ -1353,8 +1353,8 @@ mdadm 4.1-2
 media-player-info 24-1
 memtest86+ 5.01-3
 mercurial 5.2.2-2
-mesa 19.3.3-1
-mesa-vdpau 19.3.3-1
+mesa 19.3.4-0.2
+mesa-vdpau 19.3.4-0.2
 metasploit 5.0.70-1
 metis 5.1.0.p7-1
 mhwd 0.6.4-2
@@ -2217,8 +2217,8 @@ vrms-arch 0.1.0.r25.g802c767-1
 vte-common 0.58.3-1
 vte3 0.58.3-1
 vulkan-icd-loader 1.2.132-1
-vulkan-intel 19.3.3-1
-vulkan-radeon 19.3.3-1
+vulkan-intel 19.3.4-0.2
+vulkan-radeon 19.3.4-0.2
 w3m 0.5.3.git20190105-1
 watchexec 1.12.0-1
 watson 1.8.0-1
