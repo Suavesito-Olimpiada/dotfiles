@@ -27,6 +27,7 @@ Brlapi==0.7.0
 brotlipy==0.7.0
 btrfsutil==1.1.1
 CacheControl==0.12.6
+cachetools==4.0.0
 caffeine-ng==3.4.2
 ceph-volume==1.0.0
 cephfs==2.0.0
@@ -36,7 +37,7 @@ cffi==1.13.2
 chardet==3.0.4
 Click==7.0
 cmd2==0.9.25
-colorama==0.4.3
+colorama==0.4.1
 contextlib2==0.6.0
 cryptography==2.8
 curtsies==0.3.1
@@ -52,6 +53,7 @@ distro==1.4.0
 docopt==0.6.2
 docutils==0.14
 dot2tex==2.11.3
+-e git+https://github.com/nurdtechie98/drive-cli@9a285851973026488d97190cbe10b40c4694f14f#egg=drive_cli
 entrypoints==0.3
 ewmh==0.1.6
 fastpbkdf2==0.2
@@ -62,7 +64,11 @@ fpylll==0.5.1.dev0
 future==0.18.2
 gast==0.2.2
 gmpy2==2.1.0b3
+google-api-python-client==1.7.8
+google-auth==1.11.2
+google-auth-httplib2==0.0.3
 greenlet==0.4.15
+grip==4.5.2
 gufw==19.10.0
 h11==0.8.1
 h2==3.1.1
@@ -70,6 +76,7 @@ h5py==2.10.0
 helper==2.4.2
 hpack==3.0.0
 html5lib==1.0.1
+httplib2==0.12.1
 hyperframe==5.2.0
 idna==2.8
 imagesize==1.2.0
@@ -124,6 +131,7 @@ npyscreen==4.10.5
 numexpr==2.7.1
 numpy==1.18.1
 nyx==2.1.0
+oauth2client==4.1.3
 oauthlib==3.1.0
 opendht==1.10.1
 ordered-set==3.1.1
@@ -134,10 +142,12 @@ pandas-datareader==0.8.1
 pandocfilters==1.4.2
 parso==0.6.1
 passlib==1.7.2
+path-and-address==2.0.1
 pathspec==0.7.0
 pep517==0.6.0
 pew==1.2.0
 pexpect==4.8.0
+pick==0.6.4
 pickleshare==0.7.5
 Pillow==6.2.1
 pipenv==2018.11.15.dev0
@@ -146,6 +156,7 @@ ply==3.11
 pm2ml==2017.12.31.5.7.19
 Powerpill==2018.11.4.16.1.3
 pplpy==0.8.4
+prettytable==0.7.2
 progress==1.5
 prometheus-client==0.7.1
 prompt-toolkit==3.0.3
@@ -159,6 +170,7 @@ pycairo==1.19.0
 pycodestyle==2.5.0
 pycparser==2.19
 pydocstyle==5.0.2
+pyfiglet==0.8.post1
 pyflakes==2.1.1
 pyftpdlib==1.5.5
 Pygments==2.5.2
@@ -189,12 +201,13 @@ rados==2.0.0
 ranger-fm==1.9.3
 rbd==2.0.0
 regex==2020.1.8
-requests==2.22.0
+requests==2.21.0
 requests-oauthlib==1.3.0
 retrying==1.3.3
 rgw==2.0.0
 rope==0.16.0
 rpy2==3.2.6
+rsa==4.0
 rtv==1.27.0
 ruamel.yaml==0.16.7
 sage==9.0
@@ -235,7 +248,8 @@ typing-extensions==3.7.4.1
 tzlocal==2.0.0
 ufw==0.36
 ujson==1.35
-urllib3==1.25.8
+uritemplate==3.0.1
+urllib3==1.24.3
 urwid==2.1.0
 virtualenv==16.1.0
 virtualenv-clone==0.5.3
