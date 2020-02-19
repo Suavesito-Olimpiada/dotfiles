@@ -1495,6 +1495,7 @@ pango 1:1.44.7-1
 pango-perl 1.227-11
 pangomm 2.42.0-1
 pangox-compat 0.0.2+2+gedb9e09-3
+parallel 20191122-1
 pari 2.11.2-1
 pari-galdata 20080411-2
 pari-seadata-small 20090618-2
