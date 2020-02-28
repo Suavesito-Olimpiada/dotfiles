@@ -684,6 +684,7 @@ highlight 3.55-1
 hostapd 2.9-3
 hping 3.0.0-4
 hspell 1.4-2
+htmltui 1.1.0-1
 htop 2.2.0-3
 http-parser 2.9.2-1
 httping 2.5-3
@@ -1404,6 +1405,7 @@ neofetch 6.1.0-1
 neon 0.30.2-3
 neovim 0.4.3-1
 nerd-fonts-hack 2.1.0-2
+nerd-fonts-jetbrains-mono 2.1.0-1
 nerd-fonts-noto-sans-mono 2.0.0-1
 nerd-fonts-terminus 2.0.0-2
 net-tools 1.60.20181103git-2
