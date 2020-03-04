@@ -1535,7 +1535,9 @@ pdfjs 2.3.200-1
 perf 5.5-1
 perl 5.30.1-1
 perl-authen-sasl 2.16-6
+perl-cairo-gobject 1.004-9
 perl-class-inspector 1.36-1
+perl-common-sense 3.74-5
 perl-convert-binhex 1.125-5
 perl-data-dump 1.23-5
 perl-encode-locale 1.05-5
@@ -1543,6 +1545,8 @@ perl-error 0.17029-1
 perl-file-listing 6.04-6
 perl-file-sharedir 1.116-2
 perl-file-which 1.23-2
+perl-glib-object-introspection 0.047-3
+perl-gtk3 0.035-1
 perl-html-parser 3.72-8
 perl-html-tagset 3.20-8
 perl-http-cookies 6.08-1
@@ -1554,6 +1558,7 @@ perl-io-html 1.001-5
 perl-io-socket-ssl 2.066-1
 perl-io-stringy 2.111-3
 perl-json 2.97001-1
+perl-json-xs 4.0-3
 perl-libwww 6.43-1
 perl-lwp-mediatypes 6.02-6
 perl-lwp-protocol-https 6.07-3
@@ -1565,6 +1570,7 @@ perl-net-ssleay 1.88-1
 perl-parse-yapp 1.21-2
 perl-timedate 2.31-1
 perl-try-tiny 0.30-3
+perl-types-serialiser 1.0-5
 perl-uri 1.76-2
 perl-www-robotrules 6.02-6
 perl-xml-parser 2.46-1
