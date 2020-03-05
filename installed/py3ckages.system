@@ -13,7 +13,6 @@ autopep8==1.5
 Babel==2.8.0
 backcall==0.1.0
 bcrypt==3.1.7
-Beaker==1.11.0
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
@@ -26,7 +25,6 @@ bpython==0.18
 brial==1.0.2
 Brlapi==0.7.0
 Brotli==1.0.7
-brotlipy==0.7.0
 btrfsutil==1.1.1
 CacheControl==0.12.6
 cachetools==4.0.0
@@ -112,7 +110,6 @@ lit==0.9.1.dev0
 lockfile==0.12.2
 louis==3.12.0
 lxml==4.5.0
-Mako==1.1.1
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==3.1.3
@@ -120,7 +117,6 @@ mccabe==0.6.1
 MemoizeDB==2017.3.30.23.38.49
 mistune==0.8.4
 mitmproxy==5.0.1
-more-itertools==8.2.0
 mpmath==1.1.0
 msgpack==0.6.2
 mypy==0.761
