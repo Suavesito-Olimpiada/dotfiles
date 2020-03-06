@@ -4,6 +4,7 @@
 "BenchmarkTools" => v"0.5.0"
 "StaticLint" => v"3.1.0"
 "LanguageServer" => v"2.0.0"
+"PyCall" => v"1.91.4"
 "Rebugger" => v"0.3.3"
 "Traceur" => v"0.3.0"
 "OhMyREPL" => v"0.5.4"
