@@ -12,7 +12,7 @@ cachetools==3.1.1
 certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
-Click==7.0
+click==7.1.1
 colorama==0.4.3
 configobj==5.0.6
 configparser==4.0.2
@@ -64,7 +64,7 @@ lxml==4.5.0
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==2.2.5
-mercurial==5.3
+mercurial==5.3.1
 mistune==0.8.4
 msgpack==0.6.2
 nbconvert==5.6.1
@@ -76,7 +76,7 @@ notmuch==0.29.3
 numpy==1.16.5
 oauthlib==3.1.0
 ordered-set==3.1.1
-packaging==20.2
+packaging==20.3
 pandocfilters==1.4.2
 parso==0.6.1
 pathlib==1.0.1
@@ -99,9 +99,9 @@ py==1.8.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.7
 pycairo==1.18.2
-pycparser==2.19
+pycparser==2.20
 Pygments==2.5.2
-PyGObject==3.34.0
+PyGObject==3.36.0
 pynvim==0.4.0
 PyOpenGL==3.1.5
 pyOpenSSL==19.1.0
@@ -116,7 +116,7 @@ python-libtorrent==1.2.4
 pytoml==0.1.21
 pytz==2019.3
 PyYAML==5.3
-pyzmq==18.1.1
+pyzmq==19.0.0
 requests==2.23.0
 requests-oauthlib==1.3.0
 retrying==1.3.3
