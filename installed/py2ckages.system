@@ -17,13 +17,14 @@ colorama==0.4.3
 configobj==5.0.6
 configparser==4.0.2
 contextlib2==0.6.0.post1
+cpuset==1.6
 cryptography==2.8
 cvxopt==1.2.2
 cycler==0.10.0
 cypari2==2.1.0
 cysignals==1.10.0
 Cython==0.29.15
-decorator==4.4.1
+decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.0
 distro==1.4.0
@@ -75,7 +76,7 @@ notmuch==0.29.3
 numpy==1.16.5
 oauthlib==3.1.0
 ordered-set==3.1.1
-packaging==20.1
+packaging==20.2
 pandocfilters==1.4.2
 parso==0.6.1
 pathlib==1.0.1
