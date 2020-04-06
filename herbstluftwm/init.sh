@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
+xhost + # Allow connectinos from all hosts, (for X apps in docker to work)
 xset s 120 5
 xset r rate 300 25
-xss-lock -l -- "/home/jose/.config/script/lock_screen" &!
+xss-lock -l -- "/home/jose/.config/scripts/lock_screen.sh" &!
 autocutsel -fork &!
 autocutsel -selection PRIMARY -fork &! #Makes cut and paste behave as expected
-mpd &> /dev/null &> /dev/null # && mpd-mpris &> /dev/null &!
+mpd &> /dev/null &> /dev/null && mpd-mpris &> /dev/null &!
 /usr/lib/kdeconnectd&!
 dunst -config "/home/jose/.config/dunst/dunstrc" &!
 # /usr/lib/notify-osd/notify-osd &!
 # blueman-applet &!
-compton --config "/home/jose/.config/compton/compton.conf" &!
+picom --config "/home/jose/.config/compton/compton.conf" &!
 "/home/jose/Apps/precompile/lifecalendar/lifecalendar.py" -c "/home/jose/Apps/precompile/lifecalendar/examples/default.cfg" -o "/home/jose/Apps/precompile/lifecalendar/BgLifetime.png"
 feh --bg-fill --no-fehbg "/home/jose/Apps/precompile/lifecalendar/BgLifetime.png"
 setxkbmap latam
