@@ -22,10 +22,10 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug "romkatv/powerlevel10k", as:theme, depth:1
-
 if [[ -n $DISPLAY ]]
 then
+    zplug "romkatv/powerlevel10k", as:theme, depth:1
+
     zplug "hlissner/zsh-autopair", defer:2
 
     zplug "bcho/Watson.zsh"

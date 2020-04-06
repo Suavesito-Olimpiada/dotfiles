@@ -70,8 +70,8 @@ alias sysclean='pacmanclean; paccacheclean'
 # This are very specific and probably will change
 # with the time.
 
-alias mountWindows='sudo mount /dev/sda9 /home/jose/Microsoft/'
-alias umntWindows='sudo umount /home/jose/Microsoft/'
+alias mountWindows='pmount /dev/sda9 /media/win'
+alias umntWindows='pumount /media/win'
 
 
 # SPECIAL APPS SECTION

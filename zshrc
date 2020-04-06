@@ -31,7 +31,7 @@ bindkey "^h" backward-delete-char   # Backspace work normally
 
 bindkey "^[[P" delete-char          # Delete work normally
 
-bindkey "^w" backward-delete-word   # Delte word
+bindkey "^w" backward-delete-word   # Delete word
 
 # History Substring Search
 
@@ -110,8 +110,6 @@ SAVEHIST=10000
 if [[ -n $DISPLAY ]]
 then
     source "$HOME/.zsh/p10k/p10k-instant-prompt-jose.zsh"
-else
-    source "$HOME/.zsh/p10k/p10k-instant-prompt-jose-nodisplay.zsh"
 fi
 
 source /home/jose/.zsh/extra.zsh
