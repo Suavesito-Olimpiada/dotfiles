@@ -31,6 +31,7 @@ in
         sleep $((TIME*3600))
     ;;
     *)
+        exit
     ;;
 esac
 

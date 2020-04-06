@@ -1,8 +1,8 @@
-#!/bin/bash
-Operacion=`echo|dmenu -p Calcular: `
-Resultado=`genius --nomixed --maxdigits=0 --precision=2048 --fullexp -e "$Operacion"`
+#!/usr/bin/env sh
+Operacion=$(echo|dmenu -p Calcular: )
+Resultado=$(genius --nomixed --maxdigits=0 --precision=2048 --fullexp -e "$Operacion")
 Resultado=${Resultado#*] }
-Accion=`printf "$Resultado \nCopiar" |dmenu -i -l 2`
+Accion=$(printf "%s\n%s" "$Resultado" "Copiar" |dmenu -i -l 2)
 if [ "$Accion" == "Copiar" ]; then
-    echo -n "$Resultado" | xsel -b
+    echo -n "$Resultado" | xclip -i
 fi
