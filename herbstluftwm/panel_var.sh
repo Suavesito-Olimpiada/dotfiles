@@ -21,13 +21,22 @@ while true; do
     vol=$(amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/')
     if [[ -z $(pgrep mpv) ]]
     then
-        if [[ -z $(playerctl -l) ]]
-        then
-            msc=$(mpc current | sed -e 's:\(.*\)\(\.\(mp[34]\|aac\)\):\1:' -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
-            # Use of colrm intead of cut -c because of 'https://unix.stackexchange.com/questions/163721/can-not-use-cut-c-characters-with-utf-8'
-        else
-            msc=$(playerctl metadata --format '{{artist}} - {{title}}' | sed -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
-        fi
+        MPD=$(playerctl -l | grep mpd)
+        MPV=$(playerctl -l | grep mpv)
+        PLM=$(playerctl -l | grep plasma)
+        MSC=''
+
+        [[ -z $MPD ]] || MSC=$MPD
+        [[ -z $PLM ]] || MSC=$PLM
+        [[ -z $MPV ]] || MSC=$MPV
+
+        # if [[ -z $(playerctl -l) ]]
+        # then
+        #     msc=$(mpc current | sed -e 's:\(.*\)\(\.\(mp[34]\|aac\)\):\1:' -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
+        #     # Use of colrm intead of cut -c because of 'https://unix.stackexchange.com/questions/163721/can-not-use-cut-c-characters-with-utf-8'
+        # else
+        msc=$(playerctl --player=$MSC metadata --format '{{artist}} - {{title}}' | sed -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
+        # fi
     else
         msc=$(xwininfo -id $(xdotool search --pid $(pgrep mpv) |& sed -n "s/\([0-9]\)/\1/p") | sed -n -e "2p" | sed -e "s/\(^[a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\([a-zA-Z:0-9]* \)\(.*$\)/\5/" -e 's:"::g' -e 's_/_\\/_g' -e 's:&:\\&:g' | colrm 40)
     fi
