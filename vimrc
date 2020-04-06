@@ -281,6 +281,12 @@ nnoremap <silent> <Leader>tb :TagbarToggle<CR>
 noremap <silent> <F7> :call LaTeXtoUnicode#Toggle()<CR>
 inoremap <silent> <F7> <ESC>:call LaTeXtoUnicode#Toggle()<CR>a
 
+" Format Julia code
+" normal mode mapping
+nnoremap <localleader>jf :<C-u>call JuliaFormatter#Format(0)<CR>
+" visual mode mapping
+vnoremap <localleader>jf :<C-u>call JuliaFormatter#Format(1)<CR>
+
 " Grammarous check
 nnoremap <silent> <Leader>gen :GrammarousCheck --lang=en<CR>
 nnoremap <silent> <Leader>ges :GrammarousCheck --lang=es<CR>
@@ -300,7 +306,7 @@ map T <Plug>Sneak_T
 
 " bufferhint.vim
 nnoremap - :call bufferhint#Popup()<CR>
-nnoremap \ :call bufferhint#LoadPrevious()<CR>
+nnoremap + :call bufferhint#LoadPrevious()<CR>
 
 
 "}}}
@@ -335,7 +341,7 @@ autocmd FileType c,cpp,cs,java      setlocal commentstring=//\ %s
 autocmd FileType git,gitcommit      setlocal foldmethod=syntax foldlevel=1
 
 " COlorcolumn just for coding documents
-autocmd FileType c,cpp,python,julia,vim,sh,java  call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType c,cpp,python,julia,vim,sh,java,mail  call matchadd('ColorColumn', '\%81v', 100)
 
 " Keep the position of the open files
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -482,6 +488,7 @@ let g:LanguageClient_serverCommands = {
 \   'tex': ['texlab'],
 \   'bash': ['bash-language-server', 'start'],
 \   'java': ['/home/jose/.config/scripts/jdtls', '-data', getcwd()],
+\   'scala': ['metals-vim'],
 \   }
 
 set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
