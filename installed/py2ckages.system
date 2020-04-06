@@ -23,7 +23,7 @@ cvxopt==1.2.2
 cycler==0.10.0
 cypari2==2.1.0
 cysignals==1.10.0
-Cython==0.29.15
+Cython==0.29.16
 decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.0
