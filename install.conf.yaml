@@ -26,7 +26,7 @@
     ~/.config/gtkrc-2.0: gtkrc-2.0
     ~/.themes: gtk_themes
     ~/.tmux.conf: tmux.conf
-    ~/.ctags: ctags
+    ~/.ctags.d: ctags.d
     ~/.config/compton: compton
     ~/.config/dmenu: dmenu
     ~/.config/herbstluftwm: herbstluftwm
