@@ -1,10 +1,10 @@
 # network analysis
 termite -e nmtui                                                                                # INTERNET CONNECTION
-termite -e "httping -Y -K google.com"                                                           # HTTPING INTERNET PROVE
 termite -e "speedometer -r wlp2s0 -t wlp2s0"                                                    # SPEEDOMETER INTERNET CHECK
 termite -e "speedometer -r enp1s0 -t enp1s0"                                                    # SPEEDOMETER ETHERNET CHECK
 termite -e nyx                                                                                  # SPEEDOMETER FOR TOR
 termite -e "tmux new-session 'speedometer -r wlp2s0 -c -t wlp2s0' \; split-window 'nyx'"        # JUST SET ALL SPEEDOMETERES
+termite -e "tmux new-session 'speedometer -r enp1s0 -c -t enp1s0' \; split-window 'nyx'"        # JUST SET ALL SPEEDOMETERES
 gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
 
 # internet
@@ -12,12 +12,14 @@ qbittorrent                                                                     
 termite -e rtorrent                                                                             # RTORRENT TORRENT DOWNLOAD
 firefox                                                                                         # FIREFOX NAVIGATOR
 chromium                                                                                        # CHROMIUM NAVIGATOR
-tabbed -c -r 3 torsocks /home/jose/Apps/gitBuild/nofork/surf/surf -e - "https://duckduckgo.com" # SURF BROWSER
-tabbed -c -r 2 /home/jose/Apps/gitBuild/nofork/surf/surf -e -                                   # SURF BROWSER
+google-chrome-stable                                                                            # JSUT FOR NETFLIX
+tabbed -c -r 3 torsocks surf -e - "https://duckduckgo.com"                                      # SURF BROWSER
+tabbed -c -r 2 surf -e -                                                                        # SURF BROWSER
 nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
 
 # communications
 telegram-desktop                                                                                # TELEGRAM APP
+discord                                                                                         # DISCORD APP
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
 utox                                                                                            # UTOX MESSAGE APP
@@ -25,6 +27,8 @@ skypeforlinux                                                                   
 cozy-desktop                                                                                    # COZY FOR LINUX
 signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
 termite -e aerc                                                                                 # E-MAIL TERMINAL CLIENT
+zoom                                                                                            # APP FOR VIDEO CONFERENCING
+slack                                                                                           # SLACK APP
 
 # office
 termite -e vim                                                                                  # VIM
@@ -33,6 +37,8 @@ libreoffice --calc                                                              
 libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
+evince                                                                                          # EVINCE PDF READER
+FoxitReader                                                                                     # SHIT THAT WORKS (CLOSED SOURCE)
 scribus                                                                                         # SCRIBUS
 
 # math
@@ -99,6 +105,7 @@ xkill                                                                           
 gksu gufw                                                                                       # FIREWALL CONFIG APP
 hardinfo                                                                                        # HARD HARDWARE INFO
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
+tlpui                                                                                           # TLP GUI
 
 # utilities
 /home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
