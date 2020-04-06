@@ -1,0 +1,20 @@
+#compdef xbacklight
+
+# zsh completions for 'xbacklight'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-display[or -d <display>]'
+  '-help[]'
+  '-version[]'
+  '-set[or = <percentage>]'
+  '-inc[or + <percentage>]'
+  '-dec[or - <percentage>]'
+  '-get[]'
+  '-time[time in milliseconds>]'
+  '-steps[of steps in fade>]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

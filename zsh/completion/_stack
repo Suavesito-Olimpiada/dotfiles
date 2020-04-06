@@ -1,0 +1,42 @@
+#compdef stack
+
+# zsh completions for 'stack'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '--help[show this help text]'
+  '--version[show version]'
+  '--numeric-version[show only version number]'
+  '--hpack-numeric-version[show only hpacks version number]'
+  '--docker[*                Run stack --docker-help for details]'
+  '--nix[*                   Run stack --nix-help for details]'
+  '--verbosity[verbosity: silent, error, warn, info, debug]'
+  {-v,--verbose}'[enable verbose mode: verbosity level "debug"]'
+  '--silent[enable silent mode: verbosity level "silent"]'
+  '--stack-root[absolute path to the global stack root directory]'
+  '--work-dir[relative path of work directory (Overrides any]'
+  '--arch[system architecture, e.g. i386, x86_64]'
+  '--ghc-variant[specialized GHC variant, e.g. integersimple]'
+  '--ghc-build[specialized GHC build, e.g. gmp4 or standard]'
+  {-j,--jobs}'[number of concurrent jobs to run]'
+  '--extra-include-dirs[extra directories to check for C header files]'
+  '--extra-lib-dirs[extra directories to check for libraries]'
+  '--with-gcc[use gcc found at PATH-TO-GCC]'
+  '--with-hpack[use HPACK executable (overrides bundled Hpack)]'
+  '--local-bin-path[install binaries to DIR]'
+  '--setup-info-yaml[alternate URL or relative / absolute path for stack]'
+  {--color,--colour}'[specify when to use color in output; WHEN is]'
+  '--resolver[override resolver in project file]'
+  '--compiler[use the specified compiler]'
+  {--stack-colors,--stack-colours}'[specify stacks output styles; STYLES is a]'
+  '--basic[ to see the current sequence. In shells where]'
+  '--terminal-width[specify the width of the terminal, used for]'
+  '--stack-yaml[override project stack.yaml file (overrides any]'
+  '--lock-file[specify how to interact with lock files. Default:]'
+  '--local[exec                     Execute a command]'
+  '--full[]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

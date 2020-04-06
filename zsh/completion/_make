@@ -1,0 +1,43 @@
+#compdef make
+
+# zsh completions for 'make'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-b,-m}'[no se tendrá en cuenta por compatibilidad.]'
+  {-B,--always-make}'[hace incondicionalmente todos los objetivos.]'
+  {-C,--directory}'[se cambia al DIRECTORIO antes de hacer nada.]'
+  '-d[se imprimirán grandes cantidades de información de depurado.]'
+  '--debug[se imprimirán varios tipos de información de depurado.]'
+  {-e,--environment-overrides}'[las variables ambientales se imponen a las de los makefiles.]'
+  {-E,--eval}'[evalúa la CADENA como una instrucción de un makefile.]'
+  {-f,--file,--makefile}'[lee al ARCHIVO como un makefile.]'
+  {-h,--help}'[muestra este mensaje y finaliza.]'
+  {-i,--ignore-errors}'[no se toman en cuenta los errores provenientes de las instrucciones.]'
+  {-I,--include-dir}'[busca dentro del DIRECTORIO los makefiles incluidos.]'
+  {-j,--jobs}'[se permiten N trabajos a la vez; si no se especifica un]'
+  {-k,--keep-going}'[sigue avanzando aún cuando no se puedan crear algunos objetivos.]'
+  {-l,--load-average,--max-load}'[no inicia con trabajos múltiples a menos que la carga esté por debajo de N.]'
+  {-L,--check-symlink-times}'[utiliza el último mtime entre los enlaces simbólicos y los objetivos.]'
+  {-n,--just-print,--dry-run,--recon}'[no ejecuta ninguna instrucción; sólo las muestra.]'
+  {-o,--old-file,--assume-old}'[supone que ARCHIVO es muy viejo y no lo reconstruye.]'
+  {-O,--output-sync}'[sincroniza la salida de tareas paralelas por tipo.]'
+  {-p,--print-data-base}'[se imprime la base de datos interna de make.]'
+  {-q,--question}'[no se ejecutan las instrucciones; el estado de salida]'
+  {-r,--no-builtin-rules}'[se deshabilitan las reglas implícitas almacenadas internamente.]'
+  {-R,--no-builtin-variables}'[se deshabilitan los ajustes a las variables almacenadas internamente.]'
+  {-s,--silent,--quiet}'[no muestra las instrucciones.]'
+  '--no-silent[muestra las instrucciones (desactiva el modo --silent).]'
+  {-S,--no-keep-going,--stop}'[desactiva la opción -k.]'
+  {-t,--touch}'[se tocan los objetivos en vez de reconstruirlos.]'
+  '--trace[muestra trazas.]'
+  {-v,--version}'[muestra la versión del make y finaliza.]'
+  {-w,--print-directory}'[muestra el directorio actual.]'
+  '--no-print-directory[desactiva -w, aún cuando haya sido activado implícitamente.]'
+  {-W,--what-if,--new-file,--assume-new}'[supone que ARCHIVO es infinitamente reciente.]'
+  '--warn-undefined-variables[advierte cuando se hace una referencia a una variable no definida.]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

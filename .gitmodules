@@ -246,3 +246,7 @@
 	path = vim/bundle/scvim
 	url = git://github.com/supercollider/scvim.git
 	branch = master
+[submodule "vim/bundle/JuliaFormatter.vim"]
+	path = vim/bundle/JuliaFormatter.vim
+	url = https://github.com/kdheepak/JuliaFormatter.vim
+	branch = master

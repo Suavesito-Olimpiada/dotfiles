@@ -1,0 +1,26 @@
+#compdef light
+
+# zsh completions for 'light'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-H,-h}'[show this help and exit]'
+  '-V[show program version and exit]'
+  '-L[list available devices]'
+  '-A[increase brightness by value]'
+  '-U[decrease brightness by value]'
+  '-T[multiply brightness by value (can be a non-whole number, ignores raw mode)]'
+  '-S[set brightness to value]'
+  '-G[get brightness]'
+  '-N[set minimum brightness to value]'
+  '-P[get minimum brightness]'
+  '-O[save the current brightness]'
+  '-I[restore the previously saved brightness]'
+  '-r[interpret input and output values in raw mode (ignored for -T)]'
+  '-s[specify device target path to use, use -L to list available]'
+  '-v[specify the verbosity level (default 0)]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

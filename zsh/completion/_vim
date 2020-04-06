@@ -1,0 +1,52 @@
+#compdef vim
+
+# zsh completions for 'vim'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-v[modo vi]'
+  '-e[modo ex]'
+  '-E[improved Ex mode]'
+  '-s[modo silencioso de ejecución por lotes ("ex")]'
+  '-d[modo de diferencias (como "vimdiff")]'
+  '-y[modo fácil (como "evim", sin modo)]'
+  '-R[modo de solo lectura (como "view")]'
+  '-Z[modo restringido (como "rvim")]'
+  '-m[modificación de archivos desactivada]'
+  '-M[modificación de texto desactivada]'
+  '-b[modo binario]'
+  '-l[modo LISP]'
+  '-C[compatible con vi: "compatible"]'
+  '-N[parcialmente compatible con vi: "nocompatible"]'
+  '-V[con verbosidad \[nivel N\] \[guardar mensajes en nombre_archivo\]]'
+  '-D[modo de depuración]'
+  '-n[sin archivo de intercambio, solo usa RAM]'
+  '-r[dar una lista de los archivo de intercambio y salir]'
+  '-r["	Recuperar sesión fallida]'
+  '-L[igual que "-r"]'
+  '-A[iniciar en modo árabe]'
+  '-H[iniciar en modo hebreo]'
+  '-T[establecer el tipo de salida visual a <terminal>]'
+  '--not-a-term[skip warning for input/output not being a terminal]'
+  '--ttyfail[exit if input or output is not a terminal]'
+  '-u[usar <vimrc> en lugar de cualquier ".vimrc"]'
+  '--noplugin[no cargar los módulos de expansión]'
+  '-p[abrir N ventanas (valor predeterminado: una por archivo)]'
+  '-o[abrir N ventanas (valor predeterminado: una por archivo)]'
+  '-O[como "-o" pero divide las ventanas verticalmente]'
+  '--cmd[ejecutar la <orden> antes de cargar algún archivo vimrc]'
+  '-c[ejecutar <orden> después de cargar el primer archivo]'
+  '-S[ón>		Ejecutar las órdenes del archivo <sesión> después de cargar el primer archivo]'
+  '-s[leer las órdenes en modo Normal del archivo "módulo de expansión" de entrada>]'
+  '-w[añadir todas las órdenes escritas al archivo "módulo de expansión" de salida]'
+  '-W[grabar todas las órdenes escritas al archivo "módulo de expansión" de salida]'
+  '-x[editar archivos cifrados]'
+  '-i[usar <viminfo> en lugar de ".viminfo"]'
+  '--clean[nocompatible, Vim defaults, no plugins, no viminfo]'
+  '-h[or  --help	Impresión de la ayuda (este mensaje) y cerrar]'
+  '--version[impresión de la información de versión y cerrar]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

@@ -1,0 +1,45 @@
+#compdef create_ap
+
+# zsh completions for 'create_ap'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[show this help]'
+  '--version[print version number]'
+  '-c[channel number (default: 1)]'
+  '-w[version>        Use 1 for WPA, use 2 for WPA2, use 1+2 for both (default: 1+2)]'
+  '-n[disable Internet sharing (if you use this, dont pass]'
+  '-m[method for Internet sharing.]'
+  '--psk[use 64 hex digits pre-shared-key instead of passphrase]'
+  '--hidden[make the Access Point hidden (do not broadcast the SSID)]'
+  '--mac-filter[enable MAC address filtering]'
+  '--mac-filter-accept[location of MAC address filter list (defaults to /etc/hostapd/hostapd.accept)]'
+  {--redirect-to-localhost,-n}'[set, redirect every web request to localhost (useful for public information networks)]'
+  '--hostapd-debug[with level between 1 and 2, passes arguments -d or -dd to hostapd for debugging.]'
+  '--isolate-clients[disable communication between clients]'
+  '--ieee80211n[enable IEEE 802.11n (HT)]'
+  '--ieee80211ac[enable IEEE 802.11ac (VHT)]'
+  '--ht[_capab <HT>         HT capabilities (default: \[HT40+\])]'
+  '--vht[_capab <VHT>       VHT capabilities]'
+  '--country[set two-letter country code for regularity (example: US)]'
+  '--freq-band[set frequency band. Valid inputs: 2.4, 5 (default: 2.4)]'
+  '--driver[choose your WiFi adapter driver (default: nl80211)]'
+  '--no-virt[do not create virtual interface]'
+  '--no-haveged[do not run haveged automatically when needed]'
+  '--fix-unmanaged[if NetworkManager shows your interface as unmanaged after you]'
+  '--mac[set MAC address]'
+  '--dhcp-dns[1\[,IP2\]>  Set DNS returned by DHCP]'
+  '--daemon[run create_ap in the background]'
+  '--stop[send stop command to an already running create_ap. For an <id>]'
+  '--list-running[show the create_ap processes that are already running]'
+  '--list-clients[list the clients connected to create_ap instance associated with <id>.]'
+  '--mkconfig[store configs in conf_file]'
+  '--config[load configs from conf_file]'
+  '--no-dns[disable dnsmasq DNS server]'
+  '-g[IPv4 Gateway for the Access Point (default: 192.168.12.1)]'
+  '-d[DNS server will take into account /etc/hosts]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments
