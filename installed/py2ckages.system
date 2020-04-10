@@ -30,7 +30,8 @@ distlib==0.3.0
 distro==1.4.0
 entrypoints==0.3
 enum34==1.1.9
-Flask==1.1.1
+filelock==3.0.12
+Flask==1.1.2
 functools32==3.2.3.post2
 future==0.18.2
 futures==3.3.0
@@ -45,6 +46,7 @@ html5lib==1.0.1
 idna==2.9
 imagesize==1.2.0
 importlib-metadata==1.5.0
+importlib-resources==1.0.2
 ipaddress==1.0.23
 ipykernel==4.10.0
 ipython==5.9.0
@@ -64,7 +66,7 @@ lxml==4.5.0
 Markdown==3.1.1
 MarkupSafe==1.1.1
 matplotlib==2.2.5
-mercurial==5.3.1
+mercurial==5.3.2
 mistune==0.8.4
 msgpack==0.6.2
 nbconvert==5.6.1
@@ -81,7 +83,7 @@ pandocfilters==1.4.2
 parso==0.6.1
 pathlib==1.0.1
 pathlib2==2.3.5
-pep517==0.8.1
+pep517==0.8.2
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==6.2.1
@@ -104,9 +106,9 @@ PyGObject==3.36.0
 pynvim==0.4.0
 PyOpenGL==3.1.5
 pyOpenSSL==19.1.0
-pyparsing==2.4.6
-PyQt5==5.14.1
-PyQt5-sip==4.19.21
+pyparsing==2.4.7
+PyQt5==5.14.2
+PyQt5-sip==4.19.22
 pyrsistent==0.15.6
 PySocks==1.7.1
 pytest==4.6.8
@@ -137,11 +139,11 @@ toml==0.10.0
 tornado==5.1.1
 traitlets==4.3.3
 Twisted==18.9.0
-typing==3.6.6
+typing==3.7.4.1
 urllib3==1.25.8
-virtualenv==16.7.9
+virtualenv==20.0.15
 wcwidth==0.1.8
 webencodings==0.5.1
-Werkzeug==1.0.0
+Werkzeug==1.0.1
 widgetsnbextension==3.5.1
 zipp==1.1.0
