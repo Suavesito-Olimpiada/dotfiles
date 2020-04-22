@@ -37,111 +37,84 @@
 [submodule "vim/bundle/deoplete.nvim"]
 	path = vim/bundle/deoplete.nvim
 	url = git://github.com/Shougo/deoplete.nvim.git
-	branch = master
 [submodule "vim/bundle/gitv"]
 	path = vim/bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
-	branch = master
 [submodule "vim/bundle/gruvbox"]
 	path = vim/bundle/gruvbox
 	url = git://github.com/morhetz/gruvbox.git
-	branch = master
 [submodule "vim/bundle/nvim-yarp"]
 	path = vim/bundle/nvim-yarp
 	url = git://github.com/roxma/nvim-yarp.git
-	branch = master
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-	branch = master
 [submodule "vim/bundle/vim-abolish"]
 	path = vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
-	branch = master
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = git://github.com/vim-airline/vim-airline.git
-	branch = master
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
 	url = git://github.com/vim-airline/vim-airline-themes.git
-	branch = master
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-	branch = master
 [submodule "vim/bundle/vim-hug-neovim-rpc"]
 	path = vim/bundle/vim-hug-neovim-rpc
 	url = git://github.com/roxma/vim-hug-neovim-rpc.git
-	branch = master
 [submodule "vim/bundle/vim-mundo"]
 	path = vim/bundle/vim-mundo
 	url = git://github.com/simnalamburt/vim-mundo.git
-	branch = master
 [submodule "vim/bundle/vim-obsession"]
 	path = vim/bundle/vim-obsession
 	url = git://github.com/tpope/vim-obsession.git
-	branch = master
 [submodule "vim/bundle/vim-operator-user"]
 	path = vim/bundle/vim-operator-user
 	url = git://github.com/kana/vim-operator-user.git
-	branch = master
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = git://github.com/tpope/vim-rhubarb.git
-	branch = master
 [submodule "vim/bundle/vim-textobj-user"]
 	path = vim/bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
-	branch = master
 [submodule "vim/bundle/vim-slime"]
 	path = vim/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
-	branch = master
 [submodule "vim/bundle/vim-pandoc"]
 	path = vim/bundle/vim-pandoc
 	url = git://github.com/vim-pandoc/vim-pandoc.git
-	branch = master
 [submodule "vim/bundle/vim-pandoc-syntax"]
 	path = vim/bundle/vim-pandoc-syntax
 	url = git://github.com/vim-pandoc/vim-pandoc-syntax.git
-	branch = master
 [submodule "vim/bundle/vim-markdownfootnotes"]
 	path = vim/bundle/vim-markdownfootnotes
 	url = git://github.com/vim-pandoc/vim-markdownfootnotes.git
-	branch = master
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-	branch = master
 [submodule "vim/bundle/vim-rooter"]
 	path = vim/bundle/vim-rooter
 	url = git://github.com/airblade/vim-rooter.git
-	branch = master
 [submodule "vim/bundle/limelight.vim"]
 	path = vim/bundle/limelight.vim
 	url = git://github.com/junegunn/limelight.vim.git
-	branch = master
 [submodule "vim/bundle/goyo.vim"]
 	path = vim/bundle/goyo.vim
 	url = git://github.com/junegunn/goyo.vim.git
-	branch = master
 [submodule "vim/bundle/unicode.vim"]
 	path = vim/bundle/unicode.vim
 	url = git://github.com/chrisbra/unicode.vim.git
-	branch = master
 [submodule "vim/bundle/vim-niceblock"]
 	path = vim/bundle/vim-niceblock
 	url = git://github.com/kana/vim-niceblock.git
-	branch = master
 [submodule "vim/bundle/vim-textobj-entire"]
 	path = vim/bundle/vim-textobj-entire
 	url = git://github.com/kana/vim-textobj-entire.git
-	branch = master
 [submodule "vim/bundle/vim-textobj-line"]
 	path = vim/bundle/vim-textobj-line
 	url = git://github.com/kana/vim-textobj-line.git
-	branch = master
 [submodule "vim/bundle/LanguageClient-neovim"]
 	path = vim/bundle/LanguageClient-neovim
 	url = git://github.com/autozimu/LanguageClient-neovim.git
@@ -149,75 +122,57 @@
 [submodule "vim/bundle/vim-gotham"]
 	path = vim/bundle/vim-gotham
 	url = git://github.com/whatyouhide/vim-gotham.git
-	branch = master
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
-	branch = master
 [submodule "vim/bundle/vim-nerdtree-syntax-highlight"]
 	path = vim/bundle/vim-nerdtree-syntax-highlight
 	url = git://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
-	branch = master
 [submodule "vim/bundle/vim-devicons"]
 	path = vim/bundle/vim-devicons
 	url = git://github.com/ryanoasis/vim-devicons.git
-	branch = master
 [submodule "vim/bundle/vim-grammarous"]
 	path = vim/bundle/vim-grammarous
 	url = git://github.com/rhysd/vim-grammarous.git
-	branch = master
 [submodule "vim/bundle/vim-criticmarkup"]
 	path = vim/bundle/vim-criticmarkup
 	url = git://github.com/vim-pandoc/vim-criticmarkup.git
-	branch = master
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
-	branch = master
 [submodule "vim/bundle/vim-licenses"]
 	path = vim/bundle/vim-licenses
 	url = https://github.com/antoyo/vim-licenses
-	branch = master
 [submodule "vim/bundle/vim-pandoc-after"]
 	path = vim/bundle/vim-pandoc-after
 	url = https://github.com/vim-pandoc/vim-pandoc-after
-	branch = master
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
-	branch = master
 [submodule "vim/bundle/vim-clang-format"]
 	path = vim/bundle/vim-clang-format
 	url = git://github.com/rhysd/vim-clang-format.git
-	branch = master
 [submodule "vim/bundle/nerdtree-git-plugin"]
 	path = vim/bundle/nerdtree-git-plugin
 	url = git://github.com/Xuyuanp/nerdtree-git-plugin.git
-	branch = master
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-	branch = master
 [submodule "vim/bundle/vim-sneak"]
 	path = vim/bundle/vim-sneak
 	url = https://github.com/justinmk/vim-sneak
-	branch = master
 [submodule "vim/bundle/vim-polyglot"]
 	path = vim/bundle/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot.git
-	branch = master
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = git://github.com/lervag/vimtex.git
-	branch = master
 [submodule "vim/bundle/vim-gutentags"]
 	path = vim/bundle/vim-gutentags
 	url = git://github.com/ludovicchabant/vim-gutentags.git
-	branch = master
 [submodule "vim/bundle/gutentags_plus"]
 	path = vim/bundle/gutentags_plus
 	url = git://github.com/skywind3000/gutentags_plus.git
-	branch = master
 [submodule "repl"]
 	path = repl
 	url = git://github.com/defunkt/repl-completion.git
@@ -225,28 +180,25 @@
 [submodule "vim/bundle/julia.vim"]
 	path = vim/bundle/julia.vim
 	url = git://github.com/AtsushiSakai/julia.vim.git
-	branch = master
 [submodule "vim/bundle/info.vim"]
 	path = vim/bundle/info.vim
 	url = https://gitlab.com/HiPhish/info.vim
-	branch = master
 [submodule "vim/bundle/neco-vim"]
 	path = vim/bundle/neco-vim
 	url = https://github.com/Shougo/neco-vim
-	branch = master
 [submodule "vim/bundle/bufferhint"]
 	path = vim/bundle/bufferhint
 	url = https://github.com/bsdelf/bufferhint
-	branch = master
 [submodule "vim/bundle/vim-textobj-between"]
 	path = vim/bundle/vim-textobj-between
 	url = https://github.com/thinca/vim-textobj-between
-	branch = master
 [submodule "vim/bundle/scvim"]
 	path = vim/bundle/scvim
 	url = git://github.com/supercollider/scvim.git
-	branch = master
 [submodule "vim/bundle/JuliaFormatter.vim"]
 	path = vim/bundle/JuliaFormatter.vim
 	url = https://github.com/kdheepak/JuliaFormatter.vim
+[submodule "vim/bundle/vimwiki"]
+	path = vim/bundle/vimwiki
+	url = git://github.com/vimwiki/vimwiki.git
 	branch = master

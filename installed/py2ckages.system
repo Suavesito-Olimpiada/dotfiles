@@ -47,7 +47,7 @@ ipython==5.9.0
 ipython-genutils==0.1.0
 itsdangerous==1.1.0
 jedi==0.15.2
-Jinja2==2.11.1
+Jinja2==2.11.2
 jsonschema==3.2.0
 jupyter-core==4.6.3
 Keras-Applications==1.0.8
@@ -127,7 +127,7 @@ tornado==5.1.1
 traitlets==4.3.3
 Twisted==18.9.0
 typing==3.7.4.1
-urllib3==1.25.8
+urllib3==1.25.9
 virtualenv==20.0.15
 wcwidth==0.1.8
 webencodings==0.5.1
