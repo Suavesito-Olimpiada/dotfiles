@@ -18,7 +18,7 @@ configobj==5.0.6
 configparser==4.0.2
 contextlib2==0.6.0.post1
 cpuset==1.6
-cryptography==2.8
+cryptography==2.9.1
 cvxopt==1.2.2
 cypari2==2.1.0
 cysignals==1.10.0
@@ -128,7 +128,7 @@ traitlets==4.3.3
 Twisted==18.9.0
 typing==3.7.4.1
 urllib3==1.25.9
-virtualenv==20.0.15
+virtualenv==20.0.18
 wcwidth==0.1.8
 webencodings==0.5.1
 Werkzeug==1.0.1

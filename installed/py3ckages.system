@@ -8,11 +8,11 @@ asciinema==2.0.2
 asn1crypto==1.3.0
 astroid==2.3.3
 attrs==19.3.0
-autopep8==1.5.1
+autopep8==1.5.2
 Babel==2.8.0
 backcall==0.1.0
 bcrypt==3.1.7
-beautifulsoup4==4.8.2
+beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.3
 blessings==1.7
@@ -38,7 +38,7 @@ click==7.1.1
 cmd2==1.0.2
 colorama==0.4.1
 contextlib2==0.6.0.post1
-cryptography==2.8
+cryptography==2.9.1
 curtsies==0.3.1
 cvxopt==1.2.5
 cycler==0.10.0
@@ -50,7 +50,7 @@ defusedxml==0.6.0
 distlib==0.3.0
 distro==1.4.0
 docopt==0.6.2
-docutils==0.14
+docutils==0.16
 dot2tex==2.11.3
 -e git+https://github.com/nurdtechie98/drive-cli@9a285851973026488d97190cbe10b40c4694f14f#egg=drive_cli
 entrypoints==0.3
@@ -106,7 +106,7 @@ lazy-object-proxy==1.4.3
 ldap3==2.7
 lensfun==0.3.95
 LibAppArmor==2.13.4
-lit==0.9.1.dev0
+lit==0.10.0.dev0
 lockfile==0.12.2
 louis==3.13.0
 lxml==4.5.0
@@ -117,7 +117,7 @@ mccabe==0.6.1
 MemoizeDB==2017.3.30.23.38.49
 meson==0.54.0
 mistune==0.8.4
-mitmproxy==5.0.1
+mitmproxy==5.1.1
 mpmath==1.1.0
 msgpack==1.0.0
 mypy==0.770
@@ -129,7 +129,7 @@ notebook==6.0.3
 notmuch==0.29.3
 npyscreen==4.10.5
 numexpr==2.7.1
-numpy==1.18.2
+numpy==1.18.3
 nyx==2.1.0
 oauth2client==4.1.3
 opendht==1.10.1
@@ -172,7 +172,7 @@ pycodestyle==2.5.0
 pycparser==2.20
 pydocstyle==5.0.2
 pyfiglet==0.8.post1
-pyflakes==2.1.1
+pyflakes==2.2.0
 pyftpdlib==1.5.6
 pygame==1.9.6
 Pygments==2.6.1
@@ -192,7 +192,7 @@ python-dateutil==2.8.1
 python-jsonrpc-server==0.3.4
 python-language-server==0.31.8
 python-libtorrent==1.2.5
-python-xapp==1.8.1
+python-xapp==2.0.0
 python-xlib==0.27
 pytoml==0.1.21
 pytz==2019.3
@@ -203,12 +203,12 @@ QScintilla==2.11.4
 rados==2.0.0
 ranger-fm==1.9.3
 rbd==2.0.0
-regex==2020.2.20
+regex==2020.4.4
 requests==2.23.0
 retrying==1.3.3
 rgw==2.0.0
 rope==0.16.0
-rpy2==3.3.1
+rpy2==3.3.2
 rsa==4.0
 rtv==1.27.0
 ruamel.yaml==0.16.10
@@ -226,7 +226,7 @@ snowballstemmer==2.0.0
 sortedcontainers==2.1.0
 soupsieve==1.9.5
 speedtest-cli==2.1.2
-Sphinx==3.0.1
+Sphinx==3.0.2
 sphinxcontrib-applehelp==1.0.2
 sphinxcontrib-devhelp==1.0.2
 sphinxcontrib-htmlhelp==1.0.3
@@ -256,7 +256,7 @@ upass==0.3.0
 uritemplate==3.0.1
 urllib3==1.25.9
 urwid==2.1.0
-virtualenv==20.0.15
+virtualenv==20.0.18
 virtualenv-clone==0.5.4
 vrms-arch==1.0
 wcwidth==0.1.8
