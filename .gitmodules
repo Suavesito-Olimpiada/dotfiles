@@ -202,3 +202,7 @@
 	path = vim/bundle/vimwiki
 	url = git://github.com/vimwiki/vimwiki.git
 	branch = master
+[submodule "vim/bundle/seoul256.vim"]
+	path = vim/bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim
+	branch = master

@@ -18,7 +18,7 @@ configobj==5.0.6
 configparser==4.0.2
 contextlib2==0.6.0.post1
 cpuset==1.6
-cryptography==2.9.1
+cryptography==2.9.2
 cvxopt==1.2.2
 cypari2==2.1.0
 cysignals==1.10.0
@@ -26,7 +26,7 @@ Cython==0.29.16
 decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.0
-distro==1.4.0
+distro==1.5.0
 entrypoints==0.3
 enum34==1.1.9
 filelock==3.0.12
@@ -40,7 +40,7 @@ grpcio==1.26.0
 html5lib==1.0.1
 idna==2.9
 imagesize==1.2.0
-importlib-metadata==1.5.0
+importlib-metadata==1.5.1
 importlib-resources==1.0.2
 ipaddress==1.0.23
 ipython==5.9.0
