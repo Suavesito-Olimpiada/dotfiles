@@ -163,7 +163,6 @@ protobuf==3.11.4
 psutil==5.7.0
 ptyprocess==0.6.0
 publicsuffix2==2.20191221
-pwquality==1.4.2
 pyalpm==0.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -192,7 +191,6 @@ python-dateutil==2.8.1
 python-jsonrpc-server==0.3.4
 python-language-server==0.31.8
 python-libtorrent==1.2.5
-python-xapp==2.0.0
 python-xlib==0.27
 pytoml==0.1.21
 pytz==2019.3
