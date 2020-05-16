@@ -9,6 +9,7 @@
     ~/.bashrc: bashrc
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
+    ~/.git_template: git_template
     ~/.zsh: zsh
     ~/.p10k.zsh:
         path: zsh/p10k.zsh
@@ -17,20 +18,34 @@
     ~/.zshenv: zshenv
     ~/.zprofile: zprofile
     ~/.zlogout: zlogout
+    ~/.profile: profile
+    ~/.scimrc: scimrc
+    ~/.ignore: ignore
     ~/.repl: repl
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.nanorc: nanorc
+    ~/.latexmkrc: latexmkrc
     ~/.julia/config/startup.jl:
       path: julia/config/startup.jl
-    ~/.config/gtkrc-2.0: gtkrc-2.0
     ~/.themes: gtk_themes
     ~/.tmux.conf: tmux.conf
     ~/.ctags.d: ctags.d
-    ~/.config/compton: compton
+    ~/.local/share/applications/feh.desktop:
+      path: applications/feh.desktop
+    ~/.local/share/applications/xsvg.desktop:
+      path: applications/xsvg.desktop
+    ~/.local/share/applications/zathura.desktop:
+      path: applications/zathura.desktop
+    ~/.config/gtkrc-2.0: gtkrc-2.0
+    ~/.config/gtkrc-2.0.mine: gtkrc-2.0.mine
+    ~/.config/picom: picom
     ~/.config/dmenu: dmenu
     ~/.config/herbstluftwm: herbstluftwm
     ~/.config/dunst: dunst
+    ~/.config/fmui: fmui
+    ~/.config/vis: vis
+    ~/.config/sxiv: sxiv
     ~/.config/hub: hub
     ~/.config/mpd/mpd.conf:
       path: mpd/mpd.conf
@@ -38,7 +53,9 @@
     ~/.config/ranger: ranger
     ~/.config/scripts: scripts
     ~/.config/zathura: zathura
+    ~/.config/nvim: nvim
     ~/.config/termite: termite
+    ~/.config/alacritty: alacritty
     ~/.config/thefuck/settings.py:
         path: thefuck/settings.py
     ~/.wallpaper: imgs/wallpaper
