@@ -107,9 +107,6 @@ then
     source $PLUGHOME/man.zsh
     source $PLUGHOME/marker.zsh
     source $PLUGHOME/ripgrep.zsh
-
-    # Git subrepo niceties
-    source /home/jose/Apps/gitBuild/nofork/git-subrepo/.rc
 fi
 
 

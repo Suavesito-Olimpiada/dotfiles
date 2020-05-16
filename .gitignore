@@ -3,10 +3,10 @@ vim/backup/
 vim/undo/*
 vim/swap/*
 vim/.netrwhist
+vim/pack/*
 
 # Cache things
-scripts/clipboard
-scripts/hdmi.st
+scripts/scree/hdmi/hdmi.st
 ranger/history
 ranger/tagged
 ranger/bookmarks
