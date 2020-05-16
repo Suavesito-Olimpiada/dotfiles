@@ -6,39 +6,7 @@
 	path = zplug
 	url = git://github.com/zplug/zplug.git
 	branch = master
-[submodule "vim/pack/tpope/start/commentary"]
-	path = vim/pack/tpope/start/commentary
-	url = https://tpope.io/vim/commentary.git
-	branch = master
-[submodule "vim/pack/tpope/start/dispatch"]
-	path = vim/pack/tpope/start/dispatch
-	url = https://tpope.io/vim/dispatch.git
-	branch = master
-[submodule "vim/pack/tpope/start/eunuch"]
-	path = vim/pack/tpope/start/eunuch
-	url = https://tpope.io/vim/eunuch.git
-	branch = master
-[submodule "vim/pack/tpope/start/repeat"]
-	path = vim/pack/tpope/start/repeat
-	url = https://tpope.io/vim/repeat.git
-	branch = master
-[submodule "vim/pack/tpope/start/sensible"]
-	path = vim/pack/tpope/start/sensible
-	url = https://tpope.io/vim/sensible.git
-	branch = master
-[submodule "vim/pack/tpope/start/speeddating"]
-	path = vim/pack/tpope/start/speeddating
-	url = https://tpope.io/vim/speeddating.git
-	branch = master
-[submodule "vim/pack/tpope/start/surround"]
-	path = vim/pack/tpope/start/surround
-	url = https://tpope.io/vim/surround.git
-	branch = master
 [submodule "repl"]
 	path = repl
 	url = git://github.com/defunkt/repl-completion.git
-	branch = master
-[submodule "vim/pack/tpope/start/vim-abolish"]
-	path = vim/pack/tpope/start/vim-abolish
-	url = git://github.com/tpope/vim-abolish.git
 	branch = master
