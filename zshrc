@@ -53,10 +53,11 @@ setopt histignorealldups # If a new command is a duplicate, remove the older one
 
 unalias run-help
 autoload run-help
+alias help="run-help"
 
-autoload -Uz compinit colors
-compinit -C
-colors
+#autoload -Uz compinit colors
+#compinit -C
+#colors
 
 setopt AUTO_LIST # List completion automatically
 
@@ -76,13 +77,19 @@ unsetopt LIST_AMBIGUOUS # List ambiguos commands
 
 unsetopt MULTIOS # Bechave as bash with pipes
 
-unsetopt CLOBBER
+# unsetopt CLOBBER
 
 # Style
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Completion case-insensitive (all)
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true # automatically find new executables in path
+
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # Colored completion (different colors for dirs/files/etc)
+# zstyle ':completion:*:parameters'  list-colors '=*=32'
+# zstyle ':completion:*:commands' list-colors '=*=1;32'
+# zstyle ':completion:*:aliases' list-colors '=*=2;38;5;128'
+# zstyle ':completion:*:*:kill:*' list-colors '=(#b) #([0-9]#)*( *[a-z])*=34=31=33'
+# zstyle ':completion:*:options' list-colors '=^(-- *)=34'
 
 zstyle ':completion:*' menu select # Complete with selection in menu
 
@@ -112,4 +119,4 @@ then
     source "$HOME/.zsh/p10k/p10k-instant-prompt-jose.zsh"
 fi
 
-source /home/jose/.zsh/extra.zsh
+source $HOME/.zsh/extra.zsh

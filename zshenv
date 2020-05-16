@@ -13,11 +13,12 @@
 # Ignoring spaced commands... for tomb
 export HISTIGNORESPACE=1
 
+#export MANPAGER="less -R"
 #export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
-export MANPAGER="less -R"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export VISUAL="/bin/vim"
-export EDITOR="/bin/vim"
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
 
 # As I use termite for some things, to be able to use it with ssh
 # I need to change the term enviroment variable.
@@ -32,7 +33,50 @@ GENCOMPL_FPATH=$HOME/.zsh/completion
 AUTO_NOTIFY_THRESHOLD=30
 AUTO_NOTIFY_TITLE="Hey! %command has just finished"
 AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
-AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt" "julia" "bpython" "R" "julia-1.3" "sst")
+AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt" "julia" "bpython" "R" "mosh" "sh" "bash")
+
+# typewritten options
+# TYPEWRITTEN_PROMPT_LAYOUT="singleline"
+
+# Marker key for get options, no more C-@ (ctrl-space)
+MARKER_KEY_GET=
+MARKER_KEY_NEXT_PLACEHOLDER=
+
+# Marker+fzf configuration
+FZF_MARKER_MAIN_KEY=
+FZF_MARKER_PLACEHOLDER_KEY=
+
+
+# FZF options
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--border
+--ansi
+--color dark
+--prompt='~ '
+--pointer='▶'
+--marker='✗'
+--multi
+--bind 'ctrl-y:execute-silent(echo {+} | xclip -i)'"
+export FZF_DEFAULT_COMMAND="fd \
+--follow \
+--color=always \
+--exclude 'node_modules' \
+--exclude 'tags' \
+--exclude 'GPATH' \
+--exclude 'GTAGS' \
+--exclude 'GRTAGS'"
+# --exclude '.git' \
+# --hidden \
+export FZF_ALT_C_OPTS="$FZF_DEFAULT_OPTS"
+export FZF_ALT_C_COMMAND="fd \
+--type d \
+--follow \
+--color=always \
+--exclude 'node_modules'"
+
+# LS_COLORS from vivid
+export LS_COLORS=$(vivid generate solarized-dark)
 
 #export LC_ALL="es_MX.UTF-8"
 
@@ -52,10 +96,10 @@ export LOC_APPS=$HOME/Apps
 export PATH="$LOC_APPS/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.config/scripts:$PATH"
+export PATH="$(du $HOME/.config/scripts/ | grep -iv 'project' | cut -f2 | tr '\n' ':')$PATH"
 
 export GOPATH=$HOME/Apps/pkg/go
-export PATH="$GOPATH:$GOPATH/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 export CARGO_HOME=$HOME/Apps/pkg/rust
 export PATH="$CARGO_HOME/bin:$PATH"
