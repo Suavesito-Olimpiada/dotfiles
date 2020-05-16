@@ -1,0 +1,19 @@
+#compdef bcat
+
+# zsh completions for 'bcat'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-b,--browser}'[open <browser> instead of system default browser]'
+  {-T,--title}'[use <text> as the browser title]'
+  {-a,--ansi}'[convert ANSI (color) escape sequences to HTML]'
+  {-h,--html}'[input is already HTML encoded, doc or fragment]'
+  {-t,--text}'[input is unencoded text]'
+  {-c,--command}'[read the standard output of command]'
+  {-p,--persist}'[serve until interrupted, allowing reload]'
+  {-d,--debug}'[enable verbose debug logging on stderr]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

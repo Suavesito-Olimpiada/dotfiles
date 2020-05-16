@@ -1,0 +1,14 @@
+#compdef acyclic
+
+# zsh completions for 'acyclic'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-o[- put output in <file>]'
+  '-n[- do not output graph]'
+  '-v[- verbose]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

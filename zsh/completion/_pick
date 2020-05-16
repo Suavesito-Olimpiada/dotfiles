@@ -1,0 +1,20 @@
+#compdef pick
+
+# zsh completions for 'pick'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-h[output this help message and exit]'
+  '-v[output the version and exit]'
+  '-K[disable toggling of keypad transmit mode]'
+  '-S[disable sorting]'
+  '-d[read and display descriptions]'
+  '-o[output description of selected on exit]'
+  '-x[enable alternate screen]'
+  '-X[disable alternate screen]'
+  '-q[supply an initial search query]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

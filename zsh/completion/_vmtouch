@@ -1,0 +1,29 @@
+#compdef vmtouch
+
+# zsh completions for 'vmtouch'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-t[pages into memory]'
+  '-e[pages from memory]'
+  '-l[pages in physical memory with mlock(2)]'
+  '-L[pages in physical memory with mlockall(2)]'
+  '-d[mode]'
+  '-m[max file size to touch]'
+  '-p[use the specified portion instead of the entire file]'
+  '-f[symbolic links]'
+  '-F[t crawl different filesystems]'
+  '-h[count hardlinked copies]'
+  '-i[ignores files and directories that match this pattern]'
+  '-I[only process files that match this pattern]'
+  '-b[file> get files or directories from the list file]'
+  '-0[batch mode (-b) separate paths with NUL byte instead of newline]'
+  '-w[until all pages are locked (only useful together with -d)]'
+  '-P[write a pidfile (only useful together with -l or -L)]'
+  '-v[]'
+  '-q[]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

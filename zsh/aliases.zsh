@@ -14,6 +14,7 @@ alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=au
 alias la='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -A'
 
 alias grep='grep --color=tty -d skip'
+# alias grep='rg'
 alias locate='locate -r'
 alias wget='wget -c --read-timeout=20'
 
@@ -22,8 +23,11 @@ alias mv='mv -i'
 
 alias wipe='wipe -l2 -x2 -p1'
 
-#alias cat='bat' # This is batman
+alias cat='bat' # This is batman
 #alias cat='lolcat' # This is lol
+
+# alias xargs='xargs -or' # `-r` means run nothing on epty input
+                        # `-o` menas open tty again (for programs with input -vim-)
 
 alias yay='yay --cleanmenu --noredownload --editor=vim --color always'
 
@@ -97,12 +101,7 @@ function less_highlight_f()
 }
 alias lessc=less_highlight_f
 
-function volume_control ()
-{
-    SOUND=`pactl list sinks | grep "Monitor Source" | sed 's/\([^a-zA-Z]Monitor Source: \)\(.*\)\(.monitor\)/\2/'`
-    pactl set-sink-volume $SOUND $@
-}
-alias volume=volume_control
+alias volume=volume.sh
 
 function _man() # Give colors to man
 {
@@ -144,10 +143,14 @@ alias sst=_ssh_tmux
 # neither system needed things to do, or
 # aliased functions, just aliases that are useful.
 
-alias lg="lazygit" # Lazygit git utility
+# alias lg="lazygit" # Lazygit git utility
 alias git="hub" # Use hub intead of git
 alias neofetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
 alias screenfetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
+alias dragon="dragon-drag-and-drop"
+alias fzf-preview="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
+alias vimfast="vim --noplugin"
+alias vimsec="vim --noplugin -n -c 'set noundofile' -Z"
 
 # tmux specifics
 

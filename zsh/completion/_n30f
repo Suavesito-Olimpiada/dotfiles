@@ -1,0 +1,22 @@
+#compdef n30f
+
+# zsh completions for 'n30f'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[print this message]'
+  '-s[set the image scaling]'
+  '-x[set the x position]'
+  '-y[set the y position]'
+  {-i,--ignored}'[force the window to be ignored for non EWMH WMs]'
+  {-d,--daemonise}'[run n30f daemonised]'
+  {-b,--bottom}'[put n30f at the bottom of the screen]'
+  {-c,--command}'[set the command to run on click]'
+  {-t,--title}'[set the window title]'
+  {-u,--unmapped}'[start with the window unmapped (hidden)]'
+  {-p,--print}'[print the window id to stdout after starting]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

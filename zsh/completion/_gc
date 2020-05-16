@@ -1,0 +1,21 @@
+#compdef gc
+
+# zsh completions for 'gc'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '-n[- print number of nodes]'
+  '-e[- print number of edges]'
+  '-c[- print number of connected components]'
+  '-C[- print number of clusters]'
+  '-a[- print all counts]'
+  '-D[- only directed graphs]'
+  '-U[- only undirected graphs]'
+  '-r[- recursively analyze subgraphs]'
+  '-s[- silent]'
+  '-v[- verbose]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

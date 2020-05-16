@@ -1,0 +1,19 @@
+#compdef autojump
+
+# zsh completions for 'autojump'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[show this help message and exit]'
+  {-a,--add}'[add path]'
+  {-i,--increase}'[increase current directory weight]'
+  {-d,--decrease}'[decrease current directory weight]'
+  '--complete[used for tab completion]'
+  '--purge[remove non-existent paths from database]'
+  {-s,--stat}'[show database entries and their key weights]'
+  {-v,--version}'[show version information]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

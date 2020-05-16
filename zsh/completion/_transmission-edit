@@ -1,0 +1,16 @@
+#compdef transmission-edit
+
+# zsh completions for 'transmission-edit'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[display this help page and exit]'
+  {-a,--add}'[<url>       Add a trackers announce URL]'
+  {-d,--delete}'[<url>       Delete a trackers announce URL]'
+  {-r,--replace}'[<new> Search and replace a substring in the announce URLs]'
+  {-V,--version}'[show version number and exit]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

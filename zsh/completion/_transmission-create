@@ -1,0 +1,18 @@
+#compdef transmission-create
+
+# zsh completions for 'transmission-create'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[display this help page and exit]'
+  {-p,--private}'[allow this torrent to only be used with the]'
+  {-o,--outfile}'[<file>        Save the generated .torrent to this filename]'
+  {-s,--piecesize}'[in KiB> Set how many KiB each piece should be, overriding]'
+  {-c,--comment}'[<comment>     Add a comment]'
+  {-t,--tracker}'[<url>         Add a trackers announce URL]'
+  {-V,--version}'[show version number and exit]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

@@ -12,10 +12,13 @@
 
 
 # Charge my aliases file
-source /home/jose/.zsh/aliases.zsh
+source $HOME/.zsh/aliases.zsh
+
+# Add keybinds
+source $HOME/.zsh/keybinds.zsh
 
 # Zplug call cascade
-source /home/jose/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -24,13 +27,29 @@ zplug "zsh-users/zsh-autosuggestions"
 
 if [[ -n $DISPLAY ]]
 then
-    zplug "romkatv/powerlevel10k", as:theme, depth:1
-
     zplug "hlissner/zsh-autopair", defer:2
 
-    zplug "bcho/Watson.zsh"
+    zplug "RobSis/zsh-completion-generator"
 
-    zplug "RobSis/zsh-completion-generator"; compinit
+    zplug "plugins/fd", from:oh-my-zsh
+    zplug "plugins/fzf", from:oh-my-zsh
+    zplug "plugins/autojump", from:oh-my-zsh
+fi
+
+if [[ -n $DISPLAY ]] && [[ $TERM != 'st-256color' ]]
+then
+    zplug "romkatv/powerlevel10k", as:theme, depth:1
+
+    # zplug "reobin/typewritten", as:theme
+
+    zplug "plugins/autoenv", from:oh-my-zsh
+    zplug "plugins/zsh_reload", from:oh-my-zsh, defer:2
+    zplug "plugins/thefuck", from:oh-my-zsh
+    zplug "plugins/command-not-found", from:oh-my-zsh
+
+    zplug "chitoku-k/fzf-zsh-completions"
+
+    zplug 'wfxr/forgit'
 
     zplug "ryutok/rust-zsh-completions"
 
@@ -59,13 +78,39 @@ zplug load
 # I cannot get running with zplug or it was
 # simplier to get run externally.
 
-source /usr/share/doc/pkgfile/command-not-found.zsh
+if [[ -n $DISPLAY ]] && [[ $TERM != 'st-256color' ]]
+then
+    # source /usr/share/doc/pkgfile/command-not-found.zsh
 
-# For [marker](https://github.com/pindexis/marker)
-[[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+    # Fuck nicesties
+    # eval $(thefuck --alias)
+fi
 
-# Fuck nicesties
-eval $(thefuck --alias)
+if [[ -n $DISPLAY ]]
+then
+    # For [marker](https://github.com/pindexis/marker)
+    [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
+
+    # FZF nicesties (substituted by oh-my-zsh:fzf)
+    # source /usr/share/fzf/completion.zsh
+    # source /usr/share/fzf/key-bindings.zsh
+
+    # AUTOJUPM nicesties (substituted by oh-my-zsh:autojump)
+    # source /usr/share/autojump/autojump.zsh
+
+    # LS_COLORS (for aur:lscolors-git) (substituted by vivid -check in .zshenv-)
+    #source /usr/share/LS_COLORS/dircolors.sh
+
+    # Local plugins and scripts
+    PLUGHOME=$HOME/.zsh/plugin
+    source $PLUGHOME/autojump.zsh
+    source $PLUGHOME/man.zsh
+    source $PLUGHOME/marker.zsh
+    source $PLUGHOME/ripgrep.zsh
+
+    # Git subrepo niceties
+    source /home/jose/Apps/gitBuild/nofork/git-subrepo/.rc
+fi
 
 
 #   ____ ___  _   _ _____ ___ ____
@@ -82,10 +127,10 @@ eval $(thefuck --alias)
 
 # I need to use xterm-256color, because I change the TERM env for termite
 # to be able to use correctly ssh.
-if [[ $TERM == xterm-256color ]]; then
-    . /etc/profile.d/vte.sh
-    __vte_osc7
-fi
+# if [[ $TERM == xterm-256color ]]; then
+#     . /etc/profile.d/vte.sh
+#     __vte_osc7
+# fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ -n $DISPLAY ]]
@@ -96,4 +141,6 @@ else
 fi
 
 # A nice reminder that I'm not free. :'c
-echo $(vrms -g |& head -2 | tail -1 | sed 's/N\(.*\): \([0-9]*\)/You have \2 n\1 in your system./')
+[[ $TERM != "st-256color" ]] && \
+vrms -g 2>&1 1>/dev/null | \
+sed -nE '2s/.+: ([0-9]+)/You have \1 non-free packages in your system./p'

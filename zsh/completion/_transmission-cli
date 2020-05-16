@@ -1,0 +1,30 @@
+#compdef transmission-cli
+
+# zsh completions for 'transmission-cli'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[display this help page and exit]'
+  {-b,--blocklist}'[enable peer blocklists]'
+  {-B,--no-blocklist}'[disable peer blocklists]'
+  {-d,--downlimit}'[<speed>  Set max download speed in kB/s]'
+  {-D,--no-downlimit}'[dont limit the download speed]'
+  {-er,--encryption-required}'[encrypt all peer connections]'
+  {-ep,--encryption-preferred}'[prefer encrypted peer connections]'
+  {-et,--encryption-tolerated}'[prefer unencrypted peer connections]'
+  {-f,--finish}'[<script> Run a script when the torrent finishes]'
+  {-g,--config-dir}'[<path>   Where to find configuration files]'
+  {-m,--portmap}'[enable portmapping via NAT-PMP or UPnP]'
+  {-M,--no-portmap}'[disable portmapping]'
+  {-p,--port}'[<port>   Port for incoming peers (Default: 51413)]'
+  {-t,--tos}'[<tos>    Peer socket TOS (0 to 255]'
+  {-u,--uplimit}'[<speed>  Set max upload speed in kB/s]'
+  {-U,--no-uplimit}'[dont limit the upload speed]'
+  {-v,--verify}'[verify the specified torrent]'
+  {-V,--version}'[show version number and exit]'
+  {-w,--download-dir}'[<path>   Where to save downloaded data]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

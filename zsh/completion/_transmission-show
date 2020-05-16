@@ -1,0 +1,15 @@
+#compdef transmission-show
+
+# zsh completions for 'transmission-show'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  {-h,--help}'[display this help page and exit]'
+  {-m,--magnet}'[give a magnet link for the specified torrent]'
+  {-s,--scrape}'[ask the torrents trackers how many peers are in the torrents]'
+  {-V,--version}'[show version number and exit]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments
