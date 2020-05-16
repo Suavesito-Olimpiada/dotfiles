@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+DIR_MUSIC=$HOME/Música
+visualizer='vis'
+cover_max_columns=50
