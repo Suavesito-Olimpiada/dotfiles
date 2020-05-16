@@ -1,5 +1,0 @@
-#!/bin/sh
-
-export MANPAGER='env MAN_PN=1 vim -M +MANPAGER -'
-man $@
-export MANPAGER='less -R'

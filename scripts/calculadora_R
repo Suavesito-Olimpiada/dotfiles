@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-Operacion=$(echo|dmenu -p Calcular: )
-Resultado=$(Rscript -e "$Operacion")
-Resultado=${Resultado#*] }
-Accion=$(printf "%s\n%s" "$Resultado" "Copiar" |dmenu -i -l 2)
-if [ "$Accion" == "Copiar" ]; then
-    echo -n "$Resultado" | xclip -i
-fi
