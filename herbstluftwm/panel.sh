@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+quote() {
+	local q="$(printf '%q ' "$@")"
+	printf '%s' "${q% }"
+}
+
+hc_quoted="$(quote "${herbstclient_command[@]:-herbstclient}")"
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
-geometry=( $(herbstclient monitor_rect "$monitor") )
+geometry=( $(hc monitor_rect "$monitor") )
 if [ -z "$geometry" ] ;then
     echo "Invalid monitor $monitor"
     exit 1
@@ -13,7 +19,7 @@ y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=15
 #font="-*-fixed-medium-*-*-*-13-*-*-*-*-*-*-*"
-font="xos4 Terminus:size=8"
+font="Hack Nerd Font Mono,Noto Sans Mono CJK KR,Noto Sans Mono CJK HK,Noto Sans Mono CJK JP,Noto Sans Mono CJK SC,Noto Sans Mono CJK TC:style=Regular:size=8"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
 selfg='#2E9AFE'
@@ -23,10 +29,10 @@ selfg='#2E9AFE'
 # In e.g. Ubuntu, this is named dzen2-textwidth.
 if which xftwidth &> /dev/null ; then
     textwidth="xftwidth";
-elif which textwidth &> /dev/null ; then
-    textwidth="textwidth";
 elif which dzen2-textwidth &> /dev/null ; then
     textwidth="dzen2-textwidth";
+elif which textwidth &> /dev/null ; then
+    textwidth="textwidth";
 else
     echo "This script requires the textwidth tool of the dzen2 project."
     exit 1
@@ -45,13 +51,13 @@ if awk -Wv 2>/dev/null | head -1 | grep -q '^mawk'; then
     # mawk needs "-W interactive" to line-buffer stdout correctly
     # http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=593504
     uniq_linebuffered() {
-        awk -W interactive '$0 != l { print ; l=$0 ; fflush(); }' "$@"
+      awk -W interactive '$0 != l { print ; l=$0 ; fflush(); }' "$@"
     }
 else
     # other awk versions (e.g. gawk) issue a warning with "-W interactive", so
     # we don't want to use it there.
     uniq_linebuffered() {
-        awk '$0 != l { print ; l=$0 ; fflush(); }' "$@"
+      awk '$0 != l { print ; l=$0 ; fflush(); }' "$@"
     }
 fi
 
@@ -67,7 +73,7 @@ hc pad $monitor $panel_height
     while true ; do
         mpc current &
         amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/'
-        xbacklight | sed 's/\([0-9]*\)\.\([0-9]*\)/\1/'
+        light | sed -E 's/([0-9]+)..*/\1/'
         sleep 0.5 || break
     done > >(uniq_linebuffered) &
 
@@ -75,7 +81,7 @@ hc pad $monitor $panel_height
     while true ; do
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
-        date +$'date\t^fg(#efefef)%H:%M, ^fg(#909090)%Y-%m-^fg(#efefef)%d'
+        date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
         sleep 1 || break
     done > >(uniq_linebuffered) &
     childpid=$!
@@ -115,10 +121,8 @@ hc pad $monitor $panel_height
             esac
             if [ ! -z "$dzen2_svn" ] ; then
                 # clickable tags if using SVN dzen
-                echo -n "^ca(1,\"${herbstclient_command[@]:-herbstclient}\" "
-                echo -n "focus_monitor \"$monitor\" && "
-                echo -n "\"${herbstclient_command[@]:-herbstclient}\" "
-                echo -n "use \"${i:1}\") ${i:1} ^ca()"
+                echo -n "^ca(1,$hc_quoted focus_monitor \"$monitor\" && "
+                echo -n "$hc_quoted use \"${i:1}\") ${i:1} ^ca()"
             else
                 # non-clickable tags if using older dzen
                 echo -n " ${i:1} "
@@ -215,5 +219,5 @@ hc pad $monitor $panel_height
     # gets piped to dzen2.
 
 } 2> /dev/null | dzen2 -w $panel_width -x $x -y $y -fn "$font" -h $panel_height \
-    -e 'button3=;button4=exec:herbstclient use_index -1;button5=exec:herbstclient use_index +1' \
+    -e "button3=;button4=exec:$hc_quoted use_index -1;button5=exec:$hc_quoted use_index +1" \
     -ta l -bg "$bgcolor" -fg '#efefef'

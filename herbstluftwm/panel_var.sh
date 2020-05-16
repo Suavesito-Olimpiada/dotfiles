@@ -1,6 +1,6 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
-cp /home/jose/.config/herbstluftwm/vars /tmp/vars
+cp $HOME/.config/herbstluftwm/vars /tmp/vars
 VARS=/tmp/vars
 
 while true; do
@@ -18,17 +18,15 @@ while true; do
     swp=$(if [[ $(echo $FREE | awk '{printf "%d", $16}') != 0 ]]; then echo $FREE | awk '{printf ":%.2fG", $16/1024}'; fi )
     tot=$(echo $FREE | awk '{printf "%.2fG", $8/1024}')
     lig=$(light | sed 's/\([0-9]*\)\..*/\1/') #| sed 's/\([0-9]*\)\.\([0-9]*\)/\1/') # It uses the light command in https://github.com/haikarainen/light
-    vol=$(amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/')
+    vol=$(amixer -D pulse get Master | sed -E -e '7,7!d' -e 's/.*\[([0-9]+).*/\1/')
     if [[ -z $(pgrep mpv) ]]
     then
         MPD=$(playerctl -l | grep mpd)
-        MPV=$(playerctl -l | grep mpv)
         PLM=$(playerctl -l | grep plasma)
         MSC=''
 
         [[ -z $MPD ]] || MSC=$MPD
         [[ -z $PLM ]] || MSC=$PLM
-        [[ -z $MPV ]] || MSC=$MPV
 
         # if [[ -z $(playerctl -l) ]]
         # then
