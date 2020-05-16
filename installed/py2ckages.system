@@ -22,7 +22,7 @@ cryptography==2.9.2
 cvxopt==1.2.2
 cypari2==2.1.0
 cysignals==1.10.0
-Cython==0.29.16
+Cython==0.29.17
 decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.0
@@ -102,7 +102,7 @@ pyrsistent==0.15.6
 PySocks==1.7.1
 pytest==4.6.8
 python-dateutil==2.8.1
-python-libtorrent==1.2.5
+python-libtorrent==1.2.6
 pytoml==0.1.21
 pytz==2019.3
 pyzmq==19.0.0
@@ -128,7 +128,7 @@ Twisted==18.9.0
 typing==3.7.4.1
 urllib3==1.25.9
 virtualenv==20.0.18
-wcwidth==0.1.8
+wcwidth==0.1.9
 webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.5.1
