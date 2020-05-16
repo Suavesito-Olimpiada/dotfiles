@@ -39,6 +39,7 @@ set nocompatible
 set pastetoggle=<F2>
 set encoding=utf-8
 set title
+" set clipboard+=unnamedplus " to paste to system clipboard
 
 syntax on
 filetype plugin indent on
@@ -86,7 +87,7 @@ set wildmode=full
 set wildignore+=tags,.*.un~,*.pyc,*.o
 
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
@@ -283,9 +284,9 @@ inoremap <silent> <F7> <ESC>:call LaTeXtoUnicode#Toggle()<CR>a
 
 " Format Julia code
 " normal mode mapping
-nnoremap <localleader>jf :<C-u>call JuliaFormatter#Format(0)<CR>
+nnoremap <Leader>jf :<C-u>call JuliaFormatter#Format(0)<CR>
 " visual mode mapping
-vnoremap <localleader>jf :<C-u>call JuliaFormatter#Format(1)<CR>
+vnoremap <Leader>jf :<C-u>call JuliaFormatter#Format(1)<CR>
 
 " Grammarous check
 nnoremap <silent> <Leader>gen :GrammarousCheck --lang=en<CR>
@@ -336,6 +337,18 @@ augroup CPT
     au BufWritePost *.cpt     set nobin
 augroup END
 
+" vim -b : edit binary using xxd-format!
+augroup Binary
+    au!
+    au BufReadPre  *.bin let &bin=1
+    au BufReadPost *.bin if &bin | %!xxd
+    au BufReadPost *.bin set ft=xxd | endif
+    au BufWritePre *.bin if &bin | %!xxd -r
+    au BufWritePre *.bin endif
+    au BufWritePost *.bin if &bin | %!xxd
+    au BufWritePost *.bin set nomod | endif
+augroup END
+
 " Comment string for diferent types
 autocmd FileType c,cpp,cs,java      setlocal commentstring=//\ %s
 autocmd FileType git,gitcommit      setlocal foldmethod=syntax foldlevel=1
@@ -376,6 +389,7 @@ augroup END
 " autocmd BufNewFile *.cpp    0read ~/.vim/sket/skeleton.cpp
 " autocmd BufNewFile *.md     0read ~/.vim/sket/skeleton.md
 
+" SuperCollider vim plugin
 au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
 au Filetype supercollider packadd scvim
 
@@ -455,12 +469,12 @@ let airline#extensions#c_like_langs = ['arduino', 'c', 'cpp', 'cuda', 'go', 'jav
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\   'smart_case': v:true,
-\   })
-call deoplete#custom#source('LanguageClient',
-\   'min_pattern_length',
-\   2)
+" call deoplete#custom#option({
+" \   'smart_case': v:true,
+" \   })
+" call deoplete#custom#source('LanguageClient',
+" \   'min_pattern_length',
+" \   2)
 
 " mundo (gundo fork)
 let g:mundo_right = 1
@@ -470,13 +484,13 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
 \   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
 \       using LanguageServer;
+\       using SymbolServer;
+\       using StaticLint;
+\       using Sockets;
 \       using Pkg;
-\       import StaticLint;
-\       import SymbolServer;
 \       env_path = dirname(Pkg.Types.Context().env.project_file);
-\       debug = false;
 \
-\       server = LanguageServer.LanguageServerInstance(stdin, stdout, debug, env_path, "", Dict());
+\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, ""));
 \       server.runlinter = true;
 \       run(server);
 \   '],
@@ -622,9 +636,6 @@ let g:cpp_posix_standard = 1
 " let g:cpp_experimental_simple_template_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
-" vimtex (disable polyglot LatexBox)
-"
-
 " Gutentags
 let g:gutentags_project_root = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
 
@@ -643,6 +654,9 @@ let g:bufferhint_PageStep = 10
 
 " vim-niceblock
 let g:niceblock_no_default_key_mappings = 0
+
+" Vim wiki options
+let g:vimwiki_list = [{'path': '~/Documentos/Wikis/txt/', 'path_html': '~/Documentos/Wikis/html'}]
 
 
 "}}}
