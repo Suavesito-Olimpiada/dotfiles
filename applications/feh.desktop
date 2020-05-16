@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=3.2
+Type=Application
+Exec=/bin/feh %f
+Name=feh
+Comment=Simple Image Viewer

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.4.5
+Type=Application
+Exec=/usr/bin/zathura %f
+Name=zathura
+Comment=Simple PDF viewer

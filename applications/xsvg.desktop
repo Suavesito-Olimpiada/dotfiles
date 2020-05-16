@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.2.1
+Type=Application
+Exec=/usr/bin/xsvg -af %f
+Name=xsvg
+Comment=Simple image viewer for SVG
