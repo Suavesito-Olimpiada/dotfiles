@@ -1,2 +1,4 @@
-QEMU_AUDIO_DRV=alsa qemu-system-x86_64 -m 1024 -accel kvm -vga std -daemonize -soundhw ac97 /home/jose/VM/qemu/WXP_disk.qcow2
-qemu-system-x86_64 -cdrom /home/jose/VM/osimg/ttylinux-pc_x86_64-2015.02.iso -m 512 -accel kvm -vga std
+# QEMU_AUDIO_DRV=alsa qemu-system-x86_64 -m 1024 -accel kvm -vga std -daemonize -soundhw ac97 /home/jose/VM/qemu/WXP_disk.qcow2
+# qemu-system-x86_64 -cdrom /home/jose/VM/osimg/ttylinux-pc_x86_64-2015.02.iso -m 512 -accel kvm -vga std
+
+#; vim:ft=sh

@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cat ~/.config/dmenu/qemulist | dmenu -h 15 -i -l 8  | ${SHELL:-"/bin/sh"} &> /dev/null &!

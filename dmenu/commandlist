@@ -1,18 +1,17 @@
 # network analysis
-termite -e nmtui                                                                                # INTERNET CONNECTION
-termite -e "speedometer -r wlp2s0 -t wlp2s0"                                                    # SPEEDOMETER INTERNET CHECK
-termite -e "speedometer -r enp1s0 -t enp1s0"                                                    # SPEEDOMETER ETHERNET CHECK
-termite -e nyx                                                                                  # SPEEDOMETER FOR TOR
-termite -e "tmux new-session 'speedometer -r wlp2s0 -c -t wlp2s0' \; split-window 'nyx'"        # JUST SET ALL SPEEDOMETERES
-termite -e "tmux new-session 'speedometer -r enp1s0 -c -t enp1s0' \; split-window 'nyx'"        # JUST SET ALL SPEEDOMETERES
+TERMINAL nmtui                                                                                  # INTERNET CONNECTION
+TERMINAL speedometer -r wlp2s0 -t wlp2s0                                                        # SPEEDOMETER INTERNET CHECK
+TERMINAL speedometer -r enp1s0 -t enp1s0                                                        # SPEEDOMETER ETHERNET CHECK
+TERMINAL nyx                                                                                    # SPEEDOMETER FOR TOR
+TERMINAL tmux new-session 'speedometer -r wlp2s0 -c -t wlp2s0' \; split-window 'nyx'            # JUST SET ALL SPEEDOMETERES
+TERMINAL tmux new-session 'speedometer -r enp1s0 -c -t enp1s0' \; split-window 'nyx'            # JUST SET ALL SPEEDOMETERES
 gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
 
 # internet
 qbittorrent                                                                                     # QBITTORRENT TORRENTS DOWNLOAD
-termite -e rtorrent                                                                             # RTORRENT TORRENT DOWNLOAD
+TERMINAL rtorrent                                                                               # RTORRENT TORRENT DOWNLOAD
 firefox                                                                                         # FIREFOX NAVIGATOR
 chromium                                                                                        # CHROMIUM NAVIGATOR
-google-chrome-stable                                                                            # JSUT FOR NETFLIX
 tabbed -c -r 3 torsocks surf -e - "https://duckduckgo.com"                                      # SURF BROWSER
 tabbed -c -r 2 surf -e -                                                                        # SURF BROWSER
 nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
@@ -23,111 +22,121 @@ discord                                                                         
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
 utox                                                                                            # UTOX MESSAGE APP
-skypeforlinux                                                                                   # SKYPE FOR LINUX
+# skypeforlinux                                                                                   # SKYPE FOR LINUX
 cozy-desktop                                                                                    # COZY FOR LINUX
 signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
-termite -e aerc                                                                                 # E-MAIL TERMINAL CLIENT
-zoom                                                                                            # APP FOR VIDEO CONFERENCING
+TERMINAL aerc                                                                                   # E-MAIL TERMINAL CLIENT
 slack                                                                                           # SLACK APP
+jitsi-meet-desktop                                                                              # JITSI MEET OS VIDEO CALLS
 
 # office
-termite -e vim                                                                                  # VIM
+TERMINAL vim                                                                                    # VIM
+TERMINAL sc-im                                                                                  # VIM-LIKE CALC/EXCEL FOR TERMINAL
 libreoffice --writer                                                                            # LIBREOFFICE WRITER
 libreoffice --calc                                                                              # LIBREOFFICE CALC
 libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
 evince                                                                                          # EVINCE PDF READER
-FoxitReader                                                                                     # SHIT THAT WORKS (CLOSED SOURCE)
+# FoxitReader                                                                                     # PDF READER FOR EDITING
 scribus                                                                                         # SCRIBUS
 
 # math
-/home/jose/.config/scripts/calculadora_genius.sh                                                # GENIUS CALCULATOR
-/home/jose/.config/scripts/calculadora_R                                                        # R CALCULATOR
-termite -e "genius --maxdigits=0 --precision=2048 --fullexp"                                    # CALCULATOR TERMINAL
-termite -e sage                                                                                 # SAGE MATH PACK
-termite -e gnuplot                                                                              # GNUPLOT PLOT TOOL
-DMENU=1 .config/scripts/jupyter_toggle.sh
+HOME/.config/scripts/utils/calculadora_genius.sh                                                # GENIUS CALCULATOR
+HOME/.config/scripts/utils/calculadora_R                                                        # R CALCULATOR
+TERMINAL genius --maxdigits=0 --precision=2048 --fullexp                                        # CALCULATOR TERMINAL
+TERMINAL sage                                                                                   # SAGE MATH PACK
+TERMINAL gnuplot                                                                                # GNUPLOT PLOT TOOL
+DMENU=1 .config/scripts/programming/jupyter_toggle.sh
 
 # games
 doomrl                                                                                          # DOOM GAME
-termite -e "doomrl -console"                                                                    # DOOM GAME CONSOLE
-cd /home/jose/Apps/precompile/LaserTank && ./ltanks64                                           # LTANKS GAME
+TERMINAL doomrl -console                                                                        # DOOM GAME CONSOLE
+HOME/.config/scripts/games/ltanks.sh                                                            # LTANKS GAME
+TERMINAL HOME/.config/scripts/games/tetris.sh                                                   # TETRIS GAME
 steam                                                                                           # STEAM ENGINE
 cgoban3                                                                                         # GO KGS
-dwarffortress                                                                                   # DWARFFORTRESS
+lizzie                                                                                          # LIZZIE FOR GO REVISION
+# dwarffortress                                                                                   # DWARFFORTRESS
+0ad                                                                                             # 0AD
 
 # media usages
-termite --title Music -e "ncmpc -f /home/jose/.config/ncmpc/ncmpc.conf"                         # NCMPC
-termite --title Music -e ncmpcpp                                                                # NCMPCPP
+TERMINAL TITLE=Music ncmpc -f HOME/.config/ncmpc/ncmpc.conf                                     # NCMPC
+TERMINAL TITLE=Music ncmpcpp                                                                    # NCMPCPP
+TERMINAL TITLE=Music fmui                                                                       # FMUI = FZF + MPD + UI!
+picard                                                                                          # MUSICBRAINZ TAGGER
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
-termite --title Youtube -e youtube-viewer
+TERMINAL TITLE=Youtube straw-viewer                                                             # YOUTUBE FROM TERMINAL
+TERMINAL TITLE=Youtube straw-viewer --results=10 -n
 cheese                                                                                          # WEBCAM
+musikwave                                                                                       # MUSIC P2P APP
 
-# media editing
+# media editing/creation/conssumption
 gimp                                                                                            # GIMP
 inkscape                                                                                        # INKSCAPE
 darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
 krita                                                                                           # DRAWING PROGRAM
-# 3d creation/editing
+## 3d creation/editing
 blender                                                                                         # 3D RENDERING EDITOR
-# video editing
+## video editing
 pitivi                                                                                          # VIDEO EDITING PROGRAM
-flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
+# flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
 kdenlive                                                                                        # VIDEO EDITING PROGRAM
-synfigstudio                                                                                    # ANIMATE FIGURES...
-# audio
+# synfigstudio                                                                                    # ANIMATE FIGURES...
+## audio
 scide                                                                                           # SUPERCOLLIDER EDITOR
-termite -e sclang                                                                               # SUPERCOLLIDER SERVER
+TERMINAL sclang                                                                                 # SUPERCOLLIDER SERVER
 ardour5                                                                                         # AUDIO EDITING PROGRAM
-musikwave                                                                                       # MUSIC P2P APP
 shotwell                                                                                        # IMAGE ORGANIZER
+audacity                                                                                        # AUDIO EDITING
 
 # programming
-termite -e python3                                                                              # PYTHON 3 PROGRAMMING
-termite -e bpython                                                                              # PYTHON 3 PROGRAMMING
-termite -e julia                                                                                # JULIA INTERPRETER
-termite -e root                                                                                 # ROOT CERN INTERPRETER
-termite -e R                                                                                    # R INTERPRETER
+TERMINAL python3                                                                                # PYTHON 3 PROGRAMMING
+TERMINAL bpython                                                                                # PYTHON 3 PROGRAMMING
+TERMINAL julia                                                                                  # JULIA INTERPRETER
+TERMINAL root                                                                                   # ROOT CERN INTERPRETER
+TERMINAL cling                                                                                  # CLING C++ CERN INTERPRETER
+TERMINAL R                                                                                      # R INTERPRETER
 qtcreator                                                                                       # QTCREATOR
 glade                                                                                           # GTK GLADE APP CREATOR
 lepton                                                                                          # GIST LIKE SNIPPETS APP
-netbeans
 
 # system
-termite -e "vim /home/jose/.config/herbstluftwm/autostart"                                      # AUTOSTART HERBSTLUFT
-termite -e alsamixer                                                                            # ALSAMIXER SOUND
-termite -e htop                                                                                 # HTOP PROCESS
-termite -e "sudo htop"                                                                          # SUDO HTOP PROCESS
-termite -e "vim /home/jose/.config/dmenu/commandlist"                                           # VIM COMMANDLIST EDIT
+TERMINAL vim HOME/.config/herbstluftwm/autostart                                                # AUTOSTART HERBSTLUFT
+TERMINAL alsamixer                                                                              # ALSAMIXER SOUND
+TERMINAL htop                                                                                   # HTOP PROCESS
+TERMINAL sudo htop                                                                              # SUDO HTOP PROCESS
+TERMINAL vim HOME/.config/dmenu/commandlist                                                     # VIM COMMANDLIST EDIT
 # herbstclient quit                                                                             # HERBSTLUFT QUIT
 xkill                                                                                           # XKILL
 gksu gufw                                                                                       # FIREWALL CONFIG APP
 hardinfo                                                                                        # HARD HARDWARE INFO
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
 tlpui                                                                                           # TLP GUI
+pacgraph-tk                                                                                     # VIEW GRAPH OF DEPENDENCIES
+gksu gparted                                                                                    # GPARTED
 
 # utilities
-/home/jose/.config/scripts/scratchy.py                                                          # REMEMBER THINGS
-/home/jose/.config/scripts/alarm.sh
-termite -e ranger                                                                               # RANGER FILE NAVIGATOR
-komorebi                                                                                        # DYNAMIC WALLPAPERS
-komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
-termite -e calcurse                                                                             # CALCURSE
+HOME/.config/scripts/utils/scratchy.py                                                          # REMEMBER THINGS
+HOME/.config/scripts/time/alarm.sh (s|m|h) time msg
+TERMINAL ranger                                                                                 # RANGER FILE NAVIGATOR
+# komorebi                                                                                        # DYNAMIC WALLPAPERS
+# komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
+TERMINAL calcurse                                                                               # CALCURSE
 filezilla                                                                                       # FTP FREE GUI
-joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
+# joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
 pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
-termite -e bluetoothctl                                                                         # INTERNET CONNECTION
+TERMINAL bluetoothctl                                                                           # INTERNET CONNECTION
 
 # remote access
 remmina                                                                                         # CONTROL REMOTE DESKTOP
 
 # virtual machines
 VirtualBox                                                                                      # VIRTUALBOX
-/home/jose/.config/dmenu/qemu                                                                   # QEMU VM
+HOME/.config/dmenu/qemu                                                                         # QEMU VM
 qtemu                                                                                           # QEMU GRAPHICAL INTERFACE
 q4wine                                                                                          # WINE QT5 GUI
 
 # pack managers
-/home/jose/.config/dmenu/flatpak                                                                # PROGRAMS INSTALLED WITH FLATPAK
-/home/jose/.config/dmenu/snap                                                                   # PROGRAMS INSTALLED WITH SNAP
+HOME/.config/dmenu/flatpak                                                                      # PROGRAMS INSTALLED WITH FLATPAK
+HOME/.config/dmenu/snap                                                                         # PROGRAMS INSTALLED WITH SNAP

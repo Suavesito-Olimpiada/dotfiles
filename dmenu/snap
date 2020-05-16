@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 APP=$(cat ~/.config/dmenu/snaplist | dmenu -h 15 -i -l 8) && snap run $APP &> /dev/null &!

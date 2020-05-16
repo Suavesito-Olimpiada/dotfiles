@@ -1,2 +1,35 @@
-#!/bin/bash
-cat ~/.config/dmenu/commandlist | dmenu -h 15 -i -l 8  | ${bash:-"/bin/sh"} &> /dev/null &!
+#!/usr/bin/env bash
+TERMINAL=("alacritty" "st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10:antialias=true:autohint=true'")
+TERM_EXEC=("--command" "-e")
+TERM_TITLE=("--title" "-t")
+
+LINE="$(cat ~/.config/dmenu/commandlist | dmenu -h 15 -i -l 8)"
+HAS_TERM=$(printf "%s" "$LINE" | grep TERMINAL)
+HAS_TERMTITLE=$(printf "%s" "$LINE" | grep TITLE)
+HAS_HOME=$(printf "%s" "$LINE" | grep HOME)
+
+CMD="$(printf "%s" "$LINE" | sed -E 's/(.+)?#.*/\1/')"
+TITLE=""
+
+if [[ -n $HAS_TERM ]]
+then
+    if [[ -z $HAS_TERMTITLE ]]
+    then
+        _CMD="$(printf "%s" "$CMD" | cut -f 1 -d ' ' --complement)"
+        CMD="${TERMINAL[0]} ${TERM_EXEC[0]} $_CMD"
+    else
+        TITLE=$(printf "%s" "$CMD" | awk '{printf "%s", $2}' | sed -E 's/.*=(.*)/\1/')
+        _CMD="$(printf "%s" "$CMD" | cut -f 1,2 -d ' ' --complement)"
+        CMD="${TERMINAL[0]} ${TERM_TITLE[0]} $TITLE ${TERM_EXEC[0]} $_CMD"
+    fi
+fi
+
+if [[ -n $HAS_HOME ]]; then
+    CMD=$(printf "%s" "$CMD" | sed -En "s|HOME|$HOME|gp")
+fi
+
+echo $CMD
+
+exec $CMD &> /dev/null &!
+
+exit 0
