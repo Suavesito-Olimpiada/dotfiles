@@ -17,3 +17,9 @@ imgs/wallpaper/*
 # No secrets in my git
 zsh/secrets.zsh
 hub
+
+# More things
+**/tags
+**/GPATH
+**/GTAGS
+**/GRTAGS
