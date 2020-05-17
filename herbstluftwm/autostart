@@ -21,34 +21,35 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-e quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
-hc keybind $Mod-Return spawn alacritty
+hc keybind $Mod-Return       spawn alacritty
 hc keybind $Mod-Shift-Return spawn alacritty -e tmux
-hc keybind $Mod-m spawn ~/.config/scripts/sys/man_pages.sh
-hc keybind $Mod-Shift-m spawn ~/.config/scripts/sys/manv_pages.sh
-hc keybind $Mod-n spawn ~/.config/scripts/sys/less_output.sh
-hc keybind $Mod-d spawn $HOME/.config/dmenu/dmenu
-hc keybind $Mod-Shift-d spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10:antialias=true:autohint=true' -g 80x24+720+400 -i
-hc keybind $Mod-t spawn $HOME/.config/dmenu/tmux
-hc keybind $Mod-Shift-b spawn sxiv -t ~/.wallpaper/
-hc keybind $Mod-Control-r spawn ~/.config/scripts/audio/music.sh toggle-random
-hc keybind $Mod-w spawn $HOME/.config/scripts/work/work.sh
-hc keybind $Mod-Control-w spawn $HOME/.config/scripts/sys/wifi_check.sh
-hc keybind $Mod-Control-b spawn $HOME/.config/scripts/sys/bluetooth_check.sh
-hc keybind $Mod-Shift-t spawn alacritty -e ranger
-hc keybind $Mod-z spawn tabbed -c zathura -e
-hc keybind $Mod-Control-q spawn xkill
-hc keybind $Mod-Shift-p spawn $HOME/.config/scripts/screen/hdmi/hdmi.sh
-hc keybind $Mod-Shift-a spawn $HOME/.config/scripts/audio/pulse_toogle.sh
-hc keybind $Mod-Shift-s spawn $HOME/.config/scripts/screen/lock.sh
-hc keybind $Mod-Shift-u spawn $HOME/.config/scripts/utils/ibrowser.sh
-hc keybind $Mod-e spawn $HOME/.config/scripts/utils/scratchy.py
-hc keybind $Mod-y spawn $HOME/.config/scripts/audio/music_mpc.sh dmenu
-hc keybind $Mod-Shift-y spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
-hc keybind $Mod-g spawn $HOME/.config/scripts/utils/calculadora_genius.sh
-hc keybind $Mod-Mod1-j spawn alacritty -e julia
-hc keybind $Mod-Mod1-h spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
+hc keybind $Mod-m            spawn ~/.config/scripts/sys/man_pages.sh
+hc keybind $Mod-Shift-m      spawn ~/.config/scripts/sys/manv_pages.sh
+hc keybind $Mod-n            spawn ~/.config/scripts/sys/less_output.sh
+hc keybind $Mod-d            spawn $HOME/.config/dmenu/dmenu
+hc keybind $Mod-Shift-d      spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10:antialias=true:autohint=true' -g 80x24+720+400 -i
+hc keybind $Mod-t            spawn $HOME/.config/dmenu/tmux
+hc keybind $Mod-Shift-b      spawn sxiv -t ~/Imágenes/Wallpapers
+hc keybind $Mod-Control-r    spawn ~/.config/scripts/audio/music.sh toggle-random
+hc keybind $Mod-w            spawn $HOME/.config/scripts/work/work.sh
+hc keybind $Mod-Control-w    spawn $HOME/.config/scripts/sys/wifi_check.sh
+hc keybind $Mod-Control-b    spawn $HOME/.config/scripts/sys/bluetooth_check.sh
+hc keybind $Mod-Shift-t      spawn alacritty -e ranger
+hc keybind $Mod-z            spawn tabbed -c zathura -e
+hc keybind $Mod-Control-q    spawn xkill
+hc keybind $Mod-Shift-p      spawn $HOME/.config/scripts/screen/hdmi/hdmi.sh
+hc keybind $Mod-Shift-a      spawn $HOME/.config/scripts/audio/pulse_toogle.sh
+hc keybind $Mod-Shift-s      spawn $HOME/.config/scripts/screen/lock.sh
+hc keybind $Mod-Shift-u      spawn $HOME/.config/scripts/utils/ibrowser.sh
+hc keybind $Mod-e            spawn $HOME/.config/scripts/utils/scratchy.py
+hc keybind $Mod-y            spawn $HOME/.config/scripts/audio/music_mpc.sh dmenu
+hc keybind $Mod-Shift-y      spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
+hc keybind $Mod-g            spawn $HOME/.config/scripts/utils/calculadora_genius.sh
+hc keybind $Mod-Mod1-j       spawn alacritty -e julia
+hc keybind $Mod-Mod1-h       spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
 hc keybind $Mod-Mod1-Shift-h spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
-hc keybind $Mod-v spawn alacritty -e vim
+hc keybind $Mod-v            spawn alacritty -e vim
+hc keybind $Mod-Shift-o      spawn picom-trans -c 100%
 
 # basic movement in tiling and floating mode
 # focusing clients
