@@ -10,6 +10,7 @@ scripts/scree/hdmi/hdmi.st
 ranger/history
 ranger/tagged
 ranger/bookmarks
+ranger/**/__*
 
 # Wallpapers
 imgs/wallpaper/*
