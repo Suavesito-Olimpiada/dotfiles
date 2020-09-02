@@ -1,11 +1,11 @@
 CXX             = g++
 CXXFLAGS        = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra -Wshadow \
-				  -pedantic -std=c++17 -fsanitize=address \
+				  -pedantic -std=c++17 -march=native -fsanitize=address \
 				  -fsanitize=undefined
 CXXFLAGSREL     = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra -Wshadow \
-				  -pedantic -std=c++17
+				  -pedantic -std=c++17 -march=native
 CXXFLAGSDBG     = -I$(INCDIR) -I$(LINDIR) -O0 -g3 -Wall -Werror -Wextra -Wshadow \
-				  -pedantic -std=c++17 -fsanitize=address \
+				  -pedantic -std=c++17 -march=native -fsanitize=address \
 				  -fsanitize=undefined
 
 LIBFLAGS        = -lm -pthread
@@ -44,8 +44,8 @@ $(TARGET): $(OBJECTS)
 $(OBJDIRREL)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 	$(CXX) -c -o $@ $< $(CXXFLAGSREL) $(LIBFLAGS)
 
-$(TARGETREL): $(OBJECTS)
-	$(CXX) -o $(BLDDIRREL)/$@ $^ $(CXXFLAGSREL) $(LIBFLAGS)
+$(TARGETREL): $(OBJECTSREL)
+	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGSREL) $(LIBFLAGS)
 
 $(OBJDIRDBG)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 	$(CXX) -c -o $@ $< $(CXXFLAGSDBG) $(LIBFLAGS)
@@ -54,36 +54,50 @@ $(TARGETDBG): $(OBJECTSDBG)
 	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGSDBG) $(LIBFLAGS)
 
 .PHONY: clean
-
 clean:
 	rm -f $(BLDDIR)/$(OBJDIR)/*.o $(BLDDIR)/$(TARGET)
 
-.PHONY: clean-debug
+.PHONY: clean-release
+clean-release:
+	rm -f $(BLDDIR)/$(OBJDIRREL)/*.o $(BLDDIR)/$(TARGETREL)
 
+.PHONY: clean-debug
 clean-debug:
 	rm -f $(BLDDIR)/$(OBJDIRDBG)/*.o $(BLDDIR)/$(TARGETDBG)
 
 .PHONY: clean-test
-
 clean-test:
 	rm -f $(TSTDIR)/out/* $(TSTDIR)/program.log
 
-.PHONY: run
+.PHONY: clean-dist
+clean-dist:
+	rm -f ../assets/project.zip
 
+.PHONY: clean-all
+clean-all: clean clean-release clean-debug clean-test clean-dist
+
+.PHONY: run
 run: ./$(TARGET)
 	$(BLDDIR)/$(TARGET) ${ARGS}
 
-.PHONY: debug
+.PHONY: runrel
+runrel: ./$(TARGETREL)
+	$(BLDDIR)/$(TARGETREL) ${ARGS}
 
+.PHONY: debug
 debug: ./$(TARGETDBG)
 	gdb --args $(BLDDIR)/$(TARGETDBG) ${ARGS}
 
 .PHONY: release
-
 release: ./$(TARGETREL)
 
 .PHONY: test
-
 test: ./$(TARGET)
 	sh $(TSTDIR)/test.sh &>> $(TSTDIR)/program.log
 
+PWDL            = $$(pwd | sed -En 's:.*/(.+):1:p')
+.PHONY: dist
+dist: clean-all
+	rm -f ../G* ../tags
+	cd ../..; \
+	zip -r "$(PWDL)"/assets/project.zip "$(PWDL)"

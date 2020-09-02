@@ -1,18 +1,26 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
+DMENUR="$HOME/.config/scripts/lib/dmenu.sh"
 STATUS=$(pgrep jupyter)
 
 function echod ()
 {
-    if [[ -z $DMENU ]]
+    if [[ -z $2 ]]
     then
-        echo $@
+        echo "$1"
     else
-        echo $@ | sed 's/ /\n/g' | dmenu -i -l 5
+        echo "$1" | $DMENUR -i -l 5
     fi
 }
 
-if [[ -z $@ ]]
+if [[ $1 = "dmenu" ]]
+then
+    DMENU=1
+    shift 1
+fi
+
+
+if [[ -z $1 ]]
 then
     if [[ -z $STATUS ]]
     then
@@ -23,17 +31,17 @@ then
 else
     if [[ -z $STATUS ]]
     then
-        echod "Closed"
+        echod "Closed" $DMENU
     else
-        case $@ in
+        case $1 in
             "status"|"stat")
-                echod "Running"
+                echod "Running" $DMENU
                 ;;
             "url")
-                echod $(jupyter notebook list | sed -n '2,$s/\(.*\)\(::.*\)/\1/p')
+                echod "$(jupyter notebook list | sed -n '2,$s/\(.*\)\(::.*\)/\1/p')" $DMENU
                 ;;
             "dir"|"directory")
-                echod $(jupyter notebook list | sed -n '2,$s/\(.*\)\(::\)\(.*\)/\3/p')
+                echod "$(jupyter notebook list | sed -n '2,$s/\(.*\)\(::\)\(.*\)/\3/p')" $DMENU
                 ;;
             *)
                 echod 'Not command found'

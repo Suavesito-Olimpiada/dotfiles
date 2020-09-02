@@ -54,6 +54,7 @@ mkdir -p "include"
 mkdir -p "test/in"
 mkdir -p "test/out"
 mkdir -p "build/obj"
+mkdir -p "build/objrel"
 mkdir -p "build/objdbg"
 
 DATE=$(date "+%m-%d-%Y")
