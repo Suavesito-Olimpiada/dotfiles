@@ -28,22 +28,22 @@ then
     then
         exit
     fi
-    cd "$1"
+    cd "$1" || exit
 else
     mkdir new_cpp_project
-    cd new_cpp_project
+    cd new_cpp_project || exit
 fi
 
 if [[ -n "$2" ]]
 then
-    PROJECT_NAME="$(echo \"$2\")" # To allow echo to subtitute spaces and other codes.
+    PROJECT_NAME="$(echo \""$2"\")" # To allow echo to subtitute spaces and other codes.
 else
     PROJECT_NAME="Project Name"
 fi
 
 if [[ -n "$3" ]]
 then
-    PROJECT_DESC="$(echo \"$3\")"
+    PROJECT_DESC="$(echo \""$3"\")"
 else
     PROJECT_DESC="Description of the project."
 fi
