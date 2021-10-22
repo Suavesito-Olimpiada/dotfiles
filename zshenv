@@ -15,10 +15,12 @@ export HISTIGNORESPACE=1
 
 #export MANPAGER="less -R"
 #export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p --pager \"less -R\"'"
 
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
+# export BROWSER="firefox"
+export BROWSER="chromium"
 
 # As I use termite for some things, to be able to use it with ssh
 # I need to change the term enviroment variable.
@@ -27,25 +29,27 @@ if [[ $TERM == xterm-termite ]]; then
 fi
 
 # To use with [zsh-completion-generator](https://github.com/RobSis/zsh-completion-generator)
-GENCOMPL_FPATH=$HOME/.zsh/completion
+export GENCOMPL_FPATH=$HOME/.zsh/completion
 
 # Auto-Notify threshold for zsh-auto-notify
-AUTO_NOTIFY_THRESHOLD=30
-AUTO_NOTIFY_TITLE="Hey! %command has just finished"
-AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
+export AUTO_NOTIFY_THRESHOLD=30
+export AUTO_NOTIFY_TITLE="Hey! %command has just finished"
+export AUTO_NOTIFY_BODY="It completed in %elapsed seconds with exit code %exit_code"
 AUTO_NOTIFY_IGNORE+=("docker" "man" "sleep" "ssh" "tmux" "yaourt" "julia" "bpython" "R" "mosh" "sh" "bash")
 
 # typewritten options
 # TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 
 # Marker key for get options, no more C-@ (ctrl-space)
-MARKER_KEY_GET=
-MARKER_KEY_NEXT_PLACEHOLDER=
+export MARKER_KEY_GET=
+export MARKER_KEY_NEXT_PLACEHOLDER=
 
 # Marker+fzf configuration
-FZF_MARKER_MAIN_KEY=
-FZF_MARKER_PLACEHOLDER_KEY=
+export FZF_MARKER_MAIN_KEY=
+export FZF_MARKER_PLACEHOLDER_KEY=
 
+# MOSH escape key
+export MOSH_ESCAPE_KEY=
 
 # FZF options
 export FZF_DEFAULT_OPTS="
@@ -75,6 +79,9 @@ export FZF_ALT_C_COMMAND="fd \
 --color=always \
 --exclude 'node_modules'"
 
+# Emoji-cli for Emojify
+EMOJI_CLI_KEYBIND=
+
 # LS_COLORS from vivid
 export LS_COLORS=$(vivid generate solarized-dark)
 
@@ -94,8 +101,10 @@ export ZPLUG_HOME=$HOME/.zsh/plugin/zplug
 
 export LOC_APPS=$HOME/Apps
 export PATH="$LOC_APPS/bin:$PATH"
+export PATH="/var/lib/snapd/snap/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/usr/local/bin:$PATH"
 export PATH="$(du $HOME/.config/scripts/ | grep -iv 'project' | cut -f2 | tr '\n' ':')$PATH"
 
 export GOPATH=$HOME/Apps/pkg/go
@@ -104,12 +113,14 @@ export PATH="$GOPATH/bin:$PATH"
 export CARGO_HOME=$HOME/Apps/pkg/rust
 export PATH="$CARGO_HOME/bin:$PATH"
 
-export GEM_HOME=$HOME/Apps/pkg/ruby/
-export GEM_PATH=$GEM_HOME
-export PATH="$GEM_PATH/bin:$PATH"
+export CABALDIR=$HOME/Apps/pkg/cabal
+
+# export GEM_HOME=$HOME/Apps/pkg/ruby/
+# export GEM_PATH=$GEM_HOME/bin
+# export PATH="$GEM_PATH:$PATH"
 
 export NODE_PATH=$HOME/Apps/pkg/nodejs
 export PATH="$NODE_PATH/bin:$PATH"
 
-export JAVA_HOME="/usr/lib/jvm/java-13-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"

@@ -54,12 +54,13 @@ mkdir -p "include"
 mkdir -p "test/in"
 mkdir -p "test/out"
 mkdir -p "build/obj"
+mkdir -p "build/objrel"
 mkdir -p "build/objdbg"
 
 DATE=$(date "+%m-%d-%Y")
 
 sed -i "3,3s/00-00-0000/$DATE/" README.md
-sed -i "18,18s/00-00-0000/$DATE/" README.md
+sed -i "18,19s/00-00-0000/$DATE/" README.md
 sed -i "3,3s/00-00-0000/$DATE/" src/main.c
 
 sed -i "1,1s%NAME%$PROJECT_NAME%" README.md

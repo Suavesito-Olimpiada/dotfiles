@@ -10,9 +10,6 @@
 
 
 " fix runtime for some plugins
-" and make pathogen work
-
-execute pathogen#infect()
 
 runtime! macros/matchit.vim
 
@@ -58,13 +55,15 @@ if maparg('<Leader>l', 'n') ==# '' " Use <C-L> to clear the highlighting of :set
 endif
 
 set tags=./.git/tags;
-set path+=**,include
+set path=.,**,,
 
 set confirm
 set showcmd
 
 set backspace=2
 set showmatch
+" Might be dragons :v
+" set virtualedit=onemore
 
 set shiftround
 set smarttab
@@ -87,7 +86,7 @@ set wildmode=full
 set wildignore+=tags,.*.un~,*.pyc,*.o
 
 set background=dark
-"colorscheme gruvbox
+colorscheme gruvbox
 
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
@@ -123,8 +122,10 @@ set linebreak
 set scrolloff=3
 " set scrolljump=3
 
-highlight ColorColumn ctermbg=darkgray  ctermfg=red
+highlight ColorColumn ctermbg=darkgray ctermfg=red
 " set colorcolumn=81
+
+highlight SpellBad term=reverse cterm=bold,reverse ctermfg=235 ctermbg=167 gui=bold,reverse guifg=#fb4934 guibg=bg
 
 set splitbelow
 set splitright
@@ -133,6 +134,8 @@ set splitright
 set list
 set listchars=trail:·,tab:➣―
 highlight SpecialKey ctermfg=33
+
+set mouse=a
 
 
 "}}}
@@ -149,14 +152,14 @@ highlight SpecialKey ctermfg=33
 
 " Goyo enter + Limelight
 function! s:goyo_enter()
-    Limelight
+    " Limelight
     set nocursorcolumn
     set nocursorline
 endfunction
 
 " Goyo enter - Limelight
 function! s:goyo_leave()
-  Limelight!
+  " Limelight!
   set cursorcolumn
   set cursorline
   AirlineRefresh
@@ -213,10 +216,20 @@ endfunction
 " New leader in normal mode
 nnoremap <space> <Nop>
 
+" New enter normal mode
+nnoremap <CR> i<CR><ESC>
+
+" New position (`) mark
+" this because <space> is th new leader
+" and "`" in latam keyboard is much
+" harder to type
+nnoremap <Bslash> `
+
 " New scape
 " inoremap kj <ESC>
 " deprecated because ctrl-c
 " make esc, also ctrl-[
+" and know block-amyus too.
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 " noremap j gj
@@ -260,20 +273,14 @@ nnoremap <silent> <Leader>sm :smile<CR>
 " nnoremap <silent> <F5> :set list!<CR>
 " inoremap <silent> <F5> <Esc>:set list!<CR>a
 
+" Explorer with netrw
+nnoremap <silent> <Leader><Tab> :Explore!<CR>
+
 " toggle goyo + limeligh
 nnoremap <silent> <Leader>gl :Goyo<CR>
 
 " toggle mundo
 nnoremap <silent> <Leader>md :MundoToggle<CR>
-
-" LanguageClient-neovim keybinds
-augroup LCT
-    autocmd!
-    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-"    autocmd FileType julia,rust,python,c,cpp,latex,bash  nnoremap <silent> <Leader>rn :call LanguageClient_textDocument_rename()<CR>
-augroup END
 
 " toggle tagbar
 nnoremap <silent> <Leader>tb :TagbarToggle<CR>
@@ -281,12 +288,6 @@ nnoremap <silent> <Leader>tb :TagbarToggle<CR>
 " toggle latex2unicode
 noremap <silent> <F7> :call LaTeXtoUnicode#Toggle()<CR>
 inoremap <silent> <F7> <ESC>:call LaTeXtoUnicode#Toggle()<CR>a
-
-" Format Julia code
-" normal mode mapping
-nnoremap <Leader>jf :<C-u>call JuliaFormatter#Format(0)<CR>
-" visual mode mapping
-vnoremap <Leader>jf :<C-u>call JuliaFormatter#Format(1)<CR>
 
 " Grammarous check
 nnoremap <silent> <Leader>gen :GrammarousCheck --lang=en<CR>
@@ -309,6 +310,11 @@ map T <Plug>Sneak_T
 nnoremap - :call bufferhint#Popup()<CR>
 nnoremap + :call bufferhint#LoadPrevious()<CR>
 
+" LanguageClient maps
+nmap <F5> <Plug>(lcn-menu)
+vmap <F5> <Plug>(lcn-menu)
+nmap <silent> gd <Plug>(lcn-definition)
+
 
 "}}}
 "     _         _         ____ __  __ ____
@@ -321,53 +327,15 @@ nnoremap + :call bufferhint#LoadPrevious()<CR>
 "
 "{{{
 
-" For encrypted files with ccrypt
-augroup CPT
-    au!
-    au BufReadPre *.cpt       set bin
-    au BufReadPre *.cpt       set viminfo=
-    au BufReadPre *.cpt       set noswapfile
-    au BufReadPre *.cpt       set noundofile
-    au BufReadPost *.cpt      let $vimpass = inputsecret("Password: ")
-    au BufReadPost *.cpt      silent '[,']!/usr/bin/ccrypt -cb -E vimpass
-    au BufReadPost *.cpt      set nobin
-    au BufWritePre *.cpt      set bin
-    au BufWritePre *.cpt      '[,']!/usr/bin/ccrypt -e -E vimpass
-    au BufWritePost *.cpt     u
-    au BufWritePost *.cpt     set nobin
-augroup END
-
-" vim -b : edit binary using xxd-format!
-augroup Binary
-    au!
-    au BufReadPre  *.bin let &bin=1
-    au BufReadPost *.bin if &bin | %!xxd
-    au BufReadPost *.bin set ft=xxd | endif
-    au BufWritePre *.bin if &bin | %!xxd -r
-    au BufWritePre *.bin endif
-    au BufWritePost *.bin if &bin | %!xxd
-    au BufWritePost *.bin set nomod | endif
-augroup END
-
-" Comment string for diferent types
-autocmd FileType c,cpp,cs,java      setlocal commentstring=//\ %s
-autocmd FileType git,gitcommit      setlocal foldmethod=syntax foldlevel=1
-
-" COlorcolumn just for coding documents
-autocmd FileType c,cpp,python,julia,vim,sh,java,mail  call matchadd('ColorColumn', '\%81v', 100)
+" Colorcolumn just for coding documents
+autocmd FileType c,cpp,python,julia,vim,sh,java,mail,pandoc,markdown  call matchadd('ColorColumn', '\%82v', 100)
 
 " Keep the position of the open files
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Tabular automatic mode (gist tpope)
-autocmd FileType markdown inoremap <silent> <Bar> <Bar><Esc>:call <SID>align()<CR>a
-
 " goyo+limelight compatibility
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-" NERDTree
-noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 
 " Use of osc52 to pass the yanked text
 " to the CLIPBOARD X selection
@@ -375,13 +343,6 @@ augroup YANK
     autocmd!
     autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
 augroup END
-
-" Organizing CSV files columns
-" aug CSV_Editing
-"         au!
-"         au BufRead,BufWritePost *.csv :%ArrangeColumn
-"         au BufWritePre *.csv :%UnArrangeColumn
-" aug end
 
 " Load skeletons automatically
 " autocmd BufNewFile *.h      0read ~/.vim/sket/skeleton.h
@@ -392,6 +353,17 @@ augroup END
 " SuperCollider vim plugin
 au BufEnter,BufWinEnter,BufNewFile,BufRead *.sc,*.scd set filetype=supercollider
 au Filetype supercollider packadd scvim
+
+augroup Binary
+    au!
+    au BufReadPre  *.bin let &bin=1
+    au BufReadPost *.bin if &bin | %!xxd
+    au BufReadPost *.bin set ft=xxd | endif
+    au BufWritePre *.bin if &bin | %!xxd -r
+    au BufWritePre *.bin endif
+    au BufWritePost *.bin if &bin | %!xxd
+    au BufWritePost *.bin set nomod | endif
+augroup END
 
 
 "}}}
@@ -412,9 +384,6 @@ command! Osc52CopyYank call Osc52Yank()
 
 " Add license
 command! License call InsertLicense('licenseFile')
-
-" Pandoc ALL
-command! -nargs=1 PandocAll :Pandoc <args> --filter ~/.pandoc/dot2tex-filter.py --filter pandoc-crossref --filter pandoc-pyplot --filter filter_pandoc_run_py
 
 
 "}}}
@@ -440,22 +409,6 @@ let g:netrw_preview=1
 let g:netrw_list_hide='\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_list_hide+=&wildignore
 
-" Vim-Markdown
-let g:markdown_fenced_languages = ['html', 'python', 'bash=zsh', 'julia']
-let g:markdown_minlines = 100 " As tpope/vim-markdown recoments
-let g:markdown_syntax_conceal = 1
-
-" Vim-pandoc
-let g:vim_markdown_math = 1
-let g:pandoc#command#custom_open = 'zathura'
-
-" Vim-pandoc-syntax
-let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby",
-\   "julia", "bash=zsh", "python", "pyplot=python" ]
-
-" Vim-pandoc-after (pandoc)
-let g:pandoc#after#modules#enabled = ["ultisnips"]
-
 " Gzip
 let loaded_gzip=1
 
@@ -466,32 +419,40 @@ let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#checks = [ 'trailing', 'mixed-indent-file' ]
 let g:airline#extensions#whitespace#show_message = 1
 let airline#extensions#c_like_langs = ['arduino', 'c', 'cpp', 'cuda', 'go', 'javascript', 'ld', 'php']
+let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|pandoc|markdown|org|rst|tex|text'
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-" call deoplete#custom#option({
-" \   'smart_case': v:true,
-" \   })
-" call deoplete#custom#source('LanguageClient',
-" \   'min_pattern_length',
-" \   2)
-
-" mundo (gundo fork)
-let g:mundo_right = 1
+packadd deoplete.nvim
+call deoplete#custom#option({
+\   'smart_case': v:true,
+\   })
+call deoplete#custom#source('LanguageClient',
+\   'min_pattern_length',
+\   2)
 
 " LanguageClient-neovim
 let g:LanguageClient_autoStart = 1
+let g:LanguageClient_hasSnippetSupport = 1
+let g:LanguageClient_hoverPreview = "Auto"
+let g:LanguageClient_useFloatingHover = 1
+let g:LanguageClient_usePopupHover = 1
+let g:LanguageClient_loadSettings = 1
 let g:LanguageClient_serverCommands = {
 \   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
+\       using Pkg;
+\       Pkg.activate("LanguageServer", shared=true);
+\
 \       using LanguageServer;
 \       using SymbolServer;
 \       using StaticLint;
-\       using Sockets;
-\       using Pkg;
-\       env_path = dirname(Pkg.Types.Context().env.project_file);
 \
-\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, ""));
-\       server.runlinter = true;
+\       Pkg.activate(pwd());
+\
+\       src_path = pwd();
+\       project_path = something(Base.current_project(src_path), Base.load_path_expand(LOAD_PATH[3])) |> dirname;
+\
+\       server = LanguageServerInstance(stdin, stdout, project_path);
 \       run(server);
 \   '],
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
@@ -501,40 +462,59 @@ let g:LanguageClient_serverCommands = {
 \   'latex': ['texlab'],
 \   'tex': ['texlab'],
 \   'bash': ['bash-language-server', 'start'],
-\   'java': ['/home/jose/.config/scripts/jdtls', '-data', getcwd()],
+\   'sh': ['bash-language-server', 'start'],
+\   'java': ['jdtls', '-data', getcwd()],
 \   'scala': ['metals-vim'],
+\   'r': ['R', '--slave', '-e', 'languageserver::run()'],
+\   'glsl': ['glslls', '--stdin'],
+\   'yaml': ['yaml-language-server', '--stdio'],
+\   'yaml.docker-compose': ['yaml-language-server', '--stdio'],
+\   'vim': ['vim-language-server', '--stdio'],
 \   }
 
-set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()
+let settings = json_decode('
+\{
+\    "yaml": {
+\        "format": {
+\            "enable": true,
+\            "singleQuote": false,
+\            "bracketSpacing": true,
+\            "proseWrap": "preserve",
+\            "printfWidth": 80
+\        },
+\        "validate": true,
+\        "hover": true,
+\        "completion": true,
+\        "schemas": {
+\            "Kubernetes": "/*",
+\            "https://json.schemastore.org/github-action.json": "github.yml",
+\            "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "docker-compose.yml"
+\        },
+\        "schemaStore": {
+\            "enable": true,
+\        }
+\    },
+\    "http": {
+\        "proxyStrictSSL": true
+\    },
+\    "trace": {
+\        "server": "verbose",
+\    }
+\}')
+augroup LanguageClient_config
+    autocmd!
+    autocmd User LanguageClientStarted call LanguageClient#Notify(
+        \ 'workspace/didChangeConfiguration', {'settings': settings})
+augroup END
 
-" NERDTree
-let g:NERDTreeShowHidden=0
-let g:NERDTreeIndicatorMapCustom = {
-\   "Modified"  : "✹",
-\   "Staged"    : "✚",
-\   "Untracked" : "✭",
-\   "Renamed"   : "➜",
-\   "Unmerged"  : "═",
-\   "Deleted"   : "✖",
-\   "Dirty"     : "✗",
-\   "Clean"     : "✔︎",
-\   'Ignored'   : '☒',
-\   "Unknown"   : "?"
-\   }
 
-" NerdTree syntax highlight
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-let g:NERDTreeLimitedSyntax = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['jl', 'h', 'diff', 'c', 'cpp']
+" mundo (gundo fork)
+let g:mundo_right = 1
 
 " Vim-devicons
 let g:webicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_statusline = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:WebDevIconsOS = 'Linux'
 
@@ -548,11 +528,6 @@ let g:tagbar_type_julia = {
 \   't:struct', 'f:function', 'm:macro', 'c:const']
 \   } " Add Julia support
 
-" dispatch
-autocmd FileType c let b:dispatch = 'make %'
-autocmd FileType cpp let b:dispatch = 'make %'
-autocmd FileType julia let b:dispatch = 'julia %'
-
 " Vim Slime for repls
 " <C-c><C-c> default keybind
 let g:slime_target = "vimterminal"
@@ -561,8 +536,17 @@ let g:slime_target = "vimterminal"
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_silent_chdir = 0
 let g:rooter_resolve_links = 1
-let g:rooter_targets = '/,*.h,*.hpp,*.cpp,*.c,*.jl,*.py,Makefile,makefile,MAKEFILE'
-let g:rooter_patterns = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
+let g:rooter_targets = '/,*.h,*.hpp,*.cpp,*.c,*.jl,*.py,*.jl,Makefile,makefile,MAKEFILE'
+let g:rooter_patterns = [
+\   'README.rst',
+\   'Readme.rst',
+\   'README',
+\   'Readme',
+\   'README.md',
+\   'Readme.md',
+\   '.git',
+\   '.git/',
+\   ]
 
 " Goyo vim
 let g:goyo_width=120
@@ -576,6 +560,7 @@ let g:limelight_conceal_ctermfg = 240
 let g:gotham_airline_emphasised_insert = 0
 
 " Grammarous
+let g:grammarous#use_vim_spelllang = 1
 let g:grammarous#default_comments_only_filetypes = {
 \   '*' : 1,
 \   'markdown' : 0,
@@ -584,9 +569,6 @@ let g:grammarous#default_comments_only_filetypes = {
 \   }
 let g:grammarous#languagetool_cmd = 'languagetool'
 let g:grammarous#show_first_error = 1
-
-" Vim-multiple-cursors
-let g:multi_cursor_use_default_mapping=0
 
 " Licenses vim
 let g:licenses_copyright_holders_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
@@ -600,41 +582,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=["/home/jose/.vim/snips"]
 let g:UltiSnipsSnippetDir=["/home/jose/.vim/snips"]
-
-" Vim clang format
-let g:clang_format#code_style = "google"
-let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
-            \ "AlwaysBreakTemplateDeclarations" : "true",
-            \ "Standard" : "C++11",
-            \ "BreakBeforeBraces" : "Stroustrup"}
+let g:snips_author = "José Joaquín Zubieta Rico"
 
 " Vim sneak
 let g:sneak#label = 1
-
-" Vim polyglot
-let g:polyglot_disabled = ['markdown', 'tex', 'latex']
-
-" CSV.vim (available thanks to polyglot)
-let g:csv_highlight_column = 'y'
-let g:csv_delim=','
-let g:csv_strict_columns = 1
-
-" julia-vim (available thanks to polyglot)
-let g:latex_to_unicode_auto = 1
-let g:default_julia_version = "1.1.0"
-highlight link juliaParDelim Delimiter
-highlight juliaComma guifg=Red ctermfg=Red
-" let g:latex_to_unicode_suggestions = 1
-
-" Vim cpp enhanced highlight (available thanks to polyglot)
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-" let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_experimental_template_highlight = 1
 
 " Gutentags
 let g:gutentags_project_root = ['README.rst', 'Readme.rst', 'README', 'Readme', 'README.md', 'Readme.md', '.git', '.git/']
@@ -655,8 +606,49 @@ let g:bufferhint_PageStep = 10
 " vim-niceblock
 let g:niceblock_no_default_key_mappings = 0
 
-" Vim wiki options
-let g:vimwiki_list = [{'path': '~/Documentos/Wikis/txt/', 'path_html': '~/Documentos/Wikis/html'}]
+" julia-vim
+let g:latex_to_unicode_auto = 1
+let g:latex_to_unicode_tab = 0
+let g:latex_to_unicode_file_types = "pandoc"
+
+" vim-wheel by reedes
+" let g:wheel#map#up   = '<C-S-k>'
+" let g:wheel#map#down = '<C-S-j>'
+" let g:wheel#map#mouse = 1
+
+" edit_alternate.vim by tjdevries
+
+packadd standard.vim
+packadd conf.vim
+packadd edit_alternate.vim
+call edit_alternate#rule#add('c', {filename ->
+        \ fnamemodify(filename, ':h:h')
+        \ . '/include/'
+        \ . fnamemodify(filename, ':t:r') . '.h'
+        \ })
+call edit_alternate#rule#add('cpp', {filename ->
+        \ fnamemodify(filename, ':h:h')
+        \ . '/include/'
+        \ . fnamemodify(filename, ':t:r') . '.hpp'
+        \ })
+call edit_alternate#rule#add('h', {filename ->
+        \ fnamemodify(filename, ':h:h')
+        \ . '/src/'
+        \ . fnamemodify(filename, ':t:r') . '.c'
+        \ })
+call edit_alternate#rule#add('hpp', {filename ->
+        \ fnamemodify(filename, ':h:h')
+        \ . '/src/'
+        \ . fnamemodify(filename, ':t:r') . '.cpp'
+        \ })
+nnoremap <leader>ea :EditAlternate<CR>
+
+" presenting.vim
+au FileType pandoc let b:presenting_slide_separator_default = '\v(^|\n)\ze#{1,2}[^#]'
+let g:presenting_figlets = 1
+" let g:presenting_next = 'j'
+" let g:presenting_prev = 'k'
+" let g:presenting_quit = '<esc>'
 
 
 "}}}

@@ -19,6 +19,8 @@ alias volume=volume_control
 
 export VISUAL="/bin/vim"
 
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/usr/local/bin:$PATH"
 export GOPATH=$HOME/Apps/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 

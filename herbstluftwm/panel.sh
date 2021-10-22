@@ -19,10 +19,11 @@ y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=15
 #font="-*-fixed-medium-*-*-*-13-*-*-*-*-*-*-*"
-font="Hack Nerd Font Mono,Noto Sans Mono CJK KR,Noto Sans Mono CJK HK,Noto Sans Mono CJK JP,Noto Sans Mono CJK SC,Noto Sans Mono CJK TC:style=Regular:size=8"
+font="Noto Sans Mono CJK KR,Noto Sans Mono CJK HK,Noto Sans Mono CJK JP,Noto Sans Mono CJK SC,Noto Sans Mono CJK TC:style=Medium:size=8"
 bgcolor=$(hc get frame_border_normal_color)
 selbg=$(hc get window_border_active_color)
-selfg='#2E9AFE'
+# selfg='#2E9AFE'
+selfg='#EEEEEE'
 
 ####
 # Try to find textwidth binary.

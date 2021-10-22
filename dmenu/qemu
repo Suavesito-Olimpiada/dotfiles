@@ -1,2 +1,10 @@
 #!/usr/bin/env bash
-cat ~/.config/dmenu/qemulist | dmenu -h 15 -i -l 8  | ${SHELL:-"/bin/sh"} &> /dev/null &!
+
+DMENU="$HOME/.config/scripts/lib/dmenu.sh"
+LINE="$(cat ~/.config/dmenu/qemulist | $DMENU -i -l 8 -p "VM: ")"
+
+CMD="$(printf "%s" "$LINE" | sed -E 's/(.+)?#.*/\1/')"
+
+eval exec $CMD &> /dev/null &!
+
+exit 0

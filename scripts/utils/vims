@@ -1,0 +1,3 @@
+#/usr/bin/env bash
+
+vim -n --noplugin -c 'set noundofile' -c 'set noswapfile' -c 'set nobackup' -c 'set nowritebackup' -Z "$@"

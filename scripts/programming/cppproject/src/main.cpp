@@ -1,5 +1,5 @@
 /*  NAME
- *  autor       : Jose Joaquin Zubieta Rico
+ *  autor       : José Joaquín Zubieta Rico
  *  date        : 00-00-0000
  *  subject     : Is it for some subject?
  *  description : Description of the project.
@@ -9,8 +9,7 @@
 #include <algorithm>
 #include <iostream>
 
-int main ( int argc , char * const argv [] )
+int main(int argc, char *const argv[])
 {
-
     return 0;
 }

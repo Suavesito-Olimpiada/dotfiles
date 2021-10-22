@@ -51,6 +51,8 @@
       path: mpd/mpd.conf
     ~/.config/ncmpc: ncmpc
     ~/.config/ranger: ranger
+    ~/.config/pulse/daemon.conf:
+      path: pulse/daemon.conf:
     ~/.config/scripts: scripts
     ~/.config/zathura: zathura
     ~/.config/nvim: nvim

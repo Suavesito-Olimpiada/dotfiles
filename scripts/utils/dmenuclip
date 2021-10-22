@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMANDO=$(dmenu -p COPIAR: -i -l 11 -nb "white" -nf "black" -sb "black" -sf "white" < $HOME/.config/scripts/utils/clipboard)
+COMANDO=$(dmenu -p "COPIAR: " -i -l 11 < $HOME/.config/scripts/utils/clipboard)
 if [ "$COMANDO" == "limpiar" ]; then
     echo "limpiar" > $HOME/.config/scripts/utils/clipboard
 else

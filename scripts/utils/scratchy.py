@@ -10,7 +10,7 @@ class Text:
                               title="Text",
                               resizable=True)
 
-        self.win.set_size_request(640, 480)
+        self.win.set_size_request(320, 240)
 
         self.win.set_position(1)
         self.win.connect("destroy", self.destroy)

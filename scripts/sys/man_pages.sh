@@ -4,8 +4,10 @@
 # Here
 #
 
-search=$(man -k . | dmenu -i -l 11 -p "Man Page: " | awk '{print $2 " " $1}' | sed 's/(\(.*\))\(.*\)/\1\2/')
+DMENU="$HOME/.config/scripts/lib/dmenu.sh"
+search=$(man -k . | $DMENU -i -l 11 -p "Man Page: " | awk '{print $2 " " $1}' | sed 's/(\(.*\))\(.*\)/\1\2/')
 if [[ -n $search ]]
 then
-    alacritty -e bash -ci "man $search"
+    echo $search
+    alacritty -e bash -ci "MANPAGER=\"sh -c 'col -bx | bat -l man -p --pager \\\"less -R\\\"'\" man $search"
 fi

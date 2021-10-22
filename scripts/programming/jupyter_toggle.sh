@@ -38,10 +38,10 @@ else
                 echod "Running" $DMENU
                 ;;
             "url")
-                echod "$(jupyter notebook list | sed -n '2,$s/\(.*\)\(::.*\)/\1/p')" $DMENU
+                echod "$(jupyter lab list | sed -n '2,$p' | awk '{printf "%s\n", $1}')" $DMENU
                 ;;
             "dir"|"directory")
-                echod "$(jupyter notebook list | sed -n '2,$s/\(.*\)\(::\)\(.*\)/\3/p')" $DMENU
+                echod "$(jupyter lab list | sed -n '2,$p' | awk '{printf "%s\n", $3}')" $DMENU
                 ;;
             *)
                 echod 'Not command found'

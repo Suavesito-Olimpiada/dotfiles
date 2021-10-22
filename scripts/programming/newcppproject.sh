@@ -67,4 +67,4 @@ sed -i "1,1s%NAME%$PROJECT_NAME%" README.md
 sed -i "6,6s%Description of the project\.%$PROJECT_DESC%" README.md
 
 sed -i "1,1s%NAME%$PROJECT_NAME%" src/main.cpp
-sed -i "5,5s%Description of the project\.%$PROJECT_DESC%" src/main.cpp
+sed -i "6,6s%Description of the project\.%$PROJECT_DESC%" src/main.cpp

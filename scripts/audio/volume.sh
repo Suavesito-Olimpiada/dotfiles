@@ -60,9 +60,16 @@ esac
 
 source $HOME/.config/scripts/lib/notify.sh
 
+HELP="Posible commands are
+    get            - return volume percentage as an integer
+    set <volume>%  - set volume to <volume> percent
+    up             - up volume by 5%
+    down           - down volume by 5%
+    toggle         - toggle between mute an not mute
+"
 
 DELTA="5%"
-SINK=$(pactl info | grep -i sink | sed -E 's/.* (.*)/\1/')
+SINK=$(pactl info | grep -i "default sink" | sed -E 's/.* (.*)/\1/')
 
 case $1 in
     'up')
@@ -88,6 +95,12 @@ case $1 in
     'toggle')
         toggle_volume
         notify "-" "$(get_volume | cut -c 1-3)" "true" "$(get_volume)" "40"
+        ;;
+    'help')
+        printf "%s" "$HELP"
+        ;;
+    *)
+        printf "Not valid command: %s\n" "$1"
         ;;
 esac
 

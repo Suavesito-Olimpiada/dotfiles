@@ -8,13 +8,15 @@
 #   $2: image width
 #   $3: image height
 
-s="  " # field separator
+s=" | " # field separator
 
 exec 2>/dev/null
 
 filename=$(basename -- "$1")
 filesize=$(du -Hh -- "$1" | cut -f 1)
 geometry="${2}x${3}"
+tags=$(exiv2 -q pr -pi "$1" | awk '$1~"Keywords" { printf("%s,", $4); }')
+tags=${tags%,}
 
-echo "${filesize}${s}${geometry}${s}${filename}"
-
+echo "${filesize}${s}${geometry}${tags:+$s}${tags}${s}${filename}"
+#echo "${filesize}${s}${geometry}${s}${filename}"

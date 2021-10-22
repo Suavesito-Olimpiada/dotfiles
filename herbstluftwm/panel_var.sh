@@ -22,11 +22,17 @@ while true; do
     if [[ -z $(pgrep mpv) ]]
     then
         MPD=$(playerctl -l | grep mpd)
-        PLM=$(playerctl -l | grep plasma)
+        MPV=$(playerctl -l | grep mpv)
+        FMI=$(playerctl -l | grep firefox)
+        SPF=$(playerctl -l | grep spotify)
+        NCS=$(playerctl -l | grep ncspot)
         MSC=''
 
         [[ -z $MPD ]] || MSC=$MPD
-        [[ -z $PLM ]] || MSC=$PLM
+        [[ -z $MPV ]] || MSC=$MPV
+        [[ -z $FMI ]] || MSC=$FMI
+        [[ -z $SPF ]] || MSC=$SPF
+        [[ -z $NCS ]] || MSC=$NCS
 
         # if [[ -z $(playerctl -l) ]]
         # then

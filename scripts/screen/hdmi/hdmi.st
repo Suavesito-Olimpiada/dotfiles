@@ -1,1 +1,1 @@
-hdmi
+screen

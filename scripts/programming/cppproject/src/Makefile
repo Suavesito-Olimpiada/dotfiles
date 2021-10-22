@@ -2,9 +2,9 @@ CXX             = g++
 CXXFLAGS        = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra -Wshadow \
 				  -pedantic -std=c++17 -march=native -fsanitize=address \
 				  -fsanitize=undefined
-CXXFLAGSREL     = -I$(INCDIR) -I$(LINDIR) -O2 -Wall -Werror -Wextra -Wshadow \
+CXXFLAGSREL     = -I$(INCDIR) -I$(LINDIR) -O2 -flto -Wall -Werror -Wextra -Wshadow \
 				  -pedantic -std=c++17 -march=native
-CXXFLAGSDBG     = -I$(INCDIR) -I$(LINDIR) -O0 -g3 -Wall -Werror -Wextra -Wshadow \
+CXXFLAGSDBG     = -I$(INCDIR) -I$(LINDIR) -Og -g3 -Wall -Werror -Wextra -Wshadow \
 				  -pedantic -std=c++17 -march=native -fsanitize=address \
 				  -fsanitize=undefined
 
@@ -20,13 +20,14 @@ LIBDIR          = ../lib
 LINDIR          = ../lib/include
 TSTDIR          = ../test
 
-_LIBINCLUDES    = argh.h
-LIBINCLUDES     = $(patsubst %,$(INCDIR)/%,$(_INCLUDES))
+_LINCLUDES      = $(wildcard $(LINDIR)/*.hpp)
+LIBINCLUDES     = $(patsubst %,$(LINDIR)/%,$(_LINCLUDES))
 
-_INCLUDES       =
+_INCLUDES       = $(wildcard $(INCDIR)/*.hpp)
 INCLUDES        = $(patsubst %,$(INCDIR)/%,$(_INCLUDES))
 
-_OBJECTS        = main.o
+_SRC            = $(wildcard *.cpp)
+_OBJECTS        = $(_SRC:.cpp=.o)
 OBJECTS         = $(patsubst %,$(OBJDIR)/%,$(_OBJECTS))
 OBJECTSREL      = $(patsubst %,$(OBJDIRREL)/%,$(_OBJECTS))
 OBJECTSDBG      = $(patsubst %,$(OBJDIRDBG)/%,$(_OBJECTS))
@@ -45,7 +46,7 @@ $(OBJDIRREL)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 	$(CXX) -c -o $@ $< $(CXXFLAGSREL) $(LIBFLAGS)
 
 $(TARGETREL): $(OBJECTSREL)
-	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGSREL) $(LIBFLAGS)
+	$(CXX) -o $(BLDDIR)/$@ $^ $(CXXFLAGSREL) -fwhole-program $(LIBFLAGS)
 
 $(OBJDIRDBG)/%.o: %.cpp $(INCLUDES) $(LIBINCLUDES)
 	$(CXX) -c -o $@ $< $(CXXFLAGSDBG) $(LIBFLAGS)
@@ -95,9 +96,13 @@ release: ./$(TARGETREL)
 test: ./$(TARGET)
 	sh $(TSTDIR)/test.sh &>> $(TSTDIR)/program.log
 
-PWDL            = $$(pwd | sed -En 's:.*/(.+):1:p')
+ifndef DIST
+DIST            = project
+endif
+PARENT          = $(shell dirname ${CURDIR} | sed -En 's:.+/(.+):\1:p')
 .PHONY: dist
-dist: clean-all
+dist: clean clean-release clean-debug clean-dist
+	rm -rf .clangd .gdb_history
 	rm -f ../G* ../tags
 	cd ../..; \
-	zip -r "$(PWDL)"/assets/project.zip "$(PWDL)"
+	zip -r "$(PARENT)"/assets/$(DIST).zip $(PARENT)

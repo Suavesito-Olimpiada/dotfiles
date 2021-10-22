@@ -51,7 +51,7 @@ function lock() {
 
 if [[ -n $1 ]]
 then
-    for (( i=$2 ; i>0 ; --i )); do echo "Tu pantalla se apagará en $i"; sleep 1; done | dzen2 -x 660 -y 510 -w 600 -h 60 -fn "xos4 Terminus:size=30" -e 'button1=exec:killall lock_screen.sh'
+    for (( i=$2 ; i>0 ; --i )); do echo "Tu pantalla se apagará en $i"; sleep 1; done | dzen2 -x 660 -y 510 -w 600 -h 60 -fn "xos4 Terminus:size=30" -e 'button1=exec:killall lock.sh'
 fi
 
 lock

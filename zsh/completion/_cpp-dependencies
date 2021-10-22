@@ -1,0 +1,25 @@
+#compdef cpp-dependencies
+
+# zsh completions for 'cpp-dependencies'
+# automatically generated with http://github.com/RobSis/zsh-completion-generator
+local arguments
+
+arguments=(
+  '--help[: Produce this help text]'
+  '--graph[: Graph of all components with dependencies]'
+  '--graph-cycles[: Graph of components with cyclic dependencies on other components]'
+  '--graph-target[<output> : Graph for all dependencies of a specific target]'
+  '--stats[: Info about code base size, complexity and cyclic dependency count]'
+  '--cycles[: Find all possible paths from this target back to itself]'
+  '--shortest[: Determine shortest path between components and its reason]'
+  '--outliers[: Finds all components and files that match a criterium for being out of the ordinary]'
+  '--info[: Show all information on a given specific target]'
+  '--usedby[: Find all references to a specific header file]'
+  '--inout[: Find all incoming and outgoing links for a target]'
+  '--ambiguous[: Find all include statements that could refer to more than one header]'
+  '--regen[: Re-generate all marked CMakeLists.txt with the component information derived.]'
+  '--dryregen[: Verify which CMakeLists would be regenerated if you were to run --regen now.]'
+  '*:filename:_files'
+)
+
+_arguments -s $arguments

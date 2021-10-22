@@ -1,4 +1,6 @@
 # QEMU_AUDIO_DRV=alsa qemu-system-x86_64 -m 1024 -accel kvm -vga std -daemonize -soundhw ac97 /home/jose/VM/qemu/WXP_disk.qcow2
 # qemu-system-x86_64 -cdrom /home/jose/VM/osimg/ttylinux-pc_x86_64-2015.02.iso -m 512 -accel kvm -vga std
+ qemu-system-x86_64 -m 2048 -accel kvm -smp 2 -vga std -daemonize -hda $HOME/VM/qemu/parrot/parrot.img
+ qemu-system-x86_64 -m 2048 -accel kvm -vga std -soundhw ac97 -smp 2 -daemonize -hda $HOME/VM/qemu/android/android.img
 
 #; vim:ft=sh

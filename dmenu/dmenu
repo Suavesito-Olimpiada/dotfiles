@@ -3,7 +3,8 @@ TERMINAL=("alacritty" "st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10:ant
 TERM_EXEC=("--command" "-e")
 TERM_TITLE=("--title" "-t")
 
-LINE="$(cat ~/.config/dmenu/commandlist | dmenu -h 15 -i -l 8)"
+DMENU="$HOME/.config/scripts/lib/dmenu.sh"
+LINE="$(cat ~/.config/dmenu/commandlist | $DMENU -i -l 8 -p "App: ")"
 HAS_TERM=$(printf "%s" "$LINE" | grep TERMINAL)
 HAS_TERMTITLE=$(printf "%s" "$LINE" | grep TITLE)
 HAS_HOME=$(printf "%s" "$LINE" | grep HOME)
@@ -28,7 +29,7 @@ if [[ -n $HAS_HOME ]]; then
     CMD=$(printf "%s" "$CMD" | sed -En "s|HOME|$HOME|gp")
 fi
 
-echo $CMD
+printf "%s\n" "$CMD"
 
 exec $CMD &> /dev/null &!
 

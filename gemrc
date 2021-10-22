@@ -1,0 +1,6 @@
+:verbose: true
+gem: --no-user-install
+install: --no-user-install
+update: --no-user-install
+
+#; vim:ft=yaml

@@ -23,7 +23,7 @@ esac
 notify-send -u critical "$MSG"
 
 VOL=$(amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/')
-TEMP=$(pactl info | grep -i sink | sed -E 's/.*: (.*)/\1/')
+TEMP=$(pactl info | grep -i "default sink" | sed -E 's/.*: (.*)/\1/')
 
 pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
 pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 100%

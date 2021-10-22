@@ -6,6 +6,7 @@ set show-recent 5
 
 set page-padding 10
 set scroll-wrap true
+set scroll-hstep 20
 
 set incremental-search true
 set window-title-home-tilde true

@@ -2,12 +2,12 @@
 
 #### Compile
 
-To be able to compile in linux you need to get into **src** directory in your terminal.
+To be able to compile in GNU/Linux you need to get into **src** directory in your terminal.
 There you compile with
 
 > make
 
-it will create the *program* executable file.
+it will create the *program* executable file inside the **build** directory.
 
 **Important**: The makefile suppose you are using [gcc](https://gcc.gnu.org) version 9.0 or later.
 
@@ -41,5 +41,5 @@ If you want to compile, and run with the test cases, then you put
 
   > make test
 
-It will run *program* executable with the test cases given in the [test/data](./test/data) folder.
+It will run *program* executable with the test cases given in the [test/in](./test/in) folder.
 They are all ran by the [test.sh](./test/test.sh) script.

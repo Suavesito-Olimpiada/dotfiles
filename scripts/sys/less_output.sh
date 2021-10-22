@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-SEARCH=$(echo|dmenu -p "Less Output Pipe: ")
+DMENU="$HOME/.config/scripts/lib/dmenu.sh"
+SEARCH=$(echo | $DMENU -p "Less Output Pipe: ")
 alacritty -e bash -ci "$SEARCH |& less -dgKsSR"

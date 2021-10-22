@@ -49,8 +49,6 @@ zstyle :compinstall filename '/home/jose/.zshrc' # Completion
 
 setopt COMPLETE_IN_WORD
 
-setopt histignorealldups # If a new command is a duplicate, remove the older one
-
 unalias run-help
 autoload run-help
 alias help="run-help"
@@ -61,13 +59,11 @@ alias help="run-help"
 
 setopt AUTO_LIST # List completion automatically
 
-setopt HIST_IGNORE_ALL_DUPS
-
 setopt pushd_ignore_dups
 
-setopt append_history
-
 setopt autocd
+
+setopt autopushd
 
 setopt nomatch
 
@@ -75,7 +71,7 @@ setopt interactivecomments # Comment interatively
 
 unsetopt LIST_AMBIGUOUS # List ambiguos commands
 
-unsetopt MULTIOS # Bechave as bash with pipes
+# unsetopt MULTIOS # Behave as bash with pipes
 
 # unsetopt CLOBBER
 
@@ -102,9 +98,21 @@ KEYTIMEOUT=1 # Get rid of mode switching time gaps
 PROMPT="%~>"
 RPROMPT="%T"
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+
 
 # All the non-standard configuration is called here.
 

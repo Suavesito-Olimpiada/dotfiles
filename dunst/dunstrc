@@ -100,7 +100,7 @@
     #        <u>underline</u>
     #
     #        For a complete reference see
-    #        <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
+    #        <https://developer.gnome.org/pango/stable/pango-Markup.html>.
     #
     # strip: This setting is provided for compatibility with some broken
     #        clients that send markup even though it's not enabled on the
@@ -133,6 +133,10 @@
     # Possible values are "left", "center" and "right".
     alignment = left
 
+    # Vertical alignment of message text and icon.
+    # Possible values are "top", "center" and "bottom".
+    vertical_alignment = center
+
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
@@ -163,6 +167,11 @@
     # Align icons left/right/off
     icon_position = left
 
+    # Scale small icons up to this size, set to 0 to disable. Helpful
+    # for e.g. small files or high-dpi screens. In case of conflict,
+    # max_icon_size takes precedence over this.
+    min_icon_size = 0
+
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 128
 
@@ -190,16 +199,17 @@
     always_run_script = true
 
     # Define the title of the windows spawned by dunst
-    title = dunst
+    title = Dunst
 
     # Define the class of the windows spawned by dunst
-    class = dunst
+    class = Dunst
 
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
     startup_notification = true
-# Manage dunst's desire for talking
+
+    # Manage dunst's desire for talking
     # Can be one of the following values:
     #  crit: Critical features. Dunst aborts
     #  warn: Only non-fatal warnings
@@ -213,7 +223,13 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 25
+    corner_radius = 20
+
+    # Ignore the dbus closeNotification message.
+    # Useful to enforce the timeout set by dunst configuration. Without this
+    # parameter, an application may close the notification sent before the 
+    # user defined timeout.
+    ignore_dbusclose = false
 
     ### Legacy
 
@@ -229,15 +245,17 @@
 
     ### mouse
 
-    # Defines action of mouse event
+    # Defines list of actions for each mouse event
     # Possible values are:
     # * none: Don't do anything.
     # * do_action: If the notification has exactly one action, or one is marked as default,
     #              invoke it. If there are multiple and no default, open the context menu.
     # * close_current: Close current notification.
     # * close_all: Close all notifications.
+    # These values can be strung together for each mouse event, and
+    # will be executed in sequence.
     mouse_left_click = close_current
-    mouse_middle_click = do_action
+    mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
 # Experimental features that may or may not work correctly. Do not expect them
@@ -267,7 +285,7 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    # history = super+grave
+    history = ctrl+bar
 
     # Context menu.
     context = ctrl+shift+period

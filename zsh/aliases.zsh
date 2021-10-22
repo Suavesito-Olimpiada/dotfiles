@@ -8,10 +8,11 @@
 # Here are my aliases for the runtime
 
 # SYSTEM ALIASES
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias l='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -CF'
-alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -alhF'
-alias la='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -A'
+# alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+# alias l1='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -1'
+# alias l='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -CF'
+# alias ll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -alhF'
+# alias la='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F -A'
 
 alias grep='grep --color=tty -d skip'
 # alias grep='rg'
@@ -26,6 +27,14 @@ alias wipe='wipe -l2 -x2 -p1'
 alias cat='bat' # This is batman
 #alias cat='lolcat' # This is lol
 
+alias ls='lsd --group-dirs=first'
+alias l1='lsd --group-dirs=first -1'
+alias l='lsd --group-dirs=first'
+alias ll='lsd --group-dirs=first -alh'
+alias la='lsd --group-dirs=first -A'
+
+alias ltree='lsd -L --tree'
+
 # alias xargs='xargs -or' # `-r` means run nothing on epty input
                         # `-o` menas open tty again (for programs with input -vim-)
 
@@ -35,9 +44,6 @@ alias info='info --vi-keys'
 
 alias dropcatch='echo 3 | sudo tee /proc/sys/vm/drop_caches'
 alias swapswap='sudo swapoff -a && sudo swapon -a'
-
-alias :q=exit
-alias :Q=exit
 
 
 # X SYSTEM SECTION
@@ -51,7 +57,7 @@ alias hw='startx /bin/herbstluftwm --locked'
 # tha «pacmanup» is just for arch-like 
 # GNU/Linux distributions.
 
-alias pipup="pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U"
+alias pipup="pip3 freeze --user --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install --user -U"
 alias pip2up="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip2 install -U"
 
 alias gemup="gem update"
@@ -145,12 +151,14 @@ alias sst=_ssh_tmux
 
 # alias lg="lazygit" # Lazygit git utility
 alias git="hub" # Use hub intead of git
+alias github="gh"
 alias neofetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
 alias screenfetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
 alias dragon="dragon-drag-and-drop"
 alias fzf-preview="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
-alias vimfast="vim --noplugin"
-alias vimsec="vim --noplugin -n -c 'set noundofile' -Z"
+alias f="fuck"
+alias @benchmark="hyperfine"
+alias myip="curl http://ipecho.net/plain; echo"
 
 # tmux specifics
 
@@ -158,4 +166,4 @@ alias tmux="tmux -2 -u"
 alias tnew="tmux new-session -s"
 alias tlss="tmux list-sessions"
 alias tatt="tmux attach-session -t"
-alias trld="tmux source-file ~/.tmux.conf"
+alias tsrc="tmux source-file ~/.tmux.conf"

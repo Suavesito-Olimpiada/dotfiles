@@ -14,15 +14,12 @@
 # Charge my aliases file
 source $HOME/.zsh/aliases.zsh
 
-# Add keybinds
-source $HOME/.zsh/keybinds.zsh
-
 # Zplug call cascade
 source $HOME/.zplug/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 
 if [[ -n $DISPLAY ]]
@@ -33,7 +30,9 @@ then
 
     zplug "plugins/fd", from:oh-my-zsh
     zplug "plugins/fzf", from:oh-my-zsh
-    zplug "plugins/autojump", from:oh-my-zsh
+    zplug "plugins/thefuck", from:oh-my-zsh
+    zplug "plugins/safe-paste", from:oh-my-zsh
+    # zplug "plugins/autojump", from:oh-my-zsh
 fi
 
 if [[ -n $DISPLAY ]] && [[ $TERM != 'st-256color' ]]
@@ -44,12 +43,15 @@ then
 
     zplug "plugins/autoenv", from:oh-my-zsh
     zplug "plugins/zsh_reload", from:oh-my-zsh, defer:2
-    zplug "plugins/thefuck", from:oh-my-zsh
     zplug "plugins/command-not-found", from:oh-my-zsh
+    zplug "plugins/docker", from:oh-my-zsh
+    zplug "plugins/docker-compose", from:oh-my-zsh
 
     zplug "chitoku-k/fzf-zsh-completions"
 
-    zplug 'wfxr/forgit'
+    # zplug 'wfxr/forgit'
+
+    zplug 'Tarrasch/zsh-bd'
 
     zplug "ryutok/rust-zsh-completions"
 
@@ -83,7 +85,7 @@ then
     # source /usr/share/doc/pkgfile/command-not-found.zsh
 
     # Fuck nicesties
-    # eval $(thefuck --alias)
+    eval $(thefuck --alias) # --enable-experimental-instant-mode)
 fi
 
 if [[ -n $DISPLAY ]]
@@ -98,15 +100,24 @@ then
     # AUTOJUPM nicesties (substituted by oh-my-zsh:autojump)
     # source /usr/share/autojump/autojump.zsh
 
+    # ZOXIDE nicesties
+    eval "$(zoxide init --cmd j --no-aliases zsh)"
+
     # LS_COLORS (for aur:lscolors-git) (substituted by vivid -check in .zshenv-)
     #source /usr/share/LS_COLORS/dircolors.sh
 
+    # asdf-vm for language version control
+    source /opt/asdf-vm/asdf.sh
+
     # Local plugins and scripts
     PLUGHOME=$HOME/.zsh/plugin
-    source $PLUGHOME/autojump.zsh
+    # source $PLUGHOME/autojump.zsh
+    source $PLUGHOME/zoxide.zsh
     source $PLUGHOME/man.zsh
     source $PLUGHOME/marker.zsh
     source $PLUGHOME/ripgrep.zsh
+    source $PLUGHOME/music.zsh
+    source $PLUGHOME/clean.zsh
 fi
 
 

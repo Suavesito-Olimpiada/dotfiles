@@ -4,12 +4,12 @@ extends pandoc
 snippet meta "Pandoc standard metadata" b
 ---
 title:
- -  ${1:title}
+ -  ${1:`v vim_snippets#Filename('$1', 'title')`}
 subtitle: |
  |  ${2:subject}
  |  ${3:subject sub}
 author:
- -  José Joaquín Zubieta Rico
+ -  ${4:`!v g:snips_author`}
 institute:
  -  $^1$Universidad de Guanajuato
 logo:
@@ -18,16 +18,20 @@ theme:
  -  metropolis
 date:
  -  \today
+documentclass: article
+numbersections: true
+toc: false
+lang: es-MX
+monofont:
+ -  Source Code Pro
 abstract:
- -  ${4:abstract}
+ -  ${5:abstract}
 ---
 $0
 endsnippet
 
 snippet metatex "Pandoc metadata for include header." b
 header-includes: |
-    \usepackage{tikz}
-    \usetikzlibrary{shapes,arrows}
     \usepackage{float}
     \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
     \floatplacement{figure}{H}
@@ -38,73 +42,71 @@ snippet todo "TODO Pandoc"
 endsnippet
 
 snippet mtcl "Caligraphy latex math."
-\mathcal{ ${1:C} }
+\mathcal{${1:${VISUAL}}}
 endsnippet
 
 snippet mtbb "Nice latex math."
-\mathbb{ ${1:R} }
+\mathbb{${1:${VISUAL}}}
 endsnippet
 
 snippet mtbf "Bold latex."
-\mathbf{ ${1:I} }
+\mathbf{${1:${VISUAL}}}
 endsnippet
 
 snippet mtfr "Fraction for latex"
-\frac{ ${1:1} }{ ${2:2} }$0
+\frac{${1:1}}{${2:2}}$0
 endsnippet
 
-snippet mts "Sum for latex"
-\sum_{ ${1:i=0} }^{ ${2:N} }{ ${3:x} }
+snippet mtsu "Superior-Inferior command for latex"
+\${1:sum}_{${2:i=0}}^{${3:N}}{${4:x}}
 endsnippet
 
-snippet mtbgeb "Begin-End block latex math"
+snippet mtbeb "Begin-End block latex math"
 \begin{${1:aligned}}
-    $2
+    ${2:${VISUAL}}
 \end{$1}
 endsnippet
 
-snippet mtrli "Right-Left math block inlined"
-\left${1:(} $0 \right${2:)}
+snippet mtlri "Left-Right math block inlined"
+\left${1:(}${3:${VISUAL}}\right${2:)}$0
 endsnippet
 
-snippet mtrl "Right-Left math block"
+snippet mtlr "Left-Right math block"
 \left${1:(}
-    $0
+    ${3:${VISUAL}}
 \right${2:)}
 endsnippet
 
 snippet cmmt "Comment."
 
-[//]: # ($1)
+[//]: # (${1:${VISUAL}})
 
 endsnippet
 
-snippet mtb "Amth block of LaTeX" b
+snippet mtb "Math block of LaTeX" b
 $$
-    $0
+    ${1:${VISUAL}}
 $$
+$0
 endsnippet
 
-snippet cdi "Code block inline."
-\`${1:x**2}\`
-endsnippet
-
-snippet cdir "Code block inline."
+snippet irc "Code block inline run."
 \`${1:x**2}\`.{run}
 endsnippet
 
-snippet mtbgei "Begin-End block latex inlined"
+snippet mtbei "Begin-End block latex inlined"
 \begin{${1:aligned}}$2\end{$1}
 endsnippet
 
 snippet cdb "Code block."
 \`\`\`{${1:.julia}}
-$0
+$2
 \`\`\`
+$0
 endsnippet
 
-snippet cdbplt "Code block for pandoc-pyplot." b
-\`\`\`{.pyplot dpi=300 caption="${1:Image description.}" links=false}
+snippet cdbplt "Code block for pandoc-plot." b
+\`\`\`{.matplotlib dpi=300 caption="${1:Image description.}"}
 import numpy as np
 import matplotlib.pyplot as plt
 

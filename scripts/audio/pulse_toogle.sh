@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function get_default_sink() {
-    pactl info | grep -i sink | sed -E 's/.*: (.*)/\1/'
+    pactl info | grep -i "default sink" | sed -E 's/.*: (.*)/\1/'
 }
 
 function get_sink_list() {

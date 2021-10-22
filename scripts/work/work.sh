@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DMENU="$HOME/.config/scripts/lib/dmenu.sh"
+
 function __gentags()
 {
     for i in "$@"
@@ -11,22 +13,22 @@ function __gentags()
 function __focus()
 {
 
-    PROJECT=$(watson projects | dmenu -l 10 -p "Project: ")
+    PROJECT=$(watson projects | $DMENU -l 10 -p "Project: ")
 
     if [[ -z $PROJECT ]]
     then
         return 42
     fi
 
-    PTAGS=$(watson tags | dmenu -l 10 -p "Tags: ")
+    PTAGS=$(watson tags | $DMENU -i -l 10 -p "Tags: ")
 
     TAGS=$(eval __gentags $PTAGS)
 
     watson start "$PROJECT" $TAGS
 
-    focus -p 10 -d 0 -t 'To work!' -b 'You can do it!'
+    focus -p 15 -d 0 -t 'To work!' -b 'You can do it!'
 
-    potato -s &!
+    potato -w 50 -b 10 -s &!
 
 }
 

@@ -12,22 +12,33 @@ qbittorrent                                                                     
 TERMINAL rtorrent                                                                               # RTORRENT TORRENT DOWNLOAD
 firefox                                                                                         # FIREFOX NAVIGATOR
 chromium                                                                                        # CHROMIUM NAVIGATOR
+qutebrowser                                                                                     # QUTEBROWSER
+vivaldi-stable                                                                                  # VIVALDI
 tabbed -c -r 3 torsocks surf -e - "https://duckduckgo.com"                                      # SURF BROWSER
 tabbed -c -r 2 surf -e -                                                                        # SURF BROWSER
 nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
 
 # communications
-telegram-desktop                                                                                # TELEGRAM APP
+# telegram-desktop                                                                                # TELEGRAM APP
+flatpak run org.telegram.desktop
 discord                                                                                         # DISCORD APP
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
 utox                                                                                            # UTOX MESSAGE APP
 # skypeforlinux                                                                                   # SKYPE FOR LINUX
-cozy-desktop                                                                                    # COZY FOR LINUX
+# cozy-desktop                                                                                    # COZY FOR LINUX
 signal-desktop                                                                                  # SIGNAL DESKTOP CLIENT
-TERMINAL aerc                                                                                   # E-MAIL TERMINAL CLIENT
+TERMINAL aerc                                                                                   # E-MAIL TERMINAL CLIENT (GO-LANG)
+TERMINAL himalaya                                                                               # E-MAIL TERMINAL CLIENT (RUST)
 slack                                                                                           # SLACK APP
+zulip                                                                                           # ZULIP APP
 jitsi-meet-desktop                                                                              # JITSI MEET OS VIDEO CALLS
+zoom                                                                                            # ZOOM MEETING AND VIDEOCONFERING
+bluejeans                                                                                       # BLUEJEANS MEETING AND VIDEOCONFERING
+whatsapp-for-linux                                                                              # NATIVE WRAPPER FOR WHATSAPP
+teams                                                                                           # TEAMS MICROSFT APP
+notion-app                                                                                      # ALL-IN-ONE WORKSPACE FOR NOTES AND TASK
+orion                                                                                           # TWITCH TV CLIENT
 
 # office
 TERMINAL vim                                                                                    # VIM
@@ -38,8 +49,13 @@ libreoffice --impress                                                           
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
 evince                                                                                          # EVINCE PDF READER
+pdfsam                                                                                          # PDF EDITING TOOL
+pdf-xchange                                                                                     # PDF EDITING TOOL
 # FoxitReader                                                                                     # PDF READER FOR EDITING
 scribus                                                                                         # SCRIBUS
+TERMINAL trans -t es -s en -I                                                                   # TRASNLATE FROM ENGLISH TO SPANISH
+TERMINAL trans -t en -s es -I                                                                   # TRASNLATE FROM SPANISH TO ENGLISH
+xournalpp                                                                                       # NOTE TAKING APP
 
 # math
 HOME/.config/scripts/utils/calculadora_genius.sh                                                # GENIUS CALCULATOR
@@ -47,7 +63,7 @@ HOME/.config/scripts/utils/calculadora_R                                        
 TERMINAL genius --maxdigits=0 --precision=2048 --fullexp                                        # CALCULATOR TERMINAL
 TERMINAL sage                                                                                   # SAGE MATH PACK
 TERMINAL gnuplot                                                                                # GNUPLOT PLOT TOOL
-DMENU=1 .config/scripts/programming/jupyter_toggle.sh
+geogebra                                                                                        # GRAPHICS MATH SOFTWARE
 
 # games
 doomrl                                                                                          # DOOM GAME
@@ -56,58 +72,86 @@ HOME/.config/scripts/games/ltanks.sh                                            
 TERMINAL HOME/.config/scripts/games/tetris.sh                                                   # TETRIS GAME
 steam                                                                                           # STEAM ENGINE
 cgoban3                                                                                         # GO KGS
+gopanda                                                                                         # GO IGS FOR PANDANET
 lizzie                                                                                          # LIZZIE FOR GO REVISION
 # dwarffortress                                                                                   # DWARFFORTRESS
 0ad                                                                                             # 0AD
+retroarch                                                                                       # PLAY RETRO GAMES
+PCSX2                                                                                           # PLAY STATION 2 EMULATOR
+godot                                                                                           # GAME ENGINE CREATIION
+minetest                                                                                        # MINECRAFT LIKE
+srb2kart                                                                                        # KART GAME
+lutris                                                                                          # LUTRIS GAMING PLATFORM
+airshipper                                                                                      # VELORENT LAUNCHER
+tlauncher                                                                                       # MINECRAFT LAUNCHER
 
 # media usages
+TERMINAL TITLE=Music ncspot                                                                     # SPOTIFY BASED ON NCMPC
 TERMINAL TITLE=Music ncmpc -f HOME/.config/ncmpc/ncmpc.conf                                     # NCMPC
 TERMINAL TITLE=Music ncmpcpp                                                                    # NCMPCPP
 TERMINAL TITLE=Music fmui                                                                       # FMUI = FZF + MPD + UI!
+spotify                                                                                         # SPOTIFY MUSIC
 picard                                                                                          # MUSICBRAINZ TAGGER
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
-TERMINAL TITLE=Youtube straw-viewer                                                             # YOUTUBE FROM TERMINAL
-TERMINAL TITLE=Youtube straw-viewer --results=10 -n
+TERMINAL TITLE=Youtube pipe-viewer                                                              # YOUTUBE FROM TERMINAL
+gtk-pipe-viewer                                                                                # YOUTUBE FROM GTK APP
+TERMINAL TITLE=Youtube pipe-viewer --results=10 -n
 cheese                                                                                          # WEBCAM
-musikwave                                                                                       # MUSIC P2P APP
 
 # media editing/creation/conssumption
 gimp                                                                                            # GIMP
 inkscape                                                                                        # INKSCAPE
 darktable                                                                                       # PHOTO  EDITOR AND ORGANIZER
 krita                                                                                           # DRAWING PROGRAM
+pinta                                                                                           # LIKE PAINT
 ## 3d creation/editing
 blender                                                                                         # 3D RENDERING EDITOR
 ## video editing
 pitivi                                                                                          # VIDEO EDITING PROGRAM
 # flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
 kdenlive                                                                                        # VIDEO EDITING PROGRAM
+openshot-qt                                                                                     # OPENSHOT
+shotcut                                                                                         # SHOTCUT
 # synfigstudio                                                                                    # ANIMATE FIGURES...
 ## audio
+obs                                                                                             # RECORD SCREEN STUDIO
 scide                                                                                           # SUPERCOLLIDER EDITOR
 TERMINAL sclang                                                                                 # SUPERCOLLIDER SERVER
-ardour5                                                                                         # AUDIO EDITING PROGRAM
+ardour6                                                                                         # AUDIO EDITING PROGRAM
 shotwell                                                                                        # IMAGE ORGANIZER
 audacity                                                                                        # AUDIO EDITING
 
-# programming
+# developing
 TERMINAL python3                                                                                # PYTHON 3 PROGRAMMING
-TERMINAL bpython                                                                                # PYTHON 3 PROGRAMMING
+TERMINAL ptpython                                                                               # PYTHON 3 PROGRAMMING
 TERMINAL julia                                                                                  # JULIA INTERPRETER
 TERMINAL root                                                                                   # ROOT CERN INTERPRETER
 TERMINAL cling                                                                                  # CLING C++ CERN INTERPRETER
 TERMINAL R                                                                                      # R INTERPRETER
-qtcreator                                                                                       # QTCREATOR
+TERMINAL matlab                                                                                 # MATLAB IDE
+.config/scripts/programming/jupyter_toggle.sh dmenu
+# editors
+code                                                                                            # CODE OSS (VSCODE OSS)
+# atom                                                                                            # ATOM EDITOR
+# ides
 glade                                                                                           # GTK GLADE APP CREATOR
 lepton                                                                                          # GIST LIKE SNIPPETS APP
+qtcreator                                                                                       # QTCREATOR
+Unity                                                                                           # UNITY-EDITOR
+UnityHub.AppImage                                                                               # UNITY-HUB
+# debugging
+ghidra                                                                                          # ANALYZER FOR EXECUTABLES
+postman                                                                                         # RESTFUL API TEST FRAMEWORK
 
 # system
 TERMINAL vim HOME/.config/herbstluftwm/autostart                                                # AUTOSTART HERBSTLUFT
+TERMINAL pulsemixer                                                                             # PULSEMIXER SOUND
 TERMINAL alsamixer                                                                              # ALSAMIXER SOUND
 TERMINAL htop                                                                                   # HTOP PROCESS
 TERMINAL sudo htop                                                                              # SUDO HTOP PROCESS
 TERMINAL vim HOME/.config/dmenu/commandlist                                                     # VIM COMMANDLIST EDIT
 # herbstclient quit                                                                             # HERBSTLUFT QUIT
+systemctl suspend                                                                               # SUSPEND THE SYSTEM
 xkill                                                                                           # XKILL
 gksu gufw                                                                                       # FIREWALL CONFIG APP
 hardinfo                                                                                        # HARD HARDWARE INFO
@@ -115,6 +159,9 @@ gksu sysprof                                                                    
 tlpui                                                                                           # TLP GUI
 pacgraph-tk                                                                                     # VIEW GRAPH OF DEPENDENCIES
 gksu gparted                                                                                    # GPARTED
+bleachbit                                                                                       # CCLEANER FOR LINUX
+rpi-imager                                                                                      # RASPBERRY PI IMAGER
+gksu woeusbgui                                                                                  # FLASH WIN2USB
 
 # utilities
 HOME/.config/scripts/utils/scratchy.py                                                          # REMEMBER THINGS
@@ -122,21 +169,20 @@ HOME/.config/scripts/time/alarm.sh (s|m|h) time msg
 TERMINAL ranger                                                                                 # RANGER FILE NAVIGATOR
 # komorebi                                                                                        # DYNAMIC WALLPAPERS
 # komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
-TERMINAL calcurse                                                                               # CALCURSE
+# TERMINAL calcurse                                                                               # CALCURSE
 filezilla                                                                                       # FTP FREE GUI
 # joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
-pulseaudio-equalizer-gtk                                                                        # AUDIO EQUALIZER
+easyeffects                                                                                     # AUDIO POST-PORCESING (REALTIME)
 TERMINAL bluetoothctl                                                                           # INTERNET CONNECTION
 
 # remote access
-remmina                                                                                         # CONTROL REMOTE DESKTOP
+# remmina                                                                                         # CONTROL REMOTE DESKTOP
+vinagre                                                                                         # VNC CONNECT CLIENT
+anydesk                                                                                         # ANYDESK REMOTE DESKTOP ACCESS
 
 # virtual machines
 VirtualBox                                                                                      # VIRTUALBOX
 HOME/.config/dmenu/qemu                                                                         # QEMU VM
 qtemu                                                                                           # QEMU GRAPHICAL INTERFACE
 q4wine                                                                                          # WINE QT5 GUI
-
-# pack managers
-HOME/.config/dmenu/flatpak                                                                      # PROGRAMS INSTALLED WITH FLATPAK
-HOME/.config/dmenu/snap                                                                         # PROGRAMS INSTALLED WITH SNAP
+playonlinux                                                                                     # PLAY WINDOWS ON LINUX

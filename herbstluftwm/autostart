@@ -18,20 +18,21 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-e quit
+hc keybind $Mod-Alt-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return       spawn alacritty
 hc keybind $Mod-Shift-Return spawn alacritty -e tmux
-hc keybind $Mod-m            spawn ~/.config/scripts/sys/man_pages.sh
-hc keybind $Mod-Shift-m      spawn ~/.config/scripts/sys/manv_pages.sh
-hc keybind $Mod-n            spawn ~/.config/scripts/sys/less_output.sh
+hc keybind $Mod-m            spawn $HOME/.config/scripts/sys/man_pages.sh
+hc keybind $Mod-Shift-m      spawn $HOME/.config/scripts/sys/manv_pages.sh
+hc keybind $Mod-n            spawn $HOME/.config/scripts/sys/less_output.sh
 hc keybind $Mod-d            spawn $HOME/.config/dmenu/dmenu
-hc keybind $Mod-Shift-d      spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10:antialias=true:autohint=true' -g 80x24+720+400 -i
+hc keybind $Mod-Shift-d      spawn $HOME/.config/scripts/utils/st.sh
 hc keybind $Mod-t            spawn $HOME/.config/dmenu/tmux
 hc keybind $Mod-Shift-b      spawn sxiv -t ~/Imágenes/Wallpapers
-hc keybind $Mod-Control-r    spawn ~/.config/scripts/audio/music.sh toggle-random
+hc keybind $Mod-Control-r    spawn $HOME/.config/scripts/audio/music.sh toggle-random
 hc keybind $Mod-w            spawn $HOME/.config/scripts/work/work.sh
+hc keybind $Mod-Shift-w      spawn $HOME/.config/scripts/utils/wallpapers.sh
 hc keybind $Mod-Control-w    spawn $HOME/.config/scripts/sys/wifi_check.sh
 hc keybind $Mod-Control-b    spawn $HOME/.config/scripts/sys/bluetooth_check.sh
 hc keybind $Mod-Shift-t      spawn alacritty -e ranger
@@ -41,15 +42,21 @@ hc keybind $Mod-Shift-p      spawn $HOME/.config/scripts/screen/hdmi/hdmi.sh
 hc keybind $Mod-Shift-a      spawn $HOME/.config/scripts/audio/pulse_toogle.sh
 hc keybind $Mod-Shift-s      spawn $HOME/.config/scripts/screen/lock.sh
 hc keybind $Mod-Shift-u      spawn $HOME/.config/scripts/utils/ibrowser.sh
-hc keybind $Mod-e            spawn $HOME/.config/scripts/utils/scratchy.py
+hc keybind $Mod-e            spawn $HOME/.config/scripts/utils/trans.sh
+hc keybind $Mod-Shift-e      spawn $HOME/.config/scripts/utils/scratchy.py
 hc keybind $Mod-y            spawn $HOME/.config/scripts/audio/music_mpc.sh dmenu
 hc keybind $Mod-Shift-y      spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
 hc keybind $Mod-g            spawn $HOME/.config/scripts/utils/calculadora_genius.sh
-hc keybind $Mod-Mod1-j       spawn alacritty -e julia
-hc keybind $Mod-Mod1-h       spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
-hc keybind $Mod-Mod1-Shift-h spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
+hc keybind $Mod-Alt-j        spawn alacritty -e julia -q --startup-file=no -e 'using OhMyREPL; using REPL; REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"; ENV["PAGER"] = "julia_pager.sh"' -i
+hc keybind $Mod-Alt-h        spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
+hc keybind $Mod-Alt-Shift-h  spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
 hc keybind $Mod-v            spawn alacritty -e vim
 hc keybind $Mod-Shift-o      spawn picom-trans -c 100%
+hc keybind $Mod-Control-o    spawn picom-trans -d -c
+hc keybind $Mod-Alt-o        spawn picom-trans -c 10%
+hc keybind $Mod-Shift-plus   spawn picom-trans -c +10%
+hc keybind $Mod-Shift-minus  spawn picom-trans -c -10%
+hc keybind $Mod-Control-s    spawn sxiv $HOME/Imágenes/Screenshots
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -161,7 +168,10 @@ hc keybind XF86AudioPrev            spawn $MUSIC prev
 hc keybind XF86AudioPlay            spawn $MUSIC toggle
 
 # Print Screen
-hc keybind Print                    spawn scrot '%Y-%m-%d-%T_$wx$h.png' -q 100 -z -e 'mv $f ~/Imágenes/Screenshots/'
+PRINT="$CONFIG/utils/maim.sh"
+hc keybind Print                    spawn $PRINT
+hc keybind Shift-Print              spawn $PRINT -s
+hc keybind Control-Print            spawn "$HOME/.config/scripts/utils/screencpy.sh"
 
 # theme
 hc attr theme.tiling.reset 1
@@ -215,12 +225,12 @@ hc unlock
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
 # or simply:
-# hc detect_monitors
+hc detect_monitors
 
 hc set wmname herbstluftwm
 
 # find the panel
-panel=~/.config/herbstluftwm/panel.sh
+panel=$HOME/.config/herbstluftwm/panel.sh
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(hc list_monitors | cut -d: -f1) ; do
     # start it on each monitor

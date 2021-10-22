@@ -109,6 +109,15 @@ handle_extension() {
             python -m json.tool -- "${FILE_PATH}" && exit 5
             ;;
 
+        ## CSV
+        csv|data)
+            head -100 "${FILE_PATH}" | \
+              xsv table - | \
+              env COLORTERM=256bit bat -l csv --color=always \
+                --style="plain" - \
+                && exit 5
+            exit 1;;
+
         ## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
         ## by file(1).
         dff|dsf|wv|wvc)
@@ -279,7 +288,8 @@ handle_mime() {
         ## uncommented other methods to preview those formats
         *wordprocessingml.document|*/epub+zip|*/x-fictionbook+xml)
             ## Preview as markdown conversion
-            pandoc -s -t markdown -- "${FILE_PATH}" && exit 5
+            pandoc -s -t markdown -- "${FILE_PATH}" | \
+                env COLORTERM=256bit bat --color=always --style="plain" -l markdown - && exit 5
             exit 1;;
 
         ## XLS
@@ -307,6 +317,7 @@ handle_mime() {
                 -- "${FILE_PATH}" && exit 5
             env HIGHLIGHT_OPTIONS="${HIGHLIGHT_OPTIONS}" highlight \
                 --out-format="${highlight_format}" \
+                --base16=monokai \
                 --force -- "${FILE_PATH}" && exit 5
             pygmentize -f "${pygmentize_format}" -O "style=${PYGMENTIZE_STYLE}"\
                 -- "${FILE_PATH}" && exit 5

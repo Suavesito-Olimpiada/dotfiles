@@ -57,12 +57,19 @@ source $HOME/.config/scripts/lib/notify.sh
 
 MPD=$(playerctl -l | grep mpd)
 MPV=$(playerctl -l | grep mpv)
-PLM=$(playerctl -l | grep plasma)
+FMI=$(playerctl -l | grep firefox)
+SPF=$(playerctl -l | grep spotify)
+NCS=$(playerctl -l | grep ncspot)
 MSC=''
 
 [[ -z $MPD ]] || MSC=$MPD   # Works thank to mpd-mpris
-[[ -z $PLM ]] || MSC=$PLM   # Works thank to plasma-browser-integrations
+[[ -z $FMI ]] || MSC=$FMI   # Works thank to firefox
+[[ -z $SPF ]] || MSC=$SPF   # Works thank to spotify
+[[ -z $SPF ]] || MSC=$SPF   # Works thank to spotify
+[[ -z $NCS ]] || MSC=$NCS   # Works thank to spotify
 [[ -z $MPV ]] || MSC=$MPV   # Works thank to mpv-mpris
+
+STATUS="$(playerctl --player=$MSC status)"
 
 case $1 in
     "pos")
@@ -87,7 +94,15 @@ case $1 in
         playerctl --player=$MSC pause
         ;;
     "toggle")
-        playerctl --player=$MSC play-pause
+        case $STATUS in
+            "Paused")
+                playerctl --player=$MSC play
+                ;;
+            "Playing")
+                playerctl --player=$MSC pause
+                ;;
+        esac
+        # playerctl --player=$MSC play-pause
         ;;
     "toggle-random")
         mpc random
@@ -96,7 +111,7 @@ case $1 in
         ;;
 esac
 
-STATUS="$(playerctl status)"
+STATUS="$(playerctl --player=$MSC status)"
 SONG="$(playerctl --player=$MSC metadata --format '{{title}} ({{artist}})' | colrm 20)"
 
 notify "$SONG" "$STATUS" "true"
