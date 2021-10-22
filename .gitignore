@@ -4,6 +4,7 @@ vim/undo/*
 vim/swap/*
 vim/.netrwhist
 vim/pack/*
+vim/view/
 
 # Cache things
 scripts/scree/hdmi/hdmi.st
