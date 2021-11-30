@@ -18,45 +18,62 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
+# fast actions
 hc keybind $Mod-Alt-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
-hc keybind $Mod-Return       spawn alacritty
-hc keybind $Mod-Shift-Return spawn alacritty -e tmux
-hc keybind $Mod-m            spawn $HOME/.config/scripts/sys/man_pages.sh
-hc keybind $Mod-Shift-m      spawn $HOME/.config/scripts/sys/manv_pages.sh
-hc keybind $Mod-n            spawn $HOME/.config/scripts/sys/less_output.sh
-hc keybind $Mod-d            spawn $HOME/.config/dmenu/dmenu
-hc keybind $Mod-Shift-d      spawn $HOME/.config/scripts/utils/st.sh
-hc keybind $Mod-t            spawn $HOME/.config/dmenu/tmux
-hc keybind $Mod-Shift-b      spawn sxiv -t ~/Imágenes/Wallpapers
-hc keybind $Mod-Control-r    spawn $HOME/.config/scripts/audio/music.sh toggle-random
-hc keybind $Mod-w            spawn $HOME/.config/scripts/work/work.sh
-hc keybind $Mod-Shift-w      spawn $HOME/.config/scripts/utils/wallpapers.sh
-hc keybind $Mod-Control-w    spawn $HOME/.config/scripts/sys/wifi_check.sh
-hc keybind $Mod-Control-b    spawn $HOME/.config/scripts/sys/bluetooth_check.sh
-hc keybind $Mod-Shift-t      spawn alacritty -e ranger
-hc keybind $Mod-z            spawn tabbed -c zathura -e
-hc keybind $Mod-Control-q    spawn xkill
-hc keybind $Mod-Shift-p      spawn $HOME/.config/scripts/screen/hdmi/hdmi.sh
-hc keybind $Mod-Shift-a      spawn $HOME/.config/scripts/audio/pulse_toogle.sh
-hc keybind $Mod-Shift-s      spawn $HOME/.config/scripts/screen/lock.sh
-hc keybind $Mod-Shift-u      spawn $HOME/.config/scripts/utils/ibrowser.sh
-hc keybind $Mod-e            spawn $HOME/.config/scripts/utils/trans.sh
-hc keybind $Mod-Shift-e      spawn $HOME/.config/scripts/utils/scratchy.py
-hc keybind $Mod-y            spawn $HOME/.config/scripts/audio/music_mpc.sh dmenu
-hc keybind $Mod-Shift-y      spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
-hc keybind $Mod-g            spawn $HOME/.config/scripts/utils/calculadora_genius.sh
-hc keybind $Mod-Alt-j        spawn alacritty -e julia -q --startup-file=no -e 'using OhMyREPL; using REPL; REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"; ENV["PAGER"] = "julia_pager.sh"' -i
-hc keybind $Mod-Alt-h        spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
-hc keybind $Mod-Alt-Shift-h  spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
-hc keybind $Mod-v            spawn alacritty -e vim
-hc keybind $Mod-Shift-o      spawn picom-trans -c 100%
-hc keybind $Mod-Control-o    spawn picom-trans -d -c
-hc keybind $Mod-Alt-o        spawn picom-trans -c 10%
-hc keybind $Mod-Shift-plus   spawn picom-trans -c +10%
-hc keybind $Mod-Shift-minus  spawn picom-trans -c -10%
-hc keybind $Mod-Control-s    spawn sxiv $HOME/Imágenes/Screenshots
+hc keybind $Mod-Control-q       spawn xkill
+hc keybind $Mod-Shift-s         spawn $HOME/.config/scripts/screen/lock.sh
+# check bluetooth and wifi
+hc keybind $Mod-Control-w       spawn $HOME/.config/scripts/sys/wifi_check.sh
+hc keybind $Mod-Control-b       spawn $HOME/.config/scripts/sys/bluetooth_check.sh
+# hdmi/volume
+hc keybind $Mod-Shift-p         spawn $HOME/.config/scripts/screen/hdmi/hdmi.sh
+hc keybind $Mod-Shift-a         spawn $HOME/.config/scripts/audio/pulse_toogle.sh
+# hide
+hc keybind $Mod-Alt-h           spawn xdotool mousemove 1920 0 # Hide mouse in uper right corner
+hc keybind $Mod-Alt-Shift-h     spawn xdotool mousemove 0 1080 # Hide mouse in down left corner
+# transparency
+hc keybind $Mod-Shift-o         spawn picom-trans -c 100%
+hc keybind $Mod-Control-o       spawn picom-trans -d -c
+hc keybind $Mod-Alt-o           spawn picom-trans -c 10%
+hc keybind $Mod-Shift-plus      spawn picom-trans -c +10%
+hc keybind $Mod-Shift-minus     spawn picom-trans -c -10%
+# notifications
+hc keybind Control-space        spawn dunstctl close
+hc keybind Control-Shift-space  spawn dunstctl close-all
+hc keybind Control-bar          spawn dunstctl history-pop
+#terminals
+hc keybind $Mod-Return          spawn alacritty
+hc keybind $Mod-Shift-Return    spawn alacritty -e tmux
+hc keybind $Mod-Shift-d         spawn $HOME/.config/scripts/utils/st.sh
+hc keybind $Mod-t               spawn $HOME/.config/dmenu/tmux
+# help/man
+hc keybind $Mod-m               spawn $HOME/.config/scripts/sys/man_pages.sh
+hc keybind $Mod-Shift-m         spawn $HOME/.config/scripts/sys/manv_pages.sh
+hc keybind $Mod-n               spawn $HOME/.config/scripts/sys/less_output.sh
+# menu and apps
+hc keybind $Mod-d               spawn $HOME/.config/dmenu/dmenu
+hc keybind $Mod-Shift-t         spawn alacritty -e ranger
+hc keybind $Mod-z               spawn tabbed -c zathura -e
+hc keybind $Mod-Shift-u         spawn $HOME/.config/scripts/utils/ibrowser.sh
+hc keybind $Mod-e               spawn $HOME/.config/scripts/utils/trans.sh
+hc keybind $Mod-Shift-e         spawn $HOME/.config/scripts/utils/scratchy.py
+hc keybind $Mod-v               spawn alacritty -e vim
+# images and wallpapers
+hc keybind $Mod-Control-s       spawn sxiv $HOME/Imágenes/Screenshots
+hc keybind $Mod-Shift-b         spawn sxiv -t ~/Imágenes/Wallpapers
+hc keybind $Mod-Shift-w         spawn $HOME/.config/scripts/utils/wallpapers.sh
+# work
+hc keybind $Mod-w               spawn $HOME/.config/scripts/work/work.sh
+# calc and julia
+hc keybind $Mod-g               spawn $HOME/.config/scripts/utils/calculadora_genius.sh
+hc keybind $Mod-Alt-j           spawn alacritty -e julia -q --startup-file=no -e 'using OhMyREPL; using REPL; REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"; ENV["PAGER"] = "julia_pager.sh"' -i
+# music
+hc keybind $Mod-Control-r       spawn $HOME/.config/scripts/audio/music.sh toggle-random
+hc keybind $Mod-y               spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -e ytfzf -ftNs --detach
+hc keybind $Mod-Shift-y         spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
+
 
 # basic movement in tiling and floating mode
 # focusing clients

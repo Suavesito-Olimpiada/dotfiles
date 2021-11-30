@@ -123,7 +123,7 @@ set scrolloff=3
 " set scrolljump=3
 
 highlight ColorColumn ctermbg=darkgray ctermfg=red
-" set colorcolumn=81
+set colorcolumn=81
 
 highlight SpellBad term=reverse cterm=bold,reverse ctermfg=235 ctermbg=167 gui=bold,reverse guifg=#fb4934 guibg=bg
 
@@ -237,6 +237,8 @@ nnoremap <Bslash> `
 " noremap ^ g^
 " noremap 0 g0e
 " noremap $ g$
+
+nnoremap <silent> <leader>s :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv

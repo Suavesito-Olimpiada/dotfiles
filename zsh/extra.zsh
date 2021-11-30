@@ -26,9 +26,9 @@ if [[ -n $DISPLAY ]]
 then
     zplug "hlissner/zsh-autopair", defer:2
 
-    zplug "RobSis/zsh-completion-generator"
+    # zplug "RobSis/zsh-completion-generator"
 
-    zplug "plugins/fd", from:oh-my-zsh
+    # zplug "plugins/fd", from:oh-my-zsh
     zplug "plugins/fzf", from:oh-my-zsh
     zplug "plugins/thefuck", from:oh-my-zsh
     zplug "plugins/safe-paste", from:oh-my-zsh
@@ -41,19 +41,18 @@ then
 
     # zplug "reobin/typewritten", as:theme
 
-    zplug "plugins/autoenv", from:oh-my-zsh
-    zplug "plugins/zsh_reload", from:oh-my-zsh, defer:2
+    # zplug "plugins/autoenv", from:oh-my-zsh
     zplug "plugins/command-not-found", from:oh-my-zsh
-    zplug "plugins/docker", from:oh-my-zsh
-    zplug "plugins/docker-compose", from:oh-my-zsh
+    # zplug "plugins/docker", from:oh-my-zsh
+    # zplug "plugins/docker-compose", from:oh-my-zsh
 
-    zplug "chitoku-k/fzf-zsh-completions"
+    # zplug "chitoku-k/fzf-zsh-completions"
 
     # zplug 'wfxr/forgit'
 
-    zplug 'Tarrasch/zsh-bd'
+    # zplug 'Tarrasch/zsh-bd'
 
-    zplug "ryutok/rust-zsh-completions"
+    # zplug "ryutok/rust-zsh-completions"
 
     zplug "MichaelAquilina/zsh-auto-notify"
 

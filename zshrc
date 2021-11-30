@@ -53,9 +53,11 @@ unalias run-help
 autoload run-help
 alias help="run-help"
 
-#autoload -Uz compinit colors
-#compinit -C
-#colors
+# autoload -Uz compinit colors
+# compinit -C
+# colors
+autoload bashcompinit
+bashcompinit
 
 setopt AUTO_LIST # List completion automatically
 

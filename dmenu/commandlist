@@ -17,10 +17,11 @@ vivaldi-stable                                                                  
 tabbed -c -r 3 torsocks surf -e - "https://duckduckgo.com"                                      # SURF BROWSER
 tabbed -c -r 2 surf -e -                                                                        # SURF BROWSER
 nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
+fluent.rss                                                                                      # RSS READER
 
 # communications
-# telegram-desktop                                                                                # TELEGRAM APP
-flatpak run org.telegram.desktop
+telegram-desktop                                                                                # TELEGRAM APP
+# flatpak run org.telegram.desktop
 discord                                                                                         # DISCORD APP
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
@@ -155,6 +156,7 @@ systemctl suspend                                                               
 xkill                                                                                           # XKILL
 gksu gufw                                                                                       # FIREWALL CONFIG APP
 hardinfo                                                                                        # HARD HARDWARE INFO
+cpu-x                                                                                           # HARD HARDWARE INFO
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
 tlpui                                                                                           # TLP GUI
 pacgraph-tk                                                                                     # VIEW GRAPH OF DEPENDENCIES

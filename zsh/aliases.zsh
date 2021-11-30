@@ -35,7 +35,7 @@ alias la='lsd --group-dirs=first -A'
 
 alias ltree='lsd -L --tree'
 
-# alias xargs='xargs -or' # `-r` means run nothing on epty input
+# alias xargs='xargs -or' # `-r` means run nothing on empty input
                         # `-o` menas open tty again (for programs with input -vim-)
 
 alias yay='yay --cleanmenu --noredownload --editor=vim --color always'
@@ -66,7 +66,7 @@ alias Rup="sudo R -e 'old.packages (repos = \"https://cran.itam.mx\"); update.pa
 alias juliaup="julia -e 'import Pkg; Pkg.update(); Pkg.build()'"
 alias npmup="npm i -g npm"
 
-alias flatup="sudo flatpak update"
+alias flatup="flatpak update"
 alias snapup="sudo snap refresh"
 
 alias pacmanup="yay -Syyuu && sudo mandb && sudo pkgfile --update"

@@ -28,5 +28,7 @@ nnoremap <silent> <Leader>jf :<C-u>call JuliaFormatter#Format(0)<CR>
 " visual mode mapping
 vnoremap <silent> <Leader>jf :<C-u>call JuliaFormatter#Format(1)<CR>
 
+let g:JuliaFormatter_server = 1
+
 packadd julia.vim
 packadd JuliaFormatter.vim
