@@ -20,7 +20,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p --pager \"less -R\"'"
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
 # export BROWSER="firefox"
-export BROWSER="chromium"
+export BROWSER="firefox"
 
 # As I use termite for some things, to be able to use it with ssh
 # I need to change the term enviroment variable.
