@@ -73,8 +73,8 @@ hc pad $monitor $panel_height
 
     while true ; do
         mpc current &
-        amixer -D pulse get Master | sed -e '7,7!d' -e 's/\(.*[^0-9]\)\([0-9][0-9]*\)\(.*[^0-9]\)/\2/'
-        light | sed -E 's/([0-9]+)..*/\1/'
+        amixer -D pulse get Master | sed -En '7,7s/.* \[(.*)\] .*/\1/p'
+        light | cut -d'.' -f1
         sleep 0.5 || break
     done > >(uniq_linebuffered) &
 
@@ -83,8 +83,10 @@ hc pad $monitor $panel_height
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
         date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
-        sleep 1 || break
+        sleep 5 || break
     done > >(uniq_linebuffered) &
+
+    playerctl -F metadata -f '{{artist}} - {{title}}' > >(uniq_linebuffered) &
     childpid=$!
     hc --idle
     kill $childpid
@@ -133,30 +135,36 @@ hc pad $monitor $panel_height
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
 
         # small adjustments
- 
+
         color='#43AAFF'
         color2='#FF0000'
 
-        VARS="/tmp/vars"
-
+        ./bin/ram_usage
+        BIN="$HOME/.config/herbstluftwm/bin"
         # CPU
-        cpu=$(sed -n '1p' "$VARS")
+        cpu=$($BIN/cpu_usage 5)
         # RAM
-        usd=$(sed -n '2p' "$VARS")
-        cac=$(sed -n '3p' "$VARS")
-        swp=$(sed -n '4p' "$VARS")
-        tot=$(sed -n '5p' "$VARS")
+        usd=$($BIN/ram_usage | sed -n '1p')
+        tot=$($BIN/ram_usage | sed -n '2p')
+        swp=$(free --mega | awk '/Swap/ {if($3 != 0) { printf "%.2f", $3/1024;} }')
         # BATTERY
-        bat=$(sed -n '6p' "$VARS")
-        tim=$(sed -n '7p' "$VARS")
+        bat=$($BIN/battery | sed -n '1p')
+        sta=$($BIN/battery | sed -n '2p')
         # SCREEN
-        lig=$(sed -n '8p' "$VARS")
+        lig=$(light | cut -d'.' -f1)
         # VOLUME
-        vol=$(sed -n '9p' "$VARS")
+        vol=$(amixer -D pulse get Master | sed -En '7,7s/.* \[(.*)\] .*/\1/p')
         # MUSIC
-        mpc=$(sed -n '10p' "$VARS")
+        mpc=$(playerctl -F metadata -f '{{artist}} - {{title}}' | colrm 40 & sleep 0.1; pkill playerctl)
 
-        right="$separator^bg($hintcolor) ^fg($color)MUSIC: ^fg()$mpc $separator^bg($hintcolor) ^fg($color)VOL: ^fg()$vol $separator^bg($hintcolor) ^fg($color)LIG: ^fg()$lig $separator^bg($hintcolor) ^fg($color)BAT: ^fg()$bat ^fg($color)-^fg() $tim  $separator^bg($hintcolor) ^fg($color)RAM: ^fg()$usd^fg($color):^fg()$cac^fg($color2)$swp^fg($color)/^fg()$tot$separator^bg($hintcolor) ^fg($color)CPU: ^fg()$cpu $separator^bg($hintcolor) $date $separator"
+        right="$separator^bg($hintcolor)\
+ ^fg($color)MUSIC: ^fg()$mpc $separator^bg($hintcolor)\
+ ^fg($color)VOL: ^fg()$vol $separator^bg($hintcolor)\
+ ^fg($color)LIG: ^fg()$lig $separator^bg($hintcolor)\
+ ^fg($color)BAT: ^fg()$bat ^fg($color)-^fg() $sta  $separator^bg($hintcolor)\
+ ^fg($color)RAM: ^fg()$usd^fg($color):^fg($color2)$swp^fg($color)/^fg()$tot $separator^bg($hintcolor)\
+ ^fg($color)CPU: ^fg()$cpu $separator^bg($hintcolor)\
+ $date $separator"
 #        right="$separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..

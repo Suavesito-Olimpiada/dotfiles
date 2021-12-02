@@ -23,8 +23,6 @@ synclient PalmDetect=1
 numlockx on
 xrdb -all -retain ~/.Xresources
 
-"$HOME/.config/herbstluftwm/panel_var.sh" &!
-
 exit
 
 cd "$HOME/.dotfiles/installed/"
