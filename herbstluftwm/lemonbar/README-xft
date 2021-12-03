@@ -1,0 +1,17 @@
+Personal fork of Lemonbar with Xft support
+==========================================
+
+The purpose of this fork is to keep up with upstream while maintaining
+the changes by GitHub user krypt-n who seems to have lots interest in
+the project.[0]
+
+The contributions by krypt-n allow Xft support (to use typefaces
+supported by fontconfig).  Upstream Lemonbar appears to be unable or
+unwilling to merge them into master.[1]
+
+I have decided to maintain this project, because I want to use it as
+part of my custom desktop session on Debian 10 Buster.[2]
+
+[0]: https://github.com/krypt-n/bar/pull/37#issuecomment-473265449
+[1]: https://github.com/LemonBoy/bar/issues/188
+[2]: https://gitlab.com/protesilaos/dotfiles

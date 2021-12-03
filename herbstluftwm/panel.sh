@@ -17,12 +17,13 @@ fi
 x=${geometry[0]}
 y=${geometry[1]}
 panel_width=${geometry[2]}
-panel_height=15
-#font="-*-fixed-medium-*-*-*-13-*-*-*-*-*-*-*"
+panel_height=16
+#font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 font="Noto Sans Mono CJK KR,Noto Sans Mono CJK HK,Noto Sans Mono CJK JP,Noto Sans Mono CJK SC,Noto Sans Mono CJK TC:style=Medium:size=8"
-bgcolor=$(hc get frame_border_normal_color)
-selbg=$(hc get window_border_active_color)
-# selfg='#2E9AFE'
+# extract colors from hlwm and omit alpha-value
+bgcolor=$(hc get frame_border_normal_color|sed 's,^\(\#[0-9a-f]\{6\}\)[0-9a-f]\{2\}$,\1,')
+selbg=$(hc get window_border_active_color|sed 's,^\(\#[0-9a-f]\{6\}\)[0-9a-f]\{2\}$,\1,')
+#selfg='#101010'
 selfg='#EEEEEE'
 
 ####
@@ -71,22 +72,13 @@ hc pad $monitor $panel_height
     # e.g.
     #   date    ^fg(#efefef)18:33^fg(#909090), 2013-10-^fg(#efefef)29
 
-    while true ; do
-        mpc current &
-        amixer -D pulse get Master | sed -En '7,7s/.* \[(.*)\] .*/\1/p'
-        light | cut -d'.' -f1
-        sleep 0.5 || break
-    done > >(uniq_linebuffered) &
-
     #mpc idleloop player &
     while true ; do
         # "date" output is checked once a second, but an event is only
         # generated if the output changed compared to the previous run.
         date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
-        sleep 5 || break
+        sleep 1 || break
     done > >(uniq_linebuffered) &
-
-    playerctl -F metadata -f '{{artist}} - {{title}}' > >(uniq_linebuffered) &
     childpid=$!
     hc --idle
     kill $childpid
@@ -101,7 +93,6 @@ hc pad $monitor $panel_height
         # This part prints dzen data based on the _previous_ data handling run,
         # and then waits for the next event to happen.
 
-        bordercolor="#26221C"
         separator="^bg()^fg($selbg)|"
         # draw tags
         for i in "${tags[@]}" ; do
@@ -133,29 +124,28 @@ hc pad $monitor $panel_height
         done
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
-
         # small adjustments
+        #right="$separator^bg() $date $separator"
 
         color='#43AAFF'
         color2='#FF0000'
 
-        ./bin/ram_usage
         BIN="$HOME/.config/herbstluftwm/bin"
         # CPU
-        cpu=$($BIN/cpu_usage 5)
+        cpu=$($BIN/cpu_usage 1)
         # RAM
-        usd=$($BIN/ram_usage | sed -n '1p')
-        tot=$($BIN/ram_usage | sed -n '2p')
-        swp=$(free --mega | awk '/Swap/ {if($3 != 0) { printf "%.2f", $3/1024;} }')
+        usd=$($BIN/ram_usage -u)
+        tot=$($BIN/ram_usage -t)
+        swp=$($BIN/ram_usage -s)
         # BATTERY
-        bat=$($BIN/battery | sed -n '1p')
-        sta=$($BIN/battery | sed -n '2p')
+        bat=$($BIN/battery -n)
+        sta=$($BIN/battery -s)
         # SCREEN
         lig=$(light | cut -d'.' -f1)
         # VOLUME
         vol=$(amixer -D pulse get Master | sed -En '7,7s/.* \[(.*)\] .*/\1/p')
         # MUSIC
-        mpc=$(playerctl -F metadata -f '{{artist}} - {{title}}' | colrm 40 & sleep 0.1; pkill playerctl)
+        mpc=$(playerctl metadata -f '{{artist}} - {{title}}' | colrm 40)
 
         right="$separator^bg($hintcolor)\
  ^fg($color)MUSIC: ^fg()$mpc $separator^bg($hintcolor)\
@@ -165,7 +155,6 @@ hc pad $monitor $panel_height
  ^fg($color)RAM: ^fg()$usd^fg($color):^fg($color2)$swp^fg($color)/^fg()$tot $separator^bg($hintcolor)\
  ^fg($color)CPU: ^fg()$cpu $separator^bg($hintcolor)\
  $date $separator"
-#        right="$separator^bg() $date $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only    ")
