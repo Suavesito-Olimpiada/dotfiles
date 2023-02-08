@@ -1,7 +1,8 @@
 set foldmethod=marker
 set foldmarker={,}
+set foldmethod=indent
 
-setlocal commentstring=//\ %s
+" setlocal commentstring=//\ %s
 
 call matchadd('ColorColumn', '\%81v', 100)
 

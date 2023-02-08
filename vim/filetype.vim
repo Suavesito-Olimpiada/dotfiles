@@ -15,6 +15,7 @@
 " endif
 " let did_load_csvfiletype=1
 
-" augroup filetypedetect
+augroup filetypedetect
 "     au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
-" augroup END
+    au! BufRead,BufNewFile *.sgf	setfiletype sgf
+augroup END

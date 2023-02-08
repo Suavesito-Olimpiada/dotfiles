@@ -19,9 +19,11 @@ theme:
 date:
  -  \today
 documentclass: article
-numbersections: true
+numbersections: false
 toc: false
 lang: es-MX
+geometry:
+ -  margin=1in
 monofont:
  -  Source Code Pro
 abstract:
@@ -32,9 +34,23 @@ endsnippet
 
 snippet metatex "Pandoc metadata for include header." b
 header-includes: |
+    \usepackage{tikz}
+    \usepackage{mathtools}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
     \usepackage{float}
     \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
     \floatplacement{figure}{H}
+    \newcommand{\ba}{\backslash}
+    \newcommand{\ve}{\varepsilon}
+    \newcommand{\es}{\emptyset}
+    \newcommand{\lra}[1]{{\langle}{#1}{\rangle}}
+    \newcommand{\setc}[1]{{#1}^{\mathsf{c}}}
+    \newcommand{\mbb}[1]{\mathbb{#1}}
+    \newcommand{\mbf}[1]{\mathbf{#1}}
+    \newcommand{\mif}[1]{\mathit{#1}}
+    \newcommand{\mcal}[1]{\mathcal{#1}}
+    \newcommand{\mfrak}[1]{\mathfrak{#1}}
 endsnippet
 
 snippet todo "TODO Pandoc"

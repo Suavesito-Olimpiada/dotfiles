@@ -2,7 +2,7 @@ set textwidth=80
 set wrap
 set spell
 set spl=es,en
-set virtualedit=all
+" set virtualedit=all
 
 " command! -nargs=1 PandocAll :Pandoc <args> --filter pandoc-citeproc --filter pandoc-crossref --filter pandoc-pyplot --filter filter_pandoc_run_py
 "
@@ -43,10 +43,14 @@ let g:pandoc#syntax#codeblocks#embeds#langs = [
 " Vim-pandoc-after (pandoc)
 let g:pandoc#after#modules#enabled = ["ultisnips"]
 
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar = '='
+
 " packadd vim-criticmarkup
 " packadd vim-markdownfootnotes
 packadd vim-pandoc-after
 packadd vim-pandoc-syntax
+packadd vim-table-mode
 
 " Tabular automatic mode on |
 function! s:align()

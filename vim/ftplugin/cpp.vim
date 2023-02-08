@@ -1,9 +1,9 @@
 set foldmethod=marker
 set foldmarker={,}
 
-setlocal commentstring=/*\ %s\ */
+" setlocal commentstring=/*\ %s\ */
 
-" call matchadd('ColorColumn', '\%81v', 100)
+call matchadd('ColorColumn', '\%81v', 100)
 
 nnoremap <Leader>rs :split<CR>:term ++curwin root<CR>
 nnoremap <Leader>rv :vsplit<CR>:term ++curwin root<CR>
@@ -27,4 +27,4 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_template_highlight = 1
 
 packadd vim-clang-format
-" packadd vim-cpp-enhanced-highlight
+packadd vim-cpp-enhanced-highlight

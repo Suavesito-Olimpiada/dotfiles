@@ -11,3 +11,4 @@ let g:bracey_eval_on_save=1
 packadd emmet-vim
 packadd MatchTag
 packadd bracey.vim
+packadd html5.vim

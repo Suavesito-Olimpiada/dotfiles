@@ -55,7 +55,7 @@ if maparg('<Leader>l', 'n') ==# '' " Use <C-L> to clear the highlighting of :set
 endif
 
 set tags=./.git/tags;
-set path=.,**,,
+set path+=.,**
 
 set confirm
 set showcmd
@@ -112,7 +112,7 @@ set cursorline
 set cursorcolumn
 set number
 set relativenumber
-" set textwidth=80
+set textwidth=80
 
 set foldmethod=indent
 set nofoldenable
@@ -217,7 +217,7 @@ endfunction
 nnoremap <space> <Nop>
 
 " New enter normal mode
-nnoremap <CR> i<CR><ESC>
+" nnoremap <CR> i<CR><ESC> " breaks quickfix
 
 " New position (`) mark
 " this because <space> is th new leader
@@ -292,8 +292,8 @@ noremap <silent> <F7> :call LaTeXtoUnicode#Toggle()<CR>
 inoremap <silent> <F7> <ESC>:call LaTeXtoUnicode#Toggle()<CR>a
 
 " Grammarous check
-nnoremap <silent> <Leader>gen :GrammarousCheck --lang=en<CR>
-nnoremap <silent> <Leader>ges :GrammarousCheck --lang=es<CR>
+nnoremap <silent> <Leader>gen :GrammarousCheck --lang=en-US<CR>
+nnoremap <silent> <Leader>ges :GrammarousCheck --lang=es-MX<CR>
 
 " Grammarous operator map (gr)
 map gr <Plug>(operator-grammarous)
@@ -313,9 +313,14 @@ nnoremap - :call bufferhint#Popup()<CR>
 nnoremap + :call bufferhint#LoadPrevious()<CR>
 
 " LanguageClient maps
-nmap <F5> <Plug>(lcn-menu)
-vmap <F5> <Plug>(lcn-menu)
-nmap <silent> gd <Plug>(lcn-definition)
+function LC_maps()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+        nmap <silent> <F5> <Plug>(lcn-menu)
+        vmap <silent> <F5> <Plug>(lcn-menu)
+        nmap <silent> gd <Plug>(lcn-definition)
+        nmap <silent> <Leader>f <Plug>(lcn-format)
+    endif
+endfunction
 
 
 "}}}
@@ -331,9 +336,11 @@ nmap <silent> gd <Plug>(lcn-definition)
 
 " Colorcolumn just for coding documents
 autocmd FileType c,cpp,python,julia,vim,sh,java,mail,pandoc,markdown  call matchadd('ColorColumn', '\%82v', 100)
+autocmd FileType * call LC_maps()
 
 " Keep the position of the open files
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufWritePre c,cpp,python,julia,vim,sh,java,mail,pandoc,markdown  :%s/\s\+$//e
 
 " goyo+limelight compatibility
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -441,24 +448,8 @@ let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_usePopupHover = 1
 let g:LanguageClient_loadSettings = 1
 let g:LanguageClient_serverCommands = {
-\   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
-\       using Pkg;
-\       Pkg.activate("LanguageServer", shared=true);
-\
-\       using LanguageServer;
-\       using SymbolServer;
-\       using StaticLint;
-\
-\       Pkg.activate(pwd());
-\
-\       src_path = pwd();
-\       project_path = something(Base.current_project(src_path), Base.load_path_expand(LOAD_PATH[3])) |> dirname;
-\
-\       server = LanguageServerInstance(stdin, stdout, project_path);
-\       run(server);
-\   '],
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
-\   'python': ['pyls'],
+\   'python': ['pylsp'],
 \   'c': ['clangd'],
 \   'cpp': ['clangd'],
 \   'latex': ['texlab'],
@@ -471,7 +462,28 @@ let g:LanguageClient_serverCommands = {
 \   'glsl': ['glslls', '--stdin'],
 \   'yaml': ['yaml-language-server', '--stdio'],
 \   'yaml.docker-compose': ['yaml-language-server', '--stdio'],
+\   'javascript': ['typescript-language-server', '--stdio'],
+\   'javascriptreact': ['typescript-language-server', '--stdio'],
+\   'typescript': ['typescript-language-server', '--stdio'],
+\   'typescriptreact': ['typescript-language-server', '--stdio'],
+\   'html': ['vscode-html-languageserver', '--stdio'],
+\   'css': ['vscode-css-languageserver', '--stdio'],
 \   'vim': ['vim-language-server', '--stdio'],
+\   'julia': ['julia', '--startup-file=no', '--history-file=no',
+\       '--project=@LanguageServer', '-e', '
+\           using LanguageServer;
+\           using SymbolServer;
+\           using StaticLint;
+\           using Pkg;
+\
+\           Pkg.activate(pwd());
+\
+\           src_path = pwd();
+\           project_path = something(Base.current_project(src_path), Base.load_path_expand(LOAD_PATH[3])) |> dirname;
+\
+\           server = LanguageServerInstance(stdin, stdout, project_path);
+\           run(server);
+\   '],
 \   }
 
 let settings = json_decode('
@@ -573,8 +585,8 @@ let g:grammarous#languagetool_cmd = 'languagetool'
 let g:grammarous#show_first_error = 1
 
 " Licenses vim
-let g:licenses_copyright_holders_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
-let g:licenses_authors_name = 'Zubieta Rico, Jose Joaquin <jose.zubieta@cimat.mx>'
+let g:licenses_copyright_holders_name = 'Zubieta Rico, Jose Joaquin <jjjzubiet@gmail.com>'
+let g:licenses_authors_name = 'Zubieta Rico, Jose Joaquin <jjjzubiet@gmail.com>'
 let g:licenses_default_commands = ['gpl', 'mit', 'gplv2', 'bsd2', 'bsd3', 'lgpl']
 
 " UtilSnips vim
@@ -625,24 +637,44 @@ packadd conf.vim
 packadd edit_alternate.vim
 call edit_alternate#rule#add('c', {filename ->
         \ fnamemodify(filename, ':h:h')
-        \ . '/include/'
+        \ . '/'
         \ . fnamemodify(filename, ':t:r') . '.h'
         \ })
 call edit_alternate#rule#add('cpp', {filename ->
         \ fnamemodify(filename, ':h:h')
-        \ . '/include/'
+        \ . '/'
         \ . fnamemodify(filename, ':t:r') . '.hpp'
         \ })
 call edit_alternate#rule#add('h', {filename ->
         \ fnamemodify(filename, ':h:h')
-        \ . '/src/'
+        \ . '/'
         \ . fnamemodify(filename, ':t:r') . '.c'
         \ })
 call edit_alternate#rule#add('hpp', {filename ->
         \ fnamemodify(filename, ':h:h')
-        \ . '/src/'
+        \ . '/'
         \ . fnamemodify(filename, ':t:r') . '.cpp'
         \ })
+" call edit_alternate#rule#add('c', {filename ->
+"         \ fnamemodify(filename, ':h:h')
+"         \ . '/include/'
+"         \ . fnamemodify(filename, ':t:r') . '.h'
+"         \ })
+" call edit_alternate#rule#add('cpp', {filename ->
+"         \ fnamemodify(filename, ':h:h')
+"         \ . '/include/'
+"         \ . fnamemodify(filename, ':t:r') . '.hpp'
+"         \ })
+" call edit_alternate#rule#add('h', {filename ->
+"         \ fnamemodify(filename, ':h:h')
+"         \ . '/src/'
+"         \ . fnamemodify(filename, ':t:r') . '.c'
+"         \ })
+" call edit_alternate#rule#add('hpp', {filename ->
+"         \ fnamemodify(filename, ':h:h')
+"         \ . '/src/'
+"         \ . fnamemodify(filename, ':t:r') . '.cpp'
+"         \ })
 nnoremap <leader>ea :EditAlternate<CR>
 
 " presenting.vim
