@@ -52,57 +52,33 @@ case $1 in
         ;;
 esac
 
-source $HOME/.config/scripts/lib/notify.sh
-
-
-MPD=$(playerctl -l | grep mpd)
-MPV=$(playerctl -l | grep mpv)
-FMI=$(playerctl -l | grep firefox)
-SPF=$(playerctl -l | grep spotify)
-NCS=$(playerctl -l | grep ncspot)
-MSC=''
-
-[[ -z $MPD ]] || MSC=$MPD   # Works thank to mpd-mpris
-[[ -z $FMI ]] || MSC=$FMI   # Works thank to firefox
-[[ -z $SPF ]] || MSC=$SPF   # Works thank to spotify
-[[ -z $SPF ]] || MSC=$SPF   # Works thank to spotify
-[[ -z $NCS ]] || MSC=$NCS   # Works thank to spotify
-[[ -z $MPV ]] || MSC=$MPV   # Works thank to mpv-mpris
-
-STATUS="$(playerctl --player=$MSC status)"
+# MPD depends on mpd-mpris
+# MPV depends on mpv-mpris
 
 case $1 in
     "pos")
         SEEK=$3
         if [[ $2 = "+" ]]
         then
-            playerctl --player=$MSC position $SEEK+
+            playerctl position $SEEK+
         else
-            playerctl --player=$MSC position $SEEK-
+            playerctl position $SEEK-
         fi
         ;;
     "next")
-        playerctl --player=$MSC next
+        playerctl next
         ;;
     "prev")
-        playerctl --player=$MSC previous
+        playerctl previous
         ;;
     "play")
-        playerctl --player=$MSC play
+        playerctl play
         ;;
     "pause")
-        playerctl --player=$MSC pause
+        playerctl pause
         ;;
     "toggle")
-        case $STATUS in
-            "Paused")
-                playerctl --player=$MSC play
-                ;;
-            "Playing")
-                playerctl --player=$MSC pause
-                ;;
-        esac
-        # playerctl --player=$MSC play-pause
+        playerctl play-pause
         ;;
     "toggle-random")
         mpc random
@@ -111,7 +87,17 @@ case $1 in
         ;;
 esac
 
-STATUS="$(playerctl --player=$MSC status)"
-SONG="$(playerctl --player=$MSC metadata --format '{{title}} ({{artist}})' | colrm 20)"
+# this depends on playerctld running
+# sleep 0.25
+STATUS="$(playerctl status)"
+SONG="$(playerctl metadata --format '{{title}} ({{artist}})' | colrm 20)"
+ART_URL="$(playerctl metadata --format '{{mpris:artUrl}}')"
+if [[ -n $ART_URL ]]
+then
+    curl $ART_URL -o /tmp/art
+    ICON=/tmp/art
+fi
 
-notify "$SONG" "$STATUS" "true"
+source $HOME/.config/scripts/lib/notify.sh
+
+# notify "$SONG" "$STATUS" "true"
