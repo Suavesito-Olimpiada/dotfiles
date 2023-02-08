@@ -35,3 +35,5 @@ man() {
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
 }
+
+source /home/jose/.config/broot/launcher/bash/br
