@@ -1,5 +1,5 @@
-source /home/jose/Apps/gitBuild/nofork/pwndbg/pwndbg/gdbinit.py
-source /home/jose/Apps/gitBuild/nofork/jerdna-regeiz/splitmind/gdbinit.py
+source /usr/share/pwndbg/gdbinit.py
+source /home/jose/Apps/gitBuild/splitmind/gdbinit.py
 
 set context-clear-screen on
 set follow-fork-mode parent
@@ -20,6 +20,7 @@ import splitmind
   .below(of="backtrace", cmd="ipython", size="30%")
 ).build(nobanner=True)
 end
+set debuginfod enabled off
 set context-code-lines 30
 set context-source-code-lines 30
 set context-sections  "regs args code disasm stack backtrace"
