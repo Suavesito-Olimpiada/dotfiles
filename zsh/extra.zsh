@@ -19,7 +19,7 @@ source $HOME/.zplug/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting"
-# zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 
 if [[ -n $DISPLAY ]]
@@ -29,7 +29,7 @@ then
     # zplug "RobSis/zsh-completion-generator"
 
     # zplug "plugins/fd", from:oh-my-zsh
-    zplug "plugins/fzf", from:oh-my-zsh
+    # zplug "plugins/fzf", from:oh-my-zsh
     zplug "plugins/thefuck", from:oh-my-zsh
     zplug "plugins/safe-paste", from:oh-my-zsh
     # zplug "plugins/autojump", from:oh-my-zsh
@@ -46,13 +46,13 @@ then
     # zplug "plugins/docker", from:oh-my-zsh
     # zplug "plugins/docker-compose", from:oh-my-zsh
 
-    # zplug "chitoku-k/fzf-zsh-completions"
-
     # zplug 'wfxr/forgit'
 
     # zplug 'Tarrasch/zsh-bd'
 
     # zplug "ryutok/rust-zsh-completions"
+
+    zplug "zpm-zsh/autoenv"
 
     zplug "MichaelAquilina/zsh-auto-notify"
 
@@ -93,14 +93,17 @@ then
     [[ -s "$HOME/.local/share/marker/marker.sh" ]] && source "$HOME/.local/share/marker/marker.sh"
 
     # FZF nicesties (substituted by oh-my-zsh:fzf)
-    # source /usr/share/fzf/completion.zsh
-    # source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+    source /usr/share/fzf/key-bindings.zsh
 
     # AUTOJUPM nicesties (substituted by oh-my-zsh:autojump)
     # source /usr/share/autojump/autojump.zsh
 
     # ZOXIDE nicesties
     eval "$(zoxide init --cmd j --no-aliases zsh)"
+
+    # BROOT niceties
+    source /home/jose/.config/broot/launcher/bash/br
 
     # LS_COLORS (for aur:lscolors-git) (substituted by vivid -check in .zshenv-)
     #source /usr/share/LS_COLORS/dircolors.sh
@@ -118,6 +121,8 @@ then
     source $PLUGHOME/music.zsh
     source $PLUGHOME/clean.zsh
 fi
+
+# source /usr/share/nvm/init-nvm.sh
 
 
 #   ____ ___  _   _ _____ ___ ____
@@ -142,12 +147,5 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ -n $DISPLAY ]]
 then
-    source "$HOME/.zsh/p10k/p10k.zsh"
-else
-    source "$HOME/.zsh/p10k/p10k-nodisplay.zsh"
+    source "$HOME/.zsh/p10k.zsh"
 fi
-
-# A nice reminder that I'm not free. :'c
-[[ $TERM != "st-256color" ]] && \
-vrms -g 2>&1 1>/dev/null | \
-sed -nE '2s/.+: ([0-9]+)/You have \1 non-free packages in your system./p'

@@ -10,6 +10,14 @@
 # Some nice things for zsh
 # DEFAULT_USER='jose'
 
+# A level of inception indicator if ZSH is from inside ZSH
+if [[ -z "$INCEPTION" ]]
+then
+    export INCEPTION=0
+else
+    export INCEPTION="$((INCEPTION + 1))"
+fi
+
 # Ignoring spaced commands... for tomb
 export HISTIGNORESPACE=1
 
@@ -19,7 +27,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p --pager \"less -R\"'"
 
 export VISUAL="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
-# export BROWSER="firefox"
 export BROWSER="firefox"
 
 # As I use termite for some things, to be able to use it with ssh
@@ -119,8 +126,11 @@ export CABALDIR=$HOME/Apps/pkg/cabal
 # export GEM_PATH=$GEM_HOME/bin
 # export PATH="$GEM_PATH:$PATH"
 
-export NODE_PATH=$HOME/Apps/pkg/nodejs
-export PATH="$NODE_PATH/bin:$PATH"
+export NODE_PATH="$HOME/Apps/pkg/nodejs:/usr/lib/node_modules"
+export PATH="$HOME/Apps/pkg/nodejs/bin:$PATH"
 
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
+export JAVA_HOME="/usr/lib/jvm/default"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+export RACKET_HOME="$HOME/.local/share/racket/8.3"
+export PATH="$RACKET_HOME/bin:$PATH"

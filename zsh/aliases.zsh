@@ -27,18 +27,18 @@ alias wipe='wipe -l2 -x2 -p1'
 alias cat='bat' # This is batman
 #alias cat='lolcat' # This is lol
 
-alias ls='lsd --group-dirs=first'
-alias l1='lsd --group-dirs=first -1'
-alias l='lsd --group-dirs=first'
-alias ll='lsd --group-dirs=first -alh'
-alias la='lsd --group-dirs=first -A'
+alias ls='lsd'
+alias l1='lsd -1'
+alias l='lsd'
+alias ll='lsd -alh'
+alias la='lsd -A'
 
 alias ltree='lsd -L --tree'
 
 # alias xargs='xargs -or' # `-r` means run nothing on empty input
                         # `-o` menas open tty again (for programs with input -vim-)
 
-alias yay='yay --cleanmenu --noredownload --editor=vim --color always'
+alias yay='yay --editmenu --cleanmenu --noredownload --editor=vim --color always'
 
 alias info='info --vi-keys'
 
@@ -57,14 +57,14 @@ alias hw='startx /bin/herbstluftwm --locked'
 # tha «pacmanup» is just for arch-like 
 # GNU/Linux distributions.
 
-alias pipup="pip3 freeze --user --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install --user -U"
-alias pip2up="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip2 install -U"
+# alias pipup="pip3 freeze --user --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install --user -U"
+# alias pip2up="pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip2 install -U"
 
-alias gemup="gem update"
+# alias gemup="gem update"
 # alias stackup="stack update && stack upgrade"
-alias Rup="sudo R -e 'old.packages (repos = \"https://cran.itam.mx\"); update.packages (ask = FALSE, repos = \"https://cran.itam.mx\")'"
-alias juliaup="julia -e 'import Pkg; Pkg.update(); Pkg.build()'"
-alias npmup="npm i -g npm"
+# alias Rup="sudo R -e 'old.packages (repos = \"https://cran.itam.mx\"); update.packages (ask = FALSE, repos = \"https://cran.itam.mx\")'"
+# alias juliaup="julia -e 'import Pkg; Pkg.update(); Pkg.build()'"
+# alias npmup="npm i -g npm"
 
 alias flatup="flatpak update"
 alias snapup="sudo snap refresh"
@@ -154,7 +154,7 @@ alias git="hub" # Use hub intead of git
 alias github="gh"
 alias neofetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
 alias screenfetch="neofetch --cpu_temp C --refresh_rate on --memory_percent on"
-alias dragon="dragon-drag-and-drop"
+alias dragon="dragon-drop"
 alias fzf-preview="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
 alias f="fuck"
 alias @benchmark="hyperfine"

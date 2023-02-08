@@ -6,9 +6,9 @@
 # /____|____/|_| |_| |_| \_\\____|
 #
 # This is my zshrc, it's a little kind of mess, but
-# I'm improving it with the time.
-# I tried like four time OMZ but it never likes me.
-# So I went to zplug to discover what else it have
+# I'm improving it with time.
+# I tried like four times OMZ, but it was never of my like.
+# So I went to zplug to discover what else it had
 # to give to my zsh experience.
 # I'll figured it out. :)
 #
@@ -101,16 +101,18 @@ PROMPT="%~>"
 RPROMPT="%T"
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTFILESIZE=1000000000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
+HISTTIMEFORMAT="[%F %T] "
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
+# setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+# setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
@@ -118,15 +120,16 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 
 # All the non-standard configuration is called here.
 
+# A not so nice reminder that I'm not free. :'c
+[[ $TERM != "st-256color" ]] && \
+vrms 2>&1 1>/dev/null | \
+sed -nE '2s/.+: ([0-9]+)/You have \1 non-free packages in your system./p'
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-if [[ -n $DISPLAY ]]
-then
-    source "$HOME/.zsh/p10k/p10k-instant-prompt-jose.zsh"
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]] && [[ -n $DISPLAY ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 source $HOME/.zsh/extra.zsh
