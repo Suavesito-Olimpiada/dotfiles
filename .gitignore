@@ -25,3 +25,13 @@ hub
 **/GPATH
 **/GTAGS
 **/GRTAGS
+
+# Some binaries
+herbstluftwm/bin/battery
+herbstluftwm/bin/batteryd
+herbstluftwm/bin/cpu_usage
+herbstluftwm/bin/nohup.out
+herbstluftwm/bin/ram_usage
+herbstluftwm/bin/time
+herbstluftwm/bin/wmdesk
+herbstluftwm/bin/wmtitle
