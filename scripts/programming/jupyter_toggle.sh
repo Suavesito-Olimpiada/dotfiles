@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+STATUS=$(pgrep jupyter-lab)
+if [[ -z $STATUS ]]
+then
+    julia --startup-file=no --history=no --project=@Conda -e 'using Conda; Conda.runconda(`run jupyter lab`, :jupyterlab); exit()'
+else
+    kill -15 $STATUS
+fi
+
+exit 0
+
 DMENUR="$HOME/.config/scripts/lib/dmenu.sh"
 STATUS=$(pgrep jupyter)
 
