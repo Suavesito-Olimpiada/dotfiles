@@ -13,36 +13,38 @@ V='#0088aadd'  # verifying
 
 function lock() {
     i3lock \
-    --pass-media-keys \
+    --pass-media-keys   \
+    --pass-volume-keys  \
+    --pass-screen-keys  \
     \
-    --insidevercolor=$B   \
-    --ringvercolor=$V     \
+    --insidever-color=$B   \
+    --ringver-color=$V     \
     \
-    --insidewrongcolor=$B \
-    --ringwrongcolor=$W   \
+    --insidewrong-color=$B \
+    --ringwrong-color=$W   \
     \
-    --insidecolor=$B      \
-    --ringcolor=$D        \
-    --linecolor=$B        \
-    --separatorcolor=$D   \
+    --inside-color=$B      \
+    --ring-color=$D        \
+    --line-color=$B        \
+    --separator-color=$D   \
     \
-    --verifcolor=$V       \
-    --wrongcolor=$W       \
-    --timecolor=$T        \
-    --datecolor=$T        \
-    --keyhlcolor=$K       \
-    --bshlcolor=$W        \
+    --verif-color=$V       \
+    --wrong-color=$W       \
+    --time-color=$T        \
+    --date-color=$T        \
+    --keyhl-color=$K       \
+    --bshl-color=$W        \
     \
     --color=00000033      \
     --clock               \
     --indicator           \
-    --timestr="%H:%M:%S"  \
-    --datestr="%A, %m %Y" \
+    --time-str="%H:%M:%S"  \
+    --date-str="%A, %m %Y" \
     \
-    --veriftext=Verifying... \
-    --wrongtext=Wrong! \
-    --noinputtext=... \
-    --timesize=30 \
+    --verif-text=Verifying... \
+    --wrong-text=Wrong! \
+    --noinput-text=... \
+    --time-size=30 \
     --time-font="Hack Nerd Font Mono"
     # --screen 1            \
     # --blur 5              \
