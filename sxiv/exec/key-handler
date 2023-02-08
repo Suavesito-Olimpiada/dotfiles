@@ -32,6 +32,6 @@ case "$1" in
 "w")        while read file; do hsetroot -screens 1 -cover "$file"      ; notify-send -i "$file" "Wallpaper changed."   ; done ;;
 "f")        while read file; do convert -flop "$file" "$file"           ; notify-send -i "$file" "Image flopped."       ; done ;;
 "F")        while read file; do convert -flip "$file" "$file"           ; notify-send -i "$file" "Image flopped."       ; done ;;
-">")        while read file; do convert -rotate 90 "$file" "$file"      ; notify-send -i "$file" "Image rotated."       ; done ;;
-"<")        while read file; do convert -rotate -90 "$file" "$file"     ; notify-send -i "$file" "Image rotated."       ; done ;;
+"r")        while read file; do convert -rotate 90 "$file" "$file"      ; notify-send -i "$file" "Image rotated."       ; done ;;
+"R")        while read file; do convert -rotate -90 "$file" "$file"     ; notify-send -i "$file" "Image rotated."       ; done ;;
 esac
