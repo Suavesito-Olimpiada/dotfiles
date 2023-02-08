@@ -40,8 +40,7 @@ hc keybind $Mod-Alt-o           spawn picom-trans -c 10%
 hc keybind $Mod-Shift-plus      spawn picom-trans -c +10%
 hc keybind $Mod-Shift-minus     spawn picom-trans -c -10%
 # notifications
-hc keybind Control-space        spawn dunstctl close
-hc keybind Control-Shift-space  spawn dunstctl close-all
+hc keybind $Mod-Shift-space     spawn dunstctl close
 hc keybind Control-bar          spawn dunstctl history-pop
 #terminals
 hc keybind $Mod-Return          spawn alacritty
@@ -49,10 +48,12 @@ hc keybind $Mod-Shift-Return    spawn alacritty -e tmux
 hc keybind $Mod-Shift-d         spawn $HOME/.config/scripts/utils/st.sh
 hc keybind $Mod-t               spawn $HOME/.config/dmenu/tmux
 # help/man
-hc keybind $Mod-m               spawn $HOME/.config/scripts/sys/man_pages.sh
+hc keybind $Mod-m               spawn $HOME/.config/scripts/sys/dman.sh newterm
 hc keybind $Mod-n               spawn $HOME/.config/scripts/sys/less_output.sh
 # menu and apps
 hc keybind $Mod-d               spawn $HOME/.config/dmenu/dmenu
+hc keybind $Mod-Control-p       spawn $HOME/.config/scripts/utils/passmenu.sh
+hc keybind $Mod-Shift-Control-p spawn $HOME/.config/scripts/utils/passmenu.sh --otp
 hc keybind $Mod-Shift-t         spawn alacritty -e ranger
 hc keybind $Mod-z               spawn tabbed -c zathura -e
 hc keybind $Mod-Shift-u         spawn $HOME/.config/scripts/utils/ibrowser.sh
@@ -66,11 +67,11 @@ hc keybind $Mod-Shift-w         spawn $HOME/.config/scripts/utils/wallpapers.sh
 # work
 hc keybind $Mod-w               spawn $HOME/.config/scripts/work/work.sh
 # calc and julia
-hc keybind $Mod-g               spawn $HOME/.config/scripts/utils/calculadora_genius.sh
-hc keybind $Mod-Alt-j           spawn alacritty -e julia -q --startup-file=no -e 'using OhMyREPL; using REPL; REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"; ENV["PAGER"] = "julia_pager.sh"' -i
+hc keybind $Mod-g               spawn $HOME/.config/scripts/utils/genius.sh
+hc keybind $Mod-Alt-j           spawn alacritty -e julia -q -t2 --startup-file=no -e 'using OhMyREPL, TerminalPager; using REPL; REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"; ENV["PAGER"] = "julia_pager.sh"; using Pkg; Pkg.activate(temp=true)' -i
 # music
 hc keybind $Mod-Control-r       spawn $HOME/.config/scripts/audio/music.sh toggle-random
-hc keybind $Mod-y               spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -e ytfzf -ftNs --detach
+hc keybind $Mod-y               spawn alacritty --command ytfzf -lts
 hc keybind $Mod-Shift-y         spawn st -f 'Hack Nerd Font Mono:style=Regular:pixelsize=10' -g 150x24+0+0 -i fmui
 
 # basic movement in tiling and floating mode
@@ -178,8 +179,8 @@ hc keybind XF86AudioMute            spawn $VOLUME toggle
 
 # Music control
 MUSIC="$CONFIG/audio/music.sh"
-hc keybind $Mod-Control-n           spawn $MUSIC pos + 10
-hc keybind $Mod-Control-p           spawn $MUSIC pos - 10
+# hc keybind $Mod-Control-n           spawn $MUSIC pos + 10
+# hc keybind $Mod-Control-p           spawn $MUSIC pos - 10
 hc keybind XF86AudioNext            spawn $MUSIC next
 hc keybind XF86AudioPrev            spawn $MUSIC prev
 hc keybind XF86AudioPlay            spawn $MUSIC toggle
@@ -189,6 +190,7 @@ PRINT="$CONFIG/utils/maim.sh"
 hc keybind Print                    spawn $PRINT
 hc keybind Shift-Print              spawn $PRINT -s
 hc keybind Control-Print            spawn "$HOME/.config/scripts/utils/screencpy.sh"
+hc keybind Alt-Print                spawn flameshot gui
 
 # theme
 hc attr theme.tiling.reset 1

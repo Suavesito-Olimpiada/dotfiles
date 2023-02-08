@@ -5,14 +5,16 @@ xset s 120 5
 xset r rate 300 30
 xrandr --output eDP-1 --gamma 0.75:0.75:0.75
 xss-lock -l -- "$HOME/.config/scripts/screen/lock.sh" &!
-redshift &!
+# redshift &!
 autocutsel -fork &!
-autocutsel -selection PRIMARY -fork &! #Makes cut and paste behave as expected
+autocutsel -selection PRIMARY -fork &! # Makes cut and paste behave as expected
 mpd &> /dev/null && mpd-mpris &> /dev/null &!
-/usr/lib/kdeconnectd&!
+playerctld daemon &!
+$HOME/.config/herbstluftwm/bin/batteryd &!
+/usr/lib/kdeconnectd &!
 dunst -config "$HOME/.config/dunst/dunstrc" &!
 # /usr/lib/notify-osd/notify-osd &!
-picom &!
+picom -b &!
 "$HOME/Apps/precompile/lifecalendar/lifecalendar.py" -c "$HOME/Apps/precompile/lifecalendar/examples/default.cfg" -o "$HOME/Apps/precompile/lifecalendar/BgLifetime.png"
 hsetroot -screens 1 -cover "$HOME/Apps/precompile/lifecalendar/BgLifetime.png"
 setxkbmap latam -option caps:escape

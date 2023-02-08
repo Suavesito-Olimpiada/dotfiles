@@ -5,6 +5,12 @@ quote() {
 	printf '%s' "${q% }"
 }
 
+if [[ -f /usr/lib/bash/sleep ]]; then
+    # load and enable 'sleep' builtin (does not support unit suffixes: h, m, s!)
+    # requires pkg 'bash-builtins' on debian; included in 'bash' on arch.
+    enable -f /usr/lib/bash/sleep sleep
+fi
+
 hc_quoted="$(quote "${herbstclient_command[@]:-herbstclient}")"
 hc() { "${herbstclient_command[@]:-herbstclient}" "$@" ;}
 monitor=${1:-0}
@@ -19,6 +25,7 @@ y=${geometry[1]}
 panel_width=${geometry[2]}
 panel_height=16
 #font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+#font="-*-notosansmono nerd font-medium-*-*-*-8-*-*-*-*-*-*-*" # xfontsel
 font="Noto Sans Mono CJK KR,Noto Sans Mono CJK HK,Noto Sans Mono CJK JP,Noto Sans Mono CJK SC,Noto Sans Mono CJK TC:style=Medium:size=8"
 # extract colors from hlwm and omit alpha-value
 bgcolor=$(hc get frame_border_normal_color|sed 's,^\(\#[0-9a-f]\{6\}\)[0-9a-f]\{2\}$,\1,')
@@ -33,7 +40,7 @@ if which xftwidth &> /dev/null ; then
     textwidth="xftwidth";
 elif which dzen2-textwidth &> /dev/null ; then
     textwidth="dzen2-textwidth";
-elif which textwidth &> /dev/null ; then
+elif which textwidth &> /dev/null ; then # For guix
     textwidth="textwidth";
 else
     echo "This script requires the textwidth tool of the dzen2 project."
@@ -74,9 +81,15 @@ hc pad $monitor $panel_height
 
     #mpc idleloop player &
     while true ; do
-        # "date" output is checked once a second, but an event is only
+        # output is checked once a second, but a "date" event is only
         # generated if the output changed compared to the previous run.
-        date +$'date\t^fg(#efefef)%H:%M^fg(#909090), %Y-%m-^fg(#efefef)%d'
+        printf 'date\t^fg(#efefef)%(%H:%M)T^fg(#909090), %(%Y-%m)T-^fg(#efefef)%(%d)T\n'
+        sleep 1 || break
+    done > >(uniq_linebuffered) &
+
+    while true ; do
+        "$HOME/.config/herbstluftwm/bin/cpu_usage" 1
+        playerctl metadata --format '{{title}} ({{artist}})'
         sleep 1 || break
     done > >(uniq_linebuffered) &
     childpid=$!
@@ -132,23 +145,23 @@ hc pad $monitor $panel_height
 
         BIN="$HOME/.config/herbstluftwm/bin"
         # CPU
-        cpu=$($BIN/cpu_usage 1)
+        cpu=$("$BIN"/cpu_usage 1)
         # RAM
-        usd=$($BIN/ram_usage -u)
-        tot=$($BIN/ram_usage -t)
-        swp=$($BIN/ram_usage -s)
+        usd=$("$BIN"/ram_usage -u)
+        tot=$("$BIN"/ram_usage -t)
+        swp=$("$BIN"/ram_usage -s)
         # BATTERY
-        bat=$($BIN/battery -n)
-        sta=$($BIN/battery -s)
+        bat=$("$BIN"/battery -n)
+        sta=$("$BIN"/battery -s)
         # SCREEN
         lig=$(light | cut -d'.' -f1)
         # VOLUME
         vol=$(amixer -D pulse get Master | sed -En '7,7s/.* \[(.*)\] .*/\1/p')
         # MUSIC
-        mpc=$(playerctl metadata -f '{{artist}} - {{title}}' | colrm 40)
+        msc=$(playerctl metadata -f '{{artist}} - {{title}}' | colrm 40)
 
         right="$separator^bg($hintcolor)\
- ^fg($color)MUSIC: ^fg()$mpc $separator^bg($hintcolor)\
+ ^fg($color)MUSIC: ^fg()$msc $separator^bg($hintcolor)\
  ^fg($color)VOL: ^fg()$vol $separator^bg($hintcolor)\
  ^fg($color)LIG: ^fg()$lig $separator^bg($hintcolor)\
  ^fg($color)BAT: ^fg()$bat ^fg($color)-^fg() $sta  $separator^bg($hintcolor)\

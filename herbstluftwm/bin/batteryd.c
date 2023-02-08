@@ -3,14 +3,12 @@
 #define _GNU_SOURCE
 #include <ctype.h>
 #include <libnotify/notify.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
-
-#define BAT_energy_NOW 0x1
-#define BAT_STATUS 0x2
 
 static float battery_energy_now()
 {
@@ -65,6 +63,57 @@ static float battery_energy_now()
     return 0.0;
 }
 
+static void battery_notify(const float charge, const char *const status)
+{
+    if (!status)
+        return;
+
+    const float min = 60.0f;
+    const float max = 99.5f;
+
+    /* reminder that `strcmp` returns `0` when both strings are equal */
+    if ((charge > min && charge < max) ||
+        (charge > max && strcmp(status, "Discharging") == 0) ||
+        (charge < min && strcmp(status, "Charging") == 0))
+        return;
+
+    if (!notify_init("Battery"))
+        return;
+
+    char *icon = NULL;
+    char *summary = NULL;
+    char *message = NULL;
+
+    if (charge > max) {
+        icon =
+            "file:///usr/share/icons/la-capitaine/status/scalable-dark/"
+            "battery-full-charged.svg";
+        summary = "Battery full";
+        message = "Disconnect power cord";
+    }
+    else if (charge < min) {
+        icon =
+            "file:///usr/share/icons/la-capitaine/status/scalable-dark/"
+            "battery-good.svg";
+        summary = "Battery discharging";
+        message = "Connect power cord";
+    }
+
+    NotifyNotification *notification =
+        notify_notification_new(summary, message, icon);
+
+    if (notification) {
+        /* NOTIFY_URGENCY_LOW, NOTIFY_URGENCY_NORMAL, NOTIFY_URGENCY_CRITICAL */
+        notify_notification_set_urgency(notification, NOTIFY_URGENCY_CRITICAL);
+
+        notify_notification_show(notification, NULL);
+
+        g_object_unref(G_OBJECT(notification));
+    }
+
+    notify_uninit();
+}
+
 static char *battery_status()
 {
     size_t len = 0;
@@ -92,39 +141,16 @@ static char *battery_status()
     return line;
 }
 
-int main(int argc, char *const argv[])
+int main()
 {
-    int flags = 0;
-    int c;
-    while ((c = getopt(argc, argv, "sn")) != -1) {
-        switch (c) {
-            case 'n':
-                flags = BAT_energy_NOW;
-                break;
-            case 's':
-                if (flags != BAT_energy_NOW)
-                    flags = BAT_STATUS;
-                break;
-        }
-    }
-
     char *status;
     float charge;
-    switch (flags) {
-        case BAT_energy_NOW:
-            charge = battery_energy_now();
-            printf("%.2f%%", charge);
-            break;
-        case BAT_STATUS:
-            status = battery_status();
-            if (status == NULL) {
-                fputs("Unkown", stdout);
-            }
-            else {
-                fputs(status, stdout);
-                free(status);
-            }
-            break;
+    while (true) {
+        charge = battery_energy_now();
+        status = battery_status();
+        battery_notify(charge, status);
+        free(status);
+        sleep(60);
     }
 
     return 0;
