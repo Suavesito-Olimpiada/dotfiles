@@ -1,18 +1,21 @@
 using BenchmarkTools
-using Debugger
-using OhMyREPL
 using ProgressMeter
+using OhMyREPL
+using Debugger
 using Revise
 using REPL
+
 REPL.REPLCompletions.latex_symbols["\\julia"] = "\ue624"
 
 push!(LOAD_PATH, "/media/data/Programming/Langs/Julia")
 ENV["PAGER"] = "julia_pager.sh"
 
+# using Eyeball
 # using Cthulhu
-# using IJulia
 # using ProfileView
 # using Traceur
+
+# using IJulia
 
 # using JuliaFormatter
 # using LanguageServer
