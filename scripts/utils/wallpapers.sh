@@ -32,7 +32,7 @@ toplist"
 SORTING="$(printf "$SORTOPTIONS" | $DMENU -i -l 5 -p "Sort Order: ")"
 [[ -z "$SORTING" ]] && exit
 
-QUERY="$(printf "$QUERY" | sed -e 's/#//g' -e 's/ /+/g')"
+CQUERY="$(printf "$QUERY" | sed -e 's/#//g' -e 's/ /+/g')"
 
 APPNAME="Wallpaper Download"
 ICON="/usr/share/icons/la-capitaine/actions/22x22-dark/downloading.svg"
@@ -45,12 +45,12 @@ notify "Downloading wallpapers 🖼️" "$QUERY - $SORTING" "false"
 for i in $(seq 1 5)
 do
     curl -s "https://wallhaven.cc/api/v1/search?\
-        q=$QUERY&\
-        categories=110&\
-        purity=100&\
-        atleast=1920x1080&\
-        sorting=$SORTING&\
-        page=$i" > tmp.json
+q=${CQUERY}&\
+categories=110&\
+purity=100&\
+atleast=1920x1080&\
+sorting=${SORTING}&\
+page=$i" > tmp.json
     # https://wallhaven.cc/api/v1/search? -> search url api
     # q=anime&                            -> tag options, some from $TAGOPTIONS
     # categories=111&                     -> categories is 100 (general) | 010 (anime) | 001 (people)
@@ -59,13 +59,13 @@ do
     # sorting=relevance&                  -> sorting mode accepts $SORTOPTIONS
     # order=desc&                         -> accepts asc (↑) and desc (↓)
     # page=3                              -> page number, starting from zero
-    PAGE="$(jq '.data[].path' tmp.json | sed 's/"//g')"
-    printf "$PAGE" | parallel -j 8 wget -q -nc -P "$TMPDIR" '{}'
+    jq -r '.data[].path' tmp.json |\
+        parallel -j 8 wget -q -nc -P "${TMPDIR}" '{}'
 done
 rm tmp.json
-notify "Download finish ✅""$QUERY - $SORTING" "true"
+notify "Download finish ✅" "${QUERY} - ${SORTING}" "true"
 
-sxiv -t "$TMPDIR"/*
-mv -n "$TMPDIR"/* ~/Imágenes/Wallpapers/
+sxiv -t "${TMPDIR}"
+mv -n "${TMPDIR}"/* ~/Imágenes/Wallpapers/
 cd ~
-rmdir "$TMPDIR"
+rmdir "${TMPDIR}"
