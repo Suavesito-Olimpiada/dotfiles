@@ -1,11 +1,13 @@
 # network analysis
 TERMINAL nmtui                                                                                  # INTERNET CONNECTION
-TERMINAL speedometer -r wlp2s0 -t wlp2s0                                                        # SPEEDOMETER INTERNET CHECK
+TERMINAL speedometer -r wlp3s0 -t wlp3s0                                                        # SPEEDOMETER INTERNET CHECK
 TERMINAL speedometer -r enp1s0 -t enp1s0                                                        # SPEEDOMETER ETHERNET CHECK
+TERMINAL speedometer -r enp0s20f0u3 -t enp0s20f0u3                                              # SPEEDOMETER ETHERNET CHECK
+TERMINAL speedometer -r enp0s20f0u3u2c2 -t enp0s20f0u3u2c2                                      # SPEEDOMETER ETHERNET CHECK
 TERMINAL nyx                                                                                    # SPEEDOMETER FOR TOR
-TERMINAL tmux new-session 'speedometer -r wlp2s0 -c -t wlp2s0' \; split-window 'nyx'            # JUST SET ALL SPEEDOMETERES
+TERMINAL tmux new-session 'speedometer -r wlp3s0 -c -t wlp3s0' \; split-window 'nyx'            # JUST SET ALL SPEEDOMETERES
 TERMINAL tmux new-session 'speedometer -r enp1s0 -c -t enp1s0' \; split-window 'nyx'            # JUST SET ALL SPEEDOMETERES
-gksu wireshark-gtk                                                                              # NETWORK SNNIFING TOOL
+gksu wireshark                                                                                  # NETWORK SNNIFING TOOL
 
 # internet
 qbittorrent                                                                                     # QBITTORRENT TORRENTS DOWNLOAD
@@ -18,11 +20,14 @@ tabbed -c -r 3 torsocks surf -e - "https://duckduckgo.com"                      
 tabbed -c -r 2 surf -e -                                                                        # SURF BROWSER
 nextcloud                                                                                       # NEXCLUD ONLINE STORAGE SOLUTION
 fluent.rss                                                                                      # RSS READER
+google-calendar-nativefier                                                                      # GOOGLE CALENDAR
 
 # communications
 telegram-desktop                                                                                # TELEGRAM APP
+kotatogram-desktop                                                                              # ALTERNATIVE TELEGRAM APP
 # flatpak run org.telegram.desktop
 discord                                                                                         # DISCORD APP
+# abaddon                                                                                         # ALTERNATIVE DISCORD APP
 fractal                                                                                         # MATRIX CLIENT
 ring                                                                                            # RING CALL
 utox                                                                                            # UTOX MESSAGE APP
@@ -38,25 +43,28 @@ zoom                                                                            
 bluejeans                                                                                       # BLUEJEANS MEETING AND VIDEOCONFERING
 whatsapp-for-linux                                                                              # NATIVE WRAPPER FOR WHATSAPP
 teams                                                                                           # TEAMS MICROSFT APP
-notion-app                                                                                      # ALL-IN-ONE WORKSPACE FOR NOTES AND TASK
+/opt/Notion/notion-app                                                                          # ALL-IN-ONE WORKSPACE FOR NOTES AND TASK
 orion                                                                                           # TWITCH TV CLIENT
 
 # office
 TERMINAL vim                                                                                    # VIM
+gedit                                                                                           # EDITOR
 TERMINAL sc-im                                                                                  # VIM-LIKE CALC/EXCEL FOR TERMINAL
 libreoffice --writer                                                                            # LIBREOFFICE WRITER
 libreoffice --calc                                                                              # LIBREOFFICE CALC
 libreoffice --impress                                                                           # LIBREOFFICE IMPRESS
 libreoffice --draw                                                                              # LIBREOFFICE DRAW
+onlyoffice                                                                                      # ONLYOFFICE OFFICE SUITE
 tabbed -c zathura -e                                                                            # ZATHURA TABBED
 evince                                                                                          # EVINCE PDF READER
 pdfsam                                                                                          # PDF EDITING TOOL
 pdf-xchange                                                                                     # PDF EDITING TOOL
-# FoxitReader                                                                                     # PDF READER FOR EDITING
+foxitreader                                                                                     # PDF READER FOR EDITING
 scribus                                                                                         # SCRIBUS
 TERMINAL trans -t es -s en -I                                                                   # TRASNLATE FROM ENGLISH TO SPANISH
 TERMINAL trans -t en -s es -I                                                                   # TRASNLATE FROM SPANISH TO ENGLISH
 xournalpp                                                                                       # NOTE TAKING APP
+fontforge                                                                                       # FONT CREATION APP
 
 # math
 HOME/.config/scripts/utils/calculadora_genius.sh                                                # GENIUS CALCULATOR
@@ -67,15 +75,21 @@ TERMINAL gnuplot                                                                
 geogebra                                                                                        # GRAPHICS MATH SOFTWARE
 
 # games
+rogue                                                                                           # ROGUE CLASSIC
+nethack                                                                                         # THERE IS EVERYTHING BUT A SINK
+crawl                                                                                           # DUNGEON CRAWL
+crawl-tiles                                                                                     # DUNGEON CRAWL (GRAPHICAL)
+adom                                                                                            # ANCIENT DOMAINS OF MYSTERY
 doomrl                                                                                          # DOOM GAME
 TERMINAL doomrl -console                                                                        # DOOM GAME CONSOLE
+tome4                                                                                           # TALES OF MAJ EYAL
+dwarffortress                                                                                   # DWARFFORTRESS
 HOME/.config/scripts/games/ltanks.sh                                                            # LTANKS GAME
 TERMINAL HOME/.config/scripts/games/tetris.sh                                                   # TETRIS GAME
 steam                                                                                           # STEAM ENGINE
 cgoban3                                                                                         # GO KGS
 gopanda                                                                                         # GO IGS FOR PANDANET
 lizzie                                                                                          # LIZZIE FOR GO REVISION
-# dwarffortress                                                                                   # DWARFFORTRESS
 0ad                                                                                             # 0AD
 retroarch                                                                                       # PLAY RETRO GAMES
 PCSX2                                                                                           # PLAY STATION 2 EMULATOR
@@ -84,7 +98,10 @@ minetest                                                                        
 srb2kart                                                                                        # KART GAME
 lutris                                                                                          # LUTRIS GAMING PLATFORM
 airshipper                                                                                      # VELORENT LAUNCHER
-tlauncher                                                                                       # MINECRAFT LAUNCHER
+prime-run minecraft-launcher                                                                    # OFFICIAL MINECRAFT LAUNCHER
+terasology                                                                                      # HIGH RESOLUTION MINECRAFT-LIKE GAME
+# tlauncher                                                                                       # MINECRAFT LAUNCHER
+leagueoflegends start                                                                           # LEAGUE OF LEGENDS
 
 # media usages
 TERMINAL TITLE=Music ncspot                                                                     # SPOTIFY BASED ON NCMPC
@@ -94,9 +111,12 @@ TERMINAL TITLE=Music fmui                                                       
 spotify                                                                                         # SPOTIFY MUSIC
 picard                                                                                          # MUSICBRAINZ TAGGER
 popcorntime                                                                                     # STREAMING MOVIES-SERIES VIEWER
+stremio                                                                                         # STREAMING MOVIE-SERIES VIEWER
+plexmediaplayer                                                                                 # PLEX CLIENT
 TERMINAL TITLE=Youtube pipe-viewer                                                              # YOUTUBE FROM TERMINAL
 gtk-pipe-viewer                                                                                # YOUTUBE FROM GTK APP
 TERMINAL TITLE=Youtube pipe-viewer --results=10 -n
+TERMINAL ytfzf -lts                                                                             # YOUTUBE FZF FROM TERMINAL
 cheese                                                                                          # WEBCAM
 
 # media editing/creation/conssumption
@@ -107,6 +127,7 @@ krita                                                                           
 pinta                                                                                           # LIKE PAINT
 ## 3d creation/editing
 blender                                                                                         # 3D RENDERING EDITOR
+goxel                                                                                           # VOXEL EDITOR
 ## video editing
 pitivi                                                                                          # VIDEO EDITING PROGRAM
 # flowblade                                                                                       # FLOWBLADE VIDEO EDITOR
@@ -119,6 +140,7 @@ obs                                                                             
 scide                                                                                           # SUPERCOLLIDER EDITOR
 TERMINAL sclang                                                                                 # SUPERCOLLIDER SERVER
 ardour6                                                                                         # AUDIO EDITING PROGRAM
+qtractor                                                                                        # AUDIO EDITING PROGRAM
 shotwell                                                                                        # IMAGE ORGANIZER
 audacity                                                                                        # AUDIO EDITING
 
@@ -130,7 +152,7 @@ TERMINAL root                                                                   
 TERMINAL cling                                                                                  # CLING C++ CERN INTERPRETER
 TERMINAL R                                                                                      # R INTERPRETER
 TERMINAL matlab                                                                                 # MATLAB IDE
-.config/scripts/programming/jupyter_toggle.sh dmenu
+.config/scripts/programming/jupyter_toggle.sh
 # editors
 code                                                                                            # CODE OSS (VSCODE OSS)
 # atom                                                                                            # ATOM EDITOR
@@ -138,10 +160,12 @@ code                                                                            
 glade                                                                                           # GTK GLADE APP CREATOR
 lepton                                                                                          # GIST LIKE SNIPPETS APP
 qtcreator                                                                                       # QTCREATOR
-Unity                                                                                           # UNITY-EDITOR
-UnityHub.AppImage                                                                               # UNITY-HUB
+unityhub                                                                                        # UNITYHUB
+idea                                                                                            # INTELLIJ IDEA COMMUNITY
 # debugging
 ghidra                                                                                          # ANALYZER FOR EXECUTABLES
+imhex                                                                                           # HEX EDITOR FOR HACKERS
+xelfviewer                                                                                      # ELF VIEWER
 postman                                                                                         # RESTFUL API TEST FRAMEWORK
 
 # system
@@ -149,13 +173,15 @@ TERMINAL vim HOME/.config/herbstluftwm/autostart                                
 TERMINAL pulsemixer                                                                             # PULSEMIXER SOUND
 TERMINAL alsamixer                                                                              # ALSAMIXER SOUND
 TERMINAL htop                                                                                   # HTOP PROCESS
+TERMINAL btop                                                                                   # BTOP SYTEM MONITOR
+TERMINAL nvtop                                                                                  # NVIDIA TOP GPU MONITOR
 TERMINAL sudo htop                                                                              # SUDO HTOP PROCESS
+TERMINAL sudo iotop -o -d 0.5                                                                   # IO PROCESS VISUALIZER
 TERMINAL vim HOME/.config/dmenu/commandlist                                                     # VIM COMMANDLIST EDIT
 # herbstclient quit                                                                             # HERBSTLUFT QUIT
 systemctl suspend                                                                               # SUSPEND THE SYSTEM
 xkill                                                                                           # XKILL
 gksu gufw                                                                                       # FIREWALL CONFIG APP
-hardinfo                                                                                        # HARD HARDWARE INFO
 cpu-x                                                                                           # HARD HARDWARE INFO
 gksu sysprof                                                                                    # SYSTEM-WIDE PROFILER
 tlpui                                                                                           # TLP GUI
@@ -164,23 +190,32 @@ gksu gparted                                                                    
 bleachbit                                                                                       # CCLEANER FOR LINUX
 rpi-imager                                                                                      # RASPBERRY PI IMAGER
 gksu woeusbgui                                                                                  # FLASH WIN2USB
+nvidia-settings                                                                                 # NVIDIA SETTINGS
 
 # utilities
 HOME/.config/scripts/utils/scratchy.py                                                          # REMEMBER THINGS
 HOME/.config/scripts/time/alarm.sh (s|m|h) time msg
 TERMINAL ranger                                                                                 # RANGER FILE NAVIGATOR
+nautilus                                                                                        # FILE NAVIGATOR
 # komorebi                                                                                        # DYNAMIC WALLPAPERS
 # komorebi-wallpaper-creator                                                                      # CREATE YOUR OWN DYNAMIC WALLPAPERS
 # TERMINAL calcurse                                                                               # CALCURSE
 filezilla                                                                                       # FTP FREE GUI
 # joplin-desktop                                                                                  # NOTE KEEPING APP, SYNCLABLE WITH PHONE
 easyeffects                                                                                     # AUDIO POST-PORCESING (REALTIME)
+flameshot gui                                                                                   # NICE SCREENSHOTS
 TERMINAL bluetoothctl                                                                           # INTERNET CONNECTION
+picom -b                                                                                        # PICOM
+killall
+xfontsel                                                                                        # X FONT SELECTION
+caffeine start -a -t 4:00                                                                       # CAFFEINE FOR MY SCREEN
+stellarium                                                                                      # STELLARIUM SKY VIEW
 
 # remote access
 # remmina                                                                                         # CONTROL REMOTE DESKTOP
 vinagre                                                                                         # VNC CONNECT CLIENT
 anydesk                                                                                         # ANYDESK REMOTE DESKTOP ACCESS
+rustdesk                                                                                        # REMOTE DESKTOP ACCESS
 
 # virtual machines
 VirtualBox                                                                                      # VIRTUALBOX
